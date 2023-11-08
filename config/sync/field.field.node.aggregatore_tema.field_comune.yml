@@ -1,0 +1,28 @@
+uuid: 2e417c11-8552-4c35-a63f-3f4bf01894b1
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comune
+    - node.type.aggregatore_tema
+    - node.type.comune
+id: node.aggregatore_tema.field_comune
+field_name: field_comune
+entity_type: node
+bundle: aggregatore_tema
+label: Comune
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      comune: comune
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

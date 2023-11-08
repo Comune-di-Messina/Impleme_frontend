@@ -1,0 +1,18 @@
+uuid: 7a1da4e8-66f6-49e0-82ae-150a7b533387
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.territori
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.territori
+target_entity_type_id: taxonomy_term
+target_bundle: territori
+default_langcode: site_default
+language_alterable: true

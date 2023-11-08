@@ -1,0 +1,8 @@
+src: https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1
+alt: Alt text
+title: Lorem ipsum dolor sit amet, consectetur adipiscing elit…
+
+###
+
+ui_pattern_definition:
+  label: Element - Image

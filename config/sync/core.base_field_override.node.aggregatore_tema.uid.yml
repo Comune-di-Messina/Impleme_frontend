@@ -1,0 +1,20 @@
+uuid: eb412a04-777e-4fca-b282-b5d266b144bf
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.aggregatore_tema
+id: node.aggregatore_tema.uid
+field_name: uid
+entity_type: node
+bundle: aggregatore_tema
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

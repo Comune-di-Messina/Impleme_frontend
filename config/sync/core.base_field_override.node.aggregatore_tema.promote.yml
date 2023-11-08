@@ -1,0 +1,22 @@
+uuid: b5dc61d8-612b-4112-97a2-453f45b4a4f6
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.aggregatore_tema
+id: node.aggregatore_tema.promote
+field_name: promote
+entity_type: node
+bundle: aggregatore_tema
+label: 'Promosso alla prima pagina'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

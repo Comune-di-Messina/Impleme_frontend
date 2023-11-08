@@ -1,0 +1,10 @@
+uuid: d56e97b5-a79e-4998-99a0-dc1f8886beea
+langcode: it
+status: true
+dependencies: {  }
+id: carosello_con_testata_big
+label: 'Carosello - con testata - big'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

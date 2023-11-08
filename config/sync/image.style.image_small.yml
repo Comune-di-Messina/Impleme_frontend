@@ -1,0 +1,17 @@
+uuid: c5b8deba-c237-470d-91e3-a29e2095fafc
+langcode: it
+status: true
+dependencies:
+  module:
+    - focal_point
+name: image_small
+label: '[850x760] Image small'
+effects:
+  f5d1fcd5-e557-4db6-a03b-9a198719f0de:
+    uuid: f5d1fcd5-e557-4db6-a03b-9a198719f0de
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 850
+      height: 760
+      crop_type: focal_point

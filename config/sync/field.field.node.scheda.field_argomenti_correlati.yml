@@ -1,0 +1,25 @@
+uuid: 83ab1020-761b-422f-914f-41afebb85b93
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_argomenti_correlati
+    - node.type.scheda
+id: node.scheda.field_argomenti_correlati
+field_name: field_argomenti_correlati
+entity_type: node
+bundle: scheda
+label: 'Argomenti correlati'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: temi_er
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

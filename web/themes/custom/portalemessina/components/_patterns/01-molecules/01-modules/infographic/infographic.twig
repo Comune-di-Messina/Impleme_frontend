@@ -1,0 +1,25 @@
+{%
+  set classes = [
+  'module',
+  'infographic',
+  'container'
+]
+%}
+<div {{ attributes.addClass(classes) }}>
+  <div class="row align-items-center">
+    <div class="col-sm-12 col-lg-5 mx-4 mx-lg-0">
+      <h2 class="infographic-title mb-2">{{ title }}</h2>
+      <div class="infographic-content text-serif">
+        {{ content }}
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-6 ml-auto row row-cols-2">
+      {{ modules }}
+      {% if pl %}
+        {{ modules }}
+        {{ modules }}
+        {{ modules }}
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+#block-loghiprefooter {
+  .field--name-field-loghi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $gap * 2;
+    .field__item { 
+      padding: $gap * 1.5;
+      position: relative;
+      & + .field__item {
+        &::before {
+          background-color: $color-white;
+          content: '';
+          display: block;
+          height: 30px;
+          left: -1px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 2px;
+        }
+      }
+    }
+  }
+  .field--name-body {
+    text-align: center;
+    font-size: $font-xsmall;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,42 @@
+uuid: f41d2f60-cb1c-4c47-8581-5e60e16ecc14
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.immagine_full.field_immagine
+    - paragraphs.paragraphs_type.immagine_full
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_image_full
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_immagine
+id: paragraph.immagine_full.default
+targetEntityType: paragraph
+bundle: immagine_full
+mode: default
+content:
+  field_immagine:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: cover_medium
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: image
+hidden: {  }

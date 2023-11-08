@@ -1,0 +1,18 @@
+uuid: 19484ccc-de5b-49f7-a919-71bc9526a3bd
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.logo
+id: media.logo.metatag
+field_name: metatag
+entity_type: media
+bundle: logo
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,54 @@
+uuid: f33b59a0-7bb8-4b97-af27-2b13a03ff9dc
+langcode: it
+status: true
+dependencies:
+  config:
+    - block_content.type.contatti
+    - field.field.block_content.contatti.field_email
+    - field.field.block_content.contatti.field_indirizzo
+    - field.field.block_content.contatti.field_telefono
+id: block_content.contatti.default
+targetEntityType: block_content
+bundle: contatti
+mode: default
+content:
+  field_email:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_indirizzo:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telefono:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

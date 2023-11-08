@@ -1,0 +1,93 @@
+uuid: 958249f7-10de-44a1-bcee-8a0dad7be720
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.sala.body
+    - field.field.node.sala.field_abstract
+    - field.field.node.sala.field_attachments
+    - field.field.node.sala.field_categoria_servizio
+    - field.field.node.sala.field_comune_servizi
+    - field.field.node.sala.field_contatti_email
+    - field.field.node.sala.field_contatti_indirizzo
+    - field.field.node.sala.field_contatti_telefono
+    - field.field.node.sala.field_contatti_titolo
+    - field.field.node.sala.field_coordinate
+    - field.field.node.sala.field_cover
+    - field.field.node.sala.field_room_id
+    - node.type.sala
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_simple
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      category:
+        - 'bundle_field:node'
+      title:
+        - node_title
+      content:
+        - field_abstract
+      cta:
+        - node_link
+    fields:
+      'bundle_field:node':
+        plugin_id: 'bundle_field:node'
+        weight: 0
+        label: hidden
+        formatter: default
+      node_link:
+        plugin_id: node_link
+        weight: 3
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.sala.search_index
+targetEntityType: node
+bundle: sala
+mode: search_index
+content:
+  field_abstract:
+    type: text_summary_or_trimmed
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_attachments: true
+  field_categoria_servizio: true
+  field_comune_servizi: true
+  field_contatti_email: true
+  field_contatti_indirizzo: true
+  field_contatti_telefono: true
+  field_contatti_titolo: true
+  field_coordinate: true
+  field_cover: true
+  field_room_id: true
+  langcode: true
+  links: true

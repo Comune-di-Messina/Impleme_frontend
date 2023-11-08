@@ -1,0 +1,28 @@
+uuid: 121dc03a-b523-4bb7-9a18-c4580f04a434
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comune
+    - node.type.comune
+    - node.type.evento
+id: node.evento.field_comune
+field_name: field_comune
+entity_type: node
+bundle: evento
+label: Comune
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      comune: comune
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

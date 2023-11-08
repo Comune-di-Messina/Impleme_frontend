@@ -1,0 +1,21 @@
+{
+  "page_title": "I tuoi pagamenti",
+  "elencopagamenti": [
+    {
+      "titolo": "Titolo",
+      "url_ricevuta": "#"
+    },
+    {
+      "titolo": "Titolo due",
+      "url_paga": "test-paga"
+    },
+    {
+      "titolo": "Titolo tre",
+      "url_ricevuta": "#"
+    }
+  ],
+  "breadcrumbs": "",
+  "SelectServizi": "",
+  "SelectAnni": "",
+  "errore": ""
+}

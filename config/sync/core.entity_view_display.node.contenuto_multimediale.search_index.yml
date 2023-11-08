@@ -1,0 +1,83 @@
+uuid: 278fef78-759e-46b7-a6d8-022499fcd74b
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.contenuto_multimediale.body
+    - field.field.node.contenuto_multimediale.field_cover
+    - field.field.node.contenuto_multimediale.field_external_link
+    - field.field.node.contenuto_multimediale.field_link_ad_articolo
+    - field.field.node.contenuto_multimediale.field_term_temi
+    - field.field.node.contenuto_multimediale.field_tipologia
+    - field.field.node.contenuto_multimediale.field_video_url
+    - node.type.contenuto_multimediale
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_simple
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      category:
+        - 'bundle_field:node'
+      title:
+        - node_title
+      content:
+        - body
+      cta:
+        - node_link
+    fields:
+      'bundle_field:node':
+        plugin_id: 'bundle_field:node'
+        weight: 0
+        label: hidden
+        formatter: default
+      node_link:
+        plugin_id: node_link
+        weight: 3
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.contenuto_multimediale.search_index
+targetEntityType: node
+bundle: contenuto_multimediale
+mode: search_index
+content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+hidden:
+  field_cover: true
+  field_external_link: true
+  field_link_ad_articolo: true
+  field_term_temi: true
+  field_tipologia: true
+  field_video_url: true
+  langcode: true
+  links: true

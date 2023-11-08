@@ -1,0 +1,19 @@
+uuid: 976f04ed-709b-4a8a-a559-dbff85ccfe42
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titolo
+    - paragraphs.paragraphs_type.elemento_infografica
+id: paragraph.elemento_infografica.field_titolo
+field_name: field_titolo
+entity_type: paragraph
+bundle: elemento_infografica
+label: Titolo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,58 @@
+uuid: aea7e329-63e9-4c3b-8ba5-4b6907cafc9a
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.anteprima_con_immagine
+    - field.field.node.aggregatore_servizi.body
+    - field.field.node.aggregatore_servizi.field_abstract
+    - field.field.node.aggregatore_servizi.field_categoria_agg_servizi
+    - field.field.node.aggregatore_servizi.field_comune
+    - field.field.node.aggregatore_servizi.field_cover
+    - field.field.node.aggregatore_servizi.field_moduli
+    - field.field.node.aggregatore_servizi.field_vista
+    - node.type.aggregatore_servizi
+  module:
+    - ds
+    - text
+    - user
+id: node.aggregatore_servizi.anteprima_con_immagine
+targetEntityType: node
+bundle: aggregatore_servizi
+mode: anteprima_con_immagine
+content:
+  field_abstract:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 350
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: text_summary_or_trimmed
+    region: content
+  field_cover:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: cover_large
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  body: true
+  field_categoria_agg_servizi: true
+  field_comune: true
+  field_moduli: true
+  field_vista: true
+  langcode: true
+  links: true

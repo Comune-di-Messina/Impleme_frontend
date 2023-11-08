@@ -1,0 +1,23 @@
+uuid: 455aaea5-e4d3-4cd5-97f0-b1b1e068b3d2
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url_servizio
+    - node.type.settore_pratiche_tipologia
+  module:
+    - link
+id: node.settore_pratiche_tipologia.field_url_servizio
+field_name: field_url_servizio
+entity_type: node
+bundle: settore_pratiche_tipologia
+label: 'URL Servizio'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

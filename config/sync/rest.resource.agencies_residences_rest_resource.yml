@@ -1,0 +1,13 @@
+uuid: 6de56728-aca1-428b-9213-736d729cea6a
+langcode: it
+status: true
+dependencies: {  }
+id: agencies_residences_rest_resource
+plugin_id: agencies_residences_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

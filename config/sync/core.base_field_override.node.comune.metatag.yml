@@ -1,0 +1,18 @@
+uuid: 3a11e43e-b251-4872-845c-694c96265553
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.comune
+id: node.comune.metatag
+field_name: metatag
+entity_type: node
+bundle: comune
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

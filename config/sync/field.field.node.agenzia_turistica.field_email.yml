@@ -1,0 +1,19 @@
+uuid: e42acfcc-1841-4e45-93eb-cb7d01cbf070
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.agenzia_turistica
+id: node.agenzia_turistica.field_email
+field_name: field_email
+entity_type: node
+bundle: agenzia_turistica
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

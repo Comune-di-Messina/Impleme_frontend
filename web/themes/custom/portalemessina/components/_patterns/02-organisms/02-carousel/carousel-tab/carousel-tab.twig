@@ -1,0 +1,66 @@
+{%
+  set classes = [
+  'carousel carousel-card',
+  'container'
+]
+%}
+<div {{ attributes.addClass(classes) }}>
+
+  <div class="row">
+
+    <div class="col-md-6">
+      {% if title|render or selector|render %}
+        <div class="carousel-header">
+          {% if title|render %}
+            <h3 class="carousel-title">{{ title }}</h3>
+          {% endif %}
+          {% if selector|render %}
+            {{ selector }}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="col-md-6 text-right">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="servizi-tab" data-toggle="tab" href="#servizi" role="tab" aria-controls="servizi" aria-selected="true">{{ titletab1 }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="luoghi-tab" data-toggle="tab" href="#luoghi" role="tab" aria-controls="luoghi" aria-selected="false">{{ titletab2 }}</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane show active" id="servizi" role="tabpanel" aria-labelledby="servizi-tab">
+      <div class="row">
+        <div class="col-md-10 col-lg-8">
+            {{ modules }}
+            {% if pl %}
+              {{ modules }}
+              {{ modules }}
+              {{ modules }}
+              {{ modules }}
+            {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane" id="luoghi" role="tabpanel" aria-labelledby="luoghi-tab">
+      <div class="row">
+        <div class="col-md-10 col-lg-8">
+            {{ secondmodules }}
+            {% if pl %}
+              {{ secondmodules }}
+              {{ secondmodules }}
+              {{ secondmodules }}
+              {{ secondmodules }}
+            {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

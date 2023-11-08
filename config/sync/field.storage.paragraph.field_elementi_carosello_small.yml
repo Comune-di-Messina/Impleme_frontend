@@ -1,0 +1,20 @@
+uuid: 6b0c08ff-143d-4198-80a6-78bf5b1302da
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_elementi_carosello_small
+field_name: field_elementi_carosello_small
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 30
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

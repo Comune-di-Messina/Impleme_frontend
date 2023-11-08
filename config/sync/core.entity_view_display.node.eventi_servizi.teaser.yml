@@ -1,0 +1,37 @@
+uuid: 720b6c54-bf43-4f44-9e3e-68a6ddcb399d
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.eventi_servizi.body
+    - field.field.node.eventi_servizi.field_comune
+    - field.field.node.eventi_servizi.field_cta
+    - field.field.node.eventi_servizi.field_data
+    - node.type.eventi_servizi
+  module:
+    - text
+    - user
+id: node.eventi_servizi.teaser
+targetEntityType: node
+bundle: eventi_servizi
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_comune: true
+  field_cta: true
+  field_data: true
+  langcode: true

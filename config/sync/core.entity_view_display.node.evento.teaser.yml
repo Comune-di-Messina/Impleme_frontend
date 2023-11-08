@@ -1,0 +1,55 @@
+uuid: 2c3c56b7-2250-4d26-9622-3288cd35805f
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.evento.body
+    - field.field.node.evento.field_abstract
+    - field.field.node.evento.field_argomenti_correlati
+    - field.field.node.evento.field_comune
+    - field.field.node.evento.field_contatti_indirizzo
+    - field.field.node.evento.field_contenuti_collegati
+    - field.field.node.evento.field_coordinate
+    - field.field.node.evento.field_cover
+    - field.field.node.evento.field_data
+    - field.field.node.evento.field_moduli
+    - field.field.node.evento.field_target
+    - field.field.node.evento.field_term_temi
+    - node.type.evento
+  module:
+    - user
+id: node.evento.teaser
+targetEntityType: node
+bundle: evento
+mode: teaser
+content:
+  field_comune:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_term_temi:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_abstract: true
+  field_argomenti_correlati: true
+  field_contatti_indirizzo: true
+  field_contenuti_collegati: true
+  field_coordinate: true
+  field_cover: true
+  field_data: true
+  field_moduli: true
+  field_target: true
+  langcode: true
+  links: true

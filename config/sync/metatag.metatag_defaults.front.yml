@@ -1,0 +1,12 @@
+uuid: 64871598-315b-444b-b0b5-a2831780bb2c
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: uSSAM6qrv6vBBokDVNvxZCaapmvzVaqbnKN1QyAE_Sw
+id: front
+label: 'Prima pagina'
+tags:
+  shortlink: '[site:url]'
+  title: '[site:name]'
+  canonical_url: '[site:url]'

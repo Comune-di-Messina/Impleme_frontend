@@ -1,0 +1,81 @@
+{%
+  set classes = [
+  'page-aggregatore',
+]
+%}
+<div {{ attributes.addClass(classes).addClass(class_title) }}>
+
+  {% include "@molecules/01-modules/hero/hero-full/hero-full.twig" with {
+    title: hero_title,
+    select_comune: select_comune,
+    content: hero_content,
+    back: back,
+    image: hero_image,
+    band_left: before_content|render ? '' : filters,
+    band_right: hero_band_right,
+    change_comune: change_comune
+  } %}
+
+  {% if before_content|render %}
+    <div class="before-content py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          {% if filters|render %}
+          <div class="col-filters col-lg-4">
+            <div class="block filters filters-neg">
+              <div class="filters-wrapper">
+                {# {{filters}} #}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          <div class="col-content col-lg-8">
+            {{ before_content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if content|render %}
+    <div class="content">
+      {{ content }}
+    </div>
+  {% endif %}
+
+  {% if view|render %}
+    <div class="container p-0">
+      <div class="row">
+        <div class="col-cards {{ map|render ? 'col-lg-8' : 'col-lg-12' }}">
+          <div class="card-list-wrapper">
+            {{ view }}
+            {% if pl %}
+              {{ view }}
+              {{ view }}
+              {{ view }}
+              {{ view }}
+            {% endif %}
+          </div>
+        </div>
+
+        {# {% if map|render %}
+          <div class="col-map d-none d-lg-block">
+            <div class="col-map-wrapper sticky-wrapper navbar-wrapper">
+              {{ map }}
+            </div>
+          </div>
+        {% endif %} #}
+
+        {% if map|render %}
+          <div class="col-map sticky-col d-none d-lg-block">
+            <div class="col-map-wrapper navbar-wrapper">
+              {{ map }}
+            </div>
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  {% endif %}
+
+</div>

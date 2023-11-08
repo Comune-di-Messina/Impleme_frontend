@@ -1,0 +1,5 @@
+name: 'segnalame'
+type: module
+description: 'Api Integrations for SegnalaME service'
+core: 8.x
+package: 'Messina'

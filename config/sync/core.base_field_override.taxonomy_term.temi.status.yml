@@ -1,0 +1,22 @@
+uuid: 3f76ce2a-9a1a-495e-823f-47cc637c10b5
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.temi
+id: taxonomy_term.temi.status
+field_name: status
+entity_type: taxonomy_term
+bundle: temi
+label: Pubblicato
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

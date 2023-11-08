@@ -1,0 +1,153 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+<header role="banner" class="it-header-wrapper it-shadow">
+<div class="it-header-slim-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-slim-wrapper-content">
+          {{ citta_metropolitana }}
+          <div class="it-header-slim-right-zone">
+            <div class="it-access-top-wrapper">
+              {{ personal_area_link }}
+              {{ logout }}
+              <a class="btn btn-primary btn-sm" href="/">{{ "Vai alla home"|t }}</a>
+            </div>
+            <div class="nav-item dropdown">
+              {% if elements['languageswitcher']|length > 1 %}
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                <span class="text-uppercase">{{ elements['languageswitcher']['current_language'] }}</span>
+                <svg class="icon d-none d-lg-block">
+                  <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-expand"></use>
+                </svg>
+              </a>
+              <div class="dropdown-menu">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="link-list-wrapper text-uppercase">
+                      {% if elements['languageswitcher'] %}
+                      {% block language_switcher %}
+                        {{ language_switcher }}
+                      {% endblock %}
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="it-nav-wrapper">
+    <div class="it-header-center-wrapper theme-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="it-header-center-content-wrapper">
+              <div class="it-brand-wrapper">
+                {% if elements['portalemessina_branding'] %}
+                  {% block branding %}
+                    {{ header_branding }}
+                  {% endblock %}
+                {% else %}
+                  {% if path_to_comune %}
+                    <a href="{{ path_to_comune }}">
+                      <div class="logo">
+                      {% if field_logo %}
+                        <img src="{{ field_logo }}" alt="{{ 'Home'|t }}" />
+                      {% else %}
+                        <img src="{{ dist_url }}images/logo/logo-visitme.svg">
+                      {% endif %}
+                      </div>
+                    </a>
+                  {% endif %}
+                {% endif %}
+              </div>
+              <div class="it-right-zone">
+
+                <div class="it-header-navbar-wrapper">
+                  <nav class="navbar navbar-expand-lg has-megamenu">
+                    <button class="custom-navbar-toggler" type="button" aria-controls="nav03" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav03">
+                      <svg class="icon">
+                        <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-burger"></use>
+                      </svg>
+                    </button>
+                    {% if elements['portalemessina_main_menu'] %}
+                    <div class="navbar-collapsable" id="nav03" style="display: none;">
+                      <div class="overlay" style="display: none;"></div>
+                      <div class="close-div sr-only">
+                        <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
+                      </div>
+                      <div class="menu-wrapper">
+                        {% block nav_main %}
+                          {{ header_main }}
+                        {% endblock %}
+                      </div>
+                    </div>
+                    {% endif %}
+                  </nav>
+                </div>
+
+                <div class="it-search-wrapper ml-0">
+                  {% if luoghi_path  %}
+                  <a class="location-button" href="{{ luoghi_path }}">
+                    <svg class="icon">
+                      <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-search"></use>
+                    </svg>
+                    <span>{{ "Scopri i Luoghi"|t }}</span>
+                  </a>
+                  {% endif %}
+                  <a class="search-link rounded-icon ml-0" aria-label={{ "Cerca"|t }} href="#">
+                    <svg class="icon">
+                      <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-search"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="search-overlay">
+                  <button class="close" href="#"><span class="sr-only">{{ "Chiudi la ricerca"|t }}</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-close-big"></use>
+                    </svg>
+                  </button>
+                  <div class="search-form">
+                    {% block search_block %}
+                      {{ search_field }}
+                    {% endblock %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% if block('nav_bottom') %}
+    <div class="it-header-navbar-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!--start nav-->
+            <nav class="navbar navbar-expand-lg has-megamenu">
+              <div class="navbar-collapsable" id="nav03" style="display: none;">
+                <div class="overlay" style="display: none;"></div>
+                <div class="close-div sr-only">
+                  <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
+                </div>
+                <div class="menu-wrapper">
+                  {% block nav_bottom %}
+                    {{ header_main }}
+                  {% endblock %}
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</header>

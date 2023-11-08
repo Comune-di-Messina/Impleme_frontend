@@ -1,0 +1,22 @@
+uuid: c17984e5-6d92-48ed-983c-7bb702ab967d
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: itinerari
+label: Itinerari
+type: 'canonical_entities:node'
+pattern: 'luoghi/itinerari/[node:title]'
+selection_criteria:
+  e8ba3da2-dac3-43c6-8ef5-5836caf1efd2:
+    id: node_type
+    bundles:
+      itinerario: itinerario
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e8ba3da2-dac3-43c6-8ef5-5836caf1efd2
+selection_logic: and
+weight: -5
+relationships: {  }

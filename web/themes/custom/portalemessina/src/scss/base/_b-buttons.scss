@@ -1,0 +1,29 @@
+.btn {
+  &.btn-primary {
+    background-color: $color-blue;
+    padding: $gap $gap * 2;
+  }
+  &.btn-base {
+    background-color: $color-white;;
+  }
+  &.pagopa {
+    background-color: $color-blue-pagopa !important;
+    .h-pago-pa {
+      margin-top: -4px;
+      margin-bottom: -12px;
+    }
+    &:hover {
+      background-color: darken($color-blue-pagopa, 5%);
+    }
+  }
+}
+
+#edit-openid-connect-client-wso2-login, #edit-openid-connect-client-spid-login {
+  background-color: $color-blue-spid;
+  border: 0;
+  color: $color-white;
+  display: inline-block;
+  font-size: $font-medium;
+  font-weight: 600;
+  padding: $gap $gap * 2;
+}

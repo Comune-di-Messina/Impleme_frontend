@@ -1,0 +1,14 @@
+uuid: dbdf5b24-d1ea-4fea-9180-20106e493618
+langcode: it
+status: true
+dependencies: {  }
+id: document
+label: Documento
+description: ''
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map:
+  name: name

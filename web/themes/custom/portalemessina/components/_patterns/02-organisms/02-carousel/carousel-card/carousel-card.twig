@@ -1,0 +1,34 @@
+{%
+  set classes = [
+  'carousel carousel-card',
+  'container'
+]
+%}
+<div {{ attributes.addClass(classes) }}>
+
+  {% if title|render or selector|render %}
+    <div class="carousel-header">
+      {% if title|render %}
+        <h3 class="carousel-title">{{ title }}</h3>
+      {% endif %}
+      {% if selector|render %}
+        {{ selector }}
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="row">
+    <div class="col-md-10 col-lg-8">
+      <div class="carousel-wrapper">
+          {{ modules }}
+          {% if pl %}
+            {{ modules }}
+            {{ modules }}
+            {{ modules }}
+            {{ modules }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+</div>

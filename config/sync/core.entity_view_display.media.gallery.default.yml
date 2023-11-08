@@ -1,0 +1,36 @@
+uuid: 9c50671e-eb0e-4cfb-8f4c-87908af5448a
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.media.gallery.field_media_image_2
+    - image.style.image_medium
+    - media.type.gallery
+  module:
+    - ds
+    - image
+id: media.gallery.default
+targetEntityType: media
+bundle: gallery
+mode: default
+content:
+  field_media_image_2:
+    label: visually_hidden
+    weight: 0
+    settings:
+      image_style: image_medium
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: image
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,23 @@
+uuid: 61dddf93-7058-4e9c-9d07-3fe7ccff5fc8
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.settore_pratiche_tipologia
+  module:
+    - text
+id: node.settore_pratiche_tipologia.body
+field_name: body
+entity_type: node
+bundle: settore_pratiche_tipologia
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,17 @@
+uuid: 28a5ede4-1072-4a43-9b16-62160eb2ee87
+langcode: it
+status: true
+dependencies:
+  module:
+    - focal_point
+name: cover_large_tall
+label: '[1600x1000] Cover large tall'
+effects:
+  9dae0b88-e4a1-4a64-ad1b-60c4103e5fae:
+    uuid: 9dae0b88-e4a1-4a64-ad1b-60c4103e5fae
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 1000
+      crop_type: focal_point

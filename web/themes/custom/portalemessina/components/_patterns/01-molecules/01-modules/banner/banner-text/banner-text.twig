@@ -1,0 +1,55 @@
+{%
+  set classes = [
+  'module',
+  'banner banner-text'
+]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="banner-main">
+    <div class="banner-img">
+      {{ image }}
+    </div>
+    <div class="container">
+      <div class="row justify-content-center py-5">
+        <div class="col-lg-4">
+          {% if title|render %}
+            <h2>{{ title }}</h2>
+          {% endif %}
+        </div>
+        <div class="col-lg-6">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    {% if modules|render %}
+    <div class="banner-secondary row">
+      <div class="carousel carousel-teaser">
+        <div class="carousel-nav">
+          <button class="carousel-prev">Prev</button>
+          <button class="carousel-next">Next</button>
+        </div>
+        <div class="carousel-wrapper">
+          {{ modules }}
+          {% if pl %}
+            {{ modules }}
+            {{ modules }}
+            {{ modules }}
+            {{ modules }}
+            {{ modules }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if link|render %}
+      <div class="banner-link text-center mt-4">
+        {{ link }}
+      </div>
+    {% endif %}
+  </div>
+</div>

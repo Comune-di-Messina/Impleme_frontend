@@ -1,0 +1,19 @@
+uuid: 86fa3463-15f6-4205-90fd-4e2e51ef30b0
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titolo
+    - paragraphs.paragraphs_type.carosello_con_intro_small
+id: paragraph.carosello_con_intro_small.field_titolo
+field_name: field_titolo
+entity_type: paragraph
+bundle: carosello_con_intro_small
+label: Titolo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

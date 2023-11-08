@@ -1,0 +1,33 @@
+uuid: 3e534473-eefa-4914-8421-b18c3343be04
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.guida_turistica.field_comune
+    - field.field.node.guida_turistica.field_email
+    - field.field.node.guida_turistica.field_lingua
+    - field.field.node.guida_turistica.field_residenza
+    - field.field.node.guida_turistica.field_sito_web
+    - field.field.node.guida_turistica.field_telefono
+    - node.type.guida_turistica
+  module:
+    - user
+id: node.guida_turistica.teaser
+targetEntityType: node
+bundle: guida_turistica
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_comune: true
+  field_email: true
+  field_lingua: true
+  field_residenza: true
+  field_sito_web: true
+  field_telefono: true
+  langcode: true

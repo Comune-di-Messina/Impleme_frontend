@@ -1,0 +1,55 @@
+uuid: 7ac578b4-7023-46fc-b158-ddaa0630a125
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.frontpage.body
+    - field.field.node.frontpage.field_moduli
+    - field.field.node.frontpage.field_pre_moduli
+    - node.type.frontpage
+  module:
+    - ds
+    - entity_reference_revisions
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_page_front
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      before_content:
+        - field_pre_moduli
+      content:
+        - field_moduli
+id: node.frontpage.default
+targetEntityType: node
+bundle: frontpage
+mode: default
+content:
+  field_moduli:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_pre_moduli:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: before_content
+hidden:
+  body: true
+  langcode: true
+  links: true

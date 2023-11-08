@@ -1,0 +1,15 @@
+{% if utente is not empty %}
+    <table>
+        <tr>
+            <th style="width:100px">ID UTENTE:</th><td>{{ utente.id_utente }}</td>     
+        </tr>
+        <tr>
+            <th style="width:100px">JWT:</th><td style="word-break:break-all">{{ utente.id_token }}</td>
+        </tr>
+    </table>
+    <button class="button js-form-submit form-submit btn btn-primary w-100" role="button" id="btn-wso2-test" >{{'Test chiamata API Manager' | t }}</button>
+
+    <textarea id="wso2-response" style="width:100%;height:300px;"></textarea>
+{% else %}
+    <h2>Nessun utente autenticato, e niente JWT!</h2>
+{% endif %}

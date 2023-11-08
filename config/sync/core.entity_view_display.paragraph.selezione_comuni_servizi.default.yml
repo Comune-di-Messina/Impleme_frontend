@@ -1,0 +1,58 @@
+uuid: effd475d-338e-4f80-8bb3-cf262872f1b0
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.selezione_comuni_servizi.field_etichetta
+    - field.field.paragraph.selezione_comuni_servizi.field_testo
+    - field.field.paragraph.selezione_comuni_servizi.field_titolo
+    - paragraphs.paragraphs_type.selezione_comuni_servizi
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_block_selection_element
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      label:
+        - field_etichetta
+      title:
+        - field_titolo
+      content:
+        - field_testo
+id: paragraph.selezione_comuni_servizi.default
+targetEntityType: paragraph
+bundle: selezione_comuni_servizi
+mode: default
+content:
+  field_etichetta:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: label
+  field_testo:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_titolo:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: title
+hidden: {  }

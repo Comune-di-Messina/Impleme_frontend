@@ -1,0 +1,21 @@
+.leaflet-popup {
+  font-family: $font-primary;
+  color: $color-blue-slater;
+  .tema {
+    color: $color-blue;
+    font-size: $font-small;
+    text-transform: uppercase;
+  }
+  .titolo {
+    font-size: $font-normal;
+    font-weight: 600;
+    a {
+      color: $color-blue-slater;
+    }
+  }
+  .indirizzo {
+    font-size: $font-small;
+    font-weight: 600;
+    margin-top: $gap * 3;
+  }
+}

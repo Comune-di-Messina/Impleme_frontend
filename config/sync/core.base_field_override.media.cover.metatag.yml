@@ -1,0 +1,18 @@
+uuid: c6bd774f-b1f9-4d48-b746-f58e6c055061
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.cover
+id: media.cover.metatag
+field_name: metatag
+entity_type: media
+bundle: cover
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,18 @@
+uuid: 185bc7c8-cfbb-4f21-858b-56316e92b0ca
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.raccolta_contenuti_con_testata
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.raccolta_contenuti_con_testata
+target_entity_type_id: paragraph
+target_bundle: raccolta_contenuti_con_testata
+default_langcode: site_default
+language_alterable: true

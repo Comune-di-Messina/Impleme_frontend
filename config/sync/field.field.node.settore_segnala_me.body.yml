@@ -1,0 +1,23 @@
+uuid: 1fd1feed-0a68-4c2d-9638-7d52f8bb9c8a
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.settore_segnala_me
+  module:
+    - text
+id: node.settore_segnala_me.body
+field_name: body
+entity_type: node
+bundle: settore_segnala_me
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

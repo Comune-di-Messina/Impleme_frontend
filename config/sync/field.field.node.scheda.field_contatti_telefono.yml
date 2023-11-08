@@ -1,0 +1,19 @@
+uuid: afc0189c-155c-47cb-987c-072842f21aab
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contatti_telefono
+    - node.type.scheda
+id: node.scheda.field_contatti_telefono
+field_name: field_contatti_telefono
+entity_type: node
+bundle: scheda
+label: Telefono
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

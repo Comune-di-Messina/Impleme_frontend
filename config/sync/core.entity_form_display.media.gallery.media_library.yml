@@ -1,0 +1,33 @@
+uuid: 4004bdb7-eed9-4861-83d2-23b8666813eb
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.gallery.field_media_image_2
+    - image.style.thumbnail
+    - media.type.gallery
+  module:
+    - focal_point
+id: media.gallery.media_library
+targetEntityType: media
+bundle: gallery
+mode: media_library
+content:
+  field_media_image_2:
+    weight: -50
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+      preview_link: true
+      offsets: '50,50'
+    third_party_settings: {  }
+    type: image_focal_point
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  path: true
+  status: true
+  uid: true

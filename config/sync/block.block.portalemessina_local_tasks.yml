@@ -1,0 +1,42 @@
+uuid: 433fc328-e5f7-4ac2-9f6b-cb94362f7b67
+langcode: en
+status: true
+dependencies:
+  module:
+    - context
+    - user
+  theme:
+    - portalemessina
+_core:
+  default_config_hash: 6eYuBTZR0lqAxdPo20yHxNOj1fnGzACYqgNbWmkITVQ
+id: portalemessina_local_tasks
+theme: portalemessina
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

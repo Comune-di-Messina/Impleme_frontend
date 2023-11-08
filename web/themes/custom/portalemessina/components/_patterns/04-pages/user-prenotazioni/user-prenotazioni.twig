@@ -1,0 +1,49 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+<div class="page-user-prenotazioni{{ pl ? ' h-section-servizi' }}">
+
+  {% include "@molecules/01-modules/hero/hero-simple/hero-simple.twig" with {
+    breadcrumbs: breadcrumbs,
+    title: page_title,
+    content: '',
+    image: ''
+  } %}
+
+
+  <div class="container">
+
+    <div class="dati-content-header row align-items-center py-5">
+      <div class="col-4 col-select">
+        <div class="bootstrap-select-wrapper">
+          {{ FiltroData }}
+        </div>
+      </div>
+      <div class="col-2 col-select">
+        <div class="bootstrap-select-wrapper">
+          {{ SelectStato }}
+        </div>
+      </div>
+    </div>
+
+    <div class="h-grid-2col py-5">
+      {% for prenotazione in elencoprenotazioni %}
+
+        {% include "@molecules/01-modules/custom/card-prenotazione/card-prenotazione.twig" with {
+
+          title: prenotazione.prenotazione_titolo,
+          subtitle: prenotazione.prenotazione_sottotitolo,
+          prenotazione_stato: prenotazione.prenotazione_stato,
+          prenotazione_codice_stato: prenotazione.prenotazione_codice_stato,
+          prenotazione_data: prenotazione.prenotazione_data,
+          prenotazione_pratica: prenotazione.prenotazione_pratica,
+          prenotazione_orario: prenotazione.prenotazione_orario,
+          prenotazione_note: prenotazione.prenotazione_note,
+          prenotazione_url_dettaglio: prenotazione.prenotazione_url
+
+        } %}
+
+      {% endfor %}
+    </div>
+
+  </div>
+
+</div>

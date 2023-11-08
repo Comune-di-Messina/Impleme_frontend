@@ -1,0 +1,28 @@
+uuid: a9b2a992-0801-4c06-ba50-1e809a023933
+langcode: it
+status: true
+dependencies:
+  module:
+    - ctools
+name: header_negative
+label: 'Negative header'
+group: null
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      aggregatore_tema: aggregatore_tema
+      comune: comune
+    negate: false
+    uuid: be8a5eea-dc2d-4a5f-ab8b-8469aa65e939
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  body_class:
+    id: body_class
+    body_class: h-header-neg
+    saved: false
+weight: 0

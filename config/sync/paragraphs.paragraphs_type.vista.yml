@@ -1,0 +1,10 @@
+uuid: 8a57d49c-60dc-45c0-9042-02450873f8c3
+langcode: it
+status: true
+dependencies: {  }
+id: vista
+label: 'Vista collegata'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

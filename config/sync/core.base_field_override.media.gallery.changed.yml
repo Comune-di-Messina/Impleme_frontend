@@ -1,0 +1,18 @@
+uuid: 91f0be7e-d094-4abf-98ed-e5cdc6c24eb9
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.gallery
+id: media.gallery.changed
+field_name: changed
+entity_type: media
+bundle: gallery
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

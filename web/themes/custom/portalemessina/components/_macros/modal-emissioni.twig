@@ -1,0 +1,85 @@
+{% macro modalEmissioniRate(modalName, data) %}
+  <div class="modal-emissioni-rate">
+    <div class="modal" tabindex="-1" role="dialog" id="{{ modalName }}">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="title">
+              <h4 class="modal-title">Rate in cui è scomposta la fattura #{{ data.EmiRiferimento }}</h4>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="table-row my-5 text-center">
+              <div class="table-wrapper">
+                <table width="100%">
+                  <thead>
+                  <tr>
+                    <th>Rata</th>
+                    <th>Importo</th>
+                    <th>Data di scadenza</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  {% for rata in data.EmiRate %}
+                    <tr>
+                      <td>{{ rata.EmiNumRata }}</td>
+                      <td>{{ rata.EmiImpRata }}</td>
+                      <td>{{ rata.EmiDataScaRata }}</td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Chiudi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro modalEmissioniDocumenti(modalName, data) %}
+  <div class="modal-emissioni-documenti">
+    <div class="modal" tabindex="-1" role="dialog" id="{{ modalName }}">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="title">
+              <h4 class="modal-title">Documenti allegati alla fattura</h4>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="table-row my-5 text-center">
+              <div class="table-wrapper">
+                <table width="100%">
+                  <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Contenuto</th>
+                    <th>Oggetto</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  {% for documento in data.EmiDocumenti %}
+                    <tr>
+                      <td>{{ documento.EmiNomeDoc }}</td>
+                      <td>{{ documento.EmiContenutoDoc }}</td>
+                      <td>{{ documento.EmiOggettoDoc }}</td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Chiudi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

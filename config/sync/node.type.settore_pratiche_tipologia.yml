@@ -1,0 +1,18 @@
+uuid: 1d225a7f-5c0c-4e89-add6-bb6a8bd7c9eb
+langcode: it
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Settore Pratiche (Tipologia)'
+type: settore_pratiche_tipologia
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,22 @@
+uuid: 39eb9dfe-e47d-47da-96b3-71443ebfad76
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.evento
+id: node.evento.promote
+field_name: promote
+entity_type: node
+bundle: evento
+label: 'Promosso alla prima pagina'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

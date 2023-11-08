@@ -1,0 +1,90 @@
+<div class="page-node-type-sala">
+  <div class="secondary-bg-light">
+    <div class="container">
+
+      <div class="specifiche form-row">
+        <h3>Specifiche della sala</h3>
+
+        {% for i in 1..4 %}
+          <div class="form-item">
+            <label>{{ label }}</label>
+            <span class="item-value">{{ value }}</span>
+          </div>
+        {% endfor %}
+
+      </div>
+
+      <div class="sezione-tariffe">
+        <div class="tariffa form-row">
+          <h3>Tariffe</h3>
+
+          {% for i in 1..5 %}
+          <div class="form-item">
+            <label>{{ label }}</label>
+            <span class="item-value">{{ value }}</span>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+
+      <div class="container-servizi">
+        <h3>Seleziona i servizi</h3>
+        <div class="list-servizi form-row">
+          {% for i in 1..6 %}
+          <div class="form-check">
+            <input id="servizi-{{ i }}" type="checkbox">
+            <label for="servizi-{{ i }}">
+              {{ label }}
+            </label>
+            <small class="form-text">Lorem ipsum dolor</small>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="container-calendar">
+      <h3>Verifica la disponibilità</h3>
+      <div class="calendario">calendario</div>
+      <div class="orari">
+        <div class="orari-header text-center">
+          <h5 class="text-uppercase">Fasce orarie</h5>
+        </div>
+        <div class="orari-all d-flex justify-content-between align-items-center">
+          <strong>Tutto il giorno</strong>
+          <div class="orari-toggle">
+            <div class="toggles">
+              <label for="toggleEsempio1a">
+                <input type="checkbox" id="toggleEsempio1a">
+                <span class="lever"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="orari-content">
+        {% for i in 1..6 %}
+          <button class="orari-fascia">09:00 - 10:00</button>
+        {% endfor %}
+          <button class="orari-fascia h-selected">18:00 - 19:00</button>
+          <button class="orari-fascia" disabled>19:00 - 20:00</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-privacy form-row">
+      {% for i in 1..6 %}
+      <div class="privacy-item form-check">
+        <input id="privacy-{{ i }}" type="checkbox">
+        <label for="privacy-{{ i }}">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin est magna, euismod vitae tempor sit amet, elementum vel leo. Vestibulum lacinia lacus quis bibendum pulvinar.
+        </label>
+      </div>
+      {% endfor %}
+    </div>
+
+
+  </div>
+</div>

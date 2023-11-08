@@ -1,0 +1,69 @@
+uuid: 6e66f355-a7a1-4ddf-bff0-2820f41df7ff
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.aggregatore.field_elementi_carosello_aggrega
+    - field.field.paragraph.aggregatore.field_immagine
+    - field.field.paragraph.aggregatore.field_tema
+    - field.field.paragraph.aggregatore.field_testo
+    - field.field.paragraph.aggregatore.field_titolo
+    - paragraphs.paragraphs_type.aggregatore
+  module:
+    - inline_entity_form
+    - media_library
+    - text
+id: paragraph.aggregatore.default
+targetEntityType: paragraph
+bundle: aggregatore
+mode: default
+content:
+  field_elementi_carosello_aggrega:
+    weight: 3
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_immagine:
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_tema:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_testo:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_titolo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

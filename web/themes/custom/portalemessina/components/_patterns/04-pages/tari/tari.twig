@@ -1,0 +1,414 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+
+<div class="h-section-servizi">
+  <div class="page-scheda-dati">
+
+  {% include "@molecules/01-modules/hero/hero-simple/hero-simple.twig" with {
+    breadcrumbs: breadcrumbs,
+    title: 'Consultazione TARI',
+    content: '',
+    image: '<img src="' ~ dist_url ~ 'images/hero/tari.jpg">',
+    back: '<a href="/it/servizi/messina">Torna indietro</a>'
+  } %}
+
+  {% if MsgEsito %}
+
+    <div class="container py-5">
+      <div class="alert alert-danger mt-4" role="alert">
+        {{ MsgEsito }}
+      </div>
+    </div>
+
+  {% else %}
+
+    <div class="dati-info py-5">
+      <div class="container">
+        <h3>Dati contribuente</h3>
+        <div class="row">
+          <div class="col">
+            <h6 class="dati-label">Codice contribuente</h6>
+            <div class="dati-content">{{ Contribuenti[0].CodContr }}</div>
+          </div>
+          <div class="col">
+            <h6 class="dati-label">Codice Fiscale</h6>
+            <div class="dati-content">{{ CfiscPiva }}</div>
+          </div>
+          <div class="col">
+            <h6 class="dati-label">Nominativo</h6>
+            <div class="dati-content">{{ Contribuenti[0].Nome }} {{ Contribuenti[0].Cognome }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dati-content py-5 container">
+
+      <ul class="nav nav-tabs auto nav-tabs-hidescroll" role="tablist">
+        <li class="nav-item"><a class="nav-link active" href="#utenze" data-toggle="tab" role="tab" aria-controls="tab1" aria-selected="true">Utenze</a></li>
+        <li class="nav-item"><a class="nav-link" href="#emissioni" data-toggle="tab" role="tab" aria-controls="tab1" aria-selected="false">Emissioni</a></li>
+        <li class="nav-item"><a class="nav-link" href="#accertamenti" data-toggle="tab" role="tab" aria-controls="tab1" aria-selected="false">Accertamenti</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane p-4 active" role="tabpanel" id="utenze">
+          <div class="dati-content-header row align-items-center justify-content-between">
+            <div class="col-title">
+              <h2>Le tue utenze</h2>
+            </div>
+            <div class="col-select">
+              <div class="bootstrap-select-wrapper">
+                {{ SelectContribuenti }}
+              </div>
+            </div>
+          </div>
+
+
+            <div class="table-row my-5 text-center">
+              <div class="table-wrapper">
+                <table width="100%">
+                  <thead>
+                  <tr>
+                    <th class="py-3">Comune</th>
+                    <th class="py-3">Utenza</th>
+                    <th class="py-3">Categoria</th>
+                    <th class="py-3">Superficie</th>
+                    <th class="py-3">Data Decorrenza</th>
+                    <th class="py-3">Data Cessazione</th>
+                    <th class="py-3">Nucleo Fam.</th>
+                    <th class="py-3">Esigibile</th>
+                    <th class="py-3">Dettagli</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  {% for utenza in Contribuenti[0].Utenze %}
+                  <tr class="py-3">
+                    <td class="py-3">{{ utenza.UteComune }}</td>
+                    <td class="py-3">{{ utenza.UteUtenza }}</td>
+                    <td class="py-3">{{ utenza.UteCategoria }}</td>
+                    <td class="pr-3 pl-2" align="right">{{ utenza.UteMisura|number_format(2, ',', '.') }} mq</td>
+                    <td class="py-3">{{ utenza.UteDataDecorrenza }}</td>
+                    <td class="py-3">{{ utenza.UteDataCessaz|default('-') }}</td>
+                    <td class="py-3">{{ utenza.UteNucleo }}</td>
+                    <td class="py-3">{{ utenza.UteFatturabile }}</td>
+                    <td class="py-3">
+                      {% if utenza.UteUbucazioni|length > 0 %}
+                        <a href="#" data-toggle="modal" data-target="#utenze-{{ utenza.UteUtenza }}-details">
+                          <svg class="icon icon-sm icon-primary align-top">
+                            <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-search"></use>
+                          </svg>
+                          <span class="badge badge-light">
+                            {{ utenza.UteUbucazioni|length }}
+                          </span>
+                        </a>
+                        {{ _self.modalUteUbicazioni('utenze-' ~ utenza.UteUtenza, utenza) }}
+                      {% endif %}
+                    </td>
+                  </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+        </div>
+
+        <!-- EMISSIONI -->
+        <div class="tab-pane p-4" role="tabpanel" id="emissioni">
+          <div class="dati-content-header row align-items-center justify-content-between">
+            <div class="col-title">
+              <h2>Le tue emissioni</h2>
+            </div>
+            <div class="col-select">
+              <div class="bootstrap-select-wrapper">
+                {{ SelectContribuenti }}
+              </div>
+            </div>
+          </div>
+          <div class="table-row my-5 text-center">
+            <div class="table-wrapper">
+              <table width="100%">
+                <thead>
+                <tr>
+                  <th>Tipo</th>
+                  <th>Rif. Emissione </th>
+                  <th>Data Emissione</th>
+                  <th>Importo totale pagato</th>
+                  <th>Data di ultimo pagamento</th>
+                  <th>Annullata</th>
+                  <th>Documenti allegati alla fattura</th>
+                  <th>Rate in cui è scomposta la fattura</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for emissione in Contribuenti[0].Emissioni %}
+                <tr>
+                  <td>{{ emissione.EmiTipo|length > 0 ? emissione.EmiTipo : '-' }}</td>
+                  <td>{{ emissione.EmiRiferimento|length > 0 ? emissione.EmiRiferimento : '-' }}</td>
+                  <td>{{ emissione.EmiDataEmissione|length > 0 ? emissione.EmiDataEmissione : '-' }}</td>
+                  <td align="right">{{ emissione.EmiImpPagato|length > 0 ? emissione.EmiImpPagato : '-' }} &euro;</td>
+                  <td>{{ emissione.EmiModPagamento|length > 0 ? emissione.EmiModPagamento : '-' }}</td>
+                  <td>{{ emissione.EmiAnnullata == 'S' ? 'Si' : 'No' }}</td>
+                  <td>
+                    {% set emissioniRateModalName = 'emissioni-rate-' ~ emissione.EmiNumero %}
+                    {% set emissioniDocuModalName = 'emissioni-documenti-' ~ emissione.EmiDocNumero %}
+
+                    <a href="#" data-toggle="modal" data-target="#{{ emissioniDocuModalName }}">
+                      <svg class="icon icon-sm icon-primary align-top">
+                        <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-search"></use>
+                      </svg>
+                    </a>
+                    {{ _self.modalEmissioniDocumenti(emissioniDocuModalName, emissione) }}
+                  </td>
+                  <td>
+                    <a href="#" data-toggle="modal" data-target="#{{ emissioniRateModalName }}">
+                      <svg class="icon icon-sm icon-primary align-top">
+                        <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-search"></use>
+                      </svg>
+                    </a>
+                    {{ _self.modalEmissioniRate(emissioniRateModalName, emissione) }}
+                  </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- ACCERTAMENTI -->
+        <div class="tab-pane p-4" role="tabpanel" id="accertamenti">
+          <div class="dati-content-header row align-items-center justify-content-between">
+            <div class="col-title">
+              <h2>I tuoi accertamenti</h2>
+            </div>
+            <div class="col-select">
+              <div class="bootstrap-select-wrapper">
+                {{ SelectContribuenti }}
+              </div>
+            </div>
+          </div>
+          <div class="table-row my-5 text-center">
+            <div class="table-wrapper">
+              <table width="100%">
+                <thead>
+                <tr>
+                  <th>Tipo</th>
+                  <th>Anno</th>
+                  <th>Numero</th>
+                  <th>Data emissione</th>
+                  <th>Importo</th>
+                  <th>Importo agevolato</th>
+                  <th>Data notifica</th>
+                  <th>Stato</th>
+                  <th>Data chiusura</th>
+                </tr>
+                </thead>
+                <tbody>
+                  {% for accertamento in Contribuenti[0].Accertamenti %}
+                    <tr>
+                      <td>{{ accertamento.AccTipo|length > 0 ? accertamento.AccTipo : '-' }}</td>
+                      <td>{{ accertamento.AccAnno|length > 0 ? accertamento.AccAnno : '-' }}</td>
+                      <td>{{ accertamento.AccNumero|length > 0 ? accertamento.AccNumero : '-' }}</td>
+                      <td>{{ accertamento.AccDataEmis|length > 0 ? accertamento.AccDataEmis : '-' }}</td>
+                      <td align="right">{{ accertamento.AccImporto|length > 0 ? accertamento.AccImporto|number_format(2, ',', '.') : '-' }} &euro;</td>
+                      <td align="right">{{ accertamento.AccImpAgevolato|length > 0 ? accertamento.AccImpAgevolato|number_format(2, ',', '.') : '-' }} &euro;</td>
+                      <td>{{ accertamento.AccDataNotifica|length > 0 ? accertamento.AccDataNotifica : '-' }}</td>
+                      <td>{{ accertamento.AccStato|length > 0 ? accertamento.AccStato : '-' }}</td>
+                      <td>-</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{# Modal uteUbicazioni #}
+{% macro modalUteUbicazioni(modalName, data) %}
+  <div class="utenze-dettagli">
+    <div class="modal" tabindex="-1" role="dialog" id="{{ modalName }}-details">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="title">
+              <h4 class="modal-title">Dettagli utenza #{{ data.UteUtenza }}</h4>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="table-row my-5 text-center">
+              <div class="table-wrapper">
+                <table width="100%">
+                  <thead>
+                  <tr>
+                    <th>Ubicazione principale</th>
+                    <th>Categoria</th>
+                    <th>Indirizzo</th>
+                    <th>Superficie</th>
+                    <th>Sezione</th>
+                    <th>Foglio</th>
+                    <th>Particella</th>
+                    <th>Sub</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  {% for ubicazione in data.UteUbucazioni %}
+                    <tr>
+                      <td>{{ ubicazione.UbiPrincipale == 'S' ? 'Si' : 'No' }}</td>
+                      <td>{{ data.UteCategoria|length > 0 ? data.UteCategoria : '-' }}</td>
+                      <td>{{ ubicazione.UbiIndirizzo|length > 0 ? ubicazione.UbiIndirizzo : '-' }}</td>
+                      <td align="right">{{ ubicazione.UbiMisura|length > 0 ? ubicazione.UbiMisura|number_format(2, ',', '.') : '-' }} mq</td>
+                      <td>{{ ubicazione.UbiSezione|length > 0 ? ubicazione.UbiSezione : '-' }}</td>
+                      <td>{{ ubicazione.UbiFoglio|length > 0 ? ubicazione.UbiFoglio : '-' }}</td>
+                      <td>{{ ubicazione.UbiParticella|length > 0 ? ubicazione.UbiParticella : '-' }}</td>
+                      <td>{{ ubicazione.UbiSubalterno|length > 0 ? ubicazione.UbiSubalterno : '-' }}</td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="table-wrapper">
+              <table width="100%" class="mt-5 text-center">
+                <thead>
+                <tr>
+                  <th>Riduzioni</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>
+                    {% for riduzione in data.UteRiduzioni %}
+                      <div>{{ riduzione.RidDescrizione|default('-') }}</div>
+                    {% else %}
+                      -
+                    {% endfor %}
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-wrapper">
+              <table width="100%" class="mt-5 text-center">
+                <thead>
+                <tr>
+                  <th>Maggiorazioni</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>
+                    {% for maggiorazione in data.UteAggiuntivi %}
+                      <div>{{ maggiorazione.AggDescrizione|default('-') }}</div>
+                    {% else %}
+                      -
+                    {% endfor %}
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Chiudi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{# Modal emiRate #}
+{% macro modalEmissioniRate(modalName, data) %}
+  <div class="modal-emissioni-rate">
+    <div class="modal" tabindex="-1" role="dialog" id="{{ modalName }}">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="title">
+              <h4 class="modal-title">Rate in cui è scomposta la fattura {{ data.EmiRiferimento }}</h4>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="table-row my-5 text-center">
+              <div class="table-wrapper">
+                <table width="100%">
+                  <thead>
+                  <tr>
+                    <th>Rata</th>
+                    <th>Importo</th>
+                    <th>Data di scadenza</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  {% for rata in data.EmiRate %}
+                    <tr>
+                      <td>{{ rata.EmiNumRata }}</td>
+                      <td align="right">{{ rata.EmiImpRata|number_format(2, ',', '.') }} &euro;</td>
+                      <td>{{ rata.EmiDataScaRata }}</td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Chiudi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{# Modal emiRateDoc #}
+{% macro modalEmissioniDocumenti(modalName, data) %}
+  <div class="modal-emissioni-documenti">
+    <div class="modal" tabindex="-1" role="dialog" id="{{ modalName }}">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="title">
+              <h4 class="modal-title">Documenti allegati alla fattura</h4>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="table-row my-5 text-center">
+              <div class="table-wrapper">
+                <table width="100%">
+                  <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Contenuto</th>
+                    <th>Oggetto</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  {% for documento in data.EmiDocumenti %}
+                    <tr>
+                      <td>{{ documento.EmiNomeDoc }}</td>
+                      <td>{{ documento.EmiContenutoDoc }}</td>
+                      <td>{{ documento.EmiOggettoDoc }}</td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Chiudi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+

@@ -1,0 +1,7 @@
+uuid: 5e5ca416-f43c-4749-84bc-4583004218ad
+langcode: it
+status: true
+dependencies: {  }
+name: cover
+label: Cover
+effects: {  }

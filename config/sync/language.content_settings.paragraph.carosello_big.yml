@@ -1,0 +1,18 @@
+uuid: 858af323-e0b8-4afb-b923-057fa1062963
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.carosello_big
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.carosello_big
+target_entity_type_id: paragraph
+target_bundle: carosello_big
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,18 @@
+uuid: 56da8212-27dd-4de7-9786-72644a855d37
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.aggregatore_servizi
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.aggregatore_servizi
+target_entity_type_id: node
+target_bundle: aggregatore_servizi
+default_langcode: site_default
+language_alterable: true

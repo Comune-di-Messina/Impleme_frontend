@@ -1,0 +1,19 @@
+uuid: 8638c862-a4b0-4cf0-9ba7-95e07fe9cb9f
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sito_web
+    - node.type.guida_turistica
+id: node.guida_turistica.field_sito_web
+field_name: field_sito_web
+entity_type: node
+bundle: guida_turistica
+label: 'Sito web'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,26 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+
+<div class="page-user{{ pl ? ' h-section-servizi' }}">
+
+  {% include "@molecules/01-modules/hero/hero-simple/hero-simple.twig" with {
+    breadcrumbs: breadcrumbs,
+    title: 'Personal area<br> of '|t ~ spid_name,
+    content: '',
+    image: ''
+  } %}
+
+
+  <div class="container">
+
+    <div class="dati-content-header row align-items-center justify-content-between">
+      <div class="col-title">
+        <h2>{{ "Available services"|t }}</h2>
+      </div>
+      <div class="col-3 col-select">
+        {{ selectComuni }}
+      </div>
+    </div>
+
+  </div>
+
+</div>

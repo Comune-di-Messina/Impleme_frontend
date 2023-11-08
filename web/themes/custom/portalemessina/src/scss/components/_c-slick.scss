@@ -1,0 +1,60 @@
+.carousel {
+  .slick-track {
+    display: flex;
+    min-width: 100%;
+    .slick-slide {
+      box-shadow: none;
+      height: inherit !important;
+    }
+  }
+  .slick-arrow {
+    background-color: $color-blue;
+    border-radius: 50%;
+    border: 0;
+    color: $color-white;
+    display: block;
+    font-size: 0;
+    height: $gap * 6;
+    overflow: hidden;
+    position: relative;
+    width: $gap * 6;
+    margin: 1rem;
+    &.slick-disabled {
+      display: none !important;
+    }
+    &::before {
+      display: block;
+      font-size: $font-medium;
+      font-weight: 700;
+      margin-top: -.15rem;
+    }
+    &.carousel-next::before {
+      content: '→';
+    }
+    &.carousel-prev::before {
+      content: '←';
+    }
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    button {
+      background-color: $color-white;
+      border-radius: 50%;
+      border: 0;
+      font-size: 0;
+      height: $gap;
+      padding: 0;
+      width: $gap;
+    }
+    li + li {
+      margin-left: $gap;
+    }
+    .slick-active button {
+      background-color: $color-blue;
+    }
+  }
+}

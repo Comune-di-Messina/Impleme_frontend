@@ -1,0 +1,17 @@
+uuid: 702ec0c5-cc5e-4508-a72d-38eac3a52b5a
+langcode: it
+status: true
+dependencies:
+  module:
+    - focal_point
+name: image_medium
+label: '[945x700] Image medium'
+effects:
+  9dd38c4b-540a-4d85-9524-dabc3e9e7450:
+    uuid: 9dd38c4b-540a-4d85-9524-dabc3e9e7450
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 945
+      height: 700
+      crop_type: focal_point

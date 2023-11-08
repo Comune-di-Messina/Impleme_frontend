@@ -1,0 +1,10 @@
+uuid: c203c0b1-4612-49a8-9840-7e91c5e794f6
+langcode: it
+status: true
+dependencies: {  }
+id: carosello_big
+label: 'Carosello - big'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

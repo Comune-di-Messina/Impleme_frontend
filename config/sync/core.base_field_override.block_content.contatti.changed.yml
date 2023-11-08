@@ -1,0 +1,18 @@
+uuid: 84ed50fb-ed57-4c83-8508-e08011fc34c0
+langcode: it
+status: true
+dependencies:
+  config:
+    - block_content.type.contatti
+id: block_content.contatti.changed
+field_name: changed
+entity_type: block_content
+bundle: contatti
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

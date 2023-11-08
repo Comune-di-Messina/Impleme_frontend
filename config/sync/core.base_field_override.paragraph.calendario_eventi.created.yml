@@ -1,0 +1,18 @@
+uuid: f86a5693-c7e7-4a44-96f9-2b3e63f3104f
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.calendario_eventi
+id: paragraph.calendario_eventi.created
+field_name: created
+entity_type: paragraph
+bundle: calendario_eventi
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,9 @@
+uuid: f0a53e2c-15ec-4b19-989f-a1e79c4c52ef
+langcode: it
+status: true
+dependencies: {  }
+id: it
+label: Ita
+direction: ltr
+weight: -10
+locked: false

@@ -1,0 +1,28 @@
+uuid: 67d2cbc1-9546-4da8-a3c6-3ba16cdd5937
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cover
+    - media.type.cover
+    - node.type.aggregatore_tema
+id: node.aggregatore_tema.field_cover
+field_name: field_cover
+entity_type: node
+bundle: aggregatore_tema
+label: Cover
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      cover: cover
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

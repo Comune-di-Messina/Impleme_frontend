@@ -1,0 +1,21 @@
+uuid: 99aeb501-62e9-4311-b85b-207c679b319d
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_testo
+    - paragraphs.paragraphs_type.carosello_con_testata_big
+  module:
+    - text
+id: paragraph.carosello_con_testata_big.field_testo
+field_name: field_testo
+entity_type: paragraph
+bundle: carosello_con_testata_big
+label: Testo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

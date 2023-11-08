@@ -1,0 +1,17 @@
+uuid: 743eee33-34a7-42de-8c7a-1b845aaa62f2
+langcode: it
+status: true
+dependencies:
+  module:
+    - focal_point
+name: thumb_gallery
+label: '[700x460] Thumb gallery'
+effects:
+  58e2e67b-5f8a-43c2-9fad-dbfec8cbdf4c:
+    uuid: 58e2e67b-5f8a-43c2-9fad-dbfec8cbdf4c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 460
+      crop_type: focal_point

@@ -1,0 +1,133 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+{%
+  set classes = [
+  'module',
+  'card card-dati card-pagamento',
+  'no-after p-0 rounded shadow'
+]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+
+  <div class="card-header secondary-bg p-4">
+    {% if title|render %}
+      <h3 class="card-title mb-2 mt-0">{{ title }}</h3>
+    {% endif %}
+  </div>
+  <div class="card-content">
+    <div class="card-content-main p-3">
+      <div class="w-100 row">
+        <div class="dati-block col-4 py-3">
+          <div class="dati-label text-uppercase">Anno</div>
+          <div class="dati-content">{{ pagamento_anno }}</div>
+        </div>
+        <div class="dati-block col-8 py-3">
+          <div class="dati-label text-uppercase">Ente</div>
+          <div class="dati-content text-truncate">{{ pagamento_ente }}</div>
+        </div>
+        <div class="dati-block col-4 py-3">
+          <div class="dati-label text-uppercase">Servizio</div>
+          <div class="dati-content text-truncate">{{ pagamento_servizio ? pagamento_servizio : '-' }}</div>
+        </div>
+        <div class="dati-block col-8 py-3">
+          <div class="dati-label text-uppercase">Causale</div>
+          <div class="dati-content text-truncate">{{ pagamento_causale }}</div>
+        </div>
+        <div class="dati-block col-4 py-3">
+          <div class="dati-label text-uppercase">Data emissione</div>
+          <div class="dati-content">{{ pagamento_emissione|date("d/n/Y") }}</div>
+        </div>
+        <div class="dati-block col-4 py-3">
+          <div class="dati-label text-uppercase">Data scadenza</div>
+          <div class="dati-content">{{ pagamento_scadenza|date("d/n/Y") }}</div>
+        </div>
+        {% if pagamento_url_ricevuta|render %}
+        <div class="dati-block col-4 py-3">
+          <div class="dati-label text-uppercase">Data pagamento</div>
+          <div class="dati-content">{{ pagamento_pagamento|date("d/n/Y") }}</div>
+        </div>
+        {% endif %}
+        <div class="dati-block col-4 py-3">
+          <div class="dati-label text-uppercase">IUV</div>
+          <div class="dati-content">{{ pagamento_iuv }}</div>
+        </div>
+        <div class="dati-block col-4 py-3">
+          <div class="dati-label text-uppercase">Importo</div>
+          <div class="dati-content">{{ pagamento_importo|number_format(2, ',', '.') }} €</div>
+        </div>
+        {% if pagamento_url_ricevuta|render %}
+        <div class="dati-block col-4 py-3">
+          <div class="dati-label text-uppercase">Stato</div>
+          <div class="dati-content">{{ pagamento_stato }}</div>
+        </div>
+        {% endif %}
+      </div>
+      <div class="row">
+        {% if pagamento_url_ricevuta|render %}
+          <a class="btn btn-primary btn-xs btn-icon" href="{{ pagamento_url_ricevuta }}">
+          Scarica ricevuta telematica
+            <svg class="icon icon-white ml-2">
+              <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-download"></use>
+            </svg>
+          </a>
+        {% endif %}
+        {% if pagamento_url_paga|render %}
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-{{ pagamento_iuv }}">
+            Paga
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" tabindex="-1" role="dialog" id="modal-{{ pagamento_iuv }}" aria-labelledby="modal-{{ pagamento_iuv }}-title" data-user="{{ pagamento_url_paga }}" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg rounded" role="document">
+              <div class="modal-content container">
+                <div class="row">
+                  <div class="col-8 p-4">
+                    <h3 class="m-0 col-header mb-3" id="modal-{{ pagamento_url_paga }}-title">Riepilogo pagamento</h3>
+                    <div class="row">
+                      <div class="col">
+                        <div class="dati-label text-uppercase">Codice Fiscale</div>
+                        <div class="dati-content">{{ codice_fiscale }}</div>
+                      </div>
+                      <div class="col">
+                        <div class="dati-label text-uppercase">Codice IUV</div>
+                        <div class="dati-content">{{ pagamento_iuv }}</div>
+                      </div>
+                      <div class="col">
+                        <div class="dati-label text-uppercase">Codice Servizio</div>
+                        <div class="dati-content">{{ codice_servizio }}</div>
+                      </div>
+                    </div>
+                    <div class="mt-2">
+                      <button class="btn-inline mt-5" type="button" data-dismiss="modal" aria-label="Torna indietro">
+                        <svg class="icon icon-sm">
+                          <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-arrow-left-circle"></use>
+                        </svg>
+                        Torna indietro
+                      </button>
+                    </div>
+                  </div>
+                  <div class="secondary-bg-light col-4 p-4">
+                    <div class="col-header mb-3">
+                      <svg class="icon icon-white">
+                        <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-card"></use>
+                      </svg>
+                    </div>
+                    <div class="dati-label text-uppercase">Totale importo</div>
+                    <div class="dati-content">{{ pagamento_importo|number_format(2, ',', '.') }} €</div>
+                    <div class="mt-5">
+                      <a class="btn btn-primary pagopa btn-xs btn-icon" href="{{ pagamento_url_paga }}">
+                        <span class="h-icon h-pago-pa mr-1"></span>
+                        Paga
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</div>
+

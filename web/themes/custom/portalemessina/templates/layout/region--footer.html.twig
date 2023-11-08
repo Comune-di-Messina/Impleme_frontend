@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region div.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{% extends "@organisms/00-global/footer/footer.twig" %}
+
+{% block nav_logos %}
+  {{ elements['loghiprefooter'] }}
+{% endblock %}
+
+{% block nav_main %}
+  {{ elements['navigazioneprincipale'] }}
+  {{ elements['argomenti_servizi'] }}
+{% endblock %}
+
+{% block nav_contacts %}
+  {{ elements['contattifooter'] }}
+{% endblock %}
+
+{% block nav_socials %}
+  {{ elements['social'] }}
+{% endblock %}
+
+{% block nav_secondary %}
+  {{ elements['footerlinks'] }}
+{% endblock %}
+

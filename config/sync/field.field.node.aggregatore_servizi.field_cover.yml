@@ -1,0 +1,28 @@
+uuid: 280122a7-717d-470a-bf2e-a01571569bdf
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cover
+    - media.type.cover
+    - node.type.aggregatore_servizi
+id: node.aggregatore_servizi.field_cover
+field_name: field_cover
+entity_type: node
+bundle: aggregatore_servizi
+label: Cover
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      cover: cover
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

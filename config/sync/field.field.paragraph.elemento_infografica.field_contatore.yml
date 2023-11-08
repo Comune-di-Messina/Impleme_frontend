@@ -1,0 +1,75 @@
+uuid: c7d57a49-1932-415a-aae9-f41bc7c23e9c
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contatore
+    - paragraphs.paragraphs_type.elemento_infografica
+    - views.view.api_mobile
+  module:
+    - viewsreference
+id: paragraph.elemento_infografica.field_contatore
+field_name: field_contatore
+entity_type: paragraph
+bundle: elemento_infografica
+label: Contatore
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    options:
+      title: 0
+      argument: ''
+    display_id: default
+    argument: null
+    title: 0
+    data: null
+    target_uuid: 941406dd-705d-4cdf-94b8-94f11be30d7d
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    rest_export: 0
+    page: 0
+    entity_reference: 0
+    attachment: 0
+    feed: 0
+  preselect_views:
+    contatore_itinerari: contatore_itinerari
+    contatore_scheda_dettaglio: contatore_scheda_dettaglio
+    contatore_scheda_servizio: contatore_scheda_servizio
+    prova_2: prova_2
+    api_mobile: 0
+    api_mobile_v1_taxonomy: 0
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    content: 0
+    content_recent: 0
+    contenuti_er: 0
+    eventi: 0
+    files: 0
+    frontpage: 0
+    guide_agenzie_turistiche: 0
+    itinerari: 0
+    media: 0
+    media_library: 0
+    prova: 0
+    sale: 0
+    schede: 0
+    search: 0
+    servizi_area_personale: 0
+    taxonomy_term: 0
+    temi: 0
+    temi_er: 0
+    user_admin_people: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

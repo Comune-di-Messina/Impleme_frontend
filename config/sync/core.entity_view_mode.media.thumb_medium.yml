@@ -1,0 +1,10 @@
+uuid: c8dc10e7-122c-42e3-b5d6-c9476ea35e8b
+langcode: it
+status: true
+dependencies:
+  module:
+    - media
+id: media.thumb_medium
+label: '[650x300] Thumb medium'
+targetEntityType: media
+cache: true

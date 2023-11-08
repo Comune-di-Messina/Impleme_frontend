@@ -1,0 +1,23 @@
+uuid: 50e2df4a-6f8f-44b8-8bfb-1db49658b38f
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abstract
+    - node.type.scheda_servizio
+  module:
+    - text
+id: node.scheda_servizio.field_abstract
+field_name: field_abstract
+entity_type: node
+bundle: scheda_servizio
+label: Abstract
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

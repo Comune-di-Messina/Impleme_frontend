@@ -1,0 +1,42 @@
+uuid: d0e04ea5-4b64-472b-86ea-ae4866ce5e3e
+langcode: it
+status: true
+dependencies:
+  content:
+    - 'block_content:loghi_prefooter:a037ddef-7d69-46c5-bd7b-a2354b6e32bd'
+  module:
+    - block_content
+    - context
+    - system
+  theme:
+    - portalemessina
+id: loghiprefooter
+theme: portalemessina
+region: footer
+weight: -7
+provider: null
+plugin: 'block_content:a037ddef-7d69-46c5-bd7b-a2354b6e32bd'
+settings:
+  id: 'block_content:a037ddef-7d69-46c5-bd7b-a2354b6e32bd'
+  label: 'Loghi prefooter'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '/*'
+    negate: false
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }

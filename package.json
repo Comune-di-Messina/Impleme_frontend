@@ -1,0 +1,39 @@
+{
+  "name": "portale-messina",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gitlab.com:sixeleven_it/portale-messina.git",
+  "author": "Luca Pomero <lpomero@vdu.it>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@googlemaps/js-api-loader": "1.11.3",
+    "axios": "^0.21.0",
+    "css-loader": "^5.0.1",
+    "drupal-webpack": "file:./web/modules/contrib/webpack",
+    "drupal-webpack-babel": "file:./web/modules/contrib/webpack_babel",
+    "js-base64": "^3.6.0",
+    "v-calendar": "^2.1.2",
+    "vue": "^2.6.12",
+    "vue-axios": "^3.2.0",
+    "vue-loader": "^15.9.5",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-vue": "^7.3.0",
+    "prettier": "^1.14.0",
+    "webpack": "^4.44.2"
+  },
+  "scripts": {
+    "lint": "eslint"
+  }
+}

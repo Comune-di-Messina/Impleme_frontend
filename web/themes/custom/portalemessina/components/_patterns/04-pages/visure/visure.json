@@ -1,0 +1,66 @@
+{
+  "ricercaSoggettiResponse": {
+    "individuoCompleto": {
+      "datiSoggetto": {
+        "datiIndividuo": {
+          "idAnagrafico": "45933",
+          "cognome": "MEME'",
+          "nome": "MARINA",
+          "sesso": "F",
+          "codiceFiscale": "MMEMRN56M48A366E"
+        },
+        "datiNascita": {
+          "denominazioneComune": "ARCEVIA",
+          "siglaProvinciaStato": "AN",
+          "attoNascita": {
+            "denominazioneComune": "ARCEVIA",
+            "siglaProvinciaStato": "AN",
+            "atto": "1956/90/1/A"
+          }
+        },
+        "datiStatoCivile": {
+          "statoCivile": {
+            "statoCivileDescrizione": "CONIUGATA",
+            "statoCivile": "2"
+          },
+          "matrimonio": {
+            "luogoMatrimonio": "SENIGALLIA",
+            "coniuge": {
+              "idAnagrafico": "",
+              "cognome": "CONZ",
+              "nome": "JEAN MARIE",
+              "sesso": "",
+              "codiceFiscale": ""
+            },
+            "data": "10/06/1978"
+          }
+        },
+        "datiImmigrazione": {
+          "denominazioneComune": "",
+          "siglaProvinciaStato": "",
+          "dataImmigrazione": "20/07/1978",
+          "numeroPraticaImmigrazione": ""
+        },
+        "causalePresenza": "20"
+      },
+      "indirizzoResidenza": {
+        "indirizzo": "RUE DU MONT-TERRI UlterIndir:30",
+        "frazione": "",
+        "cap": "2900",
+        "denominazioneComune": "PORRENTRUY",
+        "siglaProvinciaStato": "CH",
+        "tipoFamiglia": "A",
+        "numeroFamiglia": "351"
+      }
+    },
+    "esito": {
+      "codice": "OK",
+      "testo": "Servizio Riuscito, Soggetto Trovato. Mostrati i dati per il profilo: SYSTEM"
+    }
+  },
+  "visure_dati": "",
+  "visure_nucleofam": "",
+  "errore": "",
+  "breadcrumbs": "",
+  "formQualcosaNonTorna": ""
+}

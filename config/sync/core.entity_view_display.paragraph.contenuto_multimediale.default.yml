@@ -1,0 +1,14 @@
+uuid: a98180fb-707f-40b3-9cc5-873429baf9ec
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contenuto_multimediale.field_contenuto_multimediale
+    - paragraphs.paragraphs_type.contenuto_multimediale
+id: paragraph.contenuto_multimediale.default
+targetEntityType: paragraph
+bundle: contenuto_multimediale
+mode: default
+content: {  }
+hidden:
+  field_contenuto_multimediale: true

@@ -1,0 +1,10 @@
+uuid: 9a7fffb5-6b45-491a-8483-d04a5e41abea
+langcode: it
+status: true
+dependencies: {  }
+id: tappe
+label: Tappe
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

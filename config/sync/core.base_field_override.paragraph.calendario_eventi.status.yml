@@ -1,0 +1,22 @@
+uuid: 333ba461-79cd-4d83-861b-0d0ba1213234
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.calendario_eventi
+id: paragraph.calendario_eventi.status
+field_name: status
+entity_type: paragraph
+bundle: calendario_eventi
+label: Pubblicato
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

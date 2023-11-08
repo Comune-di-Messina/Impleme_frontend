@@ -1,0 +1,14 @@
+image: https://via.placeholder.com/480x360/ebebeb/808080/
+image_teaser: https://via.placeholder.com/480x360/ebebeb/808080/
+video: https://www.youtube.com/?gl=IT&hl=it
+category:  Faker.word(1)
+date: Faker.date(d-m-Y, now)
+title: Faker.sentence(3, false)
+content: Faker.paragraph(1)
+address: Address
+link: Read more
+
+###
+
+ui_pattern_definition:
+  label: Module - Card teaser map

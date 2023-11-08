@@ -1,0 +1,18 @@
+uuid: 399b2a3b-a41f-4bb9-adb4-50e4636d6961
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.comune_servizi
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.comune_servizi
+target_entity_type_id: node
+target_bundle: comune_servizi
+default_langcode: site_default
+language_alterable: true

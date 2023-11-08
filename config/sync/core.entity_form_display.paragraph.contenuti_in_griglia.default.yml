@@ -1,0 +1,35 @@
+uuid: cd294810-872e-440d-bac0-694af0f98ecc
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contenuti_in_griglia.field_contenuti_servizi
+    - field.field.paragraph.contenuti_in_griglia.field_immagine
+    - paragraphs.paragraphs_type.contenuti_in_griglia
+  module:
+    - media_library
+id: paragraph.contenuti_in_griglia.default
+targetEntityType: paragraph
+bundle: contenuti_in_griglia
+mode: default
+content:
+  field_contenuti_servizi:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_immagine:
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+hidden:
+  created: true
+  status: true

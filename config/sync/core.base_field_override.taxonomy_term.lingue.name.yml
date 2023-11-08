@@ -1,0 +1,18 @@
+uuid: f12f650e-5b28-4568-be80-aacc0b2c2ec5
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.lingue
+id: taxonomy_term.lingue.name
+field_name: name
+entity_type: taxonomy_term
+bundle: lingue
+label: Nome
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

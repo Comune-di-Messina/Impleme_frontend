@@ -1,0 +1,25 @@
+uuid: 0048dd2d-3a68-48d4-ab53-892a56e2b578
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_elementi_carosello_small
+    - paragraphs.paragraphs_type.carosello_con_testata_small
+id: paragraph.carosello_con_testata_small.field_elementi_carosello_small
+field_name: field_elementi_carosello_small
+entity_type: paragraph
+bundle: carosello_con_testata_small
+label: 'Elementi carosello'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: contenuti_er
+      display_name: entity_reference_4
+      arguments: {  }
+field_type: entity_reference

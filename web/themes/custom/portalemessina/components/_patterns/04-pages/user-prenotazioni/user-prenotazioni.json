@@ -1,0 +1,63 @@
+{
+  "page_title": "Le tue prenotazioni",
+  "elencoprenotazioni": [
+    {
+      "prenotazione_titolo": "Sala ovale \"Antonino Caponnetto\"",
+      "prenotazione_sottotitolo": "Titolo dell'evento",
+      "prenotazione_codice_stato": 1,
+      "prenotazione_stato": "In lavorazione",
+      "prenotazione_data": "16 maggio / 20 maggio",
+      "prenotazione_pratica": "111111",
+      "prenotazione_orario": "15:00 / 17:00",
+      "prenotazione_note": "Si richiede copia dello statuto",
+      "prenotazione_url": "/themes/custom/portalemessina/pattern-lab/public/?p=pages-user-prenotazione-dettaglio"
+    },
+    {
+      "prenotazione_titolo": "Sala ovale \"Antonino Caponnetto\"",
+      "prenotazione_sottotitolo": "Titolo dell'evento",
+      "prenotazione_codice_stato": 2,
+      "prenotazione_stato": "In attesa di integrazione",
+      "prenotazione_data": "16 maggio / 20 maggio",
+      "prenotazione_pratica": "111111",
+      "prenotazione_orario": "15:00 / 17:00",
+      "prenotazione_note": "Si richiede copia dello statuto",
+      "prenotazione_url": "/themes/custom/portalemessina/pattern-lab/public/?p=pages-user-prenotazione-dettaglio"
+    },
+    {
+      "prenotazione_titolo": "Salone delle bandiere",
+      "prenotazione_sottotitolo": "Titolo dell'evento",
+      "prenotazione_codice_stato": 3,
+      "prenotazione_stato": "In attesa di pagamento",
+      "prenotazione_data": "16 maggio / 20 maggio",
+      "prenotazione_pratica": "111111",
+      "prenotazione_orario": "15:00 / 17:00",
+      "prenotazione_note": "Si richiede copia dello statuto",
+      "prenotazione_url": "/themes/custom/portalemessina/pattern-lab/public/?p=pages-user-prenotazione-dettaglio"
+    },
+    {
+      "prenotazione_titolo": "Atrio Palazzo Zancla",
+      "prenotazione_sottotitolo": "Titolo dell'evento",
+      "prenotazione_codice_stato": 4,
+      "prenotazione_stato": "Approvata",
+      "prenotazione_data": "16 maggio / 20 maggio",
+      "prenotazione_pratica": "111111",
+      "prenotazione_orario": "15:00 / 17:00",
+      "prenotazione_note": "-",
+      "prenotazione_url": "/themes/custom/portalemessina/pattern-lab/public/?p=pages-user-prenotazione-dettaglio"
+    },
+    {
+      "prenotazione_titolo": "Sala giunta \"Falcone Borsellino\"",
+      "prenotazione_sottotitolo": "Titolo dell'evento",
+      "prenotazione_codice_stato": 5,
+      "prenotazione_stato": "Rifiutata",
+      "prenotazione_data": "16 maggio / 20 maggio",
+      "prenotazione_pratica": "111111",
+      "prenotazione_orario": "15:00 / 17:00",
+      "prenotazione_note": "Pagamento non avvenuto entro i termini indicati",
+      "prenotazione_url": "/themes/custom/portalemessina/pattern-lab/public/?p=pages-user-prenotazione-dettaglio"
+    }
+  ],
+  "breadcrumbs": "",
+  "FiltroData": "",
+  "SelectStato": ""
+}

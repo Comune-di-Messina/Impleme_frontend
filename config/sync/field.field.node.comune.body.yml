@@ -1,0 +1,23 @@
+uuid: ec9c2651-1ddf-47e8-8080-fbd7d7920b48
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.comune
+  module:
+    - text
+id: node.comune.body
+field_name: body
+entity_type: node
+bundle: comune
+label: Corpo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

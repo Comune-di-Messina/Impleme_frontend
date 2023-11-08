@@ -1,0 +1,10 @@
+uuid: 8b4d954c-cf92-4a82-87a4-2887bc0d05cb
+langcode: it
+status: true
+dependencies:
+  module:
+    - media
+id: media.thumb_small
+label: '[540x285] Thumb small'
+targetEntityType: media
+cache: true

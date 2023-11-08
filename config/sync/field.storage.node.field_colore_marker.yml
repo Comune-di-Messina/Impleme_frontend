@@ -1,0 +1,20 @@
+uuid: 358113f6-328b-4a2a-86cd-12461980a0b9
+langcode: it
+status: true
+dependencies:
+  module:
+    - color_field
+    - node
+id: node.field_colore_marker
+field_name: field_colore_marker
+entity_type: node
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

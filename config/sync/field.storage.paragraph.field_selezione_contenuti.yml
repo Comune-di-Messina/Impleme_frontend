@@ -1,0 +1,20 @@
+uuid: b197b33d-8386-4ba2-bb87-019215f6f1ba
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_selezione_contenuti
+field_name: field_selezione_contenuti
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

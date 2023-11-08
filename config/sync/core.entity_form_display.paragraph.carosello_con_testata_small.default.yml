@@ -1,0 +1,84 @@
+uuid: 11e6d321-197c-4990-a127-107295400be3
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carosello_con_testata_small.field_elementi_carosello_small
+    - field.field.paragraph.carosello_con_testata_small.field_immagine
+    - field.field.paragraph.carosello_con_testata_small.field_link
+    - field.field.paragraph.carosello_con_testata_small.field_tema
+    - field.field.paragraph.carosello_con_testata_small.field_testo
+    - field.field.paragraph.carosello_con_testata_small.field_titolo
+    - paragraphs.paragraphs_type.carosello_con_testata_small
+  module:
+    - inline_entity_form
+    - link
+    - media_library
+    - text
+id: paragraph.carosello_con_testata_small.default
+targetEntityType: paragraph
+bundle: carosello_con_testata_small
+mode: default
+content:
+  field_elementi_carosello_small:
+    weight: 4
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_immagine:
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_tema:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_testo:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_titolo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

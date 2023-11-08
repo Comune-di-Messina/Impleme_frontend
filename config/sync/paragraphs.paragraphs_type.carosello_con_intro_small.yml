@@ -1,0 +1,10 @@
+uuid: 9f244516-90cd-4661-b267-f7e14f4eaf02
+langcode: it
+status: true
+dependencies: {  }
+id: carosello_con_intro_small
+label: 'Carosello - con intro - small'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

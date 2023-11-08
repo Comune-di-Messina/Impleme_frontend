@@ -1,0 +1,10 @@
+uuid: 1af6ceb3-9fc5-440e-885d-c34e890bd1ed
+langcode: it
+status: true
+dependencies: {  }
+id: blocchi_di_selezione_del_comune
+label: 'Blocchi di selezione del comune'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

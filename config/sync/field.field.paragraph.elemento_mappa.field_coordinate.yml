@@ -1,0 +1,22 @@
+uuid: c13a866a-d207-40f9-bd4b-7ec466a0c123
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_coordinate
+    - paragraphs.paragraphs_type.elemento_mappa
+  module:
+    - geofield
+id: paragraph.elemento_mappa.field_coordinate
+field_name: field_coordinate
+entity_type: paragraph
+bundle: elemento_mappa
+label: Coordinate
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

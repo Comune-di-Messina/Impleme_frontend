@@ -1,0 +1,14 @@
+{%
+  set classes = [
+  'article',
+  'image-full',
+  'my-5'
+]
+%}
+
+<article {{ attributes.addClass(classes) }}>
+  {% include "@atoms/03-images/figure/figure.twig" with {
+    image: image,
+    caption: image_caption
+  } %}
+</article>

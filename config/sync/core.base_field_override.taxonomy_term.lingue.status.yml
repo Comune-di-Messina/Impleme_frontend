@@ -1,0 +1,22 @@
+uuid: d13f80fe-fc3f-4623-9a0a-818fe8c3b77f
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.lingue
+id: taxonomy_term.lingue.status
+field_name: status
+entity_type: taxonomy_term
+bundle: lingue
+label: Pubblicato
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

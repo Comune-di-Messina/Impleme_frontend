@@ -1,0 +1,25 @@
+uuid: 69c128f3-0b9a-4bf0-96fb-08e992cb5a44
+langcode: it
+status: true
+dependencies:
+  config:
+    - system.menu.footer-links
+  module:
+    - system
+  theme:
+    - portalemessina
+id: footerlinks
+theme: portalemessina
+region: footer
+weight: -2
+provider: null
+plugin: 'system_menu_block:footer-links'
+settings:
+  id: 'system_menu_block:footer-links'
+  label: 'Footer links'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

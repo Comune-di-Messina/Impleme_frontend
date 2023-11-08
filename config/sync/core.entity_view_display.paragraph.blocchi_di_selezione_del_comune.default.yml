@@ -1,0 +1,38 @@
+uuid: 476cff6f-240f-4ecd-9277-9bc46fbd718d
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blocchi_di_selezione_del_comune.field_moduli
+    - paragraphs.paragraphs_type.blocchi_di_selezione_del_comune
+  module:
+    - ds
+    - entity_reference_revisions
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_block_selection
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      modules:
+        - field_moduli
+id: paragraph.blocchi_di_selezione_del_comune.default
+targetEntityType: paragraph
+bundle: blocchi_di_selezione_del_comune
+mode: default
+content:
+  field_moduli:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: modules
+hidden: {  }

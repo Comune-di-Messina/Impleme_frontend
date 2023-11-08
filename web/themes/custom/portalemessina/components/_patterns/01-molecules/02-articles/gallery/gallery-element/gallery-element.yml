@@ -1,0 +1,8 @@
+src: https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1
+alt: Faker.sentence(2, false)
+title: Faker.sentence(2, false)
+
+###
+
+ui_pattern_definition:
+  label: Subarticle - Gallery element

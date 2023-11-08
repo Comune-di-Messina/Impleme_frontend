@@ -1,0 +1,10 @@
+uuid: 69c04f8a-9e9a-4af6-86ea-40f2609033a7
+langcode: it
+status: true
+dependencies: {  }
+id: elemento_mappa
+label: 'Elemento mappa'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

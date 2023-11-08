@@ -1,0 +1,43 @@
+uuid: 531938dc-0853-48bf-a56c-52111945f7c8
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.selezione_comuni.field_etichetta
+    - field.field.paragraph.selezione_comuni.field_testo
+    - field.field.paragraph.selezione_comuni.field_titolo
+    - paragraphs.paragraphs_type.selezione_comuni
+  module:
+    - text
+id: paragraph.selezione_comuni.default
+targetEntityType: paragraph
+bundle: selezione_comuni
+mode: default
+content:
+  field_etichetta:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_testo:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_titolo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

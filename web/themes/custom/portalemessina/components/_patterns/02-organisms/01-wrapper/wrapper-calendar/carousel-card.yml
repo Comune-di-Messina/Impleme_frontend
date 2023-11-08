@@ -1,0 +1,9 @@
+title: Faker.sentence(3, false)
+modules:
+  include():
+    pattern: molecules-card-image
+
+###
+
+ui_pattern_definition:
+  label: Organism - Carousel card

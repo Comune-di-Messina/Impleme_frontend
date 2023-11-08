@@ -1,0 +1,18 @@
+uuid: b8747a0e-d121-47df-be3a-9f4c2e548bac
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.contenuti_in_griglia
+id: paragraph.contenuti_in_griglia.created
+field_name: created
+entity_type: paragraph
+bundle: contenuti_in_griglia
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

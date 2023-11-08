@@ -1,0 +1,10 @@
+uuid: eca2939a-11d7-4891-9f19-c55965e639d8
+langcode: it
+status: true
+dependencies:
+  module:
+    - media
+id: media.cover_large
+label: '[1600x785] Cover large'
+targetEntityType: media
+cache: true

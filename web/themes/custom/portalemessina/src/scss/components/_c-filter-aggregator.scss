@@ -1,0 +1,31 @@
+.page-aggregatore{
+    .views-exposed-form{
+        position: relative;
+        .js-form-type-date{
+            display: flex;
+            align-items: baseline;
+            margin-right: 20px;
+        }   
+        .form-actions{
+            position: absolute;   
+            bottom: 0;
+            right: -210px;
+            @media(max-width: 1200px){
+                position: inherit;
+            }
+        }
+
+        .btn-submit {
+            padding: 12px 24px;
+            font-size: 16px;
+            white-space: initial;
+            text-decoration: none;
+            background: transparent;
+            border-radius: 5px;
+            border: 1.5px solid white;
+            font-weight: bold;
+        }
+
+
+    }
+}

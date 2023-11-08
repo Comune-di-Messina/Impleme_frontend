@@ -1,0 +1,19 @@
+uuid: 507ad88c-61fb-40f0-adf1-611e5a335fd8
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tempo_previsto
+    - node.type.itinerario
+id: node.itinerario.field_tempo_previsto
+field_name: field_tempo_previsto
+entity_type: node
+bundle: itinerario
+label: 'Tempo previsto'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

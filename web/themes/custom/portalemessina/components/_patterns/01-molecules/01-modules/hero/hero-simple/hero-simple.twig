@@ -1,0 +1,56 @@
+{%
+  set classes = [
+  'module',
+  'hero hero-simple'
+]
+%}
+
+{% if extraClasses %}
+  {% set extraClasses = extraClasses %}
+{% else %}
+  {% set extraClasses = [] %}
+{% endif %}
+<div class="{{ classes|merge(extraClasses)|join(' ') }}">
+
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col-content col-12 col-md-6 py-5 px-4 px-md-0">
+        <div class="hero-content pr-3">
+          {% if breadcrumbs|render %}
+            {{ breadcrumbs }}
+          {% endif %}
+          {% if title|render %}
+            <h1 class="no_toc">{{ title|raw }}</h1>
+          {% endif %}
+          {% if content|render %}
+            <div class="hero-content-main text-serif">
+              {{ content }}
+            </div>
+          {% endif %}
+          {% if cta|render %}
+            <div class="hero-cta text-serif">
+              {{ cta }}
+            </div>
+          {% endif %}
+          {% if back|render %}
+            <div class="hero-back mt-auto pt-5">{{ back|raw }}</div>
+          {% endif %}
+        </div>
+      </div>
+      {% if new_report|render %}
+        <div class="col-12 col-md-5 offset-md-1 p-5">
+          <a href="{% if new_report_link is null %}/servizi/segnala-me{% else %}{{ new_report_link }}{% endif %}" class="btn btn-primary btn-lg">{{ new_report }}</a>
+        </div>
+      {% else %}
+        <div class="col-image col-12 col-md-5 offset-md-1 p-0">
+          {% if cta_right|render %}
+            {{ cta_right }}
+          {% else %}
+            {{ image|raw }}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+</div>

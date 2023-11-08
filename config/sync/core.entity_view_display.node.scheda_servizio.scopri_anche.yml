@@ -1,0 +1,169 @@
+uuid: 8b56cd92-7ff1-4f73-a207-11a43fb38bc4
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.scopri_anche
+    - field.field.node.scheda_servizio.body
+    - field.field.node.scheda_servizio.field_abstract
+    - field.field.node.scheda_servizio.field_categoria_servizio
+    - field.field.node.scheda_servizio.field_categorie_correlate
+    - field.field.node.scheda_servizio.field_comune_servizi
+    - field.field.node.scheda_servizio.field_contenuti_collegati
+    - field.field.node.scheda_servizio.field_cover
+    - field.field.node.scheda_servizio.field_moduli
+    - field.field.node.scheda_servizio.field_ufficio_riferimento
+    - field.field.node.scheda_servizio.field_url_servizio
+    - node.type.scheda_servizio
+  module:
+    - ds
+    - link
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_image_slim
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_cover
+      category:
+        - field_categoria_servizio
+      title:
+        - node_title
+      content:
+        - field_abstract
+      content_note:
+        - field_ufficio_riferimento
+      link:
+        - field_url_servizio
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.scheda_servizio.scopri_anche
+targetEntityType: node
+bundle: scheda_servizio
+mode: scopri_anche
+content:
+  field_abstract:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_categoria_servizio:
+    type: entity_reference_label
+    weight: 1
+    region: category
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_cover:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: image_medium
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: image
+  field_ufficio_riferimento:
+    type: basic_string
+    weight: 4
+    region: content_note
+    label: above
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: ''
+            lbw-cl: field__label
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis: true
+            fis-el: ''
+            fis-cl: field__content
+            fis-at: ''
+            fis-def-at: true
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fi: false
+            fi-def-at: false
+  field_url_servizio:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: pattern
+          settings:
+            pattern: button_primary
+            pattern_mapping:
+              'ds_field_template:field_url_servizio':
+                destination: href
+                weight: 0
+                plugin: ds_field_template
+                source: field_url_servizio
+              'ds_field_template:field_url_servizio__title':
+                destination: label
+                weight: 1
+                plugin: ds_field_template
+                source: field_url_servizio__title
+    type: link
+    region: link
+hidden:
+  body: true
+  field_categorie_correlate: true
+  field_comune_servizi: true
+  field_contenuti_collegati: true
+  field_moduli: true
+  langcode: true
+  links: true

@@ -1,0 +1,79 @@
+uuid: 6e5a4ff1-083f-4ac1-9082-f80dd1ae20bb
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.date_format.messina_eventi_grid
+    - core.entity_view_mode.node.calendario
+    - field.field.node.eventi_servizi.body
+    - field.field.node.eventi_servizi.field_comune
+    - field.field.node.eventi_servizi.field_cta
+    - field.field.node.eventi_servizi.field_data
+    - node.type.eventi_servizi
+  module:
+    - date_recur
+    - ds
+    - link
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_data
+        - field_cta
+id: node.eventi_servizi.calendario
+targetEntityType: node
+bundle: eventi_servizi
+mode: calendario
+content:
+  field_cta:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 250
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: link
+    region: content
+  field_data:
+    weight: 0
+    label: hidden
+    settings:
+      format_type: messina_eventi_grid
+      occurrence_format_type: messina_eventi_grid
+      same_end_date_format_type: messina_eventi_grid
+      separator: ''
+      timezone_override: ''
+      interpreter: ''
+      show_next: 1
+      count_per_item: true
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: date_recur_basic_formatter
+    region: content
+hidden:
+  body: true
+  field_comune: true
+  langcode: true
+  links: true

@@ -1,0 +1,20 @@
+uuid: f9039fce-6c13-4098-a0fd-1f35f3d224ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.settore_segnala_me
+id: node.settore_segnala_me.uid
+field_name: uid
+entity_type: node
+bundle: settore_segnala_me
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,99 @@
+uuid: 34f27eeb-34bb-4002-9c93-51b9535805d9
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.raccolta_contenuti_con_testata.field_cta
+    - field.field.paragraph.raccolta_contenuti_con_testata.field_immagine
+    - field.field.paragraph.raccolta_contenuti_con_testata.field_selezione_contenuti
+    - field.field.paragraph.raccolta_contenuti_con_testata.field_testo
+    - field.field.paragraph.raccolta_contenuti_con_testata.field_titolo
+    - paragraphs.paragraphs_type.raccolta_contenuti_con_testata
+  module:
+    - ds
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_banner_simple
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+        wrappers:
+          image: div
+          title: div
+          content: div
+          link: div
+          modules: div
+    regions:
+      image:
+        - field_immagine
+      title:
+        - field_titolo
+      content:
+        - field_testo
+      link:
+        - field_cta
+      modules:
+        - field_selezione_contenuti
+id: paragraph.raccolta_contenuti_con_testata.default
+targetEntityType: paragraph
+bundle: raccolta_contenuti_con_testata
+mode: default
+content:
+  field_cta:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: link
+  field_immagine:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: image
+  field_selezione_contenuti:
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: grid
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: modules
+  field_testo:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_titolo:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: title
+hidden: {  }

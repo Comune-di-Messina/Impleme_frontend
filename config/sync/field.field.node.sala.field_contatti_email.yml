@@ -1,0 +1,19 @@
+uuid: 070aa02c-fd38-492b-8248-aa8050a715ea
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contatti_email
+    - node.type.sala
+id: node.sala.field_contatti_email
+field_name: field_contatti_email
+entity_type: node
+bundle: sala
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

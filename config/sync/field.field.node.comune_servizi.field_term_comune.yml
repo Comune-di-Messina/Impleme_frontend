@@ -1,0 +1,29 @@
+uuid: f4e4f735-787f-4640-8aa7-6a83f3f25787
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_comune
+    - node.type.comune_servizi
+    - taxonomy.vocabulary.comuni
+id: node.comune_servizi.field_term_comune
+field_name: field_term_comune
+entity_type: node
+bundle: comune_servizi
+label: Comune
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      comuni: comuni
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

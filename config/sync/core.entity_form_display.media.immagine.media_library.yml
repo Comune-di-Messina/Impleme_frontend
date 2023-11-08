@@ -1,0 +1,33 @@
+uuid: e3978516-8e65-4ef5-8816-dccec99e490a
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.immagine.field_media_image
+    - image.style.medium
+    - media.type.immagine
+  module:
+    - focal_point
+id: media.immagine.media_library
+targetEntityType: media
+bundle: immagine
+mode: media_library
+content:
+  field_media_image:
+    weight: -50
+    settings:
+      preview_image_style: medium
+      preview_link: true
+      offsets: '50,50'
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_focal_point
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  path: true
+  status: true
+  uid: true

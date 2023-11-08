@@ -1,0 +1,91 @@
+uuid: d5ae799f-84d4-4c13-b25a-5ffa41034add
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.comune_servizi.body
+    - field.field.node.comune_servizi.field_abstract
+    - field.field.node.comune_servizi.field_cover
+    - field.field.node.comune_servizi.field_logo
+    - field.field.node.comune_servizi.field_moduli
+    - field.field.node.comune_servizi.field_term_comune
+    - node.type.comune_servizi
+  module:
+    - ds
+    - entity_reference_revisions
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_page_basic
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      hero_title:
+        - node_title
+      hero_content:
+        - field_abstract
+      hero_image:
+        - field_cover
+      content:
+        - field_moduli
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.comune_servizi.default
+targetEntityType: node
+bundle: comune_servizi
+mode: default
+content:
+  field_abstract:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: hero_content
+  field_cover:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: cover_large
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: hero_image
+  field_moduli:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  body: true
+  field_logo: true
+  field_term_comune: true
+  langcode: true
+  links: true

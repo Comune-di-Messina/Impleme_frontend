@@ -1,0 +1,23 @@
+uuid: 326bbc25-3a9d-4ca7-b4b2-5ea090f32cfc
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_backoffice_id
+    - node.type.settore_segnala_me
+id: node.settore_segnala_me.field_backoffice_id
+field_name: field_backoffice_id
+entity_type: node
+bundle: settore_segnala_me
+label: 'Backoffice ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

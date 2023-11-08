@@ -1,0 +1,23 @@
+uuid: 3296aabd-1e5a-44fa-8d78-b6066939b0b2
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipologia_itinerario
+    - node.type.itinerario
+  module:
+    - options
+id: node.itinerario.field_tipologia_itinerario
+field_name: field_tipologia_itinerario
+entity_type: node
+bundle: itinerario
+label: 'Tipologia itinerario'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: Contenuto
+default_value_callback: ''
+settings: {  }
+field_type: list_string

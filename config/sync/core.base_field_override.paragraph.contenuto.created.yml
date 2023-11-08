@@ -1,0 +1,18 @@
+uuid: b424f26b-1802-4ba1-a9cf-094b8b980b1f
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.contenuto
+id: paragraph.contenuto.created
+field_name: created
+entity_type: paragraph
+bundle: contenuto
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

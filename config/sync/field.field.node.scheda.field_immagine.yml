@@ -1,0 +1,28 @@
+uuid: 54e6b332-cf56-4510-ab55-d889922e12c2
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_immagine
+    - media.type.immagine
+    - node.type.scheda
+id: node.scheda.field_immagine
+field_name: field_immagine
+entity_type: node
+bundle: scheda
+label: Immagine
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      immagine: immagine
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

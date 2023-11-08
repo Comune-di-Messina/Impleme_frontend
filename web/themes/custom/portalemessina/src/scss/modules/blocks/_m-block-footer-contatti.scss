@@ -1,0 +1,32 @@
+#block-contattifooter {
+  // Global.
+  .field {
+    display: flex;
+    position: relative;
+    padding: $gap;
+    padding-left: $gap * 5;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+    }
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  // Specific.
+  .field--name-field-indirizzo::before {
+    @include sprite--pin-white;
+    margin-top: -4px;
+  }
+  .field--name-field-email::before {
+    @include sprite--mail-white;
+  }
+  .field--name-field-telefono::before {
+    @include sprite--phone-white;
+  }
+}

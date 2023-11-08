@@ -1,0 +1,18 @@
+uuid: af56fd5f-53ea-4a2f-8a46-413733c930e8
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.territori
+id: taxonomy_term.territori.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: territori
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

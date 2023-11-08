@@ -1,0 +1,20 @@
+uuid: 5d7461cc-921f-439c-a355-2b26cf7ba7d2
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.video_url
+  module:
+    - path
+id: media.video_url.path
+field_name: path
+entity_type: media
+bundle: video_url
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,56 @@
+uuid: 0170aa15-32dc-411f-a323-5a4ee5c5b703
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tipologie_pratiche.field_backoffice_id
+    - field.field.taxonomy_term.tipologie_pratiche.field_code
+    - field.field.taxonomy_term.tipologie_pratiche.field_free
+    - field.field.taxonomy_term.tipologie_pratiche.field_note
+    - taxonomy.vocabulary.tipologie_pratiche
+  module:
+    - text
+id: taxonomy_term.tipologie_pratiche.default
+targetEntityType: taxonomy_term
+bundle: tipologie_pratiche
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_backoffice_id:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_code:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_free:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_note:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  langcode: true

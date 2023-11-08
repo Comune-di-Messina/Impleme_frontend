@@ -1,0 +1,17 @@
+uuid: 82c1b528-6416-4175-9acf-ec9f69f15893
+langcode: it
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Landing Comune servizi'
+type: comune_servizi
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

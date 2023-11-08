@@ -1,0 +1,35 @@
+uuid: 9750da7c-9804-4806-be6e-cc26bcf391ea
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.contenuto_multimediale.body
+    - field.field.node.contenuto_multimediale.field_cover
+    - field.field.node.contenuto_multimediale.field_external_link
+    - field.field.node.contenuto_multimediale.field_link_ad_articolo
+    - field.field.node.contenuto_multimediale.field_term_temi
+    - field.field.node.contenuto_multimediale.field_tipologia
+    - field.field.node.contenuto_multimediale.field_video_url
+    - node.type.contenuto_multimediale
+  module:
+    - user
+id: node.contenuto_multimediale.teaser
+targetEntityType: node
+bundle: contenuto_multimediale
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  field_cover: true
+  field_external_link: true
+  field_link_ad_articolo: true
+  field_term_temi: true
+  field_tipologia: true
+  field_video_url: true
+  langcode: true

@@ -1,0 +1,19 @@
+uuid: f499dd02-a19b-448d-aa93-574751eda8eb
+langcode: it
+status: true
+dependencies:
+  config:
+    - block_content.type.contatti
+    - field.storage.block_content.field_email
+id: block_content.contatti.field_email
+field_name: field_email
+entity_type: block_content
+bundle: contatti
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

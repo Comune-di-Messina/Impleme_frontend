@@ -1,0 +1,18 @@
+uuid: 7af683c9-c54c-41b9-98ac-1fea3cca680f
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.aggregatore_tema
+id: node.aggregatore_tema.changed
+field_name: changed
+entity_type: node
+bundle: aggregatore_tema
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

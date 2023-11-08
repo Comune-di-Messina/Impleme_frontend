@@ -1,0 +1,18 @@
+uuid: e60921f4-baf5-40ee-896a-b5d6cf77c71b
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.comuni
+id: taxonomy_term.comuni.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: comuni
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

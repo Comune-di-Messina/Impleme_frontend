@@ -1,0 +1,17 @@
+uuid: 4ff436bd-37b3-4903-9262-d867a1522fd1
+langcode: it
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Contenuto multimediale'
+type: contenuto_multimediale
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

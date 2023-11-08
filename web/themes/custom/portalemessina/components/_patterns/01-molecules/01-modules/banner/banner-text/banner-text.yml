@@ -1,0 +1,11 @@
+title: Faker.sentence(3, false)
+content: Faker.paragraph(1)
+modules:
+  include():
+    pattern: molecules-card-teaser
+link: Read more
+
+###
+
+ui_pattern_definition:
+  label: Module - Banner text

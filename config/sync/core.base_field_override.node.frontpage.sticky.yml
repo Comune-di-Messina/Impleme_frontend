@@ -1,0 +1,22 @@
+uuid: b5f1ad64-cddc-4a71-95a1-19055670f37e
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.frontpage
+id: node.frontpage.sticky
+field_name: sticky
+entity_type: node
+bundle: frontpage
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

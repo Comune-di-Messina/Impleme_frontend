@@ -1,0 +1,111 @@
+// =============================================================================
+// Breakpoints.
+// =============================================================================
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$xsmall: 0;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$full: 1200px;
+
+// =============================================================================
+// Dimensions & space.
+// =============================================================================
+
+$maxwidth-xsmall: 780px;
+$maxwidth-small: 980px;
+$maxwidth: 1184px;
+$maxwidth-large: 1600px;
+
+$gap: 8px;
+$gap-grid: 28px;
+
+// =============================================================================
+// Colors.
+// =============================================================================
+
+// Brand colors.
+$color-blue-light: #d9e4f3;
+$color-blue: #3B76BD;
+$color-blue-dark: #004275;
+
+$color-blue-spid: #127eb1;
+$color-blue-pagopa: #1376e2;
+
+$color-blue-slate-light: #7790A2;
+$color-blue-slate: #39546B;
+$color-blue-slater: #273B4B;
+
+$color-green-lighter: #E6F7EE;
+$color-green-light: #c7e8cd;
+$color-green: #008A00;
+$color-green-dark: #166744;
+$color-green-darker: #0D3C27;
+
+
+// Shades of grey.
+$color-white: #FFFFFF;
+$color-gray-lighter: #FAFAFA;
+$color-gray-light: #E5E5E5;
+$color-gray: #5C5C5C;
+$color-gray-dark: #333333;
+$color-gray-darker: #30373D;
+$color-black: #000000;
+
+// Global definitions.
+$color-primary: $color-blue;
+$color-secondary: $color-blue-slate;
+
+// Define array for patternlab.
+$colors: (
+  // Brand color.
+  'blue': $color-blue,
+  'blue-dark': $color-blue-dark,
+  'blue-slate': $color-blue-slate,
+  'blue-slater': $color-blue-slater,
+  // Shades of grey.
+  'white': $color-white,
+  'gray-lighter': $color-gray-lighter,
+  'gray-light': $color-gray-light,
+  'gray': $color-gray,
+  'gray-dark': $color-gray-dark,
+  'gray-darker': $color-gray-darker,
+  'black': $color-black,
+);
+
+@each $color-name, $color in $colors {
+  .color-#{$color-name} {
+    color: $color;
+  }
+  .bg-color-#{$color-name} {
+    color: $color;
+  }
+}
+
+// =============================================================================
+// Typography.
+// =============================================================================
+
+$font-primary: "Titillium Web",Geneva,Tahoma,sans-serif;
+$font-secondary: "Lora",Georgia,serif;
+$font-secondary-italic: "LoraItalic",Georgia,serif;
+
+// Base font-size: 18px.
+$font-xsmall: pxrem(12);
+$font-small: pxrem(14);
+$font-normal: pxrem(16);
+$font-medium: pxrem(18);
+$font-discrete: pxrem(20);
+$font-large: pxrem(24);
+$font-xlarge: pxrem(32);
+$font-xxlarge: pxrem(40);
+$font-huge: pxrem(50);
+

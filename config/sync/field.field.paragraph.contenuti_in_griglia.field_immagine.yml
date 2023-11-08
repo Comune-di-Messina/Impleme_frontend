@@ -1,0 +1,28 @@
+uuid: abc99882-2ca9-47cd-b6db-f4348f6326e3
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_immagine
+    - media.type.cover
+    - paragraphs.paragraphs_type.contenuti_in_griglia
+id: paragraph.contenuti_in_griglia.field_immagine
+field_name: field_immagine
+entity_type: paragraph
+bundle: contenuti_in_griglia
+label: Immagine
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      cover: cover
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

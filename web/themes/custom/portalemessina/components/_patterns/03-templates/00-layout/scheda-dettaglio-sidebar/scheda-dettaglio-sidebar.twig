@@ -1,0 +1,41 @@
+{%
+  set classes = [
+  'page-scheda-dettaglio page-scheda-dettaglio-sidebar'
+]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+
+  {% include "@molecules/01-modules/hero/hero-simple/hero-simple.twig" with {
+    title: hero_title,
+    content: hero_content,
+    cta: hero_cta,
+    image: hero_image
+  } %}
+
+  {% if content|render %}
+  <div class="content-wrapper border-top">
+    <div class="container">
+      <div class="row row-column-border row-column-menu-left">
+
+        <aside id="aside" class="col-lg-4">
+          {% include "@molecules/00-navigation/sidebar/sidebar.twig" %}
+        </aside>
+
+        <section class="col-lg-8 it-page-sections-container">
+          {{ content }}
+        </section>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if related|render %}
+    <div class="scheda-related mt-0 py-5">
+      <div class="container">
+        {{ related }}
+      </div>
+    </div>
+  {% endif %}
+
+</div>

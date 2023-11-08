@@ -1,0 +1,23 @@
+uuid: e34d6d21-a31f-4534-83a8-4e786387d6c0
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abstract
+    - node.type.aggregatore_tema
+  module:
+    - text
+id: node.aggregatore_tema.field_abstract
+field_name: field_abstract
+entity_type: node
+bundle: aggregatore_tema
+label: Abstract
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

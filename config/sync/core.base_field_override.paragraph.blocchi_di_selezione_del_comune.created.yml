@@ -1,0 +1,18 @@
+uuid: 5aff9436-7277-4e7c-909b-313f20540df8
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.blocchi_di_selezione_del_comune
+id: paragraph.blocchi_di_selezione_del_comune.created
+field_name: created
+entity_type: paragraph
+bundle: blocchi_di_selezione_del_comune
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

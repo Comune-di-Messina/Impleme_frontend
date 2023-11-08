@@ -1,0 +1,23 @@
+uuid: d4beebb4-dc36-45dc-9733-0614fa89fc8f
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta
+    - paragraphs.paragraphs_type.carosello_con_testata_big
+  module:
+    - link
+id: paragraph.carosello_con_testata_big.field_cta
+field_name: field_cta
+entity_type: paragraph
+bundle: carosello_con_testata_big
+label: Cta
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

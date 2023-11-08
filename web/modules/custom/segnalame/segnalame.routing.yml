@@ -1,0 +1,6 @@
+segnalame.crud_hook:
+  path: 'segnalame/crud/{instituteId}/{operationType}'
+  defaults:
+    _controller: '\Drupal\segnalame\Controller\SegnalaMeController::crud'
+  requirements:
+    _permission: 'access content'

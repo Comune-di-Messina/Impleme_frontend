@@ -1,0 +1,10 @@
+uuid: 272b674b-cdef-4d99-82ef-be9d6723d809
+langcode: it
+status: true
+dependencies: {  }
+id: selezione_comuni
+label: 'Selezione comuni'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

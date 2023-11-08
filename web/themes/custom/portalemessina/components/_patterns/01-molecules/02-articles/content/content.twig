@@ -1,0 +1,20 @@
+{%
+  set classes = [
+  'article',
+  'content',
+  'container my-5'
+]
+%}
+
+<article {{ attributes.addClass(classes) }}>
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-6">
+      {% if title|render %}
+        <h3>{{ title }}</h3>
+      {% endif %}
+      <div class="text-serif">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</article>

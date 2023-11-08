@@ -1,0 +1,22 @@
+uuid: 16d856f4-0725-458f-9b88-0bcd8fffe815
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.settore_segnala_me
+id: node.settore_segnala_me.sticky
+field_name: sticky
+entity_type: node
+bundle: settore_segnala_me
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

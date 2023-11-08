@@ -1,0 +1,22 @@
+uuid: 28e49bd3-a5a3-43c2-bde6-44d6dc4ba01e
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.immagine
+id: media.immagine.status
+field_name: status
+entity_type: media
+bundle: immagine
+label: Pubblicato
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

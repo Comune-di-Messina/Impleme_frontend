@@ -1,0 +1,61 @@
+uuid: 715a4118-a499-4eeb-a3dc-a824e93631dd
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mappa_indirizzi.field_moduli
+    - field.field.paragraph.mappa_indirizzi.field_titolo
+    - paragraphs.paragraphs_type.mappa_indirizzi
+  module:
+    - paragraphs
+    - paragraphs_ee
+    - paragraphs_features
+id: paragraph.mappa_indirizzi.default
+targetEntityType: paragraph
+bundle: mappa_indirizzi
+mode: default
+content:
+  field_moduli:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed_expand_nested
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: elemento_mappa
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings:
+      paragraphs_features:
+        add_in_between: true
+        show_drag_and_drop: true
+        delete_confirmation: false
+        split_text: false
+      paragraphs_ee:
+        paragraphs_ee:
+          dialog_style: tiles
+          dialog_off_canvas: false
+    type: paragraphs
+    region: content
+  field_titolo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

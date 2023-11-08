@@ -1,0 +1,66 @@
+uuid: 06e5db1f-28c2-4a28-9705-4e394cc2b671
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.servizi_scopri_anche.field_servizio
+    - field.field.paragraph.servizi_scopri_anche.field_titolo
+    - paragraphs.paragraphs_type.servizi_scopri_anche
+  module:
+    - ds
+id: paragraph.servizi_scopri_anche.default
+targetEntityType: paragraph
+bundle: servizi_scopri_anche
+mode: default
+content:
+  field_servizio:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: scopri_anche
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: content
+  field_titolo:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: h2
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: true
+            ow-def-cl: true
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: string
+    region: content
+hidden: {  }

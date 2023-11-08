@@ -1,0 +1,13 @@
+{%
+  set classes = [
+  'submodule',
+  'block-selection-element',
+  'col-md my-3 py-3 px-4'
+]
+%}
+<div {{ attributes.addClass(classes) }}>
+  <div class="block-label"><span class="block-icon"></span>{{ label }}</div>
+  <h2 class="block-title my-2">{{ title }}</h2>
+  <div class="block-content text-serif">{{ content }}</div>
+  <div class="block-selection custom-select">{{ selection }}</div>
+</div>

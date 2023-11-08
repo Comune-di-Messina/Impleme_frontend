@@ -1,0 +1,25 @@
+uuid: 3e2504a5-e5f3-406d-a6c7-af47830622f1
+langcode: it
+status: true
+dependencies:
+  content:
+    - 'block_content:contatti:53c2ade8-568b-45a6-9f80-78cc13abc8b3'
+  module:
+    - block_content
+  theme:
+    - portalemessina
+id: contattifooter
+theme: portalemessina
+region: footer
+weight: -4
+provider: null
+plugin: 'block_content:53c2ade8-568b-45a6-9f80-78cc13abc8b3'
+settings:
+  id: 'block_content:53c2ade8-568b-45a6-9f80-78cc13abc8b3'
+  label: Contatti
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

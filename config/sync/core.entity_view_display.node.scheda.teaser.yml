@@ -1,0 +1,59 @@
+uuid: a26ffb39-ce72-4aa5-a0d0-003f7e72a5da
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.scheda.body
+    - field.field.node.scheda.field_abstract
+    - field.field.node.scheda.field_argomenti_correlati
+    - field.field.node.scheda.field_comune
+    - field.field.node.scheda.field_contatti_email
+    - field.field.node.scheda.field_contatti_indirizzo
+    - field.field.node.scheda.field_contatti_telefono
+    - field.field.node.scheda.field_contatti_titolo
+    - field.field.node.scheda.field_contenuti_collegati
+    - field.field.node.scheda.field_coordinate
+    - field.field.node.scheda.field_cover
+    - field.field.node.scheda.field_cta
+    - field.field.node.scheda.field_immagine
+    - field.field.node.scheda.field_moduli
+    - field.field.node.scheda.field_term_temi
+    - node.type.scheda
+  module:
+    - text
+    - user
+id: node.scheda.teaser
+targetEntityType: node
+bundle: scheda
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_abstract: true
+  field_argomenti_correlati: true
+  field_comune: true
+  field_contatti_email: true
+  field_contatti_indirizzo: true
+  field_contatti_telefono: true
+  field_contatti_titolo: true
+  field_contenuti_collegati: true
+  field_coordinate: true
+  field_cover: true
+  field_cta: true
+  field_immagine: true
+  field_moduli: true
+  field_term_temi: true
+  langcode: true

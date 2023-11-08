@@ -1,0 +1,21 @@
+uuid: 79322152-2b4d-48e5-93cf-53718163a3af
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_testo
+    - paragraphs.paragraphs_type.citazione
+  module:
+    - text
+id: paragraph.citazione.field_testo
+field_name: field_testo
+entity_type: paragraph
+bundle: citazione
+label: Testo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,41 @@
+uuid: 9cf449e2-ba02-4d4e-afa1-ea25038a3fe2
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.aggregatore_tema.body
+    - field.field.node.aggregatore_tema.field_abstract
+    - field.field.node.aggregatore_tema.field_comune
+    - field.field.node.aggregatore_tema.field_cover
+    - field.field.node.aggregatore_tema.field_term_tema
+    - field.field.node.aggregatore_tema.field_vista
+    - node.type.aggregatore_tema
+  module:
+    - text
+    - user
+id: node.aggregatore_tema.teaser
+targetEntityType: node
+bundle: aggregatore_tema
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_abstract: true
+  field_comune: true
+  field_cover: true
+  field_term_tema: true
+  field_vista: true
+  langcode: true

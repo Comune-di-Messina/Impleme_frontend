@@ -1,0 +1,34 @@
+uuid: bd455b22-93a2-4018-b1dc-06063830d66d
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contenuto.field_testo
+    - field.field.paragraph.contenuto.field_titolo
+    - paragraphs.paragraphs_type.contenuto
+  module:
+    - text
+id: paragraph.contenuto.default
+targetEntityType: paragraph
+bundle: contenuto
+mode: default
+content:
+  field_testo:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_titolo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

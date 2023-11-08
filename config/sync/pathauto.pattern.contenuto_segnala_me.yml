@@ -1,0 +1,22 @@
+uuid: 11c4babf-6340-4f15-abba-150062c443b9
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: contenuto_segnala_me
+label: 'Contenuto Segnala Me'
+type: 'canonical_entities:node'
+pattern: 'servizi/segnala-me/[node:title]'
+selection_criteria:
+  feba1f3d-ae0c-4e52-aa93-8c2e4df9294b:
+    id: node_type
+    bundles:
+      settore_segnala_me: settore_segnala_me
+    negate: false
+    context_mapping:
+      node: node
+    uuid: feba1f3d-ae0c-4e52-aa93-8c2e4df9294b
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,20 @@
+uuid: d3da80ea-6b08-4e16-a316-0f3cf0d6c613
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_argomenti_correlati
+field_name: field_argomenti_correlati
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

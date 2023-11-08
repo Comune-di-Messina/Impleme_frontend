@@ -1,0 +1,71 @@
+.page-aggregatore {
+  .before-content {
+    background-color: $color-blue-dark;
+    color: $color-white;
+    .col-content {
+      padding-bottom: $gap * 23 !important;
+    }
+    .col-filters + .col-content {
+      padding-bottom: 0 !important;
+    }
+    & + .content {
+      margin-top: -#{$gap * 23};
+      & .module:first-child .module-title {
+        color: $color-white;
+      }
+    }
+  }
+  &.segnala_me {
+    .before-content {
+      & + .content {
+        margin-top: 1em;
+      }
+    }
+  }
+  .col-map {
+    margin-right: calc((-100vw - #{$maxwidth}) / 2 + (#{$maxwidth} * .3));
+    width: calc((100vw - #{$maxwidth}) / 2 + (#{$maxwidth} * .3) + #{$gap-grid} * 2 + 14px) !important;
+    .col-map-wrapper {
+      right: -#{$gap-grid} / 2 !important;
+    }
+    .leaflet-container, .geofield-google-map {
+      height: calc(100vh - 120px) !important; // height with header
+      min-height: 100% !important;
+    }
+    .map-wrapper {
+      height: 100%;
+      #block-map {
+        height: 100% !important;
+        min-height: 100% !important;
+      }
+    }
+  }
+  .card-list-wrapper {
+    .view-content {
+      @include grid2col;
+    }
+  }
+
+  &.hide-filters {
+    .card-list-wrapper {
+      .view-filters,
+      .attachment-after {
+        opacity: 0;
+      }
+    }
+  }
+
+  // Sezione servizi.
+  .h-section-servizi & {
+    .it-hero-wrapper,
+    .hero-main {
+      min-height: 0;
+    }
+
+    .paragraph--type--calendario-eventi {
+      & + .article.image-full {
+        margin-top: -395px !important;
+      }
+    }
+  }
+}

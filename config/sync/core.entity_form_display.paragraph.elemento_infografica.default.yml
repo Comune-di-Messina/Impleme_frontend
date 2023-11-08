@@ -1,0 +1,35 @@
+uuid: bcae757d-663b-4327-8c95-084554c6c4c2
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.elemento_infografica.field_contatore
+    - field.field.paragraph.elemento_infografica.field_numero
+    - field.field.paragraph.elemento_infografica.field_titolo
+    - paragraphs.paragraphs_type.elemento_infografica
+  module:
+    - viewsreference
+id: paragraph.elemento_infografica.default
+targetEntityType: paragraph
+bundle: elemento_infografica
+mode: default
+content:
+  field_contatore:
+    type: viewsreference_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_titolo:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_numero: true
+  status: true
+  translation: true

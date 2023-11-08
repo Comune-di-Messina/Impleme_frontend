@@ -1,0 +1,178 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+{%
+  set classes = [
+  'module',
+  'card card-dati card-visura',
+  'no-after p-0'
+]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+
+  <div class="card-dati-wrapper rounded shadow">
+
+    <div class="card-header p-4">
+      {% if title|render %}
+        <h3 class="card-title mb-2 mt-0">{{ title }}</h3>
+      {% endif %}
+      {% if subtitle|render %}
+        <h4 class="card-subtitle text-serif">{{ subtitle }}</h4>
+      {% endif %}
+    </div>
+    <div class="card-info py-3 px-4 d-flex align-items-center justify-content-between">
+      <h3 class="m-0">Dati anagrafici</h3>
+    </div>
+    <div class="card-content">
+      <div class="card-content-main p-3">
+        <div class="w-100 row">
+          <div class="dati-block col-4 py-3">
+            <div class="dati-label text-uppercase">Luogo di nascita</div>
+            <div class="dati-content">{{ anagrafica_luogo_nascita }}</div>
+          </div>
+          <div class="dati-block col-4 py-3">
+            <div class="dati-label text-uppercase">Data di nascita</div>
+            <div class="dati-content">{{ anagrafica_data_nascita }}</div>
+          </div>
+          <div class="dati-block col-4 py-3">
+            <div class="dati-label text-uppercase">Stato Civile</div>
+            <div class="dati-content">{{ anagrafica_stato_civile }}</div>
+          </div>
+          <div class="dati-block col-4 py-3">
+            <div class="dati-label text-uppercase">Sesso</div>
+            <div class="dati-content">{% if anagrafica_sesso == 'M' %} Maschio {% elseif anagrafica_sesso == 'F' %} Femmina {% endif %}</div>
+          </div>
+          <div class="dati-block col-4 py-3">
+            <div class="dati-label text-uppercase">Codice Fiscale</div>
+            <div class="dati-content">{{ anagrafica_codice_fiscale }}</div>
+          </div>
+        </div>
+      </div>
+
+      {% if immigrazione_data|render %}
+      <div class="card-content-more p-3">
+        <div class="w-100 d-flex align-items-center justify-content-between">
+          <h3 class="m-0">Dati di immigrazione</h3>
+          <span class="h-icon h-dati-immigrazione"></span>
+        </div>
+        <div class="w-100 row">
+          <div class="dati-block col-4 py-3">
+            <div class="dati-label text-uppercase">Data</div>
+            <div class="dati-content">{{ immigrazione_data }}</div>
+          </div>
+          <div class="dati-block col-4 py-3">
+            <div class="dati-label text-uppercase">Provincia/Nazione</div>
+            <div class="dati-content">{{ immigrazione_nazione }}</div>
+          </div>
+        </div>
+        <div class="w-100 row">
+          <div class="dati-block col-4 py-3">
+            <div class="dati-label text-uppercase">Comune</div>
+            <div class="dati-content">{{ immigrazione_comune }}</div>
+          </div>
+          <div class="dati-block col-4 py-3">
+            <div class="dati-label text-uppercase">N° Pratica</div>
+            <div class="dati-content">{{ immigrazione_pratica }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-view-more p-4">
+        <button type="button" class="btn btn-primary btn-xs">
+          <span class="view-more-open">Mostra di più</span>
+          <span class="view-more-close">Mostra di meno</span>
+        </button>
+      </div>
+      {% endif %}
+      <div class="card-cta p-4">
+        <button type="button" class="btn-inline" data-toggle="modal" data-target="#modal-{{ anagrafica_codice_fiscale }}">
+          Vai alle visure
+        </button>
+      </div>
+    </div>
+
+  </div>
+  <!-- Modal -->
+  <div class="card-modal">
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-{{ anagrafica_codice_fiscale }}" aria-labelledby="modal-{{ anagrafica_codice_fiscale }}-title" data-user="{{ anagrafica_codice_fiscale }}" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered rounded" role="document">
+        <div class="modal-content container">
+          <div class="row">
+            <div class="col-info col-4 p-0">
+              <div class="col-header py-3 px-4">
+                <h3 class="m-0" id="modal-{{ anagrafica_codice_fiscale }}-title">{{ title }}</h3>
+                <h4 class="text-serif m-0">{{ subtitle }}</h4>
+              </div>
+              <div class="col-content p-4 pb-5">
+                <h5 class="mb-4">Seleziona una visura</h5>
+                <ul class="list-docs">
+                  <li>
+                    {% include "@atoms/05-graphic-elements/document/document.twig" with {
+                      title: 'Dati anagrafici',
+                      content: 'Descrizione visura dati anagrafici'|t,
+                      url: '#anagrafica'
+                    } %}
+                  </li>
+                  <li>
+                    {% include "@atoms/05-graphic-elements/document/document.twig" with {
+                      title: 'Certificato di matrimonio',
+                      content: 'Descrizione visura certificato di matrimonio'|t,
+                      url: '#matrimonio'
+                    } %}
+                  </li>
+                  <li>
+                    {% include "@atoms/05-graphic-elements/document/document.twig" with {
+                      title: 'Certificato di nascita',
+                      content: 'Descrizione visura certificato di nascita'|t,
+                      url: '#nascita'
+                    } %}
+                  </li>
+                  <li>
+                    {% include "@atoms/05-graphic-elements/document/document.twig" with {
+                      title: 'Certificato di residenza',
+                      content: 'Descrizione visura certificato di residenza'|t,
+                      url: '#residenza'
+                    } %}
+                  </li>
+                  <li>
+                    {% include "@atoms/05-graphic-elements/document/document.twig" with {
+                      title: 'Stato di famiglia',
+                      content: 'Descrizione visura stato di famiglia'|t,
+                      url: '#StatoFamiglia'
+                    } %}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-doc col-8 p-0">
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <svg class="icon">
+                  <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-close"></use>
+                </svg>
+              </button>
+              <div class="col-doc-main p-5">
+                <div class="progress-spinner progress-spinner-double progress-spinner-active">
+                  <div class="progress-spinner-inner"></div>
+                  <div class="progress-spinner-inner"></div>
+                  <span class="sr-only">Caricamento...</span>
+                </div>
+              </div>
+              <div class="col-doc-actions py-4 px-5">
+                {% include "@atoms/02-buttons/button-action/button-action.twig" with {
+                  label: 'Stampa',
+                  icon: 'it-print',
+                  href: '#print'
+                } %}
+                {% include "@atoms/02-buttons/button-action/button-action.twig" with {
+                  label: 'Scarica',
+                  icon: 'it-download',
+                  href: '#download'
+                } %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

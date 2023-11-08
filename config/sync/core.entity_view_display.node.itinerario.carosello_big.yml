@@ -1,0 +1,82 @@
+uuid: d9c6aadb-fe85-484e-8d4e-e53bdb369098
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.carosello_big
+    - field.field.node.itinerario.body
+    - field.field.node.itinerario.field_abstract
+    - field.field.node.itinerario.field_argomenti_correlati
+    - field.field.node.itinerario.field_colore_marker
+    - field.field.node.itinerario.field_comune
+    - field.field.node.itinerario.field_contenuti_collegati
+    - field.field.node.itinerario.field_coordinate
+    - field.field.node.itinerario.field_cover
+    - field.field.node.itinerario.field_distanza_da_percorrere
+    - field.field.node.itinerario.field_external_link
+    - field.field.node.itinerario.field_geojson_routes
+    - field.field.node.itinerario.field_immagine
+    - field.field.node.itinerario.field_mezzo_di_trasporto
+    - field.field.node.itinerario.field_moduli
+    - field.field.node.itinerario.field_percorso
+    - field.field.node.itinerario.field_target
+    - field.field.node.itinerario.field_tempo_previsto
+    - field.field.node.itinerario.field_term_temi
+    - field.field.node.itinerario.field_tipologia_itinerario
+    - field.field.node.itinerario.field_video_url
+    - node.type.itinerario
+  module:
+    - text
+    - user
+id: node.itinerario.carosello_big
+targetEntityType: node
+bundle: itinerario
+mode: carosello_big
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_cover:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_term_temi:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_abstract: true
+  field_argomenti_correlati: true
+  field_colore_marker: true
+  field_comune: true
+  field_contenuti_collegati: true
+  field_coordinate: true
+  field_distanza_da_percorrere: true
+  field_external_link: true
+  field_geojson_routes: true
+  field_immagine: true
+  field_mezzo_di_trasporto: true
+  field_moduli: true
+  field_percorso: true
+  field_target: true
+  field_tempo_previsto: true
+  field_tipologia_itinerario: true
+  field_video_url: true
+  langcode: true

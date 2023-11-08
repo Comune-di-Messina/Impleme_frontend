@@ -1,0 +1,7 @@
+services:
+  logger.channel.wso2_with_jwt:
+    parent: logger.channel_base
+    arguments: ['wso2_with_jwt']
+  wso2_with_jwt.oauth_client:
+    class: Drupal\wso2_with_jwt\WSO2FactoryService
+    arguments: ['@user.private_tempstore', '@http_client_factory', '@logger.channel.wso2_with_jwt', '@state', '@config.factory']

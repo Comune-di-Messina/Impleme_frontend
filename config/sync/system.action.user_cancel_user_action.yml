@@ -1,0 +1,13 @@
+uuid: 73bcc226-2ac0-4ad0-b25e-3de7289c7b90
+langcode: it
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: nvrL9bFilzBvm2bjO9rQnFDpBA7dBBUjShSSt6NS-DU
+id: user_cancel_user_action
+label: 'Elimina i profili utente selezionati'
+type: user
+plugin: user_cancel_user_action
+configuration: {  }

@@ -1,0 +1,18 @@
+uuid: a22d1a80-cdb0-470d-8f63-51d63b181860
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.carosello_con_testata_small
+id: paragraph.carosello_con_testata_small.created
+field_name: created
+entity_type: paragraph
+bundle: carosello_con_testata_small
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

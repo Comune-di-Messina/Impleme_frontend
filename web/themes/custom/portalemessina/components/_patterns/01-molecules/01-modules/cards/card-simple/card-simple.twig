@@ -1,0 +1,26 @@
+{%
+  set classes = [
+  'module',
+  'card card-simple'
+]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="card-body card-content d-flex flex-column">
+    <div class="card-category mr-auto">{{ category }}</div>
+    <h4 class="card-title">{{ title }}</h4>
+    <div class="card-text">{{ content }}</div>
+    {% if cta|render %}
+      {% for key,value in cta['field_url_servizio']['#object'].field_url_servizio.0.url %}
+        {{ key }}<br>
+      {% endfor %}
+      <div class="card-link pt-5 mt-auto">
+          {% if cta['field_url_servizio'] %}
+            <a href="{{ cta['field_url_servizio'][0]['#plain_text'] }}">{{ 'Accedi al servizio' }}</a>
+          {% else %}
+            {{ cta }}
+          {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>

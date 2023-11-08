@@ -1,0 +1,224 @@
+.paragraph--type--calendario-eventi {
+  padding-bottom: $gap * 10;
+  margin-bottom: $gap * 2;
+  margin-top: $gap * 14;
+  position: relative;
+  z-index: 1;
+  .field--name-field-immagine {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    img {
+      width: 100%;
+      max-height: 680px;
+      min-height: 380px;
+      object-fit: cover;
+    }
+  }
+  .field--name-field-vista {
+    @include maxWidth;
+    @include cardShadowLarge;
+    background-color: $color-white;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @include breakpoint(md) {
+      flex-direction: row;
+    }
+  }
+  #calendar {
+    padding: $gap * 4;
+    width: 100%;
+    @include breakpoint(md) {
+      border-right: 1px solid $color-gray-light;
+      width: 50%;
+    }
+    table {
+      box-shadow: none;
+    }
+    .calendar-title {
+      margin-bottom: $gap * 5;
+      text-align: center;
+    }
+    .fc-day-grid-container {
+      overflow: hidden !important;
+    }
+    .fc-header-toolbar {
+      font-size: $font-small;
+      text-transform: uppercase;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      h2 {
+        font-size: $font-small;
+      }
+      .fc-button-group {
+        position: static;
+      }
+      .fc-today-button {
+        display: none;
+      }
+      .fc-prev-button,
+      .fc-next-button {
+        position: absolute;
+        background: transparent;
+        border: 0;
+        padding: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        span::before {
+          display: none;
+        }
+      }
+      .fc-prev-button {
+        left: $gap * 2;
+        span {
+          @include sprite--caret-left;
+        }
+      }
+      .fc-next-button {
+        right: $gap * 2;
+        span {
+          @include sprite--caret-right;
+        }
+      }
+    }
+    .fc-day-header {
+      font-size: $font-small;
+      text-transform: uppercase;
+      border: 0;
+      background: transparent;
+    }
+    .fc-body {
+      .fc-row {
+        align-items: center;
+        display: flex;
+        font-size: $font-small;
+      }
+      .fc-content-skeleton {
+        text-align: center;
+      }
+      .fc-day-number {
+        float: none;
+        display: flex;
+        width: $gap * 5;
+        height: $gap * 5;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .active-date span {
+      background-color: $color-blue;
+    }
+  }
+  .views-element-container {
+    flex: 1;
+    padding: $gap * 4;
+    @include breakpoint(md) {
+      // position: absolute;
+      right: 0;
+      top: 0;
+      max-height: 100%;
+      overflow-y: auto;
+      width: 50%;
+    }
+    .view-content {
+      .views-row {
+        border-top: 1px solid $color-gray-light;
+        padding-bottom: $gap;
+        padding-top: $gap;
+        position: relative;
+      }
+    }
+    .layout__region--content {
+      display: flex;
+      align-items: center;
+      a {
+        width: 100%;
+        &::after {
+          align-self: center;
+          color: $color-blue;
+          content: '→';
+          margin-left: auto;
+          padding: $gap * 2;
+          padding: 0;
+          text-decoration: none;
+          float: right;
+        }
+      }
+    }
+    .field-name-field-data {
+      align-items: center;
+      border-radius: 50%;
+      border: 1px solid $color-blue;
+      display: flex;
+      flex-direction: column;
+      font-size: $font-small;
+      font-weight: 700;
+      height: 50px;
+      justify-content: center;
+      line-height: 1;
+      margin-right: $gap * 2;
+      text-align: center;
+      text-transform: uppercase;
+      width: 50px;
+      word-spacing: 100vw;
+    }
+    .field-name-node-title a {
+      color: $color-secondary;
+      text-decoration: underline;
+      font-size: $font-normal;
+      &::before {
+        @include blockLink;
+      }
+    }
+  }
+}
+.calendario-verde.view-eventi {
+  .date-recur-date,
+  .date-recur-occurrences {
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid $color-blue;
+    display: flex;
+    flex-direction: column;
+    font-size: $font-small;
+    font-weight: 700;
+    height: 50px;
+    justify-content: center;
+    line-height: 1;
+    margin-right: $gap * 2;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50px;
+    word-spacing: 100vw;
+    time:nth-child(2) {
+      display: none;
+    }
+  }
+}
+.page-node-type-comune-servizi{
+  .paragraph--type--calendario-eventi {
+    #calendar{
+      .active-date span {
+        background-color: #008A00;
+      }
+    }
+    .views-element-container{
+      .field-name-field-data {
+        border: 1px solid #008A00;
+        display: none;
+      }
+      .layout__region--content{
+        &:after{
+          color: #008A00;
+        }
+      }
+    }
+  }
+}

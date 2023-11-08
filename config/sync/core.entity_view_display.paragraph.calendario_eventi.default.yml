@@ -1,0 +1,63 @@
+uuid: 62680171-124d-4068-9dea-23fa544a973b
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.calendario_eventi.field_cta
+    - field.field.paragraph.calendario_eventi.field_immagine
+    - field.field.paragraph.calendario_eventi.field_titolo
+    - field.field.paragraph.calendario_eventi.field_vista
+    - paragraphs.paragraphs_type.calendario_eventi
+  module:
+    - ds
+    - link
+    - viewsreference
+id: paragraph.calendario_eventi.default
+targetEntityType: paragraph
+bundle: calendario_eventi
+mode: default
+content:
+  field_cta:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_immagine:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: cover_medium
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: content
+  field_titolo:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_vista:
+    weight: 1
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+hidden: {  }

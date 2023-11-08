@@ -1,0 +1,8 @@
+name: 'm_api'
+type: module
+description: 'Api Integrations for external services'
+core: 8.x
+package: 'Messina'
+dependencies:
+  - openid_connect
+  - wso2_with_jwt

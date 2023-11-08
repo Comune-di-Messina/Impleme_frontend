@@ -1,0 +1,37 @@
+uuid: abf88eec-90db-4167-adf0-0534afb7621f
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.thumb_medium
+    - field.field.media.cover.field_media_image
+    - image.style.thumb_medium
+    - media.type.cover
+  module:
+    - ds
+    - image
+id: media.cover.thumb_medium
+targetEntityType: media
+bundle: cover
+mode: thumb_medium
+content:
+  field_media_image:
+    label: hidden
+    weight: 0
+    settings:
+      image_style: thumb_medium
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: image
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

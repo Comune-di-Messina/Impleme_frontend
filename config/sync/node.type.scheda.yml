@@ -1,0 +1,17 @@
+uuid: c28f2485-6eb7-4626-8b7f-94571443ed72
+langcode: it
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Scheda dettaglio'
+type: scheda
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

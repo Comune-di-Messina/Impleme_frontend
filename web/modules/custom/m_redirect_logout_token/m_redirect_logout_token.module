@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains m_redirect_logout_token.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function m_redirect_logout_token_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the m_redirect_logout_token module.
+    case 'help.page.m_redirect_logout_token':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('redirect to logout if token is invalid') . '</p>';
+      return $output;
+
+    default:
+  }
+}

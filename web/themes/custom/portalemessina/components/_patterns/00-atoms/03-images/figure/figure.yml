@@ -1,0 +1,9 @@
+src: https://via.placeholder.com/1280x600/ebebeb/808080/?text=Immagine1
+alt: Alt text
+caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit…
+video: //www.youtube.com/
+
+###
+
+ui_pattern_definition:
+  label: Element - Figure

@@ -1,0 +1,10 @@
+uuid: 768bf646-da01-4682-8712-db20454cdd6b
+langcode: it
+status: true
+dependencies: {  }
+id: cta_con_icona
+label: 'Cta con icona'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

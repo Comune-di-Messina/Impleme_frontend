@@ -1,0 +1,193 @@
+.filters form {
+  fieldset + .form-type-date {
+    clear: both;
+  }
+  .form-type-date {
+    label {
+      color: $color-white;
+    }
+    .form-date {
+      color: $color-white;
+      background: url('../images/icons/calendar.svg') no-repeat right center transparent;
+      border-bottom: 1px solid $color-white;
+      position: relative;
+      &::-webkit-calendar-picker-indicator {
+        background: transparent;
+        position: absolute;
+        right: 0;
+      }
+      padding-right: 30px;
+    }
+  }
+}
+// Chosen.
+.views-exposed-form {
+  .form-type-select {
+    .form-select {
+      background-color: $color-white;
+      border: 0 !important;
+      width: 100% !important;
+      .chosen-single {
+        align-items: center;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid $color-gray-light;
+        border-radius: 0;
+        box-shadow: none;
+        color: $color-blue-slate-light;
+        font-size: $font-normal;
+        display: flex;
+        font-weight: 600;
+        height: auto;
+        padding: $gap * 2;
+        &::before {
+          @include sprite--chevron-down-small;
+          content: '';
+          display: block;
+          margin-right: $gap;
+          position: absolute;
+          right: 0;
+          z-index: 15;
+        }
+        b {
+          display: none;
+        }
+      }
+    }
+    .chosen-drop {
+      border-radius: 5px;
+      border-top-right-radius: 0;
+      border: 0;
+      font-size: $font-normal;
+      top: 1px;
+      z-index: 2;
+      .chosen-search {
+        padding: 0;
+        top: -2px;
+      }
+      .chosen-search-input {
+        background: transparent !important;
+        border: 0;
+        font-family: $font-primary;
+        font-size: $font-medium;
+        font-weight: 600;
+        line-height: $gap * 2;
+        margin: 0;
+        padding: $gap * 2;
+      }
+      .chosen-results {
+        border-top: 1px solid $color-gray-light;
+        margin: -3px 0 0;
+        padding: $gap * 2;
+        li {
+          background: transparent;
+          color: $color-gray-darker;
+          padding: $gap 0;
+          &.highlighted {
+            color: $color-gray-darker;
+            text-decoration: underline;
+          }
+          &.no-results {
+            opacity: .75;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fieldset-step {
+  legend {
+    color: $color-green-dark;
+    text-transform: uppercase;
+    font-size: $font-medium;
+    font-weight: 600;
+    padding: $gap 0;
+    border-bottom: 1px solid $color-green-dark;
+  }
+  .fieldset-step-num {
+    color: $color-white;
+    position: relative;
+    width: $gap * 4;
+    height: $gap * 4;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    &::before {
+      background-color: $color-green-dark;
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+  &.h-disabled {
+    legend {
+      color: $color-gray;
+      border-color: $color-gray;
+      .fieldset-step-num::before {
+        background-color: $color-gray;
+      }
+    }
+    .fieldset-content {
+      display: none;
+    }
+  }
+}
+
+// Bootstrap overwrite. 
+.form-wrapper,
+.bootstrap-select-wrapper {
+  & > label {
+    display: block;
+    font-size: $font-small !important;
+    font-weight: 600;
+    line-height: 1.6;
+    padding: 0;
+    position: relative;
+    transform: none !important;
+    width: 100% !important;
+  }
+}
+
+// Checkbox.
+.form-check {
+  &.h-check-display { // Disable checkbox.
+    pointer-events: none;
+    label {
+      padding-left: $gap;
+      &::after, &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+// Input currency.
+.input-currency {
+  .form-wrapper {
+    position: relative;
+    &::before {
+      align-items: center;
+      bottom: 0;
+      color: $color-gray;
+      content: "€";
+      display: block;
+      display: flex;
+      font-weight: 700;
+      height: 2.5rem;
+      line-height: 1.75rem;
+      padding: .375rem .5rem;
+      position: absolute;
+    }
+  }
+  input {
+    padding-left: 1.25em !important;
+  }
+}

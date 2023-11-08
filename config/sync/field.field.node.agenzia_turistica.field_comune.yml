@@ -1,0 +1,28 @@
+uuid: cd0fdedc-11bf-4bd9-a009-bf5a3ea7ff38
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comune
+    - node.type.agenzia_turistica
+    - node.type.comune
+id: node.agenzia_turistica.field_comune
+field_name: field_comune
+entity_type: node
+bundle: agenzia_turistica
+label: Comune
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      comune: comune
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

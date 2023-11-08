@@ -1,0 +1,72 @@
+.page-scheda-dettaglio {
+  .scheda-intro {
+    background-color: $color-gray-lighter;
+  }
+  // Sidebar.
+  &.page-scheda-dettaglio-sidebar {
+    .row-column-border {
+      border-top: 0;
+      margin-top: 0;
+    }
+    .it-page-sections-container {
+      [class*="col"] { // temp.
+        max-width: 90% !important;
+        flex: 1;
+      }
+    }
+  }
+  .scheda-cta {
+    & > div {
+      border-radius: 3px;
+      box-shadow: 0 0 $gap $color-gray-light;
+      margin: auto;
+      max-width: 90%;
+      padding: $gap * 5;
+      text-align: center;
+    }
+  }
+}
+// Dettaglio.
+.page-scheda-dettaglio,
+.page-scheda-dettaglio-full {
+  .scheda-related {
+    background-color: $color-gray-lighter;
+    margin-top: $gap * 12;
+    &:last-child {
+      margin-bottom: -#{$gap * 12};
+    }
+    .cards-wrapper {
+      margin-right: ($gap-grid / -2);
+      margin-left: ($gap-grid / -2);
+      @include breakpoint(lg) {
+        display: flex;
+      }
+      .card {
+        margin: $gap-grid / 2;
+        width: calc(100% - #{$gap-grid});
+        @include breakpoint(lg) {
+          width: calc(33.3% - #{$gap-grid});
+        }
+      }
+    }
+  }
+}
+
+// Scheda visura.
+.page-scheda-visure {
+  .scheda-tabs {
+    background-color: $color-gray-lighter;
+    border: 1px solid $color-gray-lighter;
+    padding-top: $gap * 4;
+    .tab-navigation {
+      margin-bottom: 10px;
+    }
+  }
+  .container-grid {
+    @include masonry2col;
+    padding-bottom: $gap * 2;
+    .module {
+      margin-bottom: $gap * 2;
+    }
+  }
+}

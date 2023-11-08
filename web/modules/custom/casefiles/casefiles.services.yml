@@ -1,0 +1,4 @@
+services:
+  casefiles.casefiles_client:
+    class: Drupal\casefiles\CasefilesService
+    arguments: [ '@user.private_tempstore', '@http_client_factory', '@logger.channel.m_api', '@state', '@config.factory', '@wso2_with_jwt.oauth_client', '@session_manager']

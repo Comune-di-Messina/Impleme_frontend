@@ -1,0 +1,108 @@
+uuid: 353a2114-e79e-4514-a23c-b07a227402fc
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.guida_turistica.field_comune
+    - field.field.node.guida_turistica.field_email
+    - field.field.node.guida_turistica.field_lingua
+    - field.field.node.guida_turistica.field_residenza
+    - field.field.node.guida_turistica.field_sito_web
+    - field.field.node.guida_turistica.field_telefono
+    - node.type.guida_turistica
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_guida
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      title:
+        - node_title
+      card_content_main:
+        - field_telefono
+        - field_email
+        - field_sito_web
+      card_content_more:
+        - field_lingua
+        - field_residenza
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.guida_turistica.default
+targetEntityType: node
+bundle: guida_turistica
+mode: default
+content:
+  field_email:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: card_content_main
+  field_lingua:
+    weight: 4
+    label: above
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_label
+    region: card_content_more
+  field_residenza:
+    weight: 5
+    label: above
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_label
+    region: card_content_more
+  field_sito_web:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: card_content_main
+  field_telefono:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: card_content_main
+hidden:
+  field_comune: true
+  langcode: true
+  links: true

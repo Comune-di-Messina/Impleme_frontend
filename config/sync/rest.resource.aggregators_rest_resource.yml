@@ -1,0 +1,13 @@
+uuid: 75782794-4c79-463b-a258-7cf3a922f638
+langcode: it
+status: true
+dependencies: {  }
+id: aggregators_rest_resource
+plugin_id: aggregators_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

@@ -1,0 +1,72 @@
+uuid: 65e45320-5c00-4639-871b-71566d3f2092
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_moduli
+    - paragraphs.paragraphs_type.blocchi_di_selezione_del_comune
+    - paragraphs.paragraphs_type.selezione_comuni
+    - paragraphs.paragraphs_type.selezione_comuni_servizi
+  module:
+    - entity_reference_revisions
+id: paragraph.blocchi_di_selezione_del_comune.field_moduli
+field_name: field_moduli
+entity_type: paragraph
+bundle: blocchi_di_selezione_del_comune
+label: Moduli
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      selezione_comuni: selezione_comuni
+      selezione_comuni_servizi: selezione_comuni_servizi
+    target_bundles_drag_drop:
+      blocchi_di_selezione_del_comune:
+        weight: 15
+        enabled: false
+      carosello_con_testata_big:
+        weight: 16
+        enabled: false
+      carosello_con_testata_small:
+        weight: 17
+        enabled: false
+      citazione:
+        weight: 18
+        enabled: false
+      contenuto:
+        weight: 19
+        enabled: false
+      contenuto_ed_infografica:
+        weight: 20
+        enabled: false
+      elemento_infografica:
+        weight: 21
+        enabled: false
+      immagine:
+        weight: 22
+        enabled: false
+      immagine_full:
+        weight: 23
+        enabled: false
+      raccolta_contenuti_con_testata:
+        weight: 24
+        enabled: false
+      selezione_comuni:
+        enabled: true
+        weight: 25
+      selezione_comuni_servizi:
+        enabled: true
+        weight: 26
+      tappe:
+        weight: 27
+        enabled: false
+      vista:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions

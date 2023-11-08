@@ -1,0 +1,22 @@
+uuid: 2f3f25f5-9820-4dd6-89d0-0a94e4f5cd36
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - portalemessina
+_core:
+  default_config_hash: y18jh2Y_IOoA0GbsxGSMkBAHR9iqNwM6ZzJAU4YESiA
+id: portalemessina_messages
+theme: portalemessina
+region: before_content
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

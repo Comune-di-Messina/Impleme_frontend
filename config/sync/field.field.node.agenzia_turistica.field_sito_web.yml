@@ -1,0 +1,19 @@
+uuid: 42f946e9-ccb5-450c-b303-9ebc5a4060b0
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sito_web
+    - node.type.agenzia_turistica
+id: node.agenzia_turistica.field_sito_web
+field_name: field_sito_web
+entity_type: node
+bundle: agenzia_turistica
+label: 'Sito web'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

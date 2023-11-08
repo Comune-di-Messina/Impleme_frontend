@@ -1,0 +1,15 @@
+{%
+  set classes = [
+  'module',
+  'block-selection',
+  'container rounded shadow bg-white'
+]
+%}
+<div {{ attributes.addClass(classes) }}>
+  <div class="row">
+    {{ modules }}
+      {% if pl %}
+        {{ modules }}
+      {% endif %}
+  </div>
+</div>

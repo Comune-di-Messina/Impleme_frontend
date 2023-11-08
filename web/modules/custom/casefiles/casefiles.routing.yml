@@ -1,0 +1,97 @@
+casefiles.crud_hook:
+  path: 'casefiles/crud/{typeId}/{operationType}'
+  defaults:
+    _controller: '\Drupal\casefiles\Controller\CrudController::crud'
+  requirements:
+    _permission: 'access content'
+
+casefiles.lista_pratiche:
+  path: "servizi/pratiche/lista"
+  defaults:
+    _controller: '\Drupal\casefiles\Controller\CasefilesController::renderListaPratiche'
+    _title: "Servizio Pratiche - lista"
+  requirements:
+    _role: "authenticated"
+
+casefiles.dettaglio_pratica:
+  path: "servizi/pratiche/{casefileId}"
+  defaults:
+    _controller: '\Drupal\casefiles\Controller\CasefilesController::renderDettaglioPratica'
+    _title: "Servizio Pratiche - dettagli pratica"
+  requirements:
+    _role: "authenticated"
+
+casefiles.nuova_pratiche:
+  path: "servizi/pratiche/nuova"
+  defaults:
+    _controller: '\Drupal\casefiles\Controller\CasefilesController::renderNuovaPratica'
+    _title: "Servizio Pratiche - lista"
+  requirements:
+    _role: "authenticated"
+
+casefiles.api.lista_stati:
+  path: "servizi/casefiles/pratiche/stati"
+  defaults:
+    _controller: '\Drupal\casefiles\Controller\CasefilesController::listaStati'
+    _title: "Servizio Pratiche - lista stati"
+  requirements:
+    _access: 'TRUE'
+
+casefiles.api.pratica.elenco:
+  path: "servizi/casefiles/pratiche/lista"
+  defaults:
+    _controller: '\Drupal\casefiles\Controller\CasefilesController::listaPratiche'
+    _title: "Servizio Casefiles - Lista pratiche"
+  requirements:
+    _role: "authenticated"
+
+casefiles.api.enti:
+  path: "servizi/enti/lista"
+  defaults:
+    _controller: '\Drupal\casefiles\Controller\CasefilesController::listaEnti'
+    _title: "Servizio Pratiche - lista enti"
+  requirements:
+    _role: "authenticated"
+
+casefiles.api.pratica.dettagli:
+  path: "servizi/casefiles/pratiche/{casefileId}"
+  defaults:
+    _controller: '\Drupal\casefiles\Controller\CasefilesController::dettaglioPratica'
+    _title: "Servizio Pratiche - dettagli pratica"
+  requirements:
+    _role: "authenticated"
+
+casefiles.api.pratica.nuova:
+  path: "servizi/casefiles/pratiche/crea"
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\casefiles\Controller\CasefilesController::creaPratica'
+    _title: "Servizio Pratiche - nupova pratica"
+  requirements:
+    _role: "authenticated"
+
+casefiles.api.pratica.allegato:
+  path: "servizi/casefiles/pratiche/{casefileId}/allegato/{documentId}"
+  defaults:
+    _controller: '\Drupal\casefiles\Controller\CasefilesController::getAllegato'
+    _title: "Servizio Casefiles - Lista pratiche"
+  requirements:
+    _role: "authenticated"
+
+casefiles.api.pratica.aggiungi_allegato:
+  path: "servizi/casefiles/pratiche/{casefileId}/allega"
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\casefiles\Controller\CasefilesController::postAllegato'
+    _title: "Servizio Casefiles - Aggiungi allegato alla pratica"
+  requirements:
+    _role: "authenticated"
+
+
+casefiles.api.pratica.tipologie:
+  path: "servizi/casefiles/pratiche/tipologie"
+  defaults:
+    _controller: '\Drupal\casefiles\Controller\CasefilesController::listaTipologie'
+    _title: "Servizio Casefiles - Lista Tipologie Pratiche"
+  requirements:
+    _role: "authenticated"

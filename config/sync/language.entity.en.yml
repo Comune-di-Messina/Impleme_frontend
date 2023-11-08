@@ -1,0 +1,11 @@
+uuid: dac1c105-c70a-4532-81d1-9df96bf8ce90
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lBXDpdDPXQtrfTJQhr6MjRJJEEyYSoRJ0acdvHLsWeA
+id: en
+label: Eng
+direction: ltr
+weight: -9
+locked: false

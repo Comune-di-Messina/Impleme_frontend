@@ -1,0 +1,108 @@
+uuid: 6a79dcf6-b722-402d-b4f3-2bdf9171e4ee
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.itinerario.body
+    - field.field.node.itinerario.field_abstract
+    - field.field.node.itinerario.field_argomenti_correlati
+    - field.field.node.itinerario.field_colore_marker
+    - field.field.node.itinerario.field_comune
+    - field.field.node.itinerario.field_contenuti_collegati
+    - field.field.node.itinerario.field_coordinate
+    - field.field.node.itinerario.field_cover
+    - field.field.node.itinerario.field_distanza_da_percorrere
+    - field.field.node.itinerario.field_external_link
+    - field.field.node.itinerario.field_geojson_routes
+    - field.field.node.itinerario.field_immagine
+    - field.field.node.itinerario.field_mezzo_di_trasporto
+    - field.field.node.itinerario.field_moduli
+    - field.field.node.itinerario.field_percorso
+    - field.field.node.itinerario.field_target
+    - field.field.node.itinerario.field_tempo_previsto
+    - field.field.node.itinerario.field_term_temi
+    - field.field.node.itinerario.field_tipologia_itinerario
+    - field.field.node.itinerario.field_video_url
+    - node.type.itinerario
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_simple
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      category:
+        - 'bundle_field:node'
+      title:
+        - node_title
+      content:
+        - field_abstract
+      cta:
+        - node_link
+    fields:
+      'bundle_field:node':
+        plugin_id: 'bundle_field:node'
+        weight: 0
+        label: hidden
+        formatter: default
+      node_link:
+        plugin_id: node_link
+        weight: 3
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.itinerario.search_index
+targetEntityType: node
+bundle: itinerario
+mode: search_index
+content:
+  field_abstract:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  body: true
+  field_argomenti_correlati: true
+  field_colore_marker: true
+  field_comune: true
+  field_contenuti_collegati: true
+  field_coordinate: true
+  field_cover: true
+  field_distanza_da_percorrere: true
+  field_external_link: true
+  field_geojson_routes: true
+  field_immagine: true
+  field_mezzo_di_trasporto: true
+  field_moduli: true
+  field_percorso: true
+  field_target: true
+  field_tempo_previsto: true
+  field_term_temi: true
+  field_tipologia_itinerario: true
+  field_video_url: true
+  langcode: true
+  links: true

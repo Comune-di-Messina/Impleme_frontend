@@ -1,0 +1,20 @@
+uuid: f5814600-317b-4efa-b072-f8c969ac56e5
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.territori
+  module:
+    - path
+id: taxonomy_term.territori.path
+field_name: path
+entity_type: taxonomy_term
+bundle: territori
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,25 @@
+uuid: 46749718-2513-47f4-a423-2af0cc4c6419
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categoria_agg_servizi
+    - node.type.aggregatore_servizi
+id: node.aggregatore_servizi.field_categoria_agg_servizi
+field_name: field_categoria_agg_servizi
+entity_type: node
+bundle: aggregatore_servizi
+label: 'Categoria aggregatore'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: temi_er
+      display_name: entity_reference_3
+      arguments: {  }
+field_type: entity_reference

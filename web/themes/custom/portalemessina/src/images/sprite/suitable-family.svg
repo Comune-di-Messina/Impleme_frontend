@@ -1,0 +1,16 @@
+
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Family-Babies-Kids-/-Family-/-family-child" stroke="#ffffff" stroke-width="1.5">
+            <g id="family-child">
+                <circle id="Oval" cx="19.5" cy="5.25" r="3"></circle>
+                <path d="M17.812,20.25 L18,21.75 L21,21.75 L21.75,15.75 L23.25,15.75 L23.25,13.5 C23.25,12.0796048 22.4474911,10.7811181 21.177051,10.145898 C19.9066109,9.51067798 18.3863162,9.64776287 17.25,10.5" id="Shape"></path>
+                <circle id="Oval" cx="4.5" cy="5.25" r="3"></circle>
+                <path d="M6.188,20.25 L6,21.75 L3,21.75 L2.25,15.75 L0.75,15.75 L0.75,13.5 C0.75,12.0796048 1.55250891,10.7811181 2.82294902,10.145898 C4.09338912,9.51067798 5.61368382,9.64776287 6.75,10.5" id="Shape"></path>
+                <circle id="Oval" cx="12" cy="9" r="2.25"></circle>
+                <path d="M12,12.75 C9.92893219,12.75 8.25,14.4289322 8.25,16.5 L8.25,17.25 L9.75,17.25 L10.5,21.75 L12,21.75" id="Shape"></path>
+                <path d="M12,12.75 C14.0710678,12.75 15.75,14.4289322 15.75,16.5 L15.75,17.25 L14.25,17.25 L13.5,21.75 L12,21.75" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+uuid: 9c8206a6-416a-4a33-8466-222225114d59
+langcode: it
+status: true
+dependencies: {  }
+id: immagine
+label: Immagine
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name

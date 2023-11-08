@@ -1,0 +1,20 @@
+{%
+  set classes = [
+  'article',
+  'quote',
+  'container my-5'
+]
+%}
+
+<article {{ attributes.addClass(classes) }}>
+  <div class="row justify-content-center">
+    <div class="quote-wrapper col-lg-8 p-4">
+      {% if title|render %}
+        <h6>{{ title }}</h6>
+      {% endif %}
+      <div class="quote-content">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</article>

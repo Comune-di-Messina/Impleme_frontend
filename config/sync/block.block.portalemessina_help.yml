@@ -1,0 +1,22 @@
+uuid: d9caac0e-bce7-4e3e-8372-b52e3a4a91a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - portalemessina
+_core:
+  default_config_hash: OQ9O1jgytEdGuTPxOTZ7UnVlT582JpQ1oZ0QGOHxSFU
+id: portalemessina_help
+theme: portalemessina
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

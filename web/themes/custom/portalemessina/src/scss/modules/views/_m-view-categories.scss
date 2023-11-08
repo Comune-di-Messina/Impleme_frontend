@@ -1,0 +1,42 @@
+.view-categorie {
+  // Front - slideshow.
+  &.view-display-id-block_1 {
+    @include maxWidth($maxwidth-xsmall);
+    @include breakpoint(lg) {
+      max-width: $maxwidth;
+    }
+    & > .view-content {
+      margin-right: ($gap-grid / -2);
+      margin-left: ($gap-grid / -2);
+      @include breakpoint(lg) {
+        display: flex;
+      }
+      .card {
+        margin: $gap-grid / 2;
+        width: calc(100% - #{$gap-grid});
+        @include breakpoint(lg) {
+          width: calc(33.3% - #{$gap-grid});
+        }
+      }
+    }
+    .attachment-after {
+      margin-top: 2rem;
+      text-align: center;
+      .view-header {
+        font-size: $font-small;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .view-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+      }
+      .more-link {
+        margin-top: 1.25rem;
+      }
+    }
+  }
+}

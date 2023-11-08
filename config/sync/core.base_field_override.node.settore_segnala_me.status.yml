@@ -1,0 +1,22 @@
+uuid: db8e9715-23ea-4362-8a52-d09d4a5b7399
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.settore_segnala_me
+id: node.settore_segnala_me.status
+field_name: status
+entity_type: node
+bundle: settore_segnala_me
+label: Pubblicato
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

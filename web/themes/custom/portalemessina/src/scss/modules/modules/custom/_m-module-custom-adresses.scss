@@ -1,0 +1,129 @@
+.paragraph--type--mappa-indirizzi {
+  @include maxWidth;
+  @include cardShadowLarge;
+  border-radius: 3px;
+  margin-bottom: $gap * 8;
+  margin-top: $gap * 12;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  @include breakpoint(md) {
+    flex-direction: row;
+  }
+  .mappa-sidebar {
+    padding: 0;
+    width: 100%;
+    @include breakpoint(md) {
+      width: 40%;
+    }
+    & > .field--name-field-titolo {
+      color: $color-blue-dark;
+      font-weight: 700;
+      left: 0;
+      position: absolute;
+      top: -#{$gap};
+      transform: translateY(-100%);
+      @include breakpoint(sm) {
+        font-size: $font-xlarge;
+      }
+    }
+    .field--name-field-moduli {
+      height: 100%;
+      min-height: 350px;
+      overflow: auto;
+      overflow: hidden;
+      padding: $gap * 5;
+      position: relative;
+      @include breakpoint(md) {
+        max-height: 450px;
+      }
+      & > .field__item {
+        border-top: 1px solid $color-gray-light;
+      }
+    }
+    .paragraph--type--elemento-mappa {
+      & > .field--name-field-titolo {
+        cursor: pointer;
+        display: flex;
+        font-size: $font-medium;
+        padding-bottom: $gap;
+        padding-top: $gap;
+        &::after {
+          align-self: center;
+          color: $color-blue;
+          content: '→';
+          margin-left: auto;
+          padding: $gap * 2;
+        }
+      }
+      .group-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: $gap * 5;
+        transform: translateX(100%);
+        transition: transform .75s ease-in-out;
+        &.h-active {
+          transform: translateX(0);
+        }
+        .field--name-field-titolo {
+          cursor: pointer;
+          font-size: $font-large;
+          font-weight: 700;
+          border-bottom: 1px solid $color-gray-light;
+          padding-bottom: $gap;
+          margin-bottom: $gap;
+        }
+        .field--name-field-indirizzo,
+        .field--name-field-telefono,
+        .field--name-field-orari {
+          position: relative;
+          padding: $gap * 2;
+          padding-left: $gap * 6;
+          &::before {
+            content: '';
+            display: block;
+            left: 0;
+            position: absolute;
+            margin: -3px;
+          }
+        }
+        .field--name-field-indirizzo::before {
+          @include sprite--pin;
+        }
+        .field--name-field-telefono::before {
+          @include sprite--phone;
+        }
+        .field--name-field-orari::before {
+          @include sprite--clock;
+        }
+        .field-back {
+          cursor: pointer;
+          font-size: $font-small;
+          font-weight: 700;
+          margin-top: auto;
+          padding: $gap * 2;
+          padding-left: $gap * 6;
+          position: relative;
+          &::before {
+            @include sprite--arrow-back;
+            content: '';
+            display: block;
+            left: 0;
+            position: absolute;
+            margin: -3px;
+          }
+        }
+      }
+    }
+  }
+  .mappa-indirizzi {
+    background-color: $color-white;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    @include breakpoint(md) {
+      width: 60%;
+    }
+  }
+}

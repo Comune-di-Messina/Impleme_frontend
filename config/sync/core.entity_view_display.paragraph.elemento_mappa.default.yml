@@ -1,0 +1,88 @@
+uuid: 5b595f5e-a238-405a-b514-1c3f3c2c1c35
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.elemento_mappa.field_coordinate
+    - field.field.paragraph.elemento_mappa.field_indirizzo
+    - field.field.paragraph.elemento_mappa.field_orari
+    - field.field.paragraph.elemento_mappa.field_telefono
+    - field.field.paragraph.elemento_mappa.field_titolo
+    - paragraphs.paragraphs_type.elemento_mappa
+  module:
+    - ds
+    - field_group
+    - geofield
+third_party_settings:
+  field_group:
+    group_content:
+      children:
+        - field_indirizzo
+        - field_telefono
+        - field_orari
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: group-content
+      label: Contenuto
+id: paragraph.elemento_mappa.default
+targetEntityType: paragraph
+bundle: elemento_mappa
+mode: default
+content:
+  field_coordinate:
+    type: geofield_latlon
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      output_format: decimal
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_indirizzo:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_orari:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_telefono:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_titolo:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

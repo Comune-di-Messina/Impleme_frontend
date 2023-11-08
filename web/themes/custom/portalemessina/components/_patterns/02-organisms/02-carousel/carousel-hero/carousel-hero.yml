@@ -1,0 +1,8 @@
+modules:
+  include():
+    pattern: molecules-hero-full
+
+###
+
+ui_pattern_definition:
+  label: Organism - Carousel hero

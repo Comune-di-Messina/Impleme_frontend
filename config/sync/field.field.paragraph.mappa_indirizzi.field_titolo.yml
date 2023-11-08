@@ -1,0 +1,21 @@
+uuid: 198fe707-70df-485f-a33d-d9763590c1e7
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titolo
+    - paragraphs.paragraphs_type.mappa_indirizzi
+id: paragraph.mappa_indirizzi.field_titolo
+field_name: field_titolo
+entity_type: paragraph
+bundle: mappa_indirizzi
+label: Titolo
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Indirizzi utili'
+default_value_callback: ''
+settings: {  }
+field_type: string

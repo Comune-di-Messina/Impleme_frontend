@@ -1,0 +1,100 @@
+uuid: 001b6e13-1454-415d-91c7-edaedf91751c
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carosello_con_testata_small.field_elementi_carosello_small
+    - field.field.paragraph.carosello_con_testata_small.field_immagine
+    - field.field.paragraph.carosello_con_testata_small.field_link
+    - field.field.paragraph.carosello_con_testata_small.field_tema
+    - field.field.paragraph.carosello_con_testata_small.field_testo
+    - field.field.paragraph.carosello_con_testata_small.field_titolo
+    - paragraphs.paragraphs_type.carosello_con_testata_small
+  module:
+    - ds
+    - link
+    - options
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_banner_simple
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_immagine
+      title:
+        - field_titolo
+      content:
+        - field_testo
+      link:
+        - field_link
+      tema:
+        - field_tema
+      modules:
+        - field_elementi_carosello_small
+id: paragraph.carosello_con_testata_small.default
+targetEntityType: paragraph
+bundle: carosello_con_testata_small
+mode: default
+content:
+  field_elementi_carosello_small:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: grid
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: entity_reference_entity_view
+    region: modules
+  field_immagine:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: cover
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: image
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: link
+  field_tema:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: tema
+  field_testo:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_titolo:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: title
+hidden: {  }

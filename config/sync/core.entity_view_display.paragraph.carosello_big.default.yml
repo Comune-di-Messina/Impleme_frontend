@@ -1,0 +1,56 @@
+uuid: 01bcd8e5-bc91-41c9-a438-2989aca78ea3
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carosello_big.field_elementi_carosello_big
+    - field.field.paragraph.carosello_big.field_selettore_sezione
+    - field.field.paragraph.carosello_big.field_titolo
+    - paragraphs.paragraphs_type.carosello_big
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_carousel_card
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+        wrappers:
+          title: div
+          selector: div
+          modules: div
+    regions:
+      title:
+        - field_titolo
+      modules:
+        - field_elementi_carosello_big
+id: paragraph.carosello_big.default
+targetEntityType: paragraph
+bundle: carosello_big
+mode: default
+content:
+  field_elementi_carosello_big:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: carosello_big
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: entity_reference_entity_view
+    region: modules
+  field_titolo:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: title
+hidden:
+  field_selettore_sezione: true

@@ -1,0 +1,21 @@
+uuid: f67298cf-d7a3-4c2c-90ca-25049739df56
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_testo
+    - paragraphs.paragraphs_type.contenuto_ed_infografica
+  module:
+    - text
+id: paragraph.contenuto_ed_infografica.field_testo
+field_name: field_testo
+entity_type: paragraph
+bundle: contenuto_ed_infografica
+label: Testo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

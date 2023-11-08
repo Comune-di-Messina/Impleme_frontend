@@ -1,0 +1,25 @@
+wso2_with_jwt.admin_settings:
+  path: '/admin/config/services/wso2'
+  defaults:
+    _form: '\Drupal\wso2_with_jwt\Form\Wso2Form'
+    _title: 'WSO2 Configurazione'
+  requirements:
+    _permission: 'administer site configuration'
+
+# wso2_with_jwt.testpage:
+#   path: '/wso2/test'
+#   defaults:
+#     _controller:  '\Drupal\wso2_with_jwt\Controller\Wso2AjaxController::testpage'
+#     _title: 'WSO2 Test JWT!'
+#   requirements:
+#     _user_is_logged_in: 'true'
+
+
+# wso2_with_jwt.callApiManager:
+#  path: '/wso2/send'
+#  methods:  [GET]
+#  defaults:
+#   _title: 'Test di invio JWT'
+#   _controller: '\Drupal\wso2_with_jwt\Controller\Wso2AjaxController::callApiManager'
+#  requirements:
+#      _user_is_logged_in: 'true'

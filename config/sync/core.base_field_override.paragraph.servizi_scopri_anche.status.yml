@@ -1,0 +1,22 @@
+uuid: 6c825c1a-9ddb-4029-b04a-4666202fd308
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.servizi_scopri_anche
+id: paragraph.servizi_scopri_anche.status
+field_name: status
+entity_type: paragraph
+bundle: servizi_scopri_anche
+label: Pubblicato
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

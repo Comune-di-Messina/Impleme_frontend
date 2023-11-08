@@ -1,0 +1,24 @@
+uuid: e91805a8-07be-4c5f-b7ce-32bcddfcb75f
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vista.field_vista
+    - paragraphs.paragraphs_type.vista
+  module:
+    - viewsreference
+id: paragraph.vista.default
+targetEntityType: paragraph
+bundle: vista
+mode: default
+content:
+  field_vista:
+    weight: 0
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+hidden: {  }

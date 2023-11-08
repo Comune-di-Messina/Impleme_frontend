@@ -1,0 +1,28 @@
+uuid: 4b19866d-33d8-4abf-96d8-fb143524d705
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comune
+    - node.type.comune
+    - node.type.guida_turistica
+id: node.guida_turistica.field_comune
+field_name: field_comune
+entity_type: node
+bundle: guida_turistica
+label: Comune
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      comune: comune
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

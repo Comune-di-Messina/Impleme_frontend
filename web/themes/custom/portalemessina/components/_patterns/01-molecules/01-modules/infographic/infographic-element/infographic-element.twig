@@ -1,0 +1,11 @@
+{%
+  set classes = [
+  'submodule',
+  'infographic',
+  'col py-4 pr-0 pl-4'
+]
+%}
+<div {{ attributes.addClass(classes) }}>
+  <div class="item-number font-weight-normal text-monospace">{{ number }}</div>
+  <div class="item-content font-weight-bold">{{ content }}</div>
+</div>

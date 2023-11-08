@@ -1,0 +1,23 @@
+uuid: bbb7e21e-f7c9-4ea3-9f88-92cb7f39bea0
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url_servizio
+    - node.type.settore_segnala_me
+  module:
+    - link
+id: node.settore_segnala_me.field_url_servizio
+field_name: field_url_servizio
+entity_type: node
+bundle: settore_segnala_me
+label: 'URL Servizio'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,34 @@
+uuid: b03bde6e-82d6-4c6c-abb9-4f4f4dba30b1
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.citazione.field_testo
+    - field.field.paragraph.citazione.field_titolo
+    - paragraphs.paragraphs_type.citazione
+  module:
+    - text
+id: paragraph.citazione.default
+targetEntityType: paragraph
+bundle: citazione
+mode: default
+content:
+  field_testo:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_titolo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

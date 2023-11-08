@@ -1,0 +1,114 @@
+uuid: 7828d96b-7af0-4e68-af4e-e3920df4313c
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.aggregatore_servizi.body
+    - field.field.node.aggregatore_servizi.field_abstract
+    - field.field.node.aggregatore_servizi.field_categoria_agg_servizi
+    - field.field.node.aggregatore_servizi.field_comune
+    - field.field.node.aggregatore_servizi.field_cover
+    - field.field.node.aggregatore_servizi.field_moduli
+    - field.field.node.aggregatore_servizi.field_vista
+    - node.type.aggregatore_servizi
+  module:
+    - ds
+    - entity_reference_revisions
+    - text
+    - user
+    - viewsreference
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_page_aggregatore
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      hero_title:
+        - node_title
+      hero_content:
+        - field_abstract
+      hero_image:
+        - field_cover
+      before_content:
+        - body
+      content:
+        - field_moduli
+      view:
+        - field_vista
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.aggregatore_servizi.default
+targetEntityType: node
+bundle: aggregatore_servizi
+mode: default
+content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 3
+    region: before_content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_abstract:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    type: text_summary_or_trimmed
+    region: hero_content
+  field_cover:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: cover_large
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: hero_image
+  field_moduli:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_vista:
+    type: viewsreference_formatter
+    weight: 5
+    region: view
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+hidden:
+  field_categoria_agg_servizi: true
+  field_comune: true
+  langcode: true
+  links: true

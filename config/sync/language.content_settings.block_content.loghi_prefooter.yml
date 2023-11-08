@@ -1,0 +1,18 @@
+uuid: 03748ca7-90ed-4c86-a3e2-62a43a664542
+langcode: it
+status: true
+dependencies:
+  config:
+    - block_content.type.loghi_prefooter
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: block_content.loghi_prefooter
+target_entity_type_id: block_content
+target_bundle: loghi_prefooter
+default_langcode: site_default
+language_alterable: true

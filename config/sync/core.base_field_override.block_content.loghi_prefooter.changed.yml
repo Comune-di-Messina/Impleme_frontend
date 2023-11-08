@@ -1,0 +1,18 @@
+uuid: a45c9899-c3e0-4bf8-aa90-49e2c1a30b7d
+langcode: it
+status: true
+dependencies:
+  config:
+    - block_content.type.loghi_prefooter
+id: block_content.loghi_prefooter.changed
+field_name: changed
+entity_type: block_content
+bundle: loghi_prefooter
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

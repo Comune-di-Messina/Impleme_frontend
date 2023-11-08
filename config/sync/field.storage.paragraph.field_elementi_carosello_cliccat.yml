@@ -1,0 +1,20 @@
+uuid: 3a05a18a-44c3-4f0a-a72f-9ef45f0d0d20
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_elementi_carosello_cliccat
+field_name: field_elementi_carosello_cliccat
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

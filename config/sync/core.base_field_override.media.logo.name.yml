@@ -1,0 +1,20 @@
+uuid: b40ec5d6-7655-4814-8c0e-24ba0f6e9d80
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.logo
+id: media.logo.name
+field_name: name
+entity_type: media
+bundle: logo
+label: Nome
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

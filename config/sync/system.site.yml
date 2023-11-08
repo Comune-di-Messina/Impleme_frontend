@@ -1,0 +1,15 @@
+name: 'Città metropolitana di Messina'
+mail: protocollo@pec.prov.me.it
+slogan: 'Messina Porta della Sicilia'
+page:
+  403: ''
+  404: ''
+  front: /node/12
+admin_compact_mode: false
+weight_select_max: 100
+langcode: it
+default_langcode: it
+_core:
+  default_config_hash: MbulC1OEKhZmtFPnDIBeQUgG3ntZO78H7Gpunyo8HTA
+uuid: 166020ea-74ec-4596-9cd4-07e0025af452
+mail_notification: ''

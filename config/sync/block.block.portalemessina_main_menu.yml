@@ -1,0 +1,59 @@
+uuid: cc66b905-05e4-4091-9934-9f124d2bd4a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - context
+    - node
+    - system
+  theme:
+    - portalemessina
+_core:
+  default_config_hash: PV0JAT6WtYjQd3bBhbyfDnuHHY7F-4kvCD9t5zHTPkc
+id: portalemessina_main_menu
+theme: portalemessina
+region: header
+weight: -3
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: "/luoghi/*\r\n/node/*"
+    negate: false
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      agenzia_turistica: agenzia_turistica
+      aggregatore_tema: aggregatore_tema
+      comune: comune
+      contenuto_multimediale: contenuto_multimediale
+      evento: evento
+      guida_turistica: guida_turistica
+      itinerario: itinerario
+      page: page
+      scheda: scheda
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

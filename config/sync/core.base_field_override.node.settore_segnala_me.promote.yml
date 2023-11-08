@@ -1,0 +1,22 @@
+uuid: 3035e669-96db-432f-ab8d-e6d1759882ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.settore_segnala_me
+id: node.settore_segnala_me.promote
+field_name: promote
+entity_type: node
+bundle: settore_segnala_me
+label: 'Promosso alla prima pagina'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

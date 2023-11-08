@@ -1,0 +1,144 @@
+uuid: 99c2bc6b-a446-4a05-85cf-30212b1bf43a
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.scheda_servizio.body
+    - field.field.node.scheda_servizio.field_abstract
+    - field.field.node.scheda_servizio.field_categoria_servizio
+    - field.field.node.scheda_servizio.field_categorie_correlate
+    - field.field.node.scheda_servizio.field_comune_servizi
+    - field.field.node.scheda_servizio.field_contenuti_collegati
+    - field.field.node.scheda_servizio.field_cover
+    - field.field.node.scheda_servizio.field_moduli
+    - field.field.node.scheda_servizio.field_ufficio_riferimento
+    - field.field.node.scheda_servizio.field_url_servizio
+    - node.type.scheda_servizio
+  module:
+    - ds
+    - field_group
+    - link
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_simple
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      category:
+        - field_categoria_servizio
+      title:
+        - node_title
+      content:
+        - field_abstract
+      cta:
+        - field_url_servizio
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_group:
+    group_scheda_cta:
+      children: {  }
+      parent_name: ''
+      weight: 21
+      format_type: html_element
+      region: hidden
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: accedi
+        classes: scheda-cta
+      label: 'Scheda CTA'
+    group_scheda_cta_content:
+      children: {  }
+      parent_name: ''
+      weight: 22
+      format_type: html_element
+      region: hidden
+      format_settings:
+        id: ''
+        classes: scheda-cta-content
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Scheda CTA content'
+id: node.scheda_servizio.search_index
+targetEntityType: node
+bundle: scheda_servizio
+mode: search_index
+content:
+  field_abstract:
+    type: text_summary_or_trimmed
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_categoria_servizio:
+    type: entity_reference_label
+    weight: 0
+    region: category
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_url_servizio:
+    type: link
+    weight: 3
+    region: cta
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+hidden:
+  body: true
+  field_categorie_correlate: true
+  field_comune_servizi: true
+  field_contenuti_collegati: true
+  field_cover: true
+  field_moduli: true
+  field_ufficio_riferimento: true
+  langcode: true
+  links: true

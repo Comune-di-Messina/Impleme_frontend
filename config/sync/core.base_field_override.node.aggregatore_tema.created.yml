@@ -1,0 +1,18 @@
+uuid: 77b22677-a740-4c59-9144-73d898d6744e
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.aggregatore_tema
+id: node.aggregatore_tema.created
+field_name: created
+entity_type: node
+bundle: aggregatore_tema
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

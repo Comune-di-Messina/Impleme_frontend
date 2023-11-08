@@ -1,0 +1,28 @@
+uuid: 9394fa8f-459f-41dd-b344-b24be0ec733d
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_immagine
+    - media.type.immagine
+    - paragraphs.paragraphs_type.cta_con_icona
+id: paragraph.cta_con_icona.field_immagine
+field_name: field_immagine
+entity_type: paragraph
+bundle: cta_con_icona
+label: Icona
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      immagine: immagine
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,15 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+
+<div class="h-section-servizi pratiche dettaglio">
+  <div class="page-scheda-dati">
+    {% include "@molecules/01-modules/hero/hero-simple/hero-simple.twig" with {
+      breadcrumbs: breadcrumbs,
+      title: 'Dettaglio pratica',
+      content: '',
+      new_report: 'Le tue pratiche',
+      new_report_link: '/servizi/pratiche/lista',
+      back: '<a href="/it/servizi/messina">Torna indietro</a>'
+    } %}
+
+  </div>
+</div>

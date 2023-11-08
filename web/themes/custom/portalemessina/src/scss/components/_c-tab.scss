@@ -1,0 +1,44 @@
+#myTab{
+    float: right;
+    border-bottom: 0px solid;
+    background: #273b4b;
+    overflow-x: hidden;
+    @media(max-width: 768px){
+        float: left;
+        margin-top: 20px;
+    }
+    li{  
+        margin-right: 20px;
+        a{
+            color: #fff;
+            padding: 5px 40px;
+            background: #273b4b;
+            border-bottom: none;
+            border: 1px solid #fff;
+            line-height: -3;
+            border-radius: 5px;
+            transition-duration: .3s;
+            &:hover{
+                background: #fff;
+            }
+        }
+        #servizi-tab{
+            &.active{
+                color: #008a00;
+                background: #fff;
+            }
+            &:hover{
+                color: #008a00;
+            }
+        }
+        #luoghi-tab{
+            &.active{
+                color: #3b76bd;
+                background: #fff;
+            }
+            &:hover{
+                color: #3b76bd;
+            }
+        }
+    }
+}

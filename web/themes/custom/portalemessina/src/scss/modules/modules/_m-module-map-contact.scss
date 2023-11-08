@@ -1,0 +1,120 @@
+.module.block-map-content {
+  padding-bottom: $gap * 10;
+  position: relative;
+  z-index: 1;
+  .block-background {
+    border-radius: 4px;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    max-width: $maxwidth + $gap * 10;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: $gap * 7;
+    width: 98%;
+    z-index: -1;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .container {
+    background-color: $color-white;
+    overflow: hidden;
+  }
+  .col-content-header {
+    border-bottom: 1px solid $color-gray-light;
+    .block-title {
+      font-size: $font-medium;
+    }
+  }
+  .col-content-main {
+    font-size: $font-small;
+    & > div + div {
+      margin-top: $gap;
+    }
+    .field-name-field-contatti-telefono,
+    .field-name-field-contatti-email,
+    .field-name-field-contatti-indirizzo {
+      position: relative;
+      padding: $gap * 2;
+      padding-left: $gap * 6;
+      &::before {
+        content: '';
+        display: block;
+        left: 0;
+        position: absolute;
+        margin: -3px;
+      }
+    }
+    .field-name-field-contatti-indirizzo::before {
+      @include sprite--pin;
+    }
+    .field-name-field-contatti-telefono::before {
+      @include sprite--phone;
+    }
+    .field-name-field-contatti-email::before {
+      @include sprite--mail;
+    }
+  }
+  .block-footer {
+    @include inlineCta;
+  }
+  .leaflet-container {
+    height: 100%!important;
+    min-height: 400px;
+  }
+
+  // Dark.
+  &-dark .container {
+    background-color: $color-blue-dark;
+    color: $color-white;
+    .col-content-main > .field {
+      font-size: $font-medium;
+      padding-bottom: $gap * 2;
+      padding-top: $gap * 2;
+      position: relative;
+      padding-left: $gap * 8;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: $gap * 2;
+      }
+      .field__label {
+        font-size: $font-small;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+      // Icons.
+      &.field--name-field-tempo-previsto::before {
+        @include sprite--time;
+      }
+      &.field--name-field-distanza-da-percorrere::before {
+        @include sprite--walk;
+      }
+      &.field--name-field-mezzo-di-trasporto::before {
+        @include sprite--bus;
+      }
+      &.field--name-field-contatti-indirizzo::before {
+        @include sprite--pin-white;
+      }
+      &.field--name-field-data::before {
+        @include sprite--calendar;
+      }
+      .taxonomy-term-target {
+        img {
+          position: absolute;
+          left: $gap * 2;
+          top: $gap * 2;
+          max-width: $gap * 4;
+        }
+      }
+    }
+  }
+}
+.geofield-google-map{
+  color: #39546B;
+}

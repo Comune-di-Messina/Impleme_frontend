@@ -1,0 +1,10 @@
+uuid: 5e804c7f-03a5-45df-9485-7276e8ddcf08
+langcode: it
+status: true
+dependencies: {  }
+id: selezione_comuni_servizi
+label: 'Selezione comuni - servizi'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

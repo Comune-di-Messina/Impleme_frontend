@@ -1,0 +1,29 @@
+uuid: 254767da-4bc4-4343-aafd-285707eaf9be
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lingua
+    - node.type.guida_turistica
+    - taxonomy.vocabulary.lingue
+id: node.guida_turistica.field_lingua
+field_name: field_lingua
+entity_type: node
+bundle: guida_turistica
+label: Lingua
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lingue: lingue
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

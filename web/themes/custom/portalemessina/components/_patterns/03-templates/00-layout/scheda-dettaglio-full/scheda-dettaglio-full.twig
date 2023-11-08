@@ -1,0 +1,49 @@
+{%
+  set classes = [
+  'page-scheda-dettaglio-full'
+]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+
+  {% include "@molecules/01-modules/hero/hero-full/hero-full.twig" with {
+    title: hero_title,
+    content: hero_content,
+    image: hero_image
+  } %}
+
+  <div class="scheda-intro py-5 px-4 px-md-0">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-3">
+          {{ filters }}
+        </div>
+        <div class="col-7 text-serif">
+          {{ intro }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include "@molecules/01-modules/blocks/block-map-content/block-map-content.twig" with {
+    content: info_content,
+    map: info_map,
+    bg: false,
+    dark: true
+  } %}
+
+  {% if content|render %}
+    <div class="scheda-content">
+      {{ content }}
+    </div>
+  {% endif %}
+
+  {% if related|render %}
+    <div class="scheda-related py-5">
+      <div class="container">
+        {{ related }}
+      </div>
+    </div>
+  {% endif %}
+
+</div>

@@ -1,0 +1,37 @@
+uuid: 10facdd8-99a7-48cb-ba9d-103502103713
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.image_large
+    - field.field.media.immagine.field_media_image
+    - image.style.image_large
+    - media.type.immagine
+  module:
+    - ds
+    - image
+id: media.immagine.image_large
+targetEntityType: media
+bundle: immagine
+mode: image_large
+content:
+  field_media_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: image_large
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

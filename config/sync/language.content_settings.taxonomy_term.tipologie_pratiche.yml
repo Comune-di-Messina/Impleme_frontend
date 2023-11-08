@@ -1,0 +1,11 @@
+uuid: a7ce0e89-6159-426d-88db-55db80178b03
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipologie_pratiche
+id: taxonomy_term.tipologie_pratiche
+target_entity_type_id: taxonomy_term
+target_bundle: tipologie_pratiche
+default_langcode: site_default
+language_alterable: false

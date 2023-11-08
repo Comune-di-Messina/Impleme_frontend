@@ -1,0 +1,9 @@
+title: Faker.sentence(3, false)
+subtitle: Faker.sentence(3, false)
+card_content_main: Faker.paragraph(1)
+card_content_more: Faker.paragraph(1)
+
+###
+
+ui_pattern_definition:
+  label: Module - Card visura

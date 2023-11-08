@@ -1,0 +1,8 @@
+modules:
+  include():
+    pattern: molecules-block-selection-element
+
+###
+
+ui_pattern_definition:
+  label: Module - Block selection

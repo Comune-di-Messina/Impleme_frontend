@@ -1,0 +1,23 @@
+uuid: cb371c44-2a46-4c4f-89a6-740126c2f26d
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_numero
+    - paragraphs.paragraphs_type.tappe
+id: paragraph.tappe.field_numero
+field_name: field_numero
+entity_type: paragraph
+bundle: tappe
+label: Numero
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,18 @@
+uuid: 60b56366-8223-4a41-b0e8-27ac291b7136
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.vista
+id: paragraph.vista.created
+field_name: created
+entity_type: paragraph
+bundle: vista
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

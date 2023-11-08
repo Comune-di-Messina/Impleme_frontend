@@ -1,0 +1,19 @@
+uuid: ce6501d7-da08-464c-918f-9b7511124a75
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contatti_titolo
+    - node.type.sala
+id: node.sala.field_contatti_titolo
+field_name: field_contatti_titolo
+entity_type: node
+bundle: sala
+label: Titolo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,8 @@
+uuid: 4f79048d-70a1-4bd6-b595-f369b51d933b
+langcode: it
+status: true
+dependencies: {  }
+id: contatti
+label: Contatti
+revision: 0
+description: ''

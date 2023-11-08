@@ -1,0 +1,20 @@
+uuid: ba2c69d6-58b8-4be8-ab27-c4751d8be478
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.immagine
+id: media.immagine.name
+field_name: name
+entity_type: media
+bundle: immagine
+label: Nome
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

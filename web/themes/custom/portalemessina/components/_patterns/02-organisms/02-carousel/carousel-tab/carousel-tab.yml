@@ -1,0 +1,13 @@
+title: Faker.sentence(3, false)
+titletab1: ''
+titletab2: ''
+modules:
+  include():
+    pattern: molecules-card-image
+secondmodules:
+  include():
+    pattern: molecules-card-image
+###
+
+ui_pattern_definition:
+  label: Organism - Carousel tab

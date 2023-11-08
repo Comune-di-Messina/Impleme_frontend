@@ -1,0 +1,20 @@
+uuid: 9c73fe47-1e2b-4026-832c-af0b0088174a
+langcode: it
+status: true
+dependencies:
+  module:
+    - geofield
+    - paragraphs
+id: paragraph.field_coordinate
+field_name: field_coordinate
+entity_type: paragraph
+type: geofield
+settings:
+  backend: geofield_backend_default
+module: geofield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,27 @@
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 1px 1px $gap * 2;
+  table {
+    // margin: 1px;
+  }
+}
+table {
+  font-size: $font-small;
+  border-collapse: collapse;
+  border-radius: 3px;
+  border-style: hidden;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px $color-gray-light;
+  th {
+    background-color: $color-blue-light;
+    text-align: center;
+  }
+  td, th {
+    padding: 3px 15px;
+    border: 1px solid $color-gray-light;
+  }
+  tbody {
+    font-weight: normal;
+  }
+}

@@ -1,0 +1,18 @@
+uuid: 04389ab3-263a-43a8-85dc-eac2e14a0486
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.blocchi_di_selezione_del_comune
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.blocchi_di_selezione_del_comune
+target_entity_type_id: paragraph
+target_bundle: blocchi_di_selezione_del_comune
+default_langcode: site_default
+language_alterable: true

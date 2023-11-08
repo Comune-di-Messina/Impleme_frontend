@@ -1,0 +1,8 @@
+uuid: cb8df018-1f62-4219-9e72-69ec1fa0cfc1
+langcode: it
+status: true
+dependencies: {  }
+id: social
+label: Social
+description: ''
+locked: false

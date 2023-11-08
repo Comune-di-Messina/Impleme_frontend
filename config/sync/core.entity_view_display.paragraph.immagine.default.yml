@@ -1,0 +1,42 @@
+uuid: b627e412-94fb-4ab2-87ca-fa58f3e23a4b
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.immagine.field_immagine
+    - paragraphs.paragraphs_type.immagine
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_image
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_immagine
+id: paragraph.immagine.default
+targetEntityType: paragraph
+bundle: immagine
+mode: default
+content:
+  field_immagine:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: image_large
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: image
+hidden: {  }

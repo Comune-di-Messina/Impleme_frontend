@@ -1,0 +1,19 @@
+class_title: lorem-ipsum
+hero_title: Faker.sentence(3, false)
+hero_content: Faker.paragraph(1)
+hero_image: https://via.placeholder.com/1240x800/ebebeb/808080/
+hero_band_left: hero band left
+hero_band_right: hero band right
+
+before_content: Before content
+content: Content
+
+view:
+  include():
+    pattern: molecules-card-teaser
+map: map
+
+###
+
+ui_pattern_definition:
+  label: Template - Page aggregatore

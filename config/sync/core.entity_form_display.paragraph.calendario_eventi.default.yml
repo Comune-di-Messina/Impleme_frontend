@@ -1,0 +1,51 @@
+uuid: 27708227-effc-4bec-9b53-47e2f1207c2d
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.calendario_eventi.field_cta
+    - field.field.paragraph.calendario_eventi.field_immagine
+    - field.field.paragraph.calendario_eventi.field_titolo
+    - field.field.paragraph.calendario_eventi.field_vista
+    - paragraphs.paragraphs_type.calendario_eventi
+  module:
+    - link
+    - media_library
+    - viewsreference
+id: paragraph.calendario_eventi.default
+targetEntityType: paragraph
+bundle: calendario_eventi
+mode: default
+content:
+  field_cta:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_immagine:
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_titolo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_vista:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+hidden:
+  created: true
+  status: true

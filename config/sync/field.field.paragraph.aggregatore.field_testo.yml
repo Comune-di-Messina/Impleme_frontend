@@ -1,0 +1,21 @@
+uuid: 4506b21d-4188-41eb-8fb2-f2c2eb9422ad
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_testo
+    - paragraphs.paragraphs_type.aggregatore
+  module:
+    - text
+id: paragraph.aggregatore.field_testo
+field_name: field_testo
+entity_type: paragraph
+bundle: aggregatore
+label: Testo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

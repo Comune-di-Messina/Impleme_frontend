@@ -1,0 +1,28 @@
+label: 'Termine della tassonomia'
+description: 'Contenuto di un dato termine di tassonomia'
+display:
+  default:
+    display_title: Principale
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Applica
+          reset_button_label: Ripristina
+          exposed_sorts_label: 'Ordina per'
+          sort_asc_label: Crescente
+          sort_desc_label: Disc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Voci per pagina'
+            items_per_page_options_all_label: '- Tutto -'
+            offset_label: Scostamento
+          tags:
+            previous: Indietro
+            next: Avanti
+      arguments:
+        tid:
+          exception:
+            title: Tutti
+  page_1:
+    display_title: Pagina

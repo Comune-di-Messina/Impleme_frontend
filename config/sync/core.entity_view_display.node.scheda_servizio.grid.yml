@@ -1,0 +1,111 @@
+uuid: b6154625-2abb-4c0c-8110-15512f04f776
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.grid
+    - field.field.node.scheda_servizio.body
+    - field.field.node.scheda_servizio.field_abstract
+    - field.field.node.scheda_servizio.field_categoria_servizio
+    - field.field.node.scheda_servizio.field_categorie_correlate
+    - field.field.node.scheda_servizio.field_comune_servizi
+    - field.field.node.scheda_servizio.field_contenuti_collegati
+    - field.field.node.scheda_servizio.field_cover
+    - field.field.node.scheda_servizio.field_moduli
+    - field.field.node.scheda_servizio.field_ufficio_riferimento
+    - field.field.node.scheda_servizio.field_url_servizio
+    - node.type.scheda_servizio
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_teaser
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_cover
+      title:
+        - node_title
+      content:
+        - body
+      link:
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 3
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Consulta il servizio'
+          'link class': ''
+          wrapper: ''
+          class: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.scheda_servizio.grid
+targetEntityType: node
+bundle: scheda_servizio
+mode: grid
+content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 150
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_cover:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: thumb_small
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: image
+hidden:
+  field_abstract: true
+  field_categoria_servizio: true
+  field_categorie_correlate: true
+  field_comune_servizi: true
+  field_contenuti_collegati: true
+  field_moduli: true
+  field_ufficio_riferimento: true
+  field_url_servizio: true
+  langcode: true
+  links: true

@@ -1,0 +1,13 @@
+diff --git a/core/modules/views/src/Plugin/views/filter/Combine.php b/core/modules/views/src/Plugin/views/filter/Combine.php
+index 3492043e92..aeab1770e5 100644
+--- a/core/modules/views/src/Plugin/views/filter/Combine.php
++++ b/core/modules/views/src/Plugin/views/filter/Combine.php
+@@ -89,7 +89,7 @@ public function query() {
+         // values and not to multi-field values that exist only because we do
+         // the concatenation/LIKE trick.
+         $expression = implode(", ' ', ", $fields);
+-        $expression = "CONCAT_WS(' ', $expression)";
++        $expression = "LOWER(CONCAT_WS(' ', $expression))";
+       }
+       $info = $this->operators();
+       if (!empty($info[$this->operator]['method'])) {

@@ -1,0 +1,19 @@
+uuid: 9ceb7c80-30b0-4b11-bfe3-bc50e7ef5364
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_code
+    - node.type.settore_pratiche_tipologia
+id: node.settore_pratiche_tipologia.field_code
+field_name: field_code
+entity_type: node
+bundle: settore_pratiche_tipologia
+label: Codice
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

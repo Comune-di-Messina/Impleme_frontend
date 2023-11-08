@@ -1,0 +1,18 @@
+uuid: 94a99134-40f6-4b89-a3dc-ffb1ef29af96
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.contenuto_ed_infografica
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.contenuto_ed_infografica
+target_entity_type_id: paragraph
+target_bundle: contenuto_ed_infografica
+default_langcode: site_default
+language_alterable: true

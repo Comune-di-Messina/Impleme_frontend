@@ -1,0 +1,37 @@
+uuid: 2cab9290-e928-401b-9788-5cf2ee19c110
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.thumb_small
+    - field.field.media.immagine.field_media_image
+    - image.style.thumb_small
+    - media.type.immagine
+  module:
+    - ds
+    - image
+id: media.immagine.thumb_small
+targetEntityType: media
+bundle: immagine
+mode: thumb_small
+content:
+  field_media_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: thumb_small
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

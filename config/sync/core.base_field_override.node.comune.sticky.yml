@@ -1,0 +1,22 @@
+uuid: 522a95f1-86ed-4d55-b69b-3cc2131a2032
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.comune
+id: node.comune.sticky
+field_name: sticky
+entity_type: node
+bundle: comune
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

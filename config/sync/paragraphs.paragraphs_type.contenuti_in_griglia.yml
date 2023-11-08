@@ -1,0 +1,10 @@
+uuid: 26785b56-d587-4696-b776-181faec44177
+langcode: it
+status: true
+dependencies: {  }
+id: contenuti_in_griglia
+label: 'Contenuti (servizi) in griglia'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

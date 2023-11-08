@@ -1,0 +1,5 @@
+wso2_with_jwt.admin_settings:
+  title: 'WS02 with JWT'
+  description: 'Configura la chiamata al WSO2 Api Manager'
+  route_name: wso2_with_jwt.admin_settings
+  parent: 'system.admin_config_services'

@@ -1,0 +1,19 @@
+uuid: 42ebc7aa-5b41-439f-b99d-ce6aa0e7f0d2
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.guida_turistica
+id: node.guida_turistica.field_email
+field_name: field_email
+entity_type: node
+bundle: guida_turistica
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

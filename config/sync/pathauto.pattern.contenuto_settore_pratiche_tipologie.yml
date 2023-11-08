@@ -1,0 +1,22 @@
+uuid: 4b4f617a-e813-426f-9f61-8319b3cffbe9
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: contenuto_settore_pratiche_tipologie
+label: 'Contenuto Settore Pratiche (Tipologie)'
+type: 'canonical_entities:node'
+pattern: 'servizi/pratiche/[node:title]'
+selection_criteria:
+  d8d7c847-d384-4efd-a927-4066a18e33f5:
+    id: node_type
+    bundles:
+      settore_pratiche_tipologia: settore_pratiche_tipologia
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d8d7c847-d384-4efd-a927-4066a18e33f5
+selection_logic: and
+weight: -5
+relationships: {  }

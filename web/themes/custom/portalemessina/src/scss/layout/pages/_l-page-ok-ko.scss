@@ -1,0 +1,10 @@
+.page-ok-ko {
+  &--ok {
+    p.text {
+      font-size: $font-large;
+    }
+    .room-name {
+      text-transform: uppercase;
+    }
+  }
+}

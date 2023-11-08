@@ -1,0 +1,56 @@
+uuid: 3092f9b0-2583-4f41-be8a-498df866ac22
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.eventi_servizi.body
+    - field.field.node.eventi_servizi.field_cta
+    - field.field.node.eventi_servizi.field_data
+    - node.type.eventi_servizi
+  module:
+    - datetime_range
+    - link
+    - text
+    - user
+id: node.eventi_servizi.default
+targetEntityType: node
+bundle: eventi_servizi
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_cta:
+    weight: 103
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_data:
+    weight: 102
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_comune: true
+  langcode: true

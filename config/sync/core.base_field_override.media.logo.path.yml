@@ -1,0 +1,20 @@
+uuid: e8b0bdd7-796c-4488-aa7a-dd3b342e6966
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.logo
+  module:
+    - path
+id: media.logo.path
+field_name: path
+entity_type: media
+bundle: logo
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

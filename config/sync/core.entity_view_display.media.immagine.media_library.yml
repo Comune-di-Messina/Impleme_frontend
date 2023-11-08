@@ -1,0 +1,31 @@
+uuid: 37a8c8a5-668c-44f2-9621-ab1118c92c26
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.immagine.field_media_image
+    - image.style.medium
+    - media.type.immagine
+  module:
+    - image
+id: media.immagine.media_library
+targetEntityType: media
+bundle: immagine
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_image: true
+  langcode: true
+  name: true
+  uid: true

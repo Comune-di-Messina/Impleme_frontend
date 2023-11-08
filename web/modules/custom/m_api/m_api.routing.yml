@@ -1,0 +1,451 @@
+m_api.tari_contribuenti_dettaglio:
+  path: "servizi/messina/tari/dettaglio"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\TariController::contribuentiDettaglio'
+    _title: "Consultazione TARI"
+  #    codContribuente: 'default'
+  requirements:
+    _role: "authenticated"
+#  options:
+#    parameters:
+#      codContribuente:
+#        type: string
+
+m_api.imu_dettaglio_situazione:
+  path: "servizi/messina/imu/dettaglio"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\ImuController::dettaglioSituazione'
+    _title: "Consultazione IMU"
+  requirements:
+    _role: "authenticated"
+
+m_api.segnala_me_nuova_segnalazione:
+  path: "servizi/messina/segnala-me/segnala/{instituteId}/{sectorId}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\SegnalaMeController::nuovaSegnalazione'
+    _title: "Servizio Segnala ME"
+  requirements:
+    _role: "authenticated"
+
+m_api.segnala_me_dettaglio_segnalazione:
+  path: "servizi/messina/segnala-me/{instituteId}/lista/{id}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\SegnalaMeController::dettaglioSegnalazione'
+    _title: "Servizio Segnala ME - dettaglio"
+  requirements:
+    _role: "authenticated"
+  options:
+    parameters:
+      id:
+        type: string
+
+m_api.segnala_me_lista_segnalazioni:
+  path: "servizi/messina/segnala-me/{instituteId}/lista"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\SegnalaMeController::listaSegnalazioni'
+    _title: "Servizio Segnala ME - lista"
+  requirements:
+    _role: "authenticated"
+
+m_api.segnala_me_sottoaree:
+  path: "servizi/messina/segnala-me/api/sub-sectors"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\SegnalaMeController::recuperaSottoAree'
+    _title: "Recupera Sottoaree"
+  requirements:
+    _access: "TRUE"
+  options:
+    parameters:
+      id:
+        type: string
+
+m_api.segnala_me_stati:
+  path: "servizi/messina/segnala-me/api/stati"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\SegnalaMeController::recuperaStati'
+    _title: "Recupera Stati"
+  requirements:
+    _access: "TRUE"
+
+m_api.segnala_me_geodecode:
+  path: "servizi/messina/segnala-me/api/geolocate/{coords}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\SegnalaMeController::geoDecode'
+    _title: "GeoDecode"
+  requirements:
+    _access: "TRUE"
+
+m_api.segnala_me_segnalazioni:
+  path: "servizi/messina/segnala-me/api/reportings/{page}"
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\m_api\Controller\SegnalaMeController::recuperaSegnalazioni'
+    _title: "Recupera Segnalazioni"
+  requirements:
+    _access: "TRUE"
+
+
+m_api.segnala_me_aggiungi_segnalazione:
+  path: "servizi/messina/segnala-me/api/newReporting/{id}/{instituteId}/{sectorId}"
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\m_api\Controller\SegnalaMeController::aggiungiSegnalazione'
+    _title: "Aggiungi Segnalazione"
+  requirements:
+    _access: "TRUE"
+    _format: json
+
+m_api.segnala_me_carica_file:
+  path: "servizi/messina/segnala-me/api/uploadFile"
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\m_api\Controller\SegnalaMeController::uploadFile'
+    _title: "Upload File"
+  requirements:
+    _access: "TRUE"
+
+m_api.visure:
+  path: "servizi/messina/visure"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\VisureController::visure'
+    _title: "Visure"
+  requirements:
+    _role: "authenticated"
+
+m_api.visure_famiglia:
+  path: "servizi/messina/visure/famiglia"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\VisureController::visureFamiglia'
+    _title: "Visure nucleo famigliare"
+  requirements:
+    _role: "authenticated"
+
+m_api.visure_pdf:
+  path: "servizi/messina/visure/pdf/{docType}/{cfenc}/{action}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\VisureController::richiestaPdf'
+    _title: "PDF"
+    action: "view"
+  requirements:
+    _role: "authenticated"
+  options:
+    parameters:
+      docType:
+      type: string
+      cfenc:
+      type: string
+      action:
+      type: string
+
+m_api.pagome_pagamenti:
+  path: "servizi/messina/pagamenti"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PagoMeController::pagamenti'
+    _title: "I tuoi pagamenti"
+  requirements:
+    _role: "authenticated"
+
+m_api.pagome_ricevuta:
+  path: "servizi/messina/pagamenti/ricevuta/{id}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PagoMeController::ricevuta'
+    _title: "La tua ricevuta"
+  requirements:
+    _role: "authenticated"
+  options:
+    parameters:
+      id:
+      type: string
+
+m_api.pagome_posizioni_debitorie:
+  path: "servizi/messina/posizioni"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PagoMeController::posizioniDebitorie'
+    _title: "Le tue posizioni debitorie"
+    iuv: all
+  requirements:
+    _role: "authenticated"
+
+m_api.pagome_ricevute:
+  path: "servizi/messina/ricevute/{iuv}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PagoMeController::ricevute'
+    _title: "Le tue ricevute telematiche"
+    iuv: null
+  requirements:
+    _role: "authenticated"
+  options:
+    parameters:
+      iuv:
+      type: string
+
+m_api.pagome_avviso:
+  path: "servizi/messina/pagamento/avviso/{iuv}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PagoMeController::avviso'
+    _title: "Effettua un pagamento con avviso"
+    iuv: null
+  requirements:
+    _access: "TRUE"
+  options:
+    parameters:
+      iuv:
+      type: string
+
+m_api.pagome_payment:
+  path: "servizi/messina/pagamento/iuv"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PagoMeController::iuv'
+    _title: "Effettua un pagamento con avviso"
+  requirements:
+    _access: "TRUE"
+
+m_api.pagome_spontaneo:
+  path: "servizi/messina/pagamento/spontaneo/{idServizio}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PagoMeController::spontaneo'
+    _title: "Effettua un pagamento spontaneo"
+  requirements:
+    _access: "TRUE"
+
+m_api.pagome_api.tariffe:
+  path: "servizi/messina/pagamento/api/tariffe/{idTributo}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PagoMeController::apiTariffe'
+  requirements:
+    _access: "TRUE"
+
+m_api.pagome_api.richiedi_pagamento:
+  path: "servizi/messina/pagamento/api/pagamento"
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PagoMeController::richiediPagamento'
+  requirements:
+    _access: "TRUE"
+    _format: json
+
+m_api.pagome_api.ko_ok:
+  path: "servizi/messina/esito/{type}/{result}"
+  methods: [GET]
+  defaults:
+    _controller: '\Drupal\m_api\Controller\KoOkController::koOk'
+    _title_callback: '\Drupal\m_api\Controller\KoOkController::getTitle'
+  requirements:
+    _role: "authenticated"
+
+m_api.prenotame.prenotazioni:
+  path: "servizi/messina/prenotazioni"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaMeController::prenotazioni'
+    _title: "Le tue prenotazioni"
+  requirements:
+    _role: "authenticated"
+
+m_api.prenotame.prenotazione:
+  path: "servizi/messina/prenotazione/{id}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaMeController::prenotazione'
+    _title: "Le tue prenotazioni"
+  requirements:
+    _role: "authenticated"
+  options:
+    parameters:
+      id:
+      type: string
+
+m_api.prenotame.prenotazione_cancel:
+  path: "servizi/messina/prenotazione/{id}/annulla"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaMeController::prenotazioneAnnulla'
+    _title: "Annulla prenotazione"
+  requirements:
+    _role: "authenticated"
+  options:
+    parameters:
+      id:
+      type: string
+
+m_api.prenotame.document:
+  path: "servizi/messina/prenotazione/document/{id}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaMeController::document'
+    _title: "Documento"
+  requirements:
+    _role: "authenticated"
+  options:
+    parameters:
+      id:
+      type: string
+
+m_api.prenotame_dettagli_sala:
+  path: "servizi/messina/prenotazione/sala/{id}/dettagli"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaMeController::dettagliSala'
+    _title: "Dettagli sala"
+  requirements:
+    _access: "TRUE"
+  options:
+    no_cache: 'TRUE'
+    parameters:
+      id:
+      type: string
+
+m_api.prenotame_recupera_disponibilita:
+  path: "servizi/messina/prenotazione/sala/{id}/disponibilita"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaMeController::recuperaDisponibilita'
+    _title: "Recupera disponibilità"
+  requirements:
+    _access: "TRUE"
+  options:
+    parameters:
+      id:
+      type: string
+
+m_api.prenotame_verifica_prezzo:
+  path: "servizi/messina/prenotazione/sala/{id}/prezzo"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaMeController::verificaPrezzo'
+    _title: "Verifica prezzo"
+  requirements:
+    _access: "TRUE"
+  options:
+    parameters:
+      id:
+      type: string
+
+m_api.prenotame_prenota_sala:
+  path: "servizi/messina/prenotazione/sala/{id}/prenota"
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaMeController::prenotaSala'
+  requirements:
+    _access: "TRUE"
+    _format: json
+
+m_api.prenotame_allegati:
+  path: "servizi/pagamento/api/allegati/{id}"
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaMeController::aggiungiAllegati'
+  requirements:
+    _access: "TRUE"
+    _format: json
+  options:
+    parameters:
+      id:
+        type: string
+
+m_api.assistance_form.settings:
+  path: "admin/config/assistance/settings"
+  defaults:
+    _form: '\Drupal\m_api\Form\AssistanceSettingsForm'
+    _title: "Assistance Form Settings"
+  requirements:
+    _permission: "administer site configuration"
+
+m_api.prenota_ufficio.lista-uffici:
+  path: "servizi/{municipalityName}/prenota-ufficio__internal"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaUfficioController::prenotaUfficioOfficesList'
+    _title: "Servizio Prenota Ufficio - lista uffici"
+  requirements:
+    _role: "authenticated"
+
+m_api.prenota_ufficio.api-lista-uffici-filtro:
+  path: "servizi/{municipalityName}/prenota-ufficio/api"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaUfficioController::prenotaUfficioFilteredOfficesList'
+    _title: "Servizio Prenota Ufficio - API - lista uffici filtrati"
+  requirements:
+    _access: "TRUE"
+
+m_api.prenota_ufficio.api-lista-uffici-filtro-serviceType:
+  path: "servizi/{municipalityName}/prenota-ufficio/api/{serviceType}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaUfficioController::prenotaUfficioFilteredOfficesList'
+    _title: "Servizio Prenota Ufficio - API - lista uffici filtrati"
+  requirements:
+    _access: "TRUE"
+
+m_api.prenota_ufficio.api-lista-uffici-filtro-publicService:
+  path: "servizi/{municipalityName}/prenota-ufficio/api/{serviceType}/{serviceId}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaUfficioController::prenotaUfficioFilteredOfficesList'
+    _title: "Servizio Prenota Ufficio - API - lista uffici filtrati"
+  requirements:
+    _access: "TRUE"
+
+m_api.prenota_ufficio.api-lista-publicService:
+  path: "servizi/{municipalityName}/prenota-ufficio/api/publicServices/{serviceType}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaUfficioController::prenotaUfficioPublicServicesList'
+    _title: "Servizio Prenota Ufficio - API - lista publicServices"
+  requirements:
+    _access: "TRUE"
+
+m_api.prenota_ufficio.prenota:
+  path: "servizi/{municipalityName}/prenota-ufficio/{officeId}/prenota"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaUfficioController::prenotaUfficioForm'
+    _title: "Servizio Prenota Ufficio - form prenotazione"
+  requirements:
+    _role: "authenticated"
+
+m_api.prenota_ufficio.lista-prenotazioni:
+  path: "servizi/{municipalityName}/prenota-ufficio/prenotazioni"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaUfficioController::prenotaUfficioReservationsList'
+    _title: "I tuoi appuntamenti"
+  requirements:
+    _role: "authenticated"
+
+m_api.prenota_ufficio.form:
+  path: "servizi/{municipalityName}/prenota-ufficio/{officeId}/prenota/{serviceType}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaUfficioController::prenotaUfficioForm'
+    _title: "Prenota ufficio"
+  requirements:
+    _access: "TRUE"
+
+m_api.prenota_ufficio.form-con-publicService:
+  path: "servizi/{municipalityName}/prenota-ufficio/{officeId}/prenota/{serviceType}/{publicService}"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaUfficioController::prenotaUfficioForm'
+    _title: "Servizio Prenota Ufficio - nuova prenotazione"
+  requirements:
+    _role: "authenticated"
+
+m_api.prenota_ufficio.api-calendario:
+  path: "servizi/{municipalityName}/prenota-ufficio/api/calendar"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaUfficioController::prenotaUfficioCalendar'
+    _title: "Servizio Prenota Ufficio - calendario"
+  requirements:
+    _role: "authenticated"
+
+m_api.prenota_ufficio.api-nuova-prenotazione:
+  path: "servizi/messina/prenota-ufficio/api/prenota"
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaUfficioController::prenotaUfficioAddReservation'
+    _title: "Servizio Prenota Ufficio - nuova prenotazione"
+  requirements:
+    _access: "TRUE"
+
+m_api.prenota_ufficio.api-lista-prenotazioni:
+  path: "servizi/messina/prenota-ufficio/api/prenotazioni"
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaUfficioController::prenotaUfficioGetReservationsList'
+    _title: "Servizio Prenota Ufficio - api lista prenotazioni"
+  requirements:
+    _role: "authenticated"
+
+m_api.prenota_ufficio.cancella-prenotazione:
+  path: "servizi/messina/prenota-ufficio/api/reservation/{reservationId}"
+  methods: [PATCH]
+  defaults:
+    _controller: '\Drupal\m_api\Controller\PrenotaUfficioController::prenotaUfficioCancelReservation'
+    _title: "Servizio Prenota Ufficio - cencalla prenotazione"
+  requirements:
+    _role: "authenticated"

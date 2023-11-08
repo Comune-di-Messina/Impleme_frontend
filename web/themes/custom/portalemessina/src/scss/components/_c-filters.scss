@@ -1,0 +1,58 @@
+.block.filters {
+  .fieldgroup {
+    margin: 0;
+    overflow: hidden;
+  }
+  legend {
+    margin-bottom: $gap;
+  }
+  .form-radios {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -#{$gap / 2};
+    .form-item {
+      display: flex;
+      margin: $gap;
+      .form-radio {
+        display: none;
+      }
+    }
+    .form-radio:checked + .option {
+      background-color: rgba($color-white, .1);
+      font-weight: 700;
+    }
+    .option {
+      font-size: $font-xsmall;
+      margin: 0;
+      border-radius: $font-xsmall;
+      border: 1px solid $color-white;
+      padding: 2px $gap * 2;
+      display: block;
+    }
+  }
+
+  // Variants.
+  &.filters-neg {
+    .option {
+      color: $color-white;
+    }
+
+    fieldset[id^="edit-field-term-temi-target-id-selective"] {
+      display: block;
+      clear: both;
+    }
+
+    div[id^="edit-actions"] {
+      display: flex;
+      clear: none;
+      float: left;
+    }
+  }
+}
+
+// Filter Views Calendar
+.calendario-verde{
+  #views-exposed-form-eventi-block-5{
+    display: none;
+  }
+}

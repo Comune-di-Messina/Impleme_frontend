@@ -1,0 +1,17 @@
+uuid: 34a41043-9b7c-4e6b-9e8b-294512d72cbe
+langcode: it
+status: true
+dependencies:
+  module:
+    - focal_point
+name: cover_small
+label: '[1335x745] Cover small'
+effects:
+  e65fee7b-02e8-4684-bed1-0b7a03a09851:
+    uuid: e65fee7b-02e8-4684-bed1-0b7a03a09851
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1335
+      height: 745
+      crop_type: focal_point

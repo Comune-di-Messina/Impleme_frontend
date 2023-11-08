@@ -1,0 +1,15 @@
+{%
+  set classes = [
+  'article',
+  'image',
+  'container my-5'
+]
+%}
+
+<article {{ attributes.addClass(classes) }}>
+  <div class="row justify-content-center">
+    <div class="col-md-11 col-lg-9">
+      {{ image }}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,10 @@
+uuid: f2cfad20-9963-46bb-911a-678ae76cded8
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: BCM-vV1zzRaLHN18dqAR_CuGOj8AFJvTx7BKl_8Gcxc
+id: tools
+label: Strumenti
+description: 'Link agli strumenti per l''utente, spesso aggiunti da moduli'
+locked: true

@@ -1,0 +1,29 @@
+uuid: 00d82cc9-278b-426c-abd7-fae6c232da00
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_territorio
+    - node.type.agenzia_turistica
+    - taxonomy.vocabulary.territori
+id: node.agenzia_turistica.field_territorio
+field_name: field_territorio
+entity_type: node
+bundle: agenzia_turistica
+label: Territorio
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      territori: territori
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

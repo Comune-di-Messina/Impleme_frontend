@@ -1,0 +1,81 @@
+.search-overlay {  
+  background: $color-blue-dark;
+  color: $color-white;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  .close {
+    position: absolute;
+    right: $gap * 3;
+    top: $gap * 3;
+    @include breakpoint(lg) {
+      right: $gap * 10;
+      top: $gap * 6;
+    }
+    .icon {
+      fill: $color-secondary;
+    }
+  }
+  .views-exposed-form {
+    margin: 0 auto;
+    @include breakpoint(lg) {
+      width: 80%;
+    }
+    .form--inline {
+      position: relative;
+    }
+    .form-item {
+      float: none;
+      position: relative;
+      &::before {
+        @include sprite--search-big;
+        bottom: $gap * 2;
+        content: '';
+        display: block;
+        margin-bottom: -5px;
+        position: absolute;
+      }
+    }
+  }
+  .search-form {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    padding: $gap * 3;
+    width: 100%;
+    label {
+      color: $color-secondary;
+      font-size: $font-xlarge;
+      @include breakpoint(md) {
+        font-size: $font-xxlarge;
+      }
+    }
+    .form-text {
+      color: $color-white;
+      font-weight: 400;
+      background-color: transparent;
+      font-size: $font-large;
+      padding-bottom: $gap * 4;
+      padding-top: $gap * 4;
+      padding-left: $gap * 7;
+      border-bottom: 2px solid #E5E5E5;
+      @include breakpoint(md) {
+        font-size: $font-xlarge;
+      }
+    }
+    .form-submit {
+      background: transparent;
+      border: 0;
+      bottom: 0;
+      height: $gap * 7;
+      left: 0;
+      position: absolute;
+      text-indent: -9999px;
+      width: $gap * 6;
+    }
+  }
+}

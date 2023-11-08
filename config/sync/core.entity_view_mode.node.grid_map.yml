@@ -1,0 +1,10 @@
+uuid: 3308e035-b828-422b-a94d-ba2c04b4fb86
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: node.grid_map
+label: Grid-map
+targetEntityType: node
+cache: true

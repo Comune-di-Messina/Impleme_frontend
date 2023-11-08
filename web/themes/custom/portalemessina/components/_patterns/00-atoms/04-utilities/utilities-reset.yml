@@ -1,0 +1,6 @@
+content: Faker.paragraph(1)
+
+###
+
+ui_pattern_definition:
+  label: Element - Reset

@@ -1,0 +1,18 @@
+uuid: 9cc293fb-16a9-41d7-958a-d5e8e09878c5
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.lingue
+id: taxonomy_term.lingue.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: lingue
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,44 @@
+.assistance-form {
+  &__title {
+    text-transform: uppercase;
+    color: $color-green;
+    font-weight: 600;
+    margin-top: 4em;
+    border-bottom: 1px solid $color-green;
+    padding-bottom: 0.5em;
+  }
+  label {
+    font-size: 0.75em;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: $color-green;
+  }
+  textarea {
+    border-radius: 10px;
+    border: 1px solid $color-gray;
+    padding: 1em;
+    &::placeholder {
+      font-weight: bold;
+    }
+  }
+
+  &__send {
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+  }
+
+  &__thank-you {
+    font-size: 1.5rem;
+    display: inline;
+  }
+
+  &__contact_again {
+    background-color: transparent;
+    color: $color-green;
+    font-size: 1.5rem;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,0 +1,18 @@
+uuid: 79bbbdcb-5776-411b-82e4-e7a18cc0fab1
+langcode: it
+status: true
+dependencies:
+  config:
+    - block_content.type.contatti
+id: block_content.contatti.metatag
+field_name: metatag
+entity_type: block_content
+bundle: contatti
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

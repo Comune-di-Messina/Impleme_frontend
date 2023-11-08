@@ -1,0 +1,19 @@
+uuid: 2b08dfe8-b190-4a87-8255-f995c4de5706
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_oembed_video
+    - media.type.video_url
+id: media.video_url.field_media_oembed_video
+field_name: field_media_oembed_video
+entity_type: media
+bundle: video_url
+label: 'Remote video URL'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

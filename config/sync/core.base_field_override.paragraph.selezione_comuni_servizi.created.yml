@@ -1,0 +1,18 @@
+uuid: 41c459f1-6f6b-43b2-98e6-e895994bc694
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.selezione_comuni_servizi
+id: paragraph.selezione_comuni_servizi.created
+field_name: created
+entity_type: paragraph
+bundle: selezione_comuni_servizi
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

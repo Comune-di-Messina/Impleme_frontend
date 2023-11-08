@@ -1,0 +1,7 @@
+name: API Mobile
+type: module
+description: 'API Integrations for app services'
+core: 8.x
+package: 'Messina'
+dependencies:
+  - rest

@@ -1,0 +1,28 @@
+uuid: 8da54942-46a0-4a5d-a5ff-4154aea7ca51
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contenuto_multimediale
+    - node.type.contenuto_multimediale
+    - paragraphs.paragraphs_type.contenuto_multimediale
+id: paragraph.contenuto_multimediale.field_contenuto_multimediale
+field_name: field_contenuto_multimediale
+entity_type: paragraph
+bundle: contenuto_multimediale
+label: 'Riferimento a contenuto'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      contenuto_multimediale: contenuto_multimediale
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,259 @@
+.page-prenota-ufficio-form {
+  .secondary-bg-light {
+    padding-bottom: pxrem(160) !important;
+    margin-bottom: pxrem(-160);
+  }
+
+  .prenota-cta {
+    & > div {
+      border-radius: 3px;
+      box-shadow: 0 0 $gap $color-gray-light;
+      margin: auto;
+      max-width: 90%;
+      padding: $gap * 5;
+      text-align: center;
+    }
+  }
+}
+
+.page-prenota-ufficio-form__gray-bg {
+  position: relative;
+
+  box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.05) !important;
+
+  &:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $color-gray-lighter;
+    z-index: -1;
+  }
+}
+
+.page-prenota-ufficio-form__white-bg {
+  padding-bottom: 0 !important;
+}
+
+.page-prenota-ufficio-form__map-wrapper {
+  min-height: pxrem(400);
+  @include cardShadow;
+  background-color: $color-white;
+
+  .col-content {
+    background-color: $color-white;
+  }
+
+  .col-content-header {
+    font-weight: bold;
+    font-size: $font-large;
+    margin-bottom: pxrem(40);
+  }
+
+  .col-content-main {
+    padding-top: pxrem(20);
+    border-top: 1px solid $color-gray-light;
+  }
+
+  .google-map-container {
+    min-height: pxrem(400);
+  }
+}
+
+.page-prenota-ufficio-form__map-info {
+  margin-bottom: #{$gap * 2};
+}
+
+.page-prenota-ufficio-form__map-info__icon {
+  min-width: pxrem(40);
+  max-width: pxrem(40);
+
+  .h-mail-green {
+    margin-top: pxrem(8);
+  }
+}
+
+.page-prenota-ufficio-form__map-info__content {
+  padding: $gap;
+  font-size: $font-small;
+
+  strong {
+    color: $color-green-dark;
+    width: 100%;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.page-prenota-ufficio-form__services {
+  label {
+    @include cardShadow;
+    background-color: $color-white;
+    padding: #{$gap * 2} #{$gap * 2} #{$gap * 2} #{$gap * 7} !important;
+    height: auto !important;
+    width: 90%;
+    font-family: $font-primary;
+    font-weight: bold;
+    color: $color-green;
+
+    &:before {
+      border-color: $color-green-darker !important;
+      top: 50% !important;
+      left: #{$gap * 2} !important;
+      transform: translateY(-70%);
+    }
+
+    &:after {
+      top: 50% !important;
+      margin-top: -10px !important;
+      margin-left: 5px !important;
+      left: #{$gap * 2} !important;
+      background-color: $color-green !important;
+    }
+  }
+}
+
+.page-prenota-ufficio-form__calendar {
+  .calendario {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    font-family: $font-primary;
+
+    .vc-header {
+      margin: 0;
+      padding-bottom: $gap;
+      text-transform: uppercase;
+    }
+
+    .vc-weekday {
+      color: $color-blue-slate;
+    }
+
+    .vc-focusable {
+      color: $color-green;
+      font-weight: 700;
+
+      &.is-disabled {
+        font-weight: 400;
+        color: rgba($color-gray, 0.5);
+        pointer-events: none;
+      }
+    }
+
+    // Overwrite colors.
+    --green-600: #{$color-green};
+    --green-900: #{$color-green-dark};
+  }
+
+  .timepicker {
+    height: 100%;
+    background-color: $color-white;
+    padding: 0 pxrem(36) pxrem(18);
+  }
+
+  .timepicker__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: pxrem(10) 0 pxrem(20);
+    font-size: pxrem(18);
+    color: #2d3748;
+    font-weight: 600;
+    line-height: pxrem(29);
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  .timepicker__grid {
+    padding: #{$gap * 4} 0 0;
+    border-top: 1px solid $color-gray-light;
+    text-align: center;
+  }
+
+  .timepicker__grid__item {
+    color: $color-green;
+    background-color: transparent;
+    font-size: $font-normal;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: pxrem(6);
+    padding: $gap;
+    margin-bottom: pxrem(8);
+
+    &.disabled {
+      color: $color-gray;
+      pointer-events: none;
+    }
+
+    &.selected {
+      color: $color-white;
+      background-color: $color-green;
+    }
+  }
+}
+
+.page-prenota-ufficio-form__user {
+}
+
+.page-prenota-ufficio-form__user__label {
+  font-size: $font-normal;
+  padding-bottom: pxrem(12);
+}
+
+.page-prenota-ufficio-form__user__value {
+  font-size: $font-normal;
+  font-weight: bold;
+}
+
+.page-prenota-ufficio-form__user__form {
+  .col-12 {
+    margin-bottom: pxrem(24);
+  }
+
+  label {
+    color: $color-green-dark;
+    font-weight: bold;
+  }
+
+  .container-privacy {
+    .form-check {
+      border-bottom: 1px solid $color-gray-light;
+      padding: 0 0 16px 0 !important;
+      label {
+        font-size: $font-small;
+        line-height: 1.3;
+        padding-top: $gap;
+        color: inherit;
+        font-weight: normal;
+      }
+      [type="checkbox"] + label::after {
+        background: transparent !important;
+        border-radius: 50%;
+        border-color: $color-gray-darker;
+      }
+      [type="checkbox"] + label::before {
+        background: $color-green;
+        border-radius: 50%;
+        border: 2px solid white;
+        height: 16px;
+        left: 0;
+        margin: 8px 7px;
+        opacity: 0;
+        top: 0;
+        transform: none;
+        width: 16px;
+      }
+      [type="checkbox"]:checked + label::before {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,314 @@
+uuid: a34b5683-e9ec-4131-b3a2-d0d3fb973e2f
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.itinerario.body
+    - field.field.node.itinerario.field_abstract
+    - field.field.node.itinerario.field_argomenti_correlati
+    - field.field.node.itinerario.field_colore_marker
+    - field.field.node.itinerario.field_comune
+    - field.field.node.itinerario.field_contenuti_collegati
+    - field.field.node.itinerario.field_coordinate
+    - field.field.node.itinerario.field_cover
+    - field.field.node.itinerario.field_distanza_da_percorrere
+    - field.field.node.itinerario.field_external_link
+    - field.field.node.itinerario.field_geojson_routes
+    - field.field.node.itinerario.field_immagine
+    - field.field.node.itinerario.field_mezzo_di_trasporto
+    - field.field.node.itinerario.field_moduli
+    - field.field.node.itinerario.field_percorso
+    - field.field.node.itinerario.field_target
+    - field.field.node.itinerario.field_tempo_previsto
+    - field.field.node.itinerario.field_term_temi
+    - field.field.node.itinerario.field_tipologia_itinerario
+    - field.field.node.itinerario.field_video_url
+    - node.type.itinerario
+  module:
+    - color_field
+    - geofield
+    - leaflet
+    - link
+    - media_library
+    - paragraphs
+    - paragraphs_ee
+    - paragraphs_features
+    - path
+    - text
+id: node.itinerario.default
+targetEntityType: node
+bundle: itinerario
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 12
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_abstract:
+    weight: 11
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_argomenti_correlati:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_colore_marker:
+    weight: 27
+    settings:
+      show_input: '1'
+      palette: ''
+      show_palette: '0'
+      show_palette_only: '0'
+      show_buttons: '0'
+      allow_empty: '0'
+    third_party_settings: {  }
+    type: color_field_widget_spectrum
+    region: content
+  field_comune:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_contenuti_collegati:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_coordinate:
+    weight: 20
+    settings:
+      html5_geolocation: false
+    third_party_settings: {  }
+    type: geofield_latlon
+    region: content
+  field_cover:
+    weight: 8
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_distanza_da_percorrere:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_external_link:
+    weight: 24
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_immagine:
+    weight: 9
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_mezzo_di_trasporto:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_moduli:
+    weight: 25
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings:
+      paragraphs_features:
+        add_in_between: true
+        show_drag_and_drop: true
+        delete_confirmation: false
+        split_text: false
+      paragraphs_ee:
+        paragraphs_ee:
+          dialog_style: tiles
+          dialog_off_canvas: false
+    type: paragraphs
+    region: content
+  field_percorso:
+    weight: 21
+    settings:
+      map:
+        leaflet_map: 'OSM Mapnik'
+        height: '400'
+        auto_center: '1'
+        map_position:
+          force: '1'
+          center:
+            lat: '38.1786'
+            lon: '15.5304'
+          zoom: '11'
+          minZoom: '2'
+          maxZoom: '18'
+          zoomFiner: '0'
+        locate: 0
+        scroll_zoom_enabled: 0
+        fullscreen_control: 0
+      input:
+        show: '1'
+        readonly: 0
+      toolbar:
+        position: topright
+        drawMarker: '1'
+        drawPolyline: '1'
+        editMode: '1'
+        dragMode: '1'
+        removalMode: '1'
+        drawRectangle: 0
+        drawPolygon: 0
+        drawCircle: false
+        drawCircleMarker: false
+        cutPolygon: 0
+      reset_map:
+        position: topright
+        control: 0
+      geocoder:
+        control: 0
+        settings:
+          position: topright
+          input_size: 25
+          providers: {  }
+          min_terms: 4
+          delay: 800
+          zoom: 16
+          popup: 0
+          options: ''
+    third_party_settings: {  }
+    type: leaflet_widget_default
+    region: content
+  field_target:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tempo_previsto:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_term_temi:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tipologia_itinerario:
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_video_url:
+    weight: 23
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden:
+  field_geojson_routes: true

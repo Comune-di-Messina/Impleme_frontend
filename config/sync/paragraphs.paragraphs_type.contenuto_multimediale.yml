@@ -1,0 +1,10 @@
+uuid: 68766807-a35a-4d06-9ef6-27939dcd3393
+langcode: it
+status: true
+dependencies: {  }
+id: contenuto_multimediale
+label: 'Contenuto Multimediale'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

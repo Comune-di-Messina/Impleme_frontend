@@ -1,0 +1,20 @@
+uuid: 1317da28-a607-4792-b42b-7e3cbc188427
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.comuni
+  module:
+    - path
+id: taxonomy_term.comuni.path
+field_name: path
+entity_type: taxonomy_term
+bundle: comuni
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

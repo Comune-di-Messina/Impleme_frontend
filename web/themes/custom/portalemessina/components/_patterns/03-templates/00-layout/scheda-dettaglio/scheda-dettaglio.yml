@@ -1,0 +1,19 @@
+hero_title: Faker.sentence(3, false)
+hero_content: Faker.paragraph(1)
+hero_image: https://via.placeholder.com/1240x800/ebebeb/808080/
+filters: filters
+intro: Faker.paragraph(3)
+content: Faker.paragraph(3)
+login_form: Faker.paragraph(3)
+related: Faker.paragraph(3)
+
+info_header: Faker.paragraph(3)
+info_content: Faker.paragraph(3)
+info_footer: Read more
+info_map: Faker.paragraph(3)
+info_bg: https://via.placeholder.com/1240x800/ebebeb/808080/
+
+###
+
+ui_pattern_definition:
+  label: Template - Scheda dettaglio

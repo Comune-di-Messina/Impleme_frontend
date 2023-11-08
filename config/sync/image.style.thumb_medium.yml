@@ -1,0 +1,17 @@
+uuid: 3e1599a5-f8b0-46fe-9eba-5dd8e2309619
+langcode: it
+status: true
+dependencies:
+  module:
+    - focal_point
+name: thumb_medium
+label: '[650x300] Thumb medium'
+effects:
+  70528596-bdbe-47f9-8c23-52a2f4bdf583:
+    uuid: 70528596-bdbe-47f9-8c23-52a2f4bdf583
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 650
+      height: 300
+      crop_type: focal_point

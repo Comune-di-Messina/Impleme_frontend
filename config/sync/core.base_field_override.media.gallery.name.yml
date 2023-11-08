@@ -1,0 +1,20 @@
+uuid: a986f9fa-1bf1-4d1c-95aa-0a0a4fdf0e39
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.gallery
+id: media.gallery.name
+field_name: name
+entity_type: media
+bundle: gallery
+label: Nome
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

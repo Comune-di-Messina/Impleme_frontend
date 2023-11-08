@@ -1,0 +1,81 @@
+{%
+  set classes = [
+  'module',
+  'hero hero-full',
+  'it-hero-wrapper it-dark it-overlay flex-column'
+]
+%}
+<div class="{{ classes|join(' ') }}">
+  <!-- - img-->
+  {{ image }}
+
+  <!-- - texts-->
+  <div class="hero-main container position-relative d-flex flex-column">
+    <div class="row hero-main-top px-4 px-md-0 py-5 my-auto">
+        <div class="col-12 col-lg-7">
+          <div class="hero-content-wrapper">
+            {% if breadcrumbs|render %}
+              {{ breadcrumbs }}
+            {% endif %}
+            {% if category|render %}
+              <span class="it-category d-flex align-items-center{% if category_icon %} it-category-{{ category_icon }}{% endif %}">{{ category }}</span>
+            {% endif %}
+            {% if title|render %}
+              <h1 class="hero-title my-3">{{ title }}</h1>
+            {% endif %}
+            {% if content|render %}
+              <div class="hero-content text-serif">
+                {{ content }}
+              </div>
+            {% endif %}
+            {% if link|render %}
+              <div class="hero-link">
+                {{ link }}
+              </div>
+            {% endif %}
+          </div>
+          {% if back|render and not change_comune|render %}
+            <div class="hero-back mt-auto pt-5">{{ back }}</div>
+          {% elseif change_comune|render %}
+            <div class="hero-back mt-auto pt-5">{{ change_comune }}</div>
+          {% endif %}
+        </div>
+        {% if select_comune|render %}
+        <div class="col-12 col-lg-5 align-self-center">
+          <div class="custom-select">{{ select_comune }}</div>
+        </div>
+        {% endif %}
+    </div>
+    {% if hero_bottom_left|render or hero_bottom_right|render %}
+      <div class="row hero-main-bottom mt-auto py-4 py-lg-5 justify-content-between">
+        <div class="col-lg-4">{{ hero_bottom_left }}</div>
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <div class="custom-select custom-select-inline">{{ hero_bottom_right }}</div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+
+    {% if band_left|render or band_right|render %}
+    <div class="hero-band py-4 py-lg-5 position-relative">
+      <div class="container">
+        <div class="row">
+          {% if band_left|render %}
+          <div class="col-xl-5 col-lg-8 col-md-12">
+            <div class="block filters filters-neg">
+              {{ band_left }}
+            </div>
+          </div>
+          {% endif %}
+          {% if band_right|render %}
+          <div class="col mt-4 mt-lg-0">
+            {{ band_right }}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+</div>

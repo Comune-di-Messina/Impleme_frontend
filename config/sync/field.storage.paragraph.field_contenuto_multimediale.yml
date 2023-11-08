@@ -1,0 +1,20 @@
+uuid: 6fcaf7d9-8e5b-4508-94a5-0f6a08a6ee78
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_contenuto_multimediale
+field_name: field_contenuto_multimediale
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

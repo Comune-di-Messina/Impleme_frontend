@@ -1,0 +1,28 @@
+bundle_mapping:
+  m_api-pagome-spontaneo-pms:
+    - modules/custom/m_api/vue/dist/m_api-pagome-spontaneo-pms.bundle.js
+  m_api-prenotame-prenotazione-pmp:
+    - modules/custom/m_api/vue/dist/m_api-prenotame-prenotazione-pmp.bundle.js
+  m_api-prenotame-allegati-pmd:
+    - modules/custom/m_api/vue/dist/m_api-prenotame-allegati-pmd.bundle.js
+  m_api-segnala-me-segnalame:
+    - modules/custom/m_api/vue/dist/m_api-segnala-me-segnalame.bundle.js
+  m_api-segnala-me-lista-segnalame-lista:
+    - modules/custom/m_api/vue/dist/m_api-segnala-me-lista-segnalame-lista.bundle.js
+  m_api-segnala-me-dettaglio-segnalame-dettaglio:
+    - modules/custom/m_api/vue/dist/m_api-segnala-me-dettaglio-segnalame-dettaglio.bundle.js
+  m_api-prenota-ufficio-offices-list-prenota-ufficio-offices-list:
+    - modules/custom/m_api/vue/dist/m_api-prenota-ufficio-offices-list-prenota-ufficio-offices-list.bundle.js
+  m_api-prenota-ufficio-form-prenota-ufficio-form:
+    - modules/custom/m_api/vue/dist/m_api-prenota-ufficio-form-prenota-ufficio-form.bundle.js
+  m_api-prenota-ufficio-reservations-list-prenota-ufficio-reservations-list:
+    - modules/custom/m_api/vue/dist/m_api-prenota-ufficio-reservations-list-prenota-ufficio-reservations-list.bundle.js
+  m_api-pratiche-lista-pratiche-list:
+    - modules/custom/m_api/vue/dist/m_api-pratiche-lista-pratiche-list.bundle.js
+  'm_api-pratiche-dettaglio-pratiche-detail [big]':
+    - modules/custom/m_api/vue/dist/m_api-pratiche-dettaglio-pratiche-detail.bundle.js
+  'm_api-pratiche-nuova-pratiche-new [big]':
+    - modules/custom/m_api/vue/dist/m_api-pratiche-nuova-pratiche-new.bundle.js
+_core:
+  default_config_hash: Sooe_ewrWN1U8zf5XxvvZGWMEBOUtcESyvi1ohE0v5A
+langcode: it

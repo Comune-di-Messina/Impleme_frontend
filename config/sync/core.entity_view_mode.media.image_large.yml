@@ -1,0 +1,10 @@
+uuid: 3a1a454f-2f22-4ea5-be5d-3567da0b34a8
+langcode: it
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_large
+label: '[1700x700] Image large'
+targetEntityType: media
+cache: true

@@ -1,0 +1,220 @@
+uuid: 05bb5902-ff4c-441e-a798-958f2db6283a
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.grid_map
+    - field.field.node.itinerario.body
+    - field.field.node.itinerario.field_abstract
+    - field.field.node.itinerario.field_argomenti_correlati
+    - field.field.node.itinerario.field_colore_marker
+    - field.field.node.itinerario.field_comune
+    - field.field.node.itinerario.field_contenuti_collegati
+    - field.field.node.itinerario.field_coordinate
+    - field.field.node.itinerario.field_cover
+    - field.field.node.itinerario.field_distanza_da_percorrere
+    - field.field.node.itinerario.field_external_link
+    - field.field.node.itinerario.field_geojson_routes
+    - field.field.node.itinerario.field_immagine
+    - field.field.node.itinerario.field_mezzo_di_trasporto
+    - field.field.node.itinerario.field_moduli
+    - field.field.node.itinerario.field_percorso
+    - field.field.node.itinerario.field_target
+    - field.field.node.itinerario.field_tempo_previsto
+    - field.field.node.itinerario.field_term_temi
+    - field.field.node.itinerario.field_tipologia_itinerario
+    - field.field.node.itinerario.field_video_url
+    - node.type.itinerario
+  module:
+    - ds
+    - leaflet
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_teaser_map
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_cover
+      image_teaser:
+        - field_immagine
+      category:
+        - field_term_temi
+      title:
+        - node_title
+      content:
+        - body
+      address:
+        - field_coordinate
+      link:
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 6
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 3
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.itinerario.grid_map
+targetEntityType: node
+bundle: itinerario
+mode: grid_map
+content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      trim_length: 150
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_coordinate:
+    type: leaflet_formatter_default
+    weight: 5
+    region: address
+    label: above
+    settings:
+      multiple_map: 0
+      leaflet_map: 'OSM Mapnik'
+      height: 400
+      height_unit: px
+      hide_empty_map: 0
+      disable_wheel: 0
+      fullscreen_control: 1
+      gesture_handling: 0
+      reset_map:
+        control: 0
+        position: topright
+      popup: false
+      popup_content: ''
+      map_position:
+        force: 0
+        center:
+          lat: 0
+          lon: 0
+        zoom: 12
+        minZoom: 1
+        maxZoom: 18
+        zoomFiner: 0
+      icon:
+        iconType: marker
+        iconUrl: ''
+        iconSize:
+          x: null
+          'y': null
+        iconAnchor:
+          x: null
+          'y': null
+        shadowUrl: ''
+        shadowSize:
+          x: null
+          'y': null
+        shadowAnchor:
+          x: null
+          'y': null
+        popupAnchor:
+          x: null
+          'y': null
+        html: '<div></div>'
+        html_class: leaflet-map-divicon
+        circle_marker_options: '{"radius": 100, "color": "red", "fillColor": "#f03", "fillOpacity": 0.5}'
+      leaflet_markercluster:
+        control: 0
+        options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds": false}'
+      path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2"}'
+      geocoder:
+        control: 0
+        settings:
+          position: topright
+          input_size: 25
+          providers: {  }
+          min_terms: 4
+          delay: 800
+          zoom: 16
+          popup: 0
+          options: ''
+    third_party_settings: {  }
+  field_cover:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: thumb_small
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: image
+  field_immagine:
+    type: entity_reference_entity_view
+    weight: 1
+    region: image_teaser
+    label: hidden
+    settings:
+      view_mode: thumb_small
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_term_temi:
+    type: entity_reference_label
+    weight: 2
+    region: category
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+hidden:
+  field_abstract: true
+  field_argomenti_correlati: true
+  field_colore_marker: true
+  field_comune: true
+  field_contenuti_collegati: true
+  field_distanza_da_percorrere: true
+  field_external_link: true
+  field_geojson_routes: true
+  field_mezzo_di_trasporto: true
+  field_moduli: true
+  field_percorso: true
+  field_target: true
+  field_tempo_previsto: true
+  field_tipologia_itinerario: true
+  field_video_url: true
+  langcode: true
+  links: true

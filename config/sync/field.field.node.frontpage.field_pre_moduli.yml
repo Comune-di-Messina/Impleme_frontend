@@ -1,0 +1,80 @@
+uuid: 98a9b041-e833-4b1a-8fe7-75db66ab6c15
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pre_moduli
+    - node.type.frontpage
+    - paragraphs.paragraphs_type.blocchi_di_selezione_del_comune
+    - paragraphs.paragraphs_type.contenuto_ed_infografica
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - entity_reference_revisions
+id: node.frontpage.field_pre_moduli
+field_name: field_pre_moduli
+entity_type: node
+bundle: frontpage
+label: 'Pre moduli'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      blocchi_di_selezione_del_comune: blocchi_di_selezione_del_comune
+      contenuto_ed_infografica: contenuto_ed_infografica
+      slideshow: slideshow
+    target_bundles_drag_drop:
+      blocchi_di_selezione_del_comune:
+        enabled: true
+        weight: 17
+      carosello_big:
+        weight: 18
+        enabled: false
+      carosello_con_testata_big:
+        weight: 19
+        enabled: false
+      carosello_con_testata_small:
+        weight: 20
+        enabled: false
+      citazione:
+        weight: 21
+        enabled: false
+      contenuto:
+        weight: 22
+        enabled: false
+      contenuto_ed_infografica:
+        enabled: true
+        weight: 23
+      elemento_infografica:
+        weight: 24
+        enabled: false
+      immagine:
+        weight: 25
+        enabled: false
+      immagine_full:
+        weight: 26
+        enabled: false
+      raccolta_contenuti_con_testata:
+        weight: 27
+        enabled: false
+      selezione_comuni:
+        weight: 28
+        enabled: false
+      selezione_comuni_servizi:
+        weight: 29
+        enabled: false
+      slideshow:
+        enabled: true
+        weight: 30
+      tappe:
+        weight: 31
+        enabled: false
+      vista:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions

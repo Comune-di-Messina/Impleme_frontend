@@ -1,0 +1,23 @@
+uuid: df530d01-4d21-4458-9fdf-0830d170322c
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sala
+  module:
+    - text
+id: node.sala.body
+field_name: body
+entity_type: node
+bundle: sala
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

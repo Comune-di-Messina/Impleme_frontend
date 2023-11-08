@@ -1,0 +1,15 @@
+uuid: fa561417-4fa1-445f-8857-4d7f5531a415
+langcode: it
+status: true
+dependencies:
+  enforced:
+    module:
+      - media_library
+  module:
+    - media
+_core:
+  default_config_hash: pkq0uj-IoqEQRBOP_ddUDV0ZJ-dKQ_fLcppsEDF2UO8
+id: media.media_library
+label: 'Raccolta Multimediale'
+targetEntityType: media
+cache: true

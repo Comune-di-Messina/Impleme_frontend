@@ -1,0 +1,15 @@
+.breadcrumb-container .breadcrumb {
+  font-size: $font-normal;
+  .it-dark & {
+    .breadcrumb-item,
+    .breadcrumb-link {
+      color: $color-white !important;
+    }
+  }
+  .breadcrumb-item {
+    .breadcrumb-link {
+      color: $color-gray-darker;
+      font-weight: 600;
+    }
+  }
+}

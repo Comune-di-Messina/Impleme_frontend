@@ -1,0 +1,13 @@
+uuid: 71c27501-688e-43a8-85ca-18b70f950993
+langcode: it
+status: true
+dependencies: {  }
+id: guides_rest_resource
+plugin_id: guides_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

@@ -1,0 +1,20 @@
+uuid: f7f01059-58a6-4106-8ba8-aba4173055dd
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.residenze
+  module:
+    - text
+id: taxonomy_term.residenze.description
+field_name: description
+entity_type: taxonomy_term
+bundle: residenze
+label: Descrizione
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

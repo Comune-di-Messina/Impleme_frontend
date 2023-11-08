@@ -1,0 +1,350 @@
+.page-node-type-sala {
+
+  // Global components.
+  .form-row {
+    display: block;
+  }
+  .form-item {
+    label {
+      display: block;
+      text-transform: uppercase;
+      font-size: $font-small;
+    }
+    .item-value {
+      font-size: $font-normal;
+      font-weight: 700;
+    }
+  }
+
+  .form-check {
+    label {
+      height: auto;
+      line-height: 1.6;
+      margin-bottom: 0;
+      position: static;
+    }
+    .form-label {
+      color: $color-green;
+    }
+    .form-text {
+      color: $color-gray;
+      opacity: .6;
+      margin-top: 0;
+      &::before {
+        @include blockLink;
+      }
+    }
+    [type="checkbox"] + label::after {
+      background: transparent !important;
+      border-radius: 50%;
+      border-color: $color-gray-darker;
+    }
+    [type="checkbox"] + label::before {
+      background: $color-green;
+      border-radius: 50%;
+      border: 2px solid white;
+      height: 16px;
+      left: 0;
+      margin: 8px 7px;
+      opacity: 0;
+      top: 0;
+      transform: none;
+      width: 16px;
+    }
+    [type="checkbox"]:checked + label::before {
+      opacity: 1;
+    }
+  }
+
+  // Sections and containers.
+  .container-servizi {
+    .form-check {
+      .form-check-wrapper {
+        align-items: center;
+        background-color: $color-white;
+        border-radius: 3px;
+        box-shadow: 0 0 5px rgba($color-black, .25);
+        display: flex;
+        padding: $gap * 2;
+        position: relative;
+        &:not(.hide-check) {
+          // Icons.
+          &::after {
+            content: '';
+            display: block;
+            margin-left: auto;
+
+            // temp.
+            width: 32px;
+            height: 32px;
+            background-color: $color-gray-light;
+          }
+        }
+        &.servizio-7::after {
+          @include sprite--servizio-wifi;
+          background-color: transparent;
+        }
+        div.icon-file-wrapper {
+          width: 100%;
+        }
+        .icon-lg {
+          float: left;
+        }
+        p.filename {
+          float: left;
+          width: 80%;
+        }
+      }
+      [type="checkbox"] + label::after {
+        top: 0;
+        left: 20px;
+        bottom: 0;
+        margin: auto;
+      }
+      [type="checkbox"] + label::before {
+        top: 0;
+        left: 22px;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  .secondary-bg-light {
+    padding-bottom: $gap * 20 !important;
+  }
+
+  .container-specifiche {
+    h3 {
+      margin-bottom: $gap * 2;
+    }
+    & > div + div {
+      margin-top: $gap * 5;
+    }
+  }
+  .container-calendar {
+    margin: $gap * -15 auto 0;
+    @include breakpoint(lg) {
+      max-width: 90%;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      & > div {
+        @include cardShadow;
+        background-color: $color-white;
+        padding: $gap * 2;
+        border-radius: 3px;
+        width: 100%;
+        @include breakpoint(md) {
+          width: 48%;
+        }
+      }
+    }
+    .container-calendar__datepicker {
+      &.is-locked {
+        pointer-events: none;
+        opacity: .6;
+      }
+    }
+    .calendario {
+      border: 0;
+      font-family: $font-primary;
+      .vc-header {
+        margin: 0;
+        padding-bottom: $gap;
+        text-transform: uppercase;
+      }
+      .vc-weekday {
+        color: $color-blue-slate;
+      }
+      .vc-focusable {
+        color: $color-green;
+        font-weight: 700;
+        &.is-disabled {
+          font-weight: 400;
+          color: rgba($color-gray, .5);
+          pointer-events: none;
+        }
+      }
+      // Overwrite colors.
+      --green-600: #{$color-green};
+      --green-900: #{$color-green-dark};
+    }
+    .orari {
+      .orari-all {
+        font-size: $font-small;
+        border-bottom: 1px solid $color-gray-light;
+        padding-bottom: $gap;
+        .toggles label {
+          margin-bottom: 0;
+          .lever {
+            margin-right: 0;
+          }
+          input[type="checkbox"]:checked + .lever::after {
+            background-color: $color-green;
+          }
+        }
+      }
+      .orari-content {
+        display: flex;
+        flex-wrap: wrap;
+        .orari-fascia {
+          background-color: transparent;
+          border-radius: 4px;
+          border: 0;
+          color: $color-green;
+          font-size: $font-small;
+          font-weight: 700;
+          margin: $gap;
+          padding: $gap;
+          width: calc(33.3% - #{$gap} * 2);
+          &.h-selected {
+            background: $color-green !important;
+            color: $color-white;
+          }
+          &:hover, &.in-range {
+            background: $color-green-light !important;
+          }
+          &:disabled {
+            background: transparent !important;
+            color: initial;
+            font-weight: 400;
+            opacity: .3;
+          }
+        }
+      }
+    }
+  }
+
+  .container-form {
+    input[readonly="readonly"],
+    input[readonly="disabled"]{
+      cursor: not-allowed;
+      background-color: #e6e9f2;
+      opacity: 1;
+    }
+    .row {
+      margin-right: -#{$gap * 2};
+      margin-left: -#{$gap * 2};
+      [class^='col'] {
+        padding: $gap * 4 $gap * 2;
+      }
+    }
+    .organizzatore {
+      legend {
+        display: flex;
+        align-items: center;
+        .fieldset-step-num {
+          margin-right: $gap / 2;
+        }
+        .form-check {
+          margin-left: auto;
+          text-transform: initial;
+        }
+      }
+    }
+    .col-importo {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+      &::before {
+        display: block;
+        content: '';
+        background-color: $color-green-lighter;
+        position: absolute;
+        top: -#{$gap * 2};
+        left: $gap * 2;
+        bottom: 0;
+        right: $gap * 2;
+        z-index: -1;
+        @include breakpoint(lg) {
+          left: 0;
+        }
+      }
+      & > * {
+        position: relative;
+        right: 8px;
+      }
+      .btn {
+        margin: auto;
+      }
+      .form-item {
+        align-self: flex-start;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+      }
+      .alert {
+        font-size: $font-small;
+      }
+    }
+  }
+
+  .container-documenti {
+    .col-caricati {
+      position: relative;
+      z-index: 1;
+      &::before {
+        display: block;
+        content: '';
+        background-color: $color-green-lighter;
+        position: absolute;
+        top: -#{$gap * 3};
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        @include breakpoint(lg) {
+          left: 6px;
+          right: 6px;
+        }
+      }
+      .dettaglio-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0;
+        font-size: 14px;
+        li {
+          min-width: 33%;
+          max-width: 33%;
+          list-style: none;
+          padding: 8px 0;
+          svg {
+            fill: $color-green !important;
+          }
+        }
+      }
+    }
+  }
+
+  .container-privacy {
+    .form-check {
+      border-bottom: 1px solid $color-gray-light;
+      padding-bottom: $gap * 2;
+      label {
+        font-size: $font-small;
+        line-height: 1.3;
+        padding-top: $gap;
+      }
+    }
+  }
+
+  .alert {
+    background-size: 25px 25px;
+    background-position: 10px 10px;
+    padding: .5rem .5rem .5rem 2.5rem;
+    margin: .5rem auto;
+    text-align: left;
+    .errors {
+      margin: 0;
+      padding: .25rem 1rem;
+    }
+  }
+
+}

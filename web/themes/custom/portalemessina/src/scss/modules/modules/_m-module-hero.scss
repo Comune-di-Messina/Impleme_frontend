@@ -1,0 +1,137 @@
+.module.hero {
+
+  // Full.
+  &.hero-full {
+    color: $color-white;
+    &.it-overlay {
+      .img-responsive-wrapper {
+        &::after {
+          background-color: rgba($color-black, .35);
+        }
+        &::before {
+          background: linear-gradient(rgba($color-black, 0), $color-black);
+          bottom: 0;
+          content: '';
+          display: block;
+          height: 35%;
+          left: 0;
+          opacity: .75;
+          position: absolute;
+          width: 100%;
+          z-index: 1;
+        }
+      }
+    }
+    .hero-main {
+      min-height: 560px;
+      z-index: 2;
+    }
+    .hero-content {
+      font-size: $font-discrete;
+    }
+    .hero-link {
+      margin-top: auto;
+      padding-top: 2rem;
+      a {
+        @include inlineCta;
+        color: $color-white;
+      }
+    }
+    .it-category {
+      color: $color-white;
+      text-transform: uppercase;
+      font-weight: 600;
+      a {
+        color: inherit;
+      }
+      &.it-category-luoghi {
+        &::before {
+          @include sprite--section-luoghi-dot;
+          content: '';
+          display: block;
+          margin-right: $gap;
+        }
+      }
+      &.it-category-servizi {
+        &::before {
+          @include sprite--section-servizi-dot;
+          content: '';
+          display: block;
+          margin-right: $gap;
+        }
+      }
+      &.it-category-pin {
+        &::before {
+          @include sprite--pin-white;
+          content: '';
+          display: block;
+          margin-right: $gap;
+        }
+      }
+    }
+    .hero-back a {
+      align-items: center;
+      color: $color-white;
+      display: flex;
+      font-size: $font-small;
+      font-weight: 700;
+      &::before {
+        @include sprite--arrow-small-back-white;
+        content: '';
+        display: block;
+      }
+    }
+    .hero-main-bottom {
+      border-top: 1px solid $color-white;
+      @include breakpoint(lg) {
+        border: 0;
+      }
+    }
+    .hero-band {
+      background-color: rgba($color-blue-dark, .8);
+      z-index: 1;
+      width: 100%;
+    }
+  }
+
+  // Simple.
+  &.hero-simple {
+    .hero-content {
+      // max-width: 30rem;
+      padding-left: calc((100vw - #{$maxwidth}) / 2 );
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      @media (min-width: 768px) and (max-width: 1270px) {
+        padding-left: 15px;
+      }
+      .hero-content-main {
+        color: $color-gray-darker;
+      }
+      .hero-cta {
+        margin-top: auto;
+        padding-top: $gap * 2;
+      }
+    }
+    .hero-back a {
+      align-items: center;
+      color: inherit;
+      display: flex;
+      font-size: $font-small;
+      font-weight: 700;
+      &::before {
+        @include sprite--arrow-small-back;
+        content: '';
+        display: block;
+      }
+    }
+    .col-image {
+      img {
+        @include breakpoint(lg) {
+          max-width: 480px;
+        }
+      }
+    }
+  }
+
+}

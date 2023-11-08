@@ -1,0 +1,39 @@
+{%
+  set classes = [
+  'module',
+  'card card-dati card-guida',
+  'no-after p-0'
+]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="card-dati-wrapper rounded shadow">
+    <div class="card-header p-4">
+      {% if title|render %}
+        <h3 class="card-title mb-2 mt-0">{{ title }}</h3>
+      {% endif %}
+      {% if title|render %}
+        <h4 class="card-subtitle text-serif">{{ subtitle }}</h4>
+      {% endif %}
+    </div>
+    <div class="card-info py-3 px-4 d-flex align-items-center justify-content-between">
+      <h5 class="m-0">{{ "Informazioni"|t }}</h5>
+    </div>
+    <div class="card-content">
+      <div class="card-content-main p-3">
+        {{ card_content_main }}
+      </div>
+      {% if card_content_more|render %}
+        <div class="card-content-more p-3">
+          {{ card_content_more }}
+        </div>
+        <div class="card-view-more p-4">
+          <button type="button" class="btn btn-primary btn-xs">
+            <span class="view-more-open">{{ "Mostra di più"|t }}</span>
+            <span class="view-more-close">{{ "Mostra di meno"|t }}</span>
+          </button>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

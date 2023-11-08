@@ -1,0 +1,64 @@
+uuid: 4a0bebec-4c65-49cc-a3a7-b6aec4f95e4f
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_elementi_infografica
+    - paragraphs.paragraphs_type.contenuto_ed_infografica
+    - paragraphs.paragraphs_type.elemento_infografica
+  module:
+    - entity_reference_revisions
+id: paragraph.contenuto_ed_infografica.field_elementi_infografica
+field_name: field_elementi_infografica
+entity_type: paragraph
+bundle: contenuto_ed_infografica
+label: 'Elementi infografica'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      elemento_infografica: elemento_infografica
+    target_bundles_drag_drop:
+      citazione:
+        weight: 14
+        enabled: false
+      contenuto:
+        weight: 15
+        enabled: false
+      contenuto_ed_immagine:
+        weight: 16
+        enabled: false
+      contenuto_ed_infografica:
+        weight: 17
+        enabled: false
+      elemento_infografica:
+        enabled: true
+        weight: 13
+      immagine:
+        weight: 18
+        enabled: false
+      immagine_full:
+        weight: 19
+        enabled: false
+      selezione_comuni:
+        weight: 20
+        enabled: false
+      selezione_di_contenuti:
+        weight: 21
+        enabled: false
+      selezione_di_contenuti_carosello:
+        weight: 22
+        enabled: false
+      tappe:
+        weight: 23
+        enabled: false
+      vista:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

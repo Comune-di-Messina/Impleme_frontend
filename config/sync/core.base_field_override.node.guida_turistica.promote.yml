@@ -1,0 +1,22 @@
+uuid: f813cb0f-2c7b-4b37-b928-9e26bf4bc2ef
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.guida_turistica
+id: node.guida_turistica.promote
+field_name: promote
+entity_type: node
+bundle: guida_turistica
+label: 'Promosso alla prima pagina'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

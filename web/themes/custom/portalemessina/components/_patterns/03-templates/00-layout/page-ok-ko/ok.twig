@@ -1,0 +1,21 @@
+<div class="container page-ok-ko--ok">
+  <div class="row">
+    <div class="col-10 offset-1 py-5">
+      {% if room_name|striptags|length > 0 %}
+        <strong class="color-gray-darker room-name">{{ room_name }}</strong>
+        <hr class="bg-color-green-dark">
+      {% endif %}
+      <h1 class="color-gray"> {{ page_title }} </h1>
+      {% if op_type == "prenotazione" %}
+        <p class="text">{{ "Your request has been submitted, you will find the updated file in your personal area. Don't forget to download and fill in the documents needed to close the file. You will find the attachments at the bottom of the page."|t }} </p>
+      {% elseif op_type == "pagamento" %}
+        <p class="text">{{ "Thank you! Your payment will be logged in the next few hours. After that You will be able to download the digital receipt."|t }}</p>
+      {% elseif op_type == "segnalame"%}
+        <p class="text">{{ "Thank you! Your report has been submitted. We will receive an update as soon as possible."|t }}</p>
+      {% endif %}
+      <p class="text-center">
+        <a href="/user" class="btn btn-primary">{{ 'Go to the personal area'|t }}</a>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+uuid: 80953ac5-d182-4975-a503-8e2470176b81
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.comuni
+id: taxonomy_term.comuni.status
+field_name: status
+entity_type: taxonomy_term
+bundle: comuni
+label: Pubblicato
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

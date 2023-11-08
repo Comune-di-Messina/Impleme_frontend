@@ -1,0 +1,22 @@
+uuid: 2f0ac3f8-1bf0-441f-bdb6-bc9fb41348c1
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.contenuto_multimediale
+id: node.contenuto_multimediale.promote
+field_name: promote
+entity_type: node
+bundle: contenuto_multimediale
+label: 'Promosso alla prima pagina'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

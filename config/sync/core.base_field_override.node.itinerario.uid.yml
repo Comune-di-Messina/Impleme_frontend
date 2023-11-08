@@ -1,0 +1,20 @@
+uuid: 2c783613-8db9-4402-81f5-127a5efe170d
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.itinerario
+id: node.itinerario.uid
+field_name: uid
+entity_type: node
+bundle: itinerario
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

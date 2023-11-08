@@ -1,0 +1,38 @@
+parameters:
+  extensions:
+    - GrumphpPhpcbf\Loader
+  ascii:
+    failed: resources/grumphp/grumpy.txt
+    succeeded: resources/grumphp/happy.txt
+  git_dir: .
+  bin_dir: vendor/bin
+  tasks:
+    phpcbf:
+      standard:
+        - vendor/drupal/coder/coder_sniffer/Drupal
+      ignore_patterns:
+        - cfg/
+        - libraries/
+        - web/modules/custom/wso2_with_jwt/
+      triggered_by:
+        - php
+        - module
+        - inc
+      metadata:
+        priority: 100
+    git_add:
+      metadata:
+        priority: 90
+    phpcs:
+      standard:
+        - vendor/drupal/coder/coder_sniffer/Drupal
+      ignore_patterns:
+        - cfg/
+        - libraries/
+        - web/modules/custom/wso2_with_jwt/
+      triggered_by:
+        - php
+        - module
+        - inc
+      metadata:
+        priority: 50

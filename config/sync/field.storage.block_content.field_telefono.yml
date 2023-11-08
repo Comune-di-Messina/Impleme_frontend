@@ -1,0 +1,21 @@
+uuid: ea665b4b-cc67-4825-b653-a94630cc81ec
+langcode: it
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_telefono
+field_name: field_telefono
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

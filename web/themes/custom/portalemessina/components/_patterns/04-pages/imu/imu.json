@@ -1,0 +1,80 @@
+{
+  "Esito": "true",
+  "MsgEsito": "",
+  "SelectAnni": "",
+  "breadcrumbs": "",
+  "Situazione": {
+      "AnnoImposta": "2019",
+      "CfiscPiva": "PRZSRG45L23A390P",
+      "Cognome": "PERUZZI",
+      "Nome": "SERGIO",
+      "DataNascita": "23/07/1945",
+      "Immobili": [
+          {
+              "ImmUbicazione": "VIA CELLINI",
+              "ImmCategoria": "A03 - ABITAZIONI ECONOMICHE",
+              "ImmPercPoss": "100",
+              "ImmMesiPoss": "12",
+              "ImmPoss3112": "S",
+              "ImmCaratteristica": "FABBR.",
+              "ImmRendita": "200",
+              "ImmValore": "32000",
+              "ImmDetrazione": "0",
+              "ImmImpCalc": "316.8",
+              "ImmTipoFabbr": "Fabbricato Generico",
+              "ImmAssogg": "Soggetto",
+              "ImmStorico": "",
+              "ImmSezione": "",
+              "ImmFoglio": "9",
+              "ImmParticella": "3690",
+              "ImmSubalterno": "702",
+              "ImmConDiretta": "",
+              "ImmAliquota": "9,90"
+          },
+          {
+              "ImmUbicazione": "",
+              "ImmCategoria": "",
+              "ImmPercPoss": "100",
+              "ImmMesiPoss": "12",
+              "ImmPoss3112": "S",
+              "ImmCaratteristica": "TERR.",
+              "ImmRendita": "50",
+              "ImmValore": "6750",
+              "ImmDetrazione": "0",
+              "ImmImpCalc": "51.3",
+              "ImmTipoFabbr": "",
+              "ImmAssogg": "Soggetto",
+              "ImmStorico": "",
+              "ImmSezione": "",
+              "ImmFoglio": "",
+              "ImmParticella": "",
+              "ImmSubalterno": "",
+              "ImmConDiretta": "",
+              "ImmAliquota": "7,60"
+          }
+      ],
+      "Pagamenti": [],
+      "Accertamenti": [
+          {
+              "AccTipo": "Omesso Versamento",
+              "AccAnno": "2020",
+              "AccNumero": "30",
+              "AccDataEmis": "22/04/2020",
+              "AccProtocollo": "",
+              "AccDataNotifica": "",
+              "AccImporto": "486",
+              "AccImpAgevolato": "0",
+              "AccImpPagato": "0.00",
+              "AccStato": "Emesso",
+              "AccDataAnn": "",
+              "AccDestinatari": [
+                  {
+                      "AccDestNominativo": " ",
+                      "AccDestQualifica": "Contribuente"
+                  }
+              ]
+          }
+      ],
+      "Rimborsi": []
+  }
+}

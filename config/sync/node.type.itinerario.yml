@@ -1,0 +1,17 @@
+uuid: 6be54cd3-925e-4a93-9170-da0b391bf4e7
+langcode: it
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Itinerario
+type: itinerario
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,103 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+{%
+  set classes = [
+  'module',
+  'card card-visura-full',
+  'no-after p-0 rounded shadow'
+]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+
+  <div class="card-header py-4 px-5 d-flex align-items-center justify-content-between">
+    <div class="card-header-main">
+      {% if title|render %}
+        <h2 class="card-title mb-2 mt-0">{{ title }}</h2>
+      {% endif %}
+      {% if title|render %}
+        <h4 class="card-subtitle text-serif">{{ subtitle }}</h4>
+      {% endif %}
+    </div>
+    <div class="card-header-icon">
+      <button type="button" class="btn btn-collapse">
+        <svg class="icon icon-sm">
+          <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-collapse"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="card-content-main row">
+    <div class="col col-primary py-4 px-5">
+      <span class="h-icon h-dati-registry"></span>
+      <h3 class="m-0">Dati anagrafici</h3>
+      <div class="row">
+        <div class="dati-block col-6 py-3">
+          <div class="dati-label text-uppercase">Luogo di nascita</div>
+          <div class="dati-content">{{ anagrafica_luogo_nascita }}</div>
+        </div>
+        <div class="dati-block col-6 py-3">
+          <div class="dati-label text-uppercase">Data di nascita</div>
+          <div class="dati-content">{{ anagrafica_data_nascita }}</div>
+        </div>
+        <div class="dati-block col-6 py-3">
+          <div class="dati-label text-uppercase">Codice Fiscale</div>
+          <div class="dati-content">{{ anagrafica_codice_fiscale }}</div>
+        </div>
+        <div class="dati-block col-6 py-3">
+          <div class="dati-label text-uppercase">Sesso</div>
+          <div class="dati-content">{% if anagrafica_sesso == 'M' %} Maschio {% elseif anagrafica_sesso == 'F' %} Femmina {% endif %}</div>
+        </div>
+        <div class="dati-block col-6 py-3">
+          <div class="dati-label text-uppercase">Stato Civile</div>
+          <div class="dati-content">{{ anagrafica_stato_civile }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="col col-secondary py-4 px-5">
+      <span class="h-icon h-dati-home"></span>
+      <h3 class="m-0">Dati di residenza</h3>
+      <div class="row">
+        <div class="dati-block col-6 py-3">
+          <div class="dati-label text-uppercase">Provincia/Nazione</div>
+          <div class="dati-content">{{ residenza_nazione }}</div>
+        </div>
+        <div class="dati-block col-6 py-3">
+          <div class="dati-label text-uppercase">Comune</div>
+          <div class="dati-content">{{ residenza_comune }}</div>
+        </div>
+        <div class="dati-block col-6 py-3">
+          <div class="dati-label text-uppercase">Indirizzo</div>
+          <div class="dati-content"> {{ residenza_indirizzo }}</div>
+        </div>
+        <div class="dati-block col-6 py-3">
+          <div class="dati-label text-uppercase">Cap</div>
+          <div class="dati-content">{{ residenza_cap }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-content py-4 px-5">
+    <span class="h-icon h-dati-immigrazione"></span>
+    <h3 class="m-0">Dati di immigrazione</h3>
+      <div class="row">
+        <div class="dati-block col-3 py-3">
+          <div class="dati-label text-uppercase">Data</div>
+          <div class="dati-content">{{ immigrazione_data }}</div>
+        </div>
+        <div class="dati-block col-3 py-3">
+          <div class="dati-label text-uppercase">Provincia/Nazione</div>
+          <div class="dati-content">{{ immigrazione_nazione }}</div>
+        </div>
+        <div class="dati-block col-3 py-3">
+          <div class="dati-label text-uppercase">Comune</div>
+          <div class="dati-content">{{ immigrazione_comune }}</div>
+        </div>
+        <div class="dati-block col-3 py-3">
+          <div class="dati-label text-uppercase">N° Pratica</div>
+          <div class="dati-content">{{ immigrazione_pratica }}</div>
+        </div>
+      </div>
+
+  </div>
+
+</div>

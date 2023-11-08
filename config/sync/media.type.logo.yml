@@ -1,0 +1,14 @@
+uuid: 08032c64-ef91-4db6-8991-5107d5309915
+langcode: it
+status: true
+dependencies: {  }
+id: logo
+label: Logo
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image_1
+field_map:
+  name: name

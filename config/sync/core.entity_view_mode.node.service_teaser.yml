@@ -1,0 +1,10 @@
+uuid: 741a39c7-29cf-43cd-8843-1a989cdb36da
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: node.service_teaser
+label: 'Service Teaser'
+targetEntityType: node
+cache: true

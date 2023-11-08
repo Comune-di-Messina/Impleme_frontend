@@ -1,0 +1,22 @@
+uuid: 80b38c17-e957-4233-a1c6-3df6dae8b28f
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.scheda
+id: node.scheda.promote
+field_name: promote
+entity_type: node
+bundle: scheda
+label: 'Promosso alla prima pagina'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: 10905073-9d35-4ce6-b563-ad02098db41d
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta
+    - paragraphs.paragraphs_type.calendario_eventi
+  module:
+    - link
+id: paragraph.calendario_eventi.field_cta
+field_name: field_cta
+entity_type: paragraph
+bundle: calendario_eventi
+label: Cta
+description: Eventi
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

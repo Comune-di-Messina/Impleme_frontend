@@ -1,0 +1,25 @@
+uuid: aa3ae698-d63f-4ec7-920e-e06268f20d42
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_temi
+    - node.type.contenuto_multimediale
+id: node.contenuto_multimediale.field_term_temi
+field_name: field_term_temi
+entity_type: node
+bundle: contenuto_multimediale
+label: Temi
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: temi_er
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

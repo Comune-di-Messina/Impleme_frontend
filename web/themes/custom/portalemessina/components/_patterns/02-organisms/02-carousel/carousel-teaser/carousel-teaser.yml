@@ -1,0 +1,8 @@
+modules:
+  include():
+    pattern: molecules-card-teaser
+
+###
+
+ui_pattern_definition:
+  label: Organism - Carousel teaser

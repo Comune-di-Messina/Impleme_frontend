@@ -1,0 +1,28 @@
+uuid: 5532473a-2310-4966-bd00-860618373ae9
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_elementi_slideshow
+    - node.type.scheda
+    - paragraphs.paragraphs_type.slideshow
+id: paragraph.slideshow.field_elementi_slideshow
+field_name: field_elementi_slideshow
+entity_type: paragraph
+bundle: slideshow
+label: 'Elementi slideshow'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      scheda: scheda
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

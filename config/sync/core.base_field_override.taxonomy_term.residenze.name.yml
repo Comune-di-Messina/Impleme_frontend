@@ -1,0 +1,18 @@
+uuid: 920d68fc-7ee6-4724-b451-9b23a3af5cf4
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.residenze
+id: taxonomy_term.residenze.name
+field_name: name
+entity_type: taxonomy_term
+bundle: residenze
+label: Nome
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

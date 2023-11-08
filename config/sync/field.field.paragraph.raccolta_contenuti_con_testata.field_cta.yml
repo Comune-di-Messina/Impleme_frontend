@@ -1,0 +1,23 @@
+uuid: 9f22c9ef-47eb-4706-b061-8e09261acf25
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta
+    - paragraphs.paragraphs_type.raccolta_contenuti_con_testata
+  module:
+    - link
+id: paragraph.raccolta_contenuti_con_testata.field_cta
+field_name: field_cta
+entity_type: paragraph
+bundle: raccolta_contenuti_con_testata
+label: Cta
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

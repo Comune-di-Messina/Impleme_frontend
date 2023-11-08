@@ -1,0 +1,66 @@
+.guide-agenzie-page {
+  .views-element-container {
+    .view-filters {
+      display: block !important;
+      margin-top: $gap * 5;
+      padding: $gap * 2 0;
+      @include breakpoint(md) {
+        display: flex !important;
+        flex-wrap: wrap;
+      }
+      h4 {
+        font-size: $font-large;
+        font-weight: 700;
+        @include breakpoint(md) {
+          width: 33.3%;
+        }
+      }
+      .views-exposed-form {
+        margin-bottom: $gap * 5;
+        @include breakpoint(md) {
+          width: 66.6%;
+        }
+      }
+      .form--inline {
+        @include breakpoint(md) {
+          display: flex;
+        }
+        .form-item {
+          float: none;
+          flex: 1;
+          margin: 0;
+          & + .form-item {
+            margin-top: $gap * 3;
+            @include breakpoint(md) {
+              margin-left: $gap * 3;
+              margin-top: 0;
+            }
+          }
+        }
+        label {
+          color: $color-blue;
+          display: block;
+          font-size: $font-small;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  // Guide.
+  .view-guide-agenzie-turistiche {
+    .view-content {
+      @include masonry2col;
+      display: block;
+      margin: 0;
+      .views-row {
+        margin: 0 0 $gap * 2;
+        width: 100%;
+      }
+    }
+  }
+  
+  // Agenzie.
+  .view-guide-agenzie-turistiche.view-display-id-block_2 {
+    @include maxWidth;
+  }
+}

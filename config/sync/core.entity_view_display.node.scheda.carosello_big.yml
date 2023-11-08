@@ -1,0 +1,115 @@
+uuid: 05bed1ae-b3bb-468c-ad1f-4132010d1d4d
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.carosello_big
+    - field.field.node.scheda.body
+    - field.field.node.scheda.field_abstract
+    - field.field.node.scheda.field_argomenti_correlati
+    - field.field.node.scheda.field_comune
+    - field.field.node.scheda.field_contatti_email
+    - field.field.node.scheda.field_contatti_indirizzo
+    - field.field.node.scheda.field_contatti_telefono
+    - field.field.node.scheda.field_contatti_titolo
+    - field.field.node.scheda.field_contenuti_collegati
+    - field.field.node.scheda.field_coordinate
+    - field.field.node.scheda.field_cover
+    - field.field.node.scheda.field_cta
+    - field.field.node.scheda.field_immagine
+    - field.field.node.scheda.field_moduli
+    - field.field.node.scheda.field_term_temi
+    - node.type.scheda
+  module:
+    - ds
+    - taxonomy
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_image
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_cover
+      category:
+        - field_term_temi
+      title:
+        - node_title
+      content:
+        - field_abstract
+      link:
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 4
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.scheda.carosello_big
+targetEntityType: node
+bundle: scheda
+mode: carosello_big
+content:
+  field_abstract:
+    type: text_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_cover:
+    type: entity_reference_entity_view
+    weight: 0
+    region: image
+    label: hidden
+    settings:
+      view_mode: thumb_large
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_term_temi:
+    type: entity_reference_rss_category
+    weight: 1
+    region: category
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_argomenti_correlati: true
+  field_comune: true
+  field_contatti_email: true
+  field_contatti_indirizzo: true
+  field_contatti_telefono: true
+  field_contatti_titolo: true
+  field_contenuti_collegati: true
+  field_coordinate: true
+  field_cta: true
+  field_immagine: true
+  field_moduli: true
+  langcode: true
+  links: true

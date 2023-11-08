@@ -1,0 +1,35 @@
+uuid: d32bd551-7ba9-4b04-a279-3acc99f74c6c
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.media.video_url.field_media_oembed_video
+    - media.type.video_url
+  module:
+    - ds
+    - media
+id: media.video_url.default
+targetEntityType: media
+bundle: video_url
+mode: default
+content:
+  field_media_oembed_video:
+    type: oembed
+    label: visually_hidden
+    weight: 0
+    settings:
+      max_width: 960
+      max_height: 600
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,21 @@
+.module.infographic {
+  padding-bottom: $gap * 6;
+  padding-top: $gap * 6;
+  .before-content & {
+    color: $color-white;
+  }
+  .infographic-content {
+    font-size: $font-medium;
+  }
+}
+
+.submodule.infographic {
+  .item-number {
+    font-size: pxrem(96);
+    line-height: 1.3;
+    letter-spacing: -5px;
+  }
+  .item-content {
+    font-size: $font-discrete;
+  }
+}

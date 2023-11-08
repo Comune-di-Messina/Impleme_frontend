@@ -1,0 +1,28 @@
+uuid: 17467384-0540-44e0-99a0-802e1d39fd55
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_url
+    - media.type.video_url
+    - node.type.contenuto_multimediale
+id: node.contenuto_multimediale.field_video_url
+field_name: field_video_url
+entity_type: node
+bundle: contenuto_multimediale
+label: Video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video_url: video_url
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

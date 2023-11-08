@@ -1,0 +1,22 @@
+uuid: 3be891b2-b3e2-4917-b1b8-6a425239183e
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.agenzia_turistica
+id: node.agenzia_turistica.promote
+field_name: promote
+entity_type: node
+bundle: agenzia_turistica
+label: 'Promosso alla prima pagina'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

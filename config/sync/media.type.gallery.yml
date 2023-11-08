@@ -1,0 +1,14 @@
+uuid: 228e8d36-e2e8-4d69-aff5-45decb3d6766
+langcode: it
+status: true
+dependencies: {  }
+id: gallery
+label: Gallery
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image_2
+field_map:
+  name: name

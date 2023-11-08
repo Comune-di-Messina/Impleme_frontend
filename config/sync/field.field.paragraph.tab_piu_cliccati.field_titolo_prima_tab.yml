@@ -1,0 +1,19 @@
+uuid: bbb71a4a-3aad-4d3e-abed-cf4da54ad32c
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titolo_prima_tab
+    - paragraphs.paragraphs_type.tab_piu_cliccati
+id: paragraph.tab_piu_cliccati.field_titolo_prima_tab
+field_name: field_titolo_prima_tab
+entity_type: paragraph
+bundle: tab_piu_cliccati
+label: 'Titolo prima tab'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

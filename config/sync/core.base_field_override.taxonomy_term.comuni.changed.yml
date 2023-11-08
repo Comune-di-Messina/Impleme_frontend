@@ -1,0 +1,18 @@
+uuid: 49f2a3f5-19c4-48d9-ab9f-689776e88906
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.comuni
+id: taxonomy_term.comuni.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: comuni
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

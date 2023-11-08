@@ -1,0 +1,77 @@
+page-switcher-select:
+  version: 1.x
+  js:
+    js/page-switcher-select.js: {}
+pdf-select:
+  version: 1.x
+  js:
+    js/pdf-select.js: {}
+iuv-search:
+  version: 1.x
+  js:
+    js/iuv-search.js: {}
+pagome-avviso:
+  version: 1.x
+  js:
+    js/pagome-avviso.js: {}
+pagome-spontaneo:
+  webpack: true
+  js:
+    vue/src/pms.js: {}
+prenotame-prenotazione:
+  webpack: true
+  js:
+    vue/src/pmp.js: {}
+prenotame-allegati:
+  webpack: true
+  js:
+    vue/src/pmd.js: {}
+segnala-me:
+  webpack: true
+  js:
+    vue/src/segnalame.js: {}
+segnala-me-lista:
+  webpack: true
+  js:
+    vue/src/segnalame-lista.js: {}
+segnala-me-dettaglio:
+  webpack: true
+  js:
+    vue/src/segnalame-dettaglio.js: { }
+prenota-ufficio-offices-list:
+  webpack: true
+  js:
+    vue/src/prenota-ufficio-offices-list.js: { }
+prenota-ufficio-form:
+  webpack: true
+  js:
+    vue/src/prenota-ufficio-form.js: { }
+prenota-ufficio-reservations-list:
+  webpack: true
+  js:
+    vue/src/prenota-ufficio-reservations-list.js: {}
+
+pratiche-lista:
+  webpack: true
+  js:
+    vue/src/pratiche-list.js: {attributes: {type: module}}
+  dependencies:
+    - m_api/babel-polyfill
+
+pratiche-dettaglio:
+  webpack: true
+  js:
+    vue/src/pratiche-detail.js: {attributes: {type: module}}
+  dependencies:
+    - m_api/babel-polyfill
+
+pratiche-nuova:
+  webpack: true
+  js:
+    vue/src/pratiche-new.js: {attributes: {type: module}}
+  dependencies:
+    - m_api/babel-polyfill
+
+babel-polyfill:
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.12.1/polyfill.min.js: { external: true }

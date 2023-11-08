@@ -1,0 +1,22 @@
+uuid: 85358100-1c7d-4020-9cce-9602f45f8636
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.territori
+id: taxonomy_term.territori.status
+field_name: status
+entity_type: taxonomy_term
+bundle: territori
+label: Pubblicato
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

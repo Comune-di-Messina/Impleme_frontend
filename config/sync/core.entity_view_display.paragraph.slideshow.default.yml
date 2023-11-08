@@ -1,0 +1,43 @@
+uuid: 9de0d6a0-20ce-4ebe-9374-1dbefedf5ff5
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow.field_elementi_slideshow
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_carousel_hero
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      modules:
+        - field_elementi_slideshow
+id: paragraph.slideshow.default
+targetEntityType: paragraph
+bundle: slideshow
+mode: default
+content:
+  field_elementi_slideshow:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: slideshow
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: modules
+hidden: {  }

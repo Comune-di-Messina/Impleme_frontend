@@ -1,0 +1,28 @@
+uuid: be939841-796e-436b-b845-51fd27fdc0da
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comune_servizi
+    - node.type.comune_servizi
+    - node.type.sala
+id: node.sala.field_comune_servizi
+field_name: field_comune_servizi
+entity_type: node
+bundle: sala
+label: Comune
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      comune_servizi: comune_servizi
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

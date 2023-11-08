@@ -1,0 +1,8 @@
+uuid: f753d5c9-ced4-416e-899c-dc03900c566f
+langcode: it
+status: true
+dependencies: {  }
+id: messina_corto
+label: 'Messina - corto'
+locked: false
+pattern: d/m/y

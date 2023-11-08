@@ -1,0 +1,31 @@
+uuid: 5ac63f35-78fb-465d-ba92-f88d650ae67f
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contenuti_collegati
+    - node.type.evento
+    - node.type.itinerario
+    - node.type.scheda
+id: node.evento.field_contenuti_collegati
+field_name: field_contenuti_collegati
+entity_type: node
+bundle: evento
+label: 'Scopri anche'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      evento: evento
+      itinerario: itinerario
+      scheda: scheda
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: evento
+field_type: entity_reference

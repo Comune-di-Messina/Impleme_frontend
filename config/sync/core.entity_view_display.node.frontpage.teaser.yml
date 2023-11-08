@@ -1,0 +1,35 @@
+uuid: 76945516-3cd7-4ba3-bc5e-dcea22267cfd
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.frontpage.body
+    - field.field.node.frontpage.field_moduli
+    - field.field.node.frontpage.field_pre_moduli
+    - node.type.frontpage
+  module:
+    - text
+    - user
+id: node.frontpage.teaser
+targetEntityType: node
+bundle: frontpage
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_moduli: true
+  field_pre_moduli: true
+  langcode: true

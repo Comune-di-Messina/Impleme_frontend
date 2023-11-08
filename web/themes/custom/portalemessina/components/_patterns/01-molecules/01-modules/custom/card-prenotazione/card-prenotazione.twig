@@ -1,0 +1,56 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+{%
+  set classes = [
+  'module',
+  'card card-dati card-prenotazione',
+  'no-after p-0 rounded shadow'
+]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+
+  <div class="card-header secondary-bg p-4">
+    {% if title|render %}
+      <h3 class="card-title mb-2 mt-0">{{ title }}</h3>
+    {% endif %}
+    {% if subtitle|render %}
+      <h4 class="card-subtitle text-serif">{{ subtitle }}</h4>
+    {% endif %}
+  </div>
+  <div class="py-2 px-4 d-flex align-items-center justify-content-between neutral-bg-light">
+    <div class="dati-block">
+      <div class="dati-label text-uppercase">Stato pratica</div>
+      <div class="dati-content">{{ prenotazione_stato }}</div>
+    </div>
+    <span class="h-icon h-prenotazione-stato-{{ prenotazione_codice_stato }}"></span>
+  </div>
+  <div class="card-content">
+    <div class="card-content-main p-3">
+      <div class="w-100 row">
+        <div class="dati-block col-6 py-3">
+          <div class="dati-label text-uppercase">Data prenotazione</div>
+          <div class="dati-content">{{ prenotazione_data }}</div>
+        </div>
+        <div class="dati-block col-6 py-3">
+          <div class="dati-label text-uppercase">N° pratica</div>
+          <div class="dati-content text-truncate">{{ prenotazione_pratica }}</div>
+        </div>
+        <div class="dati-block col-6 py-3">
+          <div class="dati-label text-uppercase">Orario prenotazione</div>
+          <div class="dati-content text-truncate">{{ prenotazione_orario }}</div>
+        </div>
+        <div class="dati-block col-6 py-3">
+          <div class="dati-label text-uppercase">Note</div>
+          <div class="dati-content">{{ prenotazione_note }}</div>
+        </div>
+      </div>
+      <div class="w-100 row">
+        <a class="btn btn-inline btn-xs btn-icon" href="{{ prenotazione_url_dettaglio }}">
+          Vai al dettaglio&nbsp;→
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+

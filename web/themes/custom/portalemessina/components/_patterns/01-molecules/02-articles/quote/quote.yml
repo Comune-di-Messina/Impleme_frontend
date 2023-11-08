@@ -1,0 +1,7 @@
+title: Faker.sentence(3, false)
+content: Faker.paragraph(3)
+
+###
+
+ui_pattern_definition:
+  label: Article - Quote

@@ -1,0 +1,10 @@
+uuid: 97d0d806-4076-454d-8dd7-2c0ef8940a4a
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: node.anteprima_con_immagine
+label: 'Anteprima con Immagine'
+targetEntityType: node
+cache: true

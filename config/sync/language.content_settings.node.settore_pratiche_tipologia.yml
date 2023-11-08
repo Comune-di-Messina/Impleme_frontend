@@ -1,0 +1,11 @@
+uuid: e2e9c01a-824f-4eca-8b99-c2aa64f84b5b
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.settore_pratiche_tipologia
+id: node.settore_pratiche_tipologia
+target_entity_type_id: node
+target_bundle: settore_pratiche_tipologia
+default_langcode: site_default
+language_alterable: false

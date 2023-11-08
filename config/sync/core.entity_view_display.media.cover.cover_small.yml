@@ -1,0 +1,37 @@
+uuid: 274e59b4-47bf-472d-970f-bdc3e8321ced
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.cover_small
+    - field.field.media.cover.field_media_image
+    - image.style.cover_small
+    - media.type.cover
+  module:
+    - ds
+    - image
+id: media.cover.cover_small
+targetEntityType: media
+bundle: cover
+mode: cover_small
+content:
+  field_media_image:
+    label: hidden
+    weight: 0
+    settings:
+      image_style: cover_small
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: image
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

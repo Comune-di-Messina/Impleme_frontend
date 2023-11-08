@@ -1,0 +1,11 @@
+.prenota-ufficio {
+  &-prenotazioni {
+    .row {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.h-section-servizi.user-logged-in .hero-simple.prenota-ufficio {
+  background-color: $color-white;
+}

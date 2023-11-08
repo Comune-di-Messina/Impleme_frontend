@@ -1,0 +1,20 @@
+{%
+  set classes = [
+  'page-front'
+]
+%}
+<div {{ attributes.addClass(classes) }}>
+
+  {% if before_content|render %}
+    <div class="before-content">
+      {{ before_content }}
+    </div>
+  {% endif %}
+
+  {% if content|render %}
+    <div class="content">
+      {{ content }}
+    </div>
+  {% endif %}
+
+</div>

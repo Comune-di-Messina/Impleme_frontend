@@ -1,0 +1,10 @@
+uuid: 34c05d77-8962-4ea0-8ffc-b9ff9d255a01
+langcode: it
+status: true
+dependencies: {  }
+id: calendario_eventi
+label: 'Calendario eventi'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

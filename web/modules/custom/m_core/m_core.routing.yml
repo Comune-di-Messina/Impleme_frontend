@@ -1,0 +1,23 @@
+m_core.select_comuni_form:
+  path: '/m_core/form/select_comuni'
+  defaults:
+    _form: '\Drupal\m_core\Form\SelectComuniForm'
+    _title: 'SelectComuniForm'
+  requirements:
+    _access: 'TRUE'
+
+m_core.select_comuni_tema_form:
+  path: '/m_core/form/select_comuni_tema'
+  defaults:
+    _form: '\Drupal\m_core\Form\SelectComuniXTemaForm'
+    _title: 'SelectComuniXTemaForm'
+  requirements:
+    _access: 'TRUE'
+
+m_core.selettore_sezione_carosello:
+  path: '/m_core/ajax/selettore-sezione-carosello/{paragraph_id}/{section}'
+  defaults:
+    _controller: '\Drupal\m_core\Controller\MCoreAjaxCommandsController::selettoreSezioneCarosello'
+    _title: 'selettoreSezioneCarosello'
+  requirements:
+    _access: 'TRUE'

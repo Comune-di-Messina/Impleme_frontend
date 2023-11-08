@@ -1,0 +1,44 @@
+uuid: 5db7632c-1d29-4c64-86cd-fd1af8265457
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.cover
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: 0
+id: media.cover.thumbnail
+field_name: thumbnail
+entity_type: media
+bundle: cover
+label: Miniatura
+description: 'The thumbnail of the media item.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  max_resolution: ''
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: default
+  handler_settings: {  }
+field_type: image

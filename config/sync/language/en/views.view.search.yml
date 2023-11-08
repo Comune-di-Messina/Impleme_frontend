@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      title: 'Search Results'
+      filters:
+        combine:
+          expose:
+            placeholder: 'Search keyword'

@@ -1,0 +1,14 @@
+uuid: 141162d2-6c24-4c7f-8f3d-e10a3d882413
+langcode: it
+status: true
+dependencies: {  }
+id: cover
+label: Cover
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name

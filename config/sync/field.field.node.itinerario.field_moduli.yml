@@ -1,0 +1,109 @@
+uuid: c0678a9b-cb5c-4f2c-bb80-d3fcc58af623
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_moduli
+    - node.type.itinerario
+    - paragraphs.paragraphs_type.citazione
+    - paragraphs.paragraphs_type.contenuto
+    - paragraphs.paragraphs_type.contenuto_multimediale
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.immagine
+    - paragraphs.paragraphs_type.immagine_full
+    - paragraphs.paragraphs_type.tappe
+  module:
+    - entity_reference_revisions
+id: node.itinerario.field_moduli
+field_name: field_moduli
+entity_type: node
+bundle: itinerario
+label: Moduli
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      citazione: citazione
+      contenuto: contenuto
+      gallery: gallery
+      immagine: immagine
+      immagine_full: immagine_full
+      tappe: tappe
+      contenuto_multimediale: contenuto_multimediale
+    target_bundles_drag_drop:
+      blocchi_di_selezione_del_comune:
+        weight: 18
+        enabled: false
+      calendario_eventi:
+        weight: 25
+        enabled: false
+      carosello_big:
+        weight: 19
+        enabled: false
+      carosello_con_intro_small:
+        weight: 27
+        enabled: false
+      carosello_con_testata_big:
+        weight: 20
+        enabled: false
+      carosello_con_testata_small:
+        weight: 21
+        enabled: false
+      citazione:
+        enabled: true
+        weight: 22
+      contenuto:
+        enabled: true
+        weight: 23
+      contenuto_ed_infografica:
+        weight: 24
+        enabled: false
+      contenuto_multimediale:
+        enabled: true
+        weight: 33
+      elemento_infografica:
+        weight: 25
+        enabled: false
+      elemento_mappa:
+        weight: 35
+        enabled: false
+      gallery:
+        enabled: true
+        weight: 26
+      immagine:
+        enabled: true
+        weight: 27
+      immagine_full:
+        enabled: true
+        weight: 28
+      mappa_indirizzi:
+        weight: 39
+        enabled: false
+      raccolta_contenuti_con_testata:
+        weight: 29
+        enabled: false
+      selezione_comuni:
+        weight: 30
+        enabled: false
+      selezione_comuni_servizi:
+        weight: 31
+        enabled: false
+      servizi_scopri_anche:
+        weight: 43
+        enabled: false
+      slideshow:
+        weight: 32
+        enabled: false
+      tappe:
+        enabled: true
+        weight: 33
+      vista:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions

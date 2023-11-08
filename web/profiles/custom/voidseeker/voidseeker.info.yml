@@ -1,0 +1,67 @@
+name: Void Seeker
+type: profile
+description: 'Void Seeker is a void installation profile. Few frontpage blocks, no style.'
+core: 8.x
+
+distribution:
+  name: Void Seeker
+  langcode: en
+
+# Modules to install to support the profile.
+install:
+  - admin_toolbar
+  - block_content
+  - breakpoint
+  - ckeditor
+  - color
+  - comment
+  - config
+  - config_split
+  - contact
+  - contextual
+  - dblog
+  - ds
+  - editor
+  - field_group
+  - field_ui
+  - file
+  - help
+  - history
+  - image
+  - metatag
+  - menu_ui
+  - metatag_facebook
+  - metatag_open_graph
+  - metatag_twitter_cards
+  - metatag_views
+  - options
+  - paragraphs
+  - paragraphs_ee
+  - path
+  - pathauto
+  - quickedit
+  - rdf
+  - responsive_favicons
+  - search
+  - shortcut
+  - simple_sitemap
+  - smtp
+  - taxonomy
+  - token
+  - toolbar
+  - views
+  - views_ui
+
+# Required modules
+# Note that any dependencies of the modules listed here will be installed automatically.
+dependencies:
+  - node
+  - block
+  - views
+
+# List any themes that should be installed as part of the profile installation.
+# Note that this will not set any theme as the default theme.
+themes:
+  - seven
+  - classy
+  - six8theme

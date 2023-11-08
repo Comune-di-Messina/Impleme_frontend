@@ -1,0 +1,14 @@
+uuid: 256e4698-9ea0-40dc-9b8a-22bd3e51067b
+langcode: it
+status: true
+dependencies: {  }
+name: _650x300_thumb_medium_scaled
+label: '[650x300] Thumb medium scaled'
+effects:
+  0589c4d8-12c0-4a6c-a2e1-17ebdce5bcce:
+    uuid: 0589c4d8-12c0-4a6c-a2e1-17ebdce5bcce
+    id: image_resize
+    weight: -10
+    data:
+      width: 650
+      height: 300

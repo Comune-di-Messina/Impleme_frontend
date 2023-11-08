@@ -1,0 +1,16 @@
+***************
+*** 30,35 ****
+      third_party_settings: {  }
+      region: content
+  hidden:
+    field_cta: true
+    field_data: true
+    langcode: true
+--- 31,37 ----
+      third_party_settings: {  }
+      region: content
+  hidden:
++   field_comune: true
+    field_cta: true
+    field_data: true
+    langcode: true

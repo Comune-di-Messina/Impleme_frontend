@@ -1,0 +1,9 @@
+tappa_number: 15
+tappa_subtitle: Faker.sentence(3, false)
+title: Faker.sentence(3, false)
+content: Faker.paragraph(3)
+
+###
+
+ui_pattern_definition:
+  label: Article - Tappa

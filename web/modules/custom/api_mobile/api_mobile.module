@@ -1,0 +1,249 @@
+<?php
+
+/**
+ * @file
+ * api_mobile.module
+ */
+
+use Drupal\image\Entity\ImageStyle;
+use Drupal\views\ViewExecutable;
+use Drupal\api_mobile\Constants;
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function api_mobile_views_pre_view(ViewExecutable $view, $displayId, array &$args) {
+  // Alters api_mobile view.
+  if (in_array($view->id(), Constants::VIEWS_NAMES)) {
+    // Get request.
+    $reqQuery = \Drupal::request()->query;
+
+    // Get langcode parameter.
+    $langcode = $reqQuery->get('langcode');
+
+    // Get default language.
+    $defaultLangcode = \Drupal::languageManager()->getDefaultLanguage()->getId();
+
+    // Get current view's filters.
+    $filters = $view->display_handler->getOption('filters');
+
+    if ($langcode !== $defaultLangcode) {
+      $view->display_handler->setOption('rendering_language', $langcode);
+    }
+
+    // Alter pagination based on (not mandatory) quantity parameter.
+    if ($reqQuery->has('quantity')) {
+      // Update page info with new total_items' value.
+      $view->setItemsPerPage($reqQuery->get('quantity'));
+
+      // Force to count for total rows.
+      $view->get_total_rows = TRUE;
+    }
+
+    // Check if request has startIndex parameter.
+    if ($reqQuery->has('startIndex')) {
+      $view->setOffset($reqQuery->get('startIndex'));
+    }
+
+    // Custom alters for poi_list view's display.
+    if (Constants::VIEW_NAME_POI_LIST === $displayId) {
+      // Set allowed content types filterable (default: scheda)
+      $allowedTypes = Constants::ALLOWED_PARAMETERS_VALUE[$displayId]['type'];
+
+      // Alter filter based on request's parameters
+      // Get type parameter.
+      $type = $reqQuery->get('type');
+
+      // Check if has been passed type is one of allowed one.
+      if (in_array($type, $allowedTypes)) {
+        // Set new type's value.
+        $filters['type']['value'] = [$type => $type];
+      }
+    }
+
+    // Alter filter based on request's parameters
+    // Get id parameter for rooms_detail view.
+    if (Constants::VIEW_NAME_ROOMS_DETAIL === $displayId) {
+      $id = $reqQuery->get('id');
+      $filters['field_room_id_value']['value'] = $id;
+    }
+
+    // Overrides filters.
+    $view->display_handler->overrideOption('filters', $filters);
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function api_mobile_views_pre_render(ViewExecutable $view) {
+  // Alters api_mobile view.
+  if (in_array($view->id(), Constants::VIEWS_NAMES)) {
+    $displayId = $view->getDisplay()->display['id'];
+    $mandatoryParametersErrors = [];
+
+    // Get request.
+    $reqQuery = \Drupal::request()->query;
+
+    // Check for quantity parameter.
+    if ($reqQuery->has('quantity')) {
+      $quantity = $reqQuery->get('quantity');
+      $startIndex = $reqQuery->get('startIndex');
+
+      // Calculates the nextIndex value.
+      $nextIndex = $view->total_rows - ($view->total_rows - $quantity) + ($startIndex ? $startIndex : 0);
+
+      if ($quantity >= $view->total_rows || $startIndex == $quantity) {
+        $nextIndex = -1;
+      }
+      else {
+        $nextIndex = $nextIndex <= 0 ? -1 : $nextIndex;
+      }
+
+      $view->result['nextIndex'] = $nextIndex;
+    }
+
+    // Custom alters for poi_detail view's display.
+    if (Constants::VIEW_NAME_POI_DETAIL === $displayId) {
+      $itineraryId = $reqQuery->get('itemId');
+      $itinerary = api_mobile_get_itinerary_steps($itineraryId);
+      $view->result['itinerary'] = $itinerary;
+    }
+
+    // Checks for errors.
+    if (isset(Constants::MANDATORY_PARAMETERS[$displayId])) {
+      foreach (Constants::MANDATORY_PARAMETERS[$displayId] as $mandatoryParameter) {
+        // If there aren't required parameter.
+        if (!$reqQuery->has($mandatoryParameter)) {
+          $mandatoryParametersErrors[$mandatoryParameter] = $mandatoryParameter;
+        }
+        else {
+          // Check for allowed parameters.
+          $parameter = $reqQuery->get($mandatoryParameter);
+          if (isset(Constants::ALLOWED_PARAMETERS_VALUE[$displayId][$mandatoryParameter]) || isset(Constants::ALLOWED_PARAMETERS_VALUE['global'][$mandatoryParameter])) {
+            $currentDisplayId = isset(Constants::ALLOWED_PARAMETERS_VALUE['global'][$mandatoryParameter]) ? 'global' : $displayId;
+
+            if (!in_array($parameter, Constants::ALLOWED_PARAMETERS_VALUE[$currentDisplayId][$mandatoryParameter])) {
+              $mandatoryParametersErrors[$mandatoryParameter] = $mandatoryParameter;
+            }
+          }
+        }
+      }
+    }
+
+    // If there are missing parameters build errors array in view.
+    if (count($mandatoryParametersErrors) > 0) {
+      $view->errors = Constants::ERRORS['NO_MANDATORY_FIELDS'];
+
+      // Building an errors array with some useful suggestions to resolves they.
+      foreach ($mandatoryParametersErrors as $parameterError) {
+        if (isset(Constants::ALLOWED_PARAMETERS_VALUE[$displayId][$parameterError])) {
+          $parameterError = [
+            $parameterError => [
+              'allowed_values' => Constants::ALLOWED_PARAMETERS_VALUE[$displayId][$parameterError],
+              'current_value' => $reqQuery->get($parameterError),
+            ],
+          ];
+        }
+        elseif (isset(Constants::ALLOWED_PARAMETERS_VALUE['global'][$parameterError])) {
+          $parameterError = [
+            $parameterError => [
+              'allowed_values' => Constants::ALLOWED_PARAMETERS_VALUE['global'][$parameterError],
+              'current_value' => $reqQuery->get($parameterError),
+            ],
+          ];
+        }
+        $view->errors['missing_parameters'][] = $parameterError;
+      }
+    }
+  }
+}
+
+/**
+ * Get itinerary's steps.
+ *
+ * @param int $itineraryId
+ *   Iterary's ID.
+ *
+ * @return array|false
+ *   Returns array if itinerary's steps was found.
+ */
+function api_mobile_get_itinerary_steps($itineraryId) {
+  $itinerary = \Drupal::entityTypeManager()
+    ->getStorage('node')
+    ->load($itineraryId);
+
+  /** @var Drupal\Core\Entity\EntityInterface $itinerary */
+  // $itinerary = $itinerary[$itineraryId];
+
+  /** @var Drupal\paragraphs\Entity\Paragraph $steps */
+  $steps = $itinerary->field_moduli->referencedEntities();
+  $stepsArray = [];
+  $outSteps = [];
+  $firstStepIdx = 0;
+
+  foreach ($steps as $step) {
+    $paragraphFields = [];
+
+    if ('tappe' === $step->getType()) {
+      $stepNumber = $step->field_numero->value;
+      $firstStepIdx = $stepNumber;
+    }
+
+    $paragraphFields['type'] = $step->getType();
+
+    if (isset($step->field_immagine) || isset($step->field_gallery) || isset($step->field_cover)) {
+      $fieldName = isset($step->field_immagine) ? 'field_immagine' : (isset($step->field_gallery) ? 'field_gallery' : 'field_cover');
+      $subFieldName = ($fieldName == 'field_immagine' || $fieldName == 'field_cover') ? 'field_media_image' : 'field_media_image_2';
+
+      $images = $step->{$fieldName}->referencedEntities();
+
+      /** @var \Drupal\media\Entity\Media $image */
+      foreach ($images as $image) {
+        $imageUri = $image->{$subFieldName}->entity->getFileUri();
+        $imageUri = ImageStyle::load('large')->buildUrl($imageUri);
+        $paragraphFields['image'][] = file_url_transform_relative(file_create_url($imageUri));
+      }
+    }
+
+    if (isset($step->field_titolo)) {
+      $paragraphFields['title'] = $step->field_titolo->value;
+    }
+    if (isset($step->field_testo)) {
+      $paragraphFields['text'] = $step->field_testo->value;
+    }
+    if (isset($step->field_contenuto_multimediale)) {
+      $content = $step->field_contenuto_multimediale->entity;
+      $paragraphFields['title'] = $content->label();
+      if ($video = $content->get('field_video_url')->entity) {
+        $video = $video->get('field_media_oembed_video')->getValue()[0]['value'];
+        if (strpos($video, 'watch?v=') > 0) {
+          $video = str_replace('watch?v=', 'embed/', $video);
+        }
+        $paragraphFields['video'] = $video;
+      }
+      if ($tour = $content->get('field_external_link')->getValue()) {
+        $paragraphFields['tourVirtuale'] = $tour[0]['uri'];
+      }
+    }
+
+    if ($stepNumber) {
+      $stepsArray[$firstStepIdx]['name'] = t("Step") . ' ' . $stepNumber;
+      $stepsArray[$firstStepIdx]['list'][] = $paragraphFields;
+    }
+    else {
+      if (count($steps) == 1) {
+        $stepsArray[$firstStepIdx] = [$paragraphFields];
+      }
+      else {
+        $outSteps[] = $paragraphFields;
+      }
+    }
+  }
+
+  if (count($outSteps) > 0) {
+    $stepsArray = array_merge($outSteps, $stepsArray);
+  }
+
+  return array_values($stepsArray);
+}

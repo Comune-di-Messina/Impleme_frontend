@@ -1,0 +1,71 @@
+.leaflet-popup-content-wrapper {
+  border-radius: 3px;
+  box-shadow: 0 3px 15px rgba($color-black, .1);
+  color: $color-secondary;
+  font-family: $font-primary;
+
+  h5 {
+    text-transform: uppercase;
+    font-size: $font-small;
+    border-bottom: 1px solid $color-gray-light;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+  }
+
+  h6 {
+    text-transform: uppercase;
+    font-size: $font-small;
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $color-blue;
+  }
+}
+
+.leaflet-map-pane {
+  .marker-cluster-small,
+  .marker-cluster-small div {
+    background-color: rgba($color-blue, .6);
+    color: $color-white;
+    font-weight: bold;
+  }
+
+  .pin-body {
+    border: 0;
+
+    .pin-arrow {
+      @include sprite--pin-map-blue;
+      top: -50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+  }
+}
+
+.view-id-sale {
+  &.view-display-id-attachment_1 {
+    .leaflet-popup-content {
+      .tema {
+        margin-bottom: 15px;
+
+        a {
+          color: #008A00;
+        }
+      }
+
+      .link {
+        margin-top: 20px;
+
+        a {
+          color: #008A00;
+
+          &:after {
+            content: " →";
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+uuid: 2f050788-8212-4c06-a80f-d55f375243ef
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.cover
+id: media.cover.changed
+field_name: changed
+entity_type: media
+bundle: cover
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

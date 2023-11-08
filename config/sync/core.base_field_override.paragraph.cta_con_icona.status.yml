@@ -1,0 +1,22 @@
+uuid: 0ed2dd92-b27d-483d-9982-af7c36da5e8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cta_con_icona
+id: paragraph.cta_con_icona.status
+field_name: status
+entity_type: paragraph
+bundle: cta_con_icona
+label: Pubblicato
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

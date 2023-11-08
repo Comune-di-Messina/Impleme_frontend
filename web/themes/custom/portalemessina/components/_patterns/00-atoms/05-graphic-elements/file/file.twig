@@ -1,0 +1,13 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+{% set targetAttribute = delete ? '' : 'target="_blank"' %}
+
+<a class="file d-inline-flex align-items-center" href="{{ url }}" {{ targetAttribute }}>
+  <svg class="icon icon-primary icon-xs mr-1">
+    {% if delete %}
+    <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-delete"></use>
+    {% else %}
+    <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-download"></use>
+    {% endif %}
+  </svg>
+  {{ title }}
+</a>

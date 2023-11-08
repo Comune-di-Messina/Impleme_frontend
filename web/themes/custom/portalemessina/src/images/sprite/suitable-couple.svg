@@ -1,0 +1,16 @@
+
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Users-/-Geometric-Full-Body-Multiple-Users-/-multiple-man-woman-1" stroke="#ffffff" stroke-width="1.5">
+            <g id="Regular">
+                <circle id="Oval" cx="6" cy="3.75" r="3"></circle>
+                <path d="M11.25,13.5 C11.25,10.6005051 8.89949494,8.25 6,8.25 C3.10050506,8.25 0.75,10.6005051 0.75,13.5 L0.75,15.75 L3,15.75 L3.75,23.25 L8.25,23.25 L9,15.75 L11.25,15.75 L11.25,13.5 Z" id="Shape"></path>
+                <line x1="6" y1="8.25" x2="6" y2="14.25" id="Shape"></line>
+                <circle id="Oval" cx="18" cy="3.75" r="3"></circle>
+                <path d="M13.5,15.75 L15,15.75 L15.75,23.25 L20.25,23.25 L21,15.75 L23.2500006,15.75 L23.2500006,13.5 C23.2508603,11.7331934 22.3623061,10.0846321 20.886,9.114 L18,13.5 L15.114,9.114 C14.4572268,9.54887658 13.9058172,10.1248843 13.5,10.8" id="Shape"></path>
+                <path d="M15,3.75 C15,3.75 15,7.5 12.75,7.5" id="Shape"></path>
+                <path d="M21,3.75 C21,3.75 21,7.5 23.25,7.5" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

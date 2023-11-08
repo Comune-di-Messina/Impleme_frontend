@@ -1,0 +1,70 @@
+.module.block-selection {
+  // Temp.
+  margin-top: -#{$gap * 5};
+  position: relative;
+}
+.submodule.block-selection-element {
+  & + & {
+    border-top: 1px solid $color-gray-light;
+    @include breakpoint(md) {
+      border-left: 1px solid $color-gray-light;
+      border-top: 0;
+    }
+  }
+  .block-selection {
+    margin-top: $gap * 5;
+  }
+  .block-label {
+    align-items: center;
+    color: $color-blue;
+    display: flex;
+    font-weight: 600;
+    text-transform: uppercase;
+    .block-icon {
+      background-color: $color-blue;
+      border-radius: 50%;
+      display: block;
+      height: $gap * 7;
+      margin-right: 1rem;
+      width: $gap * 7;
+      display: flex;
+
+      &::before {
+        @include sprite--section-luoghi-white;
+        content: '';
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+  .custom-select {
+    .form-select {
+      box-shadow: none;
+      background-color: $color-blue-light;
+    }
+  }
+  &.selezione-servizi {
+    .block-label {
+      color: $color-green;
+      .block-icon {
+        background-color: $color-green;
+        &::before {
+          @include sprite--section-services-white;
+        }
+      }
+    }
+    .custom-select {
+      .form-select {
+        background-color: $color-green-lighter;
+      }
+      .form-submit {
+        background-color: $color-green;
+      }
+    }
+    .btn {
+      background-color: $color-green;
+      font-family: $font-primary;
+      margin-top: 1.5rem; // temp
+    }
+  }
+}

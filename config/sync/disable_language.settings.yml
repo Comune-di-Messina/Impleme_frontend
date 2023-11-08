@@ -1,0 +1,6 @@
+redirect_override_routes:
+  - user.reset.login
+  - entity.user.edit_form
+_core:
+  default_config_hash: LQdQ1K4B45URZGIyHymiy3KU1r6uuxmu76e4TsrJzzE
+langcode: it

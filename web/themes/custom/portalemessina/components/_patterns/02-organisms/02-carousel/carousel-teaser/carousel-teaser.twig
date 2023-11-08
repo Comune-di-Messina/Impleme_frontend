@@ -1,0 +1,20 @@
+{%
+  set classes = [
+  'carousel carousel-teaser'
+]
+%}
+<div {{ attributes.addClass(classes) }}>
+  <div class="carousel-wrapper">
+    {{ modules }}
+    {% if pl %}
+      {{ modules }}
+      {{ modules }}
+      {{ modules }}
+      {{ modules }}
+    {% endif %}
+  </div>
+  <div class="carousel-nav">
+    <button class="carousel-prev">Prev</button>
+    <button class="carousel-next">Next</button>
+  </div>
+</div>

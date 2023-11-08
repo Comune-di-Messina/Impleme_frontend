@@ -1,0 +1,8 @@
+uuid: 9f89f09c-4850-40bf-954a-a634e2bc15fb
+langcode: it
+status: true
+dependencies: {  }
+id: services
+label: Servizi
+description: ''
+locked: false

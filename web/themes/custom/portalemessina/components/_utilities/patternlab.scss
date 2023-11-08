@@ -1,0 +1,151 @@
+// Import.
+@import '_globals/mixins';
+@import '_globals/variables';
+
+#sg-viewport {
+  z-index: 15;
+}
+
+body {
+  margin: 0;
+}
+.sg-subtype {
+  display: none;
+}
+#sg-patterns {
+  box-sizing: border-box !important;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0.5em;
+}
+.sg-pattern-title a {
+  font-family: $font-primary !important;
+}
+.sg-pattern-category-title {
+  color: #222 !important;
+  font-family: $font-primary !important;
+  font-size: 1.4rem !important;
+  margin: 0 0 .2rem;
+  text-transform: capitalize;
+  a {
+    color: grey !important;
+    font-family: $font-primary !important;
+    &:hover {
+      color: #222 !important;
+    }
+  }
+}
+.sg-label {
+  font-size: $font-xsmall;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.sg-info {
+  color: #bbb;
+  font-size: $font-xsmall;
+}
+
+// header
+.sg-pattern-example > .o-header {
+  position: relative;
+}
+
+// Fonts.
+.sg-fonts {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  li {
+    // margin: 1.5em 0;
+    list-style: none;
+    & + li {
+      &::before {
+        border-top: 1px dashed $color-gray-light;
+        content: '';
+        display: block;
+        height: 1px;
+        margin: 1em 0;
+        width: 10em;
+      }
+    }
+    p {
+      margin: 0;
+      &.sg-font-preview {
+        margin-bottom: .25rem;
+        margin-top: .25rem;
+      }
+    }
+    &.sg-font-primary {
+      .sg-font-stack::before {
+        content: '#{$font-primary}';
+      }
+    }
+    // &.sg-font-secondary {
+    //   .sg-font-preview {
+    //     font-family: $font-secondary;
+    //   }
+    //   .sg-font-stack::before {
+    //     content: '#{$font-secondary}';
+    //   }
+    // }
+  }
+}
+
+// Typography. 
+h1, h2, h3, h4, h5, h6 {
+  margin: .75rem 0;
+}
+
+.sg-colors {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  .sg-swatch {
+    flex: 0 0 18%;
+    padding: 0.3em;
+    margin: 0 0.5em 0.5em 0;
+    border: 1px solid #ddd;
+    line-height: 1.1;
+    .color {
+      display: block;
+      height: 4em;
+      margin-bottom: 0.3em;
+    }
+    .sg-name {
+      font-size: $font-normal;
+      font-weight: 500;
+      display: block;
+    }
+    .sg-label {
+      color: #bbb;
+    }
+    @each $color-name, $bgcolor in $colors {
+      &.color-#{$color-name} {
+        .color {
+          background: $bgcolor;
+        }
+        .sg-name::before {
+          content: '#{$color-name}';
+        }
+        .sg-info::before {
+          content: '#{$bgcolor}';
+        }
+      }
+    }
+  }
+}
+
+// Overwrite for preview.
+#atoms-button-menu,
+#molecules-nav-main,
+#molecules-nav-secondary,
+#molecules-nav-languages,
+#molecules-nav-social {
+  .sg-pattern-example {
+    background-color: #999;
+    padding: 1rem;
+  }
+}

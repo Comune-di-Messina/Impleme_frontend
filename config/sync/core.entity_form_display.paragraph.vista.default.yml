@@ -1,0 +1,28 @@
+uuid: 4284265b-418c-4d32-9a83-a46213acc6aa
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vista.field_vista
+    - paragraphs.paragraphs_type.vista
+  module:
+    - viewsreference
+id: paragraph.vista.default
+targetEntityType: paragraph
+bundle: vista
+mode: default
+content:
+  field_vista:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

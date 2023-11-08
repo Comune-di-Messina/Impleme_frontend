@@ -1,0 +1,45 @@
+.page-front {
+  .before-content {
+    background-color: $color-blue-slater !important;
+    padding-bottom: $gap * 25;
+    & + .content {
+      margin-top: -#{$gap * 23};
+    }
+  }
+}
+
+.path-frontpage {
+  .it-header-wrapper {
+    .it-header-slim-wrapper,
+    .it-header-center-wrapper {
+      background-color: $color-blue-slater !important;
+    }
+    .site-logo .it-brand-text {
+      color: $color-white;
+    }
+    .it-nav-wrapper .it-search-wrapper {
+      a.search-link {
+        background-color: $color-white !important;
+        .icon {
+          fill: $color-blue-slater !important;
+        }
+      }
+    }
+    .it-access-top-wrapper {
+      display: none;
+    }
+    .navbar svg {
+      display: none;
+    }
+    .it-header-center-wrapper .it-brand-wrapper {
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+  .it-footer-main {
+    background-color: $color-blue-slater;
+    .it-footer-small-prints {
+      background-color: rgba($color-black, .1);
+    }
+  }
+}

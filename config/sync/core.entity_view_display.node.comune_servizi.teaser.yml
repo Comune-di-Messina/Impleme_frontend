@@ -1,0 +1,41 @@
+uuid: 2bd3cf00-5db2-4b1d-940a-43ba7429c534
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.comune_servizi.body
+    - field.field.node.comune_servizi.field_abstract
+    - field.field.node.comune_servizi.field_cover
+    - field.field.node.comune_servizi.field_logo
+    - field.field.node.comune_servizi.field_moduli
+    - field.field.node.comune_servizi.field_term_comune
+    - node.type.comune_servizi
+  module:
+    - text
+    - user
+id: node.comune_servizi.teaser
+targetEntityType: node
+bundle: comune_servizi
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_abstract: true
+  field_cover: true
+  field_logo: true
+  field_moduli: true
+  field_term_comune: true
+  langcode: true

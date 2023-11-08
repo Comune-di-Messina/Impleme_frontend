@@ -1,0 +1,10 @@
+uuid: 5273f364-b724-4922-ae2a-e1dd5e5fdbcb
+langcode: it
+status: true
+dependencies: {  }
+id: tab_piu_cliccati
+label: 'Tab piu cliccati'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

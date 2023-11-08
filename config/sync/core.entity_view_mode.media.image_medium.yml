@@ -1,0 +1,10 @@
+uuid: 744cdd82-70e7-4290-b52d-0830d2eb6ebe
+langcode: it
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_medium
+label: '[945x700] Image medium'
+targetEntityType: media
+cache: true

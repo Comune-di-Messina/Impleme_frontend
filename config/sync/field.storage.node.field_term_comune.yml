@@ -1,0 +1,20 @@
+uuid: a552c4fb-f37e-4921-85ee-c1d58d8671c3
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_term_comune
+field_name: field_term_comune
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

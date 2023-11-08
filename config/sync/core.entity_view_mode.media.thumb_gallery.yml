@@ -1,0 +1,10 @@
+uuid: 5525654d-a10c-4ea2-bf19-6c5f9d64ec7b
+langcode: it
+status: true
+dependencies:
+  module:
+    - media
+id: media.thumb_gallery
+label: '[700x460] Thumb gallery'
+targetEntityType: media
+cache: true

@@ -1,0 +1,19 @@
+uuid: baccd367-f65c-4ffb-8684-51dad07e2455
+langcode: it
+status: true
+dependencies:
+  config:
+    - block_content.type.contatti
+    - field.storage.block_content.field_telefono
+id: block_content.contatti.field_telefono
+field_name: field_telefono
+entity_type: block_content
+bundle: contatti
+label: Telefono
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

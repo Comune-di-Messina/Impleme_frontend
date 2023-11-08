@@ -1,0 +1,164 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+<div class="page-pagofacile{{ pl ? ' h-section-servizi' }}">
+
+  {% include "@molecules/01-modules/hero/hero-simple/hero-simple.twig" with {
+    breadcrumbs: breadcrumbs,
+    title: page_title,
+    content: 'Inserisci i dati per effettuare il pagamento',
+    image: '<img src="' ~ dist_url ~ 'images/hero/placeholder.jpg">'
+  } %}
+  
+
+  <div class="container py-5">
+    <h3>Compila il form</h3>
+
+    <fieldset class="fieldset-step my-5">
+      <legend><span class="fieldset-step-num">1</span> Servizio</legend>
+      <div class="fieldset-content">
+        <div class="row my-2">
+          <div class="col-6 col-lg-4 my-2">
+            {% include "@atoms/06-forms/select/select.twig" with {
+              id: 'servizioAnno',
+              label: "Anno di riferimento *"
+            } %}
+          </div>
+          <div class="col-6 col-lg-4 my-2">
+            {% include "@atoms/06-forms/select/select.twig" with {
+              id: 'servizioTipo',
+              label: "Tipo del servizio *"
+            } %}
+          </div>
+        </div>
+        <div class="row my-2">
+          <div class="col my-2">
+            {% include "@atoms/06-forms/select/select.twig" with {
+              id: 'servizioTariffa',
+              label: "Tariffa *"
+            } %}
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset-step my-5">
+      <legend class="mb-0"><span class="fieldset-step-num">2</span> Dati pagamento</legend>
+      <div class="fieldset-content">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row py-2">
+              <div class="col-6 col-lg-5 my-2">
+                {% include "@atoms/06-forms/textarea/textarea.twig" with {
+                  id: 'datiCausale',
+                  label: "Tipo del servizio *",
+                  placeholder: "Enim nostrud labore fugiat sint cillum.",
+                  rows: 1
+                } %}
+              </div>
+              <div class="col-6 col-lg-3 my-2 input-currency">
+                {% include "@atoms/06-forms/input/input.twig" with {
+                  id: 'datiCostoUnit',
+                  label: "Costo unitario"
+                } %}
+              </div>
+              <div class="col-6 col-lg-3 my-2">
+                {% include "@atoms/06-forms/select/select.twig" with {
+                  id: 'datiQuantità',
+                  label: "Quantità"
+                } %}
+              </div>
+              <div class="col-6 col-lg-12 mt-4">
+                <div class="dati-label">Totale importo</div>
+                <div class="dati-content">48,00€</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 ml-auto secondary-bg-light p-4">
+            <div class="dati-label">note</div>
+            <div class="dati-content">Eiusmod elit proident fugiat ipsum ullamco ex non ipsum cupidatat.</div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset-step my-5 h-disabled">
+      <legend><span class="fieldset-step-num">3</span> Dati anagrafici del debitore</legend>
+      <div class="fieldset-content">
+        <div class="row my-2">
+          <div class="col-6 col-lg-4 my-2">
+            {% include "@atoms/06-forms/input/input.twig" with {
+              id: 'anagraficaCodFisc',
+              label: "Codice Fiscale *",
+              placeholder: "----------------"
+            } %}
+          </div>
+          <div class="col-6 col-lg-4 my-2">
+            {% include "@atoms/06-forms/input/input.twig" with {
+              id: 'anagraficaNome',
+              label: "Nome *", 
+              placeholder: "Inserisci il nome"
+            } %}
+          </div>
+          <div class="col-6 col-lg-4 my-2">
+            {% include "@atoms/06-forms/input/input.twig" with {
+              id: 'anagraficaCognome',
+              label: "Cognome *", 
+              placeholder: "Inserisci il cognome"
+            } %}
+          </div>
+        </div>
+        <div class="row my-2">
+          <div class="col-6 col-lg-4 my-2">
+            {% include "@atoms/06-forms/input/input.twig" with {
+              id: 'anagraficaIndirizzo',
+              label: "Indirizzo di residenza *", 
+              placeholder: "Inserisci via/corso/piazza n°"
+            } %}
+          </div>
+          <div class="col-6 col-lg-4 my-2">
+            {% include "@atoms/06-forms/input/input.twig" with {
+              id: 'anagraficaComune',
+              label: "Comune di residenza *", 
+              placeholder: "Inserisci il comune"
+            } %}
+          </div>
+          <div class="col-6 col-lg-2 my-2">
+            {% include "@atoms/06-forms/input/input.twig" with {
+              id: 'anagraficaCAP',
+              label: "CAP *", 
+              placeholder: "Inserisci il 00000"
+            } %}
+          </div>
+          <div class="col-6 col-lg-2 my-2">
+            {% include "@atoms/06-forms/input/input.twig" with {
+              id: 'anagraficaProvincia',
+              label: "Provincia di residenza *", 
+              placeholder: "Inserisci provincia"
+            } %}
+          </div>
+        </div>
+        <div class="row my-2">
+          <div class="col-6 col-lg-4 my-2">
+            {% include "@atoms/06-forms/input/input.twig" with {
+              id: 'anagraficaEmail',
+              label: "Email *", 
+              placeholder: "Inserisci l'indirizzo email"
+            } %}
+          </div>
+          <div class="col-6 col-lg-4 my-2">
+            {% include "@atoms/06-forms/input/input.twig" with {
+              id: 'anagraficaTelefono',
+              label: "Contatto telefonico", 
+              placeholder: "Inserisci il contatto telefonico"
+            } %}
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="text-center mt-4">
+      <button class="btn btn-primary btn-lg">Prosegui</button>
+    </div>
+
+  </div>
+
+</div>

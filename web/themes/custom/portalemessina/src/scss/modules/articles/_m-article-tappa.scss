@@ -1,0 +1,11 @@
+.article.tappa {
+  .number-label {
+    color: $color-blue;
+    font-size: pxrem(96);
+    line-height: 1.3;
+    letter-spacing: -5px;
+  }
+  .tappa-title {
+    font-size: $font-xlarge;
+  }
+}

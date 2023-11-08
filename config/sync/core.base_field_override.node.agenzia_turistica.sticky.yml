@@ -1,0 +1,22 @@
+uuid: e2f2621f-04fe-4a76-bded-f0e5a5ba6760
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.agenzia_turistica
+id: node.agenzia_turistica.sticky
+field_name: sticky
+entity_type: node
+bundle: agenzia_turistica
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

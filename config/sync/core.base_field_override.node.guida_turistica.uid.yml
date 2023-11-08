@@ -1,0 +1,20 @@
+uuid: c62013e1-daa7-4a1f-a29e-f2d070a8e482
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.guida_turistica
+id: node.guida_turistica.uid
+field_name: uid
+entity_type: node
+bundle: guida_turistica
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

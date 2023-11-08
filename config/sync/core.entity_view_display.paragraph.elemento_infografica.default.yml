@@ -1,0 +1,51 @@
+uuid: cd5a5bf9-aa39-4655-95f6-3c121b5b4fe3
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.elemento_infografica.field_contatore
+    - field.field.paragraph.elemento_infografica.field_numero
+    - field.field.paragraph.elemento_infografica.field_titolo
+    - paragraphs.paragraphs_type.elemento_infografica
+  module:
+    - ds
+    - viewsreference
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_infographic_element
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      number:
+        - field_contatore
+      content:
+        - field_titolo
+id: paragraph.elemento_infografica.default
+targetEntityType: paragraph
+bundle: elemento_infografica
+mode: default
+content:
+  field_contatore:
+    weight: 0
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: number
+  field_titolo:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_numero: true

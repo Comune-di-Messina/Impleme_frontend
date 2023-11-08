@@ -1,0 +1,11 @@
+enabled: false
+settings:
+  redirect_url: ''
+  client_id: UdU66QouWC9URzISr9UkKU3T8FMa
+  client_secret: rw_QQY4j0om9OAY9qWrxxDaLSE4a
+  authorization_endpoint: 'https://spid-dev.impleme.giottolabs.com/oauth2/authorize'
+  token_endpoint: 'https://spid-dev.impleme.giottolabs.com/oauth2/token'
+  userinfo_endpoint: 'https://spid-dev.impleme.giottolabs.com/oauth2/userinfo'
+_core:
+  default_config_hash: FJ7FfwlYzcbFfG0AqVPlqsLJIRhkzS1Rv6eO1vssSkM
+langcode: it

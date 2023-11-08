@@ -1,0 +1,27 @@
+uuid: cff0f20d-7df7-4b6f-a6ff-e720a44aa5d4
+langcode: it
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_tema
+field_name: field_tema
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Luoghi
+    -
+      value: '2'
+      label: Servizi
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

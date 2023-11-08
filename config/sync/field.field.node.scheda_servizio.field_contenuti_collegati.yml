@@ -1,0 +1,27 @@
+uuid: b7667780-0713-4688-97c0-6a6cc38ee86a
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contenuti_collegati
+    - node.type.scheda_servizio
+id: node.scheda_servizio.field_contenuti_collegati
+field_name: field_contenuti_collegati
+entity_type: node
+bundle: scheda_servizio
+label: 'Servizi correlati'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      scheda_servizio: scheda_servizio
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

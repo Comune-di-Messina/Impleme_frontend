@@ -1,0 +1,19 @@
+uuid: c50be94c-8234-4cf9-b1c9-d206e71cc529
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mezzo_di_trasporto
+    - node.type.itinerario
+id: node.itinerario.field_mezzo_di_trasporto
+field_name: field_mezzo_di_trasporto
+entity_type: node
+bundle: itinerario
+label: 'Mezzo di trasporto consigliato'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

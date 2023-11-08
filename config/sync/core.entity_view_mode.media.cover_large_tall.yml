@@ -1,0 +1,10 @@
+uuid: 222e9689-d9c3-4528-876d-7d4c2149176c
+langcode: it
+status: true
+dependencies:
+  module:
+    - media
+id: media.cover_large_tall
+label: '[1600x1000] Cover large tall'
+targetEntityType: media
+cache: true

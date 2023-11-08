@@ -1,0 +1,22 @@
+uuid: eac8efc5-f66c-411a-a2d3-e9f3717c1889
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.eventi_servizi
+id: node.eventi_servizi.promote
+field_name: promote
+entity_type: node
+bundle: eventi_servizi
+label: 'Promosso alla prima pagina'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

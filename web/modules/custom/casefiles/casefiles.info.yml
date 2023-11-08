@@ -1,0 +1,7 @@
+name: 'casefiles'
+type: module
+description: 'Api Integrations for Casefiles service'
+core: 8.x
+package: 'Messina'
+dependencies:
+  - m_api

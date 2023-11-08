@@ -1,0 +1,42 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+
+<div id="sidebar" class="sidebar sticky-wrapper navbar-wrapper">
+  <nav class="navbar it-navscroll-wrapper it-top-navscroll navbar-expand-lg">
+    <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNav">
+      <span class="it-list">
+        <svg class="icon icon-sm icon-primary align-top">
+          <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-list"></use>
+        </svg>
+      </span>
+      Indice
+    </button>
+    <div class="navbar-collapsable" id="navbarNav">
+      <div class="overlay"></div>
+      <div class="close-div sr-only">
+        <button class="btn close-menu" type="button">
+          <span class="it-close"></span>Chiudi
+        </button>
+      </div>
+      <a class="it-back-button" href="#">
+        <svg class="icon icon-sm icon-primary align-top">
+          <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-chevron-left"></use>
+        </svg>
+        <span>Torna indietro</span>
+      </a>
+      <div class="menu-wrapper">
+        <div class="link-list-wrapper menu-link-list">
+          <h3 class="mb-0">Indice</h3>
+          <ul class="link-list">
+            {% for item in asidenav %}
+              {% if item.datalink %}
+              <li class="nav-item">
+                <a class="nav-link" href="#{{ item.datalink }}"><span>{{ item.text }}</span></a>
+              </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,309 @@
+<?php
+
+/**
+ * @file
+ * Contains m_api.module.
+ */
+
+use Drupal\Core\Url;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Component\Render\FormattableMarkup;
+use Drush\Drush;
+use Drupal\wso2_with_jwt\Wso2Connection;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Core\Site\Settings;
+
+/**
+ * Implements hook_help().
+ */
+function m_api_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the m_api module.
+    case 'help.page.m_api':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Api Integrations for external services') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_openid_connect_userinfo_alter().
+ */
+function m_api_openid_connect_userinfo_alter(&$userinfo, $context) {
+  // Add some custom information.
+  if ($context['plugin_id'] == 'wso2' || $context['plugin_id'] == 'spid') {
+    foreach ($context['user_data'] as $key => $name) {
+      $claim = str_replace("http://wso2.org/claims/", "", $key);
+      if ($claim === "emailaddress") {
+        $userinfo["email"] = $name;
+      }
+      if (!isset($userinfo[$claim])) {
+        $userinfo[$claim] = $name;
+      }
+    }
+    if (!isset($userinfo['email'])) {
+      $userinfo['email'] = $userinfo['sub'] . "@local.dev";
+    }
+    if (!isset($userinfo['name'])) {
+      $candidates = [
+        'surname',
+        'first_name',
+        'given_name',
+        'family_name',
+        'givenname',
+        'lastname',
+        'last_name',
+      ];
+      $account_name = [];
+      foreach ($candidates as $candidate) {
+        if (isset($userinfo[$candidate])) {
+          $account_name[] = $userinfo[$candidate];
+        }
+      }
+      $userinfo['name'] = implode(" ", $account_name);
+    }
+  }
+}
+
+/**
+ * Implements hook_node_view_alter().
+ */
+function m_api_node_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  if ($build['#view_mode'] == 'full' && isset($build['field_url_servizio'])) {
+    $currentUser = Drupal::currentUser();
+    $logged_in = $currentUser->isAuthenticated() && Drupal::service("wso2_with_jwt.oauth_client")->isAuthenticated();
+    // Session corrupted: clear session and ask for a login.
+    if ($currentUser->isAuthenticated() && !Drupal::service("wso2_with_jwt.oauth_client")->isAuthenticated()) {
+      $session_manager = \Drupal::service('session_manager');
+      if ($session_manager->isStarted()) {
+        $session_manager->destroy();
+      }
+      $logged_in = FALSE;
+    }
+
+    $claim = new FormattableMarkup('<h3 class="mb-4">@text</h3>', [
+      '@text' => t("Effettua l'accesso per accedere al servizio"),
+    ]);
+
+    if (!$logged_in) {
+      $build['#cache']['contexts'][] = 'user.roles:authenticated';
+      $form = Drupal::formBuilder()->getForm('Drupal\openid_connect\Form\OpenIDConnectLoginForm');
+      $build['field_url_servizio'] = [
+        '#type' => 'container',
+        '#attributes' => [
+          'class' => ["openid-connect-login"],
+        ],
+        'claim' => [
+          '#markup' => $claim,
+        ],
+        'element-content' => $form,
+        '#weight' => $build['field_url_servizio']['#weight'],
+      ];
+    }
+    else {
+      $build['#cache']['contexts'][] = 'user';
+      $nodeType = $build['#node']->getType();
+      if ($nodeType == 'settore_segnala_me' || $nodeType == 'settore_pratiche_tipologia') {
+        $url = $build['#node']->field_url_servizio->getValue()[0]['uri'];
+        $url = Url::fromUri($url);
+        $response = new RedirectResponse($url->toString(), 301);
+        $response->send();
+      }
+      $build['field_url_servizio']['#prefix'] = $claim;
+    }
+  }
+
+  if ($build['#view_mode'] == 'full' && $entity->bundle() == 'sala') {
+    $roomid = $entity->get('field_room_id')->getString();
+    if (!empty($roomid)) {
+      $service = Drupal::service('m_api.prenotame_client');
+      $build['#attached']['library'][] = 'm_api/prenotame-prenotazione';
+      $build['#attached']['drupalSettings']['m_api'] = [
+        'id' => $roomid,
+        'endpoint' => [
+          'recuperaDisponibilita' => Url::fromRoute('m_api.prenotame_recupera_disponibilita', ['id' => $roomid])->toString(),
+          'verificaPrezzo' => Url::fromRoute('m_api.prenotame_verifica_prezzo', ['id' => $roomid])->toString(),
+          'dettagliSala' => Url::fromRoute('m_api.prenotame_dettagli_sala', ['id' => $roomid])->toString(),
+          'submit' => Url::fromRoute('m_api.prenotame_prenota_sala', ['id' => $roomid])->toString(),
+          'pagamentoOk' => Url::fromRoute('m_api.pagome_api.ko_ok', ['type' => 'pagamento', 'result' => 'ok'])->toString(),
+          'pagamentoKo' => Url::fromRoute('m_api.pagome_api.ko_ok', ['type' => 'pagamento', 'result' => 'ko'])->toString(),
+          'prenotazioneOk' => Url::fromRoute('m_api.pagome_api.ko_ok', ['type' => 'prenotazione', 'result' => 'ok'])->toString(),
+          'prenotazioneKo' => Url::fromRoute('m_api.pagome_api.ko_ok', ['type' => 'prenotazione', 'result' => 'ko'])->toString(),
+          'segnalameOk' => Url::fromRoute('m_api.pagome_api.ko_ok', ['type' => 'segnalame', 'result' => 'ok'])->toString(),
+          'segnalameKo' => Url::fromRoute('m_api.pagome_api.ko_ok', ['type' => 'segnalame', 'result' => 'ko'])->toString(),
+        ],
+        'documenti' => [],
+        'tipiStrutture' => $service->getTipiStrutture(),
+      ];
+
+      // Bind also room's documents.
+      if ($entity->hasField('field_attachments')) {
+        $documents = $entity->get('field_attachments')->getValue();
+        foreach ($documents as $documentId) {
+          $document = Drupal::entityTypeManager()->getStorage('media')->load($documentId['target_id']);
+          $entityUri = $document->get('field_media_file')->entity->getFileUri();
+          $build['#attached']['drupalSettings']['m_api']['documenti'][] = [
+            'id'   => $documentId['target_id'],
+            'nome' => $document->getName(),
+            'url'  => file_create_url($entityUri),
+            'body' => $document->get('field_description')->getValue(),
+            'linkText' => $document->toLink()->getText(),
+          ];
+        }
+      }
+
+      $currentUser = Drupal::currentUser();
+      $logged_in = $currentUser->isAuthenticated() && Drupal::service("wso2_with_jwt.oauth_client")->isAuthenticated();
+      // Session corrupted: clear session and ask for a login.
+      if ($currentUser->isAuthenticated() && !Drupal::service("wso2_with_jwt.oauth_client")->isAuthenticated()) {
+        $session_manager = \Drupal::service('session_manager');
+        if ($session_manager->isStarted()) {
+          $session_manager->destroy();
+        }
+        $logged_in = FALSE;
+      }
+
+      $claim = new FormattableMarkup('<h3 class="mb-4">@text</h3>', [
+        '@text' => t("Effettua l'accesso per accedere al servizio"),
+      ]);
+
+      if (!$logged_in) {
+        $build['#cache']['contexts'][] = 'user.roles:authenticated';
+        $form = Drupal::formBuilder()->getForm('Drupal\openid_connect\Form\OpenIDConnectLoginForm');
+        $build['field_room_id'] = [
+          '#type' => 'container',
+          '#attributes' => [
+            'class' => ["openid-connect-login"],
+          ],
+          'claim' => [
+            '#markup' => $claim,
+          ],
+          'element-content' => $form,
+          '#weight' => $build['field_room_id']['#weight'],
+        ];
+      }
+      else {
+        $build['field_room_id']['#access'] = FALSE;
+        $build['#cache']['contexts'][] = 'user';
+        $build['#attached']['drupalSettings']['m_api']['cf'] = $service->getCurrentCf();
+        $build['#attached']['drupalSettings']['m_api']['userinfo'] = $service->getUserInfo();
+      }
+    }
+  }
+}
+
+/**
+ * Customize the webpack config for your site.
+ *
+ * @param array &$config
+ *   PHP representation of the webpack config objects. Functions and regular
+ *   expressions can be provided as strings. Special keys:
+ *   - '#lines_before' - an array os strings to print before the config export
+ *     statement.
+ */
+function m_api_webpack_config_alter(array &$config) {
+  if (PHP_SAPI == 'cli' && Drush::getMajorVersion() == 10) {
+    $command = Drush::input()->getFirstArgument();
+
+    if (in_array($command, ['wpb', 'webpack:build'])) {
+      $config['mode'] = 'production';
+      $config['output']['publicPath'] = '/modules/custom/m_api/vue/dist/';
+
+      // Fix config webpack assets max size.
+      // This avoids the `[big]` suffix issue in the bundle mapping.
+      $config['performance'] = [
+        'hints' => FALSE,
+        'maxEntrypointSize' => 512000,
+        'maxAssetSize' => 512000,
+      ];
+    }
+    else {
+      $config['devtool'] = 'inline-source-map';
+      $config['output']['publicPath'] = 'http://localhost:1234/';
+    }
+  }
+}
+
+/**
+ * Implements hook_mail().
+ */
+function m_api_mail($key, &$message, $params) {
+  $data = NULL;
+
+  switch ($key) {
+    case 'something_wrong_form':
+      $data['@username'] = $params['account']->getDisplayName();
+      $messageSubject = $params['subject'];
+
+      $message['send'] = TRUE;
+      // phpcs:ignore
+      $message['subject'] = t($messageSubject, $data);
+      $message['body'][] = $params['body'];
+      break;
+  }
+}
+
+/**
+ * Implements hook_cron().
+ */
+function m_api_cron() {
+  $stateService = Drupal::state();
+  $stateService->delete('m_api.tributi');
+  $stateService->delete('m_api.enti');
+}
+
+/**
+ * Implements hook_preprocess_user().
+ */
+function m_api_preprocess_pattern_user(&$variables) {
+  /**
+   * @var \Drupal\ui_patterns\Element\PatternContext
+   */
+  $context = $variables['context'];
+  $entity = $context->getProperty('entity');
+  $uid = $entity->id();
+  $current = Drupal::currentUser();
+  if ($uid == $current->id()) {
+    $info = Drupal::service('user.private_tempstore')->get('wso2_with_jwt');
+    $name = $info->get('given_name');
+    $surname = $info->get('family_name');
+    $variables['spid_name'] = $name . ' ' . $surname;
+    if ($variables['spid_name'] == ' ') {
+      $variables['spid_name'] = render($variables['user']['username']);
+    }
+  }
+  else {
+    $variables['spid_name'] = render($variables['user']['username']);
+  }
+}
+
+/**
+ * Implements hook_user_logout().
+ */
+function m_api_user_logout() {
+  $tempstore = Drupal::service('tempstore.private')->get('redirectToLogout');
+  if ($tempstore->get('redirect')) {
+    $tempstore->set('redirect', FALSE);
+  }
+  else {
+    $token = Wso2Connection::getJWT();
+    if ($token) {
+      $after_url = Url::fromRoute('<front>', [], ['absolute' => TRUE]);
+      $redirect_url = Settings::get('openid_logout_url', 'https://spid-dev.impleme.giottolabs.com/oidc/logout');
+      $options = [
+        'query' => [
+          'post_logout_redirect_uri' => $after_url->toString(),
+          'id_token_hint' => $token,
+        ],
+      ];
+      $url = Url::fromUri($redirect_url, $options);
+      $redirect = new RedirectResponse($url->toString());
+      $redirect->send();
+    }
+  }
+}

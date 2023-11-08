@@ -1,0 +1,57 @@
+{%
+  set classes = [
+  'article',
+  'gallery',
+  'container my-5'
+]
+%}
+
+<article {{ attributes.addClass(classes) }}>
+  <div class="row justify-content-center">
+    <div class="col-12">
+
+    {% if gallery.count >= 4 %}
+
+      {% include "@molecules/02-articles/gallery/gallery-grid/gallery-grid-4.twig" with {
+        image_1: gallery.items[0],
+        image_2: gallery.items[1],
+        image_3: gallery.items[2],
+        image_4: gallery.items[3]
+      } %}
+
+      <div class="d-none">
+        {% for key, item in gallery.items %}
+          {% if key > 3 %}
+            {{ item }}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    {% elseif gallery.count == 3 %}
+
+      {% include "@molecules/02-articles/gallery/gallery-grid/gallery-grid-3.twig" with {
+        image_1: gallery.items[0],
+        image_2: gallery.items[1],
+        image_3: gallery.items[2]
+      } %}
+
+    {% elseif gallery.count == 2 %}
+
+      {% include "@molecules/02-articles/gallery/gallery-grid/gallery-grid-2.twig" with {
+        grid_1: gallery.items[0],
+        grid_2: gallery.items[1]
+      } %}
+
+    {% else %}
+
+      {% include "@molecules/02-articles/gallery/gallery-grid/gallery-grid-1.twig" with {
+        grid_1: gallery.items[0]
+      } %}
+
+    {% endif %}
+
+
+
+    </div>
+  </div>
+</article>

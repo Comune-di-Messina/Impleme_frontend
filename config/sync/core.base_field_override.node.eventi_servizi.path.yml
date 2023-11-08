@@ -1,0 +1,20 @@
+uuid: 8f11da0a-a395-430d-88e1-10a62dc1de20
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.eventi_servizi
+  module:
+    - path
+id: node.eventi_servizi.path
+field_name: path
+entity_type: node
+bundle: eventi_servizi
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

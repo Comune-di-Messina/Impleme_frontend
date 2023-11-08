@@ -1,0 +1,25 @@
+.page-scheda-dati {
+  .hero-simple {
+    background-color: $color-green-lighter;
+  }
+  .dati-info {
+    box-shadow: 0 5px 5px rgba($color-gray-light, .5);
+    .dati-label {
+      font-weight: 400;
+    }
+    .dati-content {
+      font-weight: 700;
+    }
+  }
+  .dati-content {
+    h2 {
+      color: $color-green-dark;
+    }
+  }
+  .table-row {
+    & + .table-row {
+      border-top: 1px solid $color-green;
+      padding-top: $gap * 6;
+    }
+  }
+}

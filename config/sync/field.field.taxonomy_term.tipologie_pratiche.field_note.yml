@@ -1,0 +1,21 @@
+uuid: 6c87b912-8244-461e-b9e0-f06f3f4b67ff
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_note
+    - taxonomy.vocabulary.tipologie_pratiche
+  module:
+    - text
+id: taxonomy_term.tipologie_pratiche.field_note
+field_name: field_note
+entity_type: taxonomy_term
+bundle: tipologie_pratiche
+label: Note
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

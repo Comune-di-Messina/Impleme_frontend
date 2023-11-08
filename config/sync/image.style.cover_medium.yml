@@ -1,0 +1,17 @@
+uuid: 92f7f16f-a983-4db1-b888-101f77119acb
+langcode: it
+status: true
+dependencies:
+  module:
+    - focal_point
+name: cover_medium
+label: '[1600x530] Cover medium'
+effects:
+  1262c4d8-b9d1-4ad3-9070-959f438bab47:
+    uuid: 1262c4d8-b9d1-4ad3-9070-959f438bab47
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 530
+      crop_type: focal_point

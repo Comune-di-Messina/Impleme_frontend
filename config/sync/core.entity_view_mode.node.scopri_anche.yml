@@ -1,0 +1,10 @@
+uuid: d1a45775-b812-4aaa-80e1-8ae4f7f7b3f0
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: node.scopri_anche
+label: 'Scopri anche'
+targetEntityType: node
+cache: true

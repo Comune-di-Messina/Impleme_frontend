@@ -1,0 +1,35 @@
+.paragraph--type--servizi-scopri-anche {
+  @include maxWidth;
+  .servizi-scopri-anche-title {
+    color: $color-green-dark;
+    font-size: $font-xlarge;
+    margin-bottom: $gap * 2;
+  }
+}
+
+.paragraph--type--contenuti-in-griglia {
+  .field--name-field-immagine {
+    margin-top: -375px;
+    margin-bottom: 2em;
+    max-height: 525px;
+    overflow: hidden;
+  }
+  .view-mode-anteprima-con-immagine {
+    padding: 0.5em;
+    img {
+      border-radius: 4px;
+    }
+
+    .only-text {
+      padding: 0.25em;
+    }
+
+    .field--name-body {
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+uuid: 3e016507-72c9-417f-b311-4268945e0f52
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.evento.body
+    - field.field.node.evento.field_abstract
+    - field.field.node.evento.field_argomenti_correlati
+    - field.field.node.evento.field_comune
+    - field.field.node.evento.field_contatti_indirizzo
+    - field.field.node.evento.field_contenuti_collegati
+    - field.field.node.evento.field_coordinate
+    - field.field.node.evento.field_cover
+    - field.field.node.evento.field_data
+    - field.field.node.evento.field_moduli
+    - field.field.node.evento.field_target
+    - field.field.node.evento.field_term_temi
+    - node.type.evento
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_simple
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      category:
+        - 'bundle_field:node'
+      title:
+        - node_title
+      content:
+        - field_abstract
+      cta:
+        - node_link
+    fields:
+      'bundle_field:node':
+        plugin_id: 'bundle_field:node'
+        weight: 0
+        label: hidden
+        formatter: default
+      node_link:
+        plugin_id: node_link
+        weight: 3
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.evento.search_index
+targetEntityType: node
+bundle: evento
+mode: search_index
+content:
+  field_abstract:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  body: true
+  field_argomenti_correlati: true
+  field_comune: true
+  field_contatti_indirizzo: true
+  field_contenuti_collegati: true
+  field_coordinate: true
+  field_cover: true
+  field_data: true
+  field_moduli: true
+  field_target: true
+  field_term_temi: true
+  langcode: true
+  links: true

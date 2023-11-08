@@ -1,0 +1,17 @@
+uuid: dbcb6ada-8435-44fa-892c-631a195258af
+langcode: it
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Sala
+type: sala
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

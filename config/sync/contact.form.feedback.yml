@@ -1,0 +1,14 @@
+uuid: 4f61d828-58ef-4f0d-a0b6-daa83d74e08d
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: KqAKSZdkXi5jYcvtvAF675KzecqChA-06UxC36VPYDc
+id: feedback
+label: 'Feedback per il sito'
+recipients:
+  - newsite@email.com
+reply: ''
+weight: 0
+message: 'Il messaggio è stato inviato.'
+redirect: ''

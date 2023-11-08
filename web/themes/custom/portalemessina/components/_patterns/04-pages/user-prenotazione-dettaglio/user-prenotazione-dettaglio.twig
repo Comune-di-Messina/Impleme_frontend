@@ -1,0 +1,224 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+<div class="page-user-prenotazione-dettaglio{{ pl ? ' h-section-servizi' }}">
+
+  {% include "@molecules/01-modules/hero/hero-simple/hero-simple.twig" with {
+    breadcrumbs: breadcrumbs,
+    title: page_title,
+    content: prenotazione_sottotitolo,
+    image: '<img src="' ~ dist_url ~ 'images/hero/imu.jpg">'
+  } %}
+
+
+  <div class="container-fluid p-0">
+
+    {% if message %}
+      <div class="dettaglio-info shadow dettaglio-grid">
+        <div class="justify-content-center row">
+          <div class="col-md-10 alert alert-success mt-4" role="alert">
+            {{ message }}
+          </div>
+        </div>
+        <div class="dettaglio-step-cta text-center py-4">
+          <a href="{{ url_areapersonale }}" class="btn btn-primary ">Vai alle tue prenotazioni</a>
+        </div>
+
+      </div>
+    {% else %}
+      <div class="dettaglio-info shadow dettaglio-grid d-flex row">
+        <div class="dettaglio-col-left col-7 py-4">
+          <h3>Riepilogo prenotazione</h3>
+          <div class="row">
+            <div class="dati-block col-4 py-3">
+              <div class="dati-label text-uppercase">Data prenotazione</div>
+              <div class="dati-content text-truncate">{{ prenotazione_data }}</div>
+            </div>
+            <div class="dati-block col-4 py-3">
+              <div class="dati-label text-uppercase">Orario prenotazione</div>
+              <div class="dati-content text-truncate">{{ prenotazione_orario }}</div>
+            </div>
+            <div class="dati-block col-4 py-3">
+              <div class="dati-label text-uppercase">N° pratica</div>
+              <div class="dati-content">{{ prenotazione_pratica }}</div>
+            </div>
+          </div>
+          {% if prenotazione_codice_stato < 5 %}
+          <a class="btn btn-outline-secondary btn-sm my-3" data-toggle="modal" data-target="#modal-annullamento_iuv">Annulla prenotazione</a>
+          {# Modal #}
+          <div class="modal fade" tabindex="-1" role="dialog" id="modal-annullamento_iuv" aria-labelledby="modal-annullamento_iuv-title" data-user="pagamento_url_paga" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg rounded" role="document" >
+              <div class="modal-content container">
+                <div class="row">
+                  <div class="p-4 col-12">
+                    <h3 class="m-0 col-header mb-3" id="modal-pagamento_url_paga-title">Annulla prenotazione</h3>
+                    <div class="mt-2">
+                      <div class="alert alert-warning mt-4" role="alert">
+                        Sei sicuro di voler annullare la prenotazione?
+                      </div>
+                    </div>
+                    <div class="align-items-center d-flex flex-row justify-content-end mt-2">
+                      <button class="btn btn-inline mt-4" type="button" data-dismiss="modal" aria-label="Torna indietro">
+                        <svg class="icon icon-sm">
+                          <use xlink:href="{{ dist_url  ~ 'vendors/bootstrap-italia/svg/sprite.svg#it-arrow-left-circle' }}"></use>
+                        </svg>
+                        Torna indietro
+                      </button>
+                      <a class="btn btn-outline-secondary btn-sm mt-4" href="{{ prenotazione_annulla }}">Annulla prenotazione</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {# Modal end #}
+          {% endif %}
+        </div>
+        <div class="dettaglio-col-right col-5 pl-0">
+          <div class="col-top p-3 d-flex align-items-center justify-content-between">
+            <div class="dati-block">
+              <div class="dati-label text-uppercase">Stato pratica</div>
+              <div class="dati-content">{{ prenotazione_stato }}</div>
+            </div>
+            <span class="h-icon h-prenotazione-stato-neg-{{ prenotazione_codice_stato }}"></span>
+          </div>
+          <div class="col-bottom p-3 secondary-bg">
+            <div class="dati-block">
+              <div class="dati-label text-uppercase">Note</div>
+              <div class="dati-content">{{ prenotazione_note }}</div>
+            </div>
+            <div class="dati-block mt-3">
+              <div class="dati-label text-uppercase">Importo richiesto</div>
+              <div class="dati-content">{{ prenotazione_importo|number_format(2, ',', '.') }} €</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dettaglio-content dettaglio-grid d-flex row">
+        <div class="dettaglio-col-left col-4 py-4">
+          <h5>Documenti caricati</h5>
+          <ul class="dettaglio-list">
+            {% for documento in documenti_list %}
+              <li>
+                {% include "@atoms/05-graphic-elements/file/file.twig" with {
+                  title: documento.title,
+                  url: documento.url
+                } %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="dettaglio-col-right col-6 py-5">
+
+          {% if prenotazione_codice_stato == 2 %}
+
+          <div class="dettaglio-step">
+            <div id="allegati"></div>
+            {#
+            <div class="dettaglio-step-upload">
+
+              <div class="dettaglio-step-upload-form">
+                <!-- placeholder input -->
+              </div>
+
+              <div class="dettaglio-step-upload-list my-4">
+                {% for documento in documenti_list %}
+                  <span class="mr-3">
+                    {% include "@atoms/05-graphic-elements/file/file.twig" with {
+                      title: documento.title,
+                      url: documento.url,
+                      delete: true
+                    } %}
+                  </span>
+                {% endfor %}
+              </div>
+
+              <div class="dettaglio-step-upload-submit text-center">
+                <input type="submit" class="btn btn-primary disabled" value="Invia documentazione">
+              </div>
+
+            </div>
+            #}
+          </div>
+          {% endif %}
+          {% if prenotazione_codice_stato == 1 %}
+
+            <div class="dettaglio-step">
+              <h4>Checkout con Pago-PA</h4>
+              <div class="dettaglio-step-content text-serif">
+                Puoi procedere al pagamento, un operatore provvederà a controllarli e a risponderti al più presto.
+              </div>
+              <div class="dati-block col-4 my-4">
+                <div class="dati-label text-uppercase">Codice IUV</div>
+                <div class="dati-content text-truncate">{{ codice_IUV }}</div>
+              </div>
+              <div class="dettaglio-step-cta">
+                  <a class="btn btn-primary pagopa btn-xs btn-icon" href="{{ url_pagopa }}">
+                    <span class="h-icon h-pago-pa mr-1"></span>
+                    Paga
+                  </a>
+              </div>
+            </div>
+          {% endif %}
+          {% if prenotazione_pagamento_avvenuto == 1 %}
+            <div class="dettaglio-step">
+              <h2>Pagamento avvenuto</h2>
+              <div class="dettaglio-step-content text-serif">
+                Il pagamento è stato effettuato con successo.<br>
+                Consulti l'elenco delle sue prenotazioni dall'area personale.<br>
+                <br>
+                Grazie.
+              </div>
+              <div class="dettaglio-step-cta text-center mt-4">
+                <a href="{{ url_areapersonale }}" class="btn btn-primary ">Vai alle tue prenotazioni</a>
+              </div>
+            </div>
+          {% endif %}
+          {% if prenotazione_codice_stato == 4 %}
+            <div class="dettaglio-step">
+              <h2>Pratica in lavorazione</h2>
+              <div class="dettaglio-step-content text-serif">
+                La sua pratica è stata presa in carico, la preghiamo di attendere ulteriori istruzioni.<br>
+                <br>
+                Grazie.
+              </div>
+              <div class="dettaglio-step-cta text-center mt-4">
+                <a href="{{ url_areapersonale }}" class="btn btn-primary ">Vai alle tue prenotazioni</a>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if prenotazione_codice_stato == 5 %}
+            <div class="dettaglio-step">
+              <h2>Pratica approvata</h2>
+              <div class="dettaglio-step-content text-serif">
+                La sua pratica è stata approvata.<br>
+                Consulti l'elenco delle sue prenotazioni dall'area personale.<br>
+                <br>
+                Grazie.
+              </div>
+              <div class="dettaglio-step-cta text-center mt-4">
+                <a href="{{ url_areapersonale }}" class="btn btn-primary ">Vai alle tue prenotazioni</a>
+              </div>
+            </div>
+          {% endif %}
+          {% if prenotazione_codice_stato == 6 %}
+            <div class="dettaglio-step">
+              <h2>Pratica rifiutata</h2>
+              <div class="dettaglio-step-content text-serif">
+                Ci dispiace ma la sua prenotazione è stata rifiutata.<br>
+                Controlli nella sezione NOTE per avere il dettaglio riguardo al rifiuto o contatti lo staff per ulteriori dettagli.<br>
+                <br>
+                Grazie.
+              </div>
+              <div class="dettaglio-step-cta text-center mt-4">
+                <a href="{{ url_areapersonale }}" class="btn btn-primary ">Vai alle tue prenotazioni</a>
+              </div>
+            </div>
+          {% endif %}
+
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+</div>

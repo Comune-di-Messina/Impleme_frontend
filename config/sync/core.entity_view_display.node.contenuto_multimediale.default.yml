@@ -1,0 +1,67 @@
+uuid: a48b6843-3609-4219-9092-9c9cbf5f2d2e
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.contenuto_multimediale.body
+    - field.field.node.contenuto_multimediale.field_cover
+    - field.field.node.contenuto_multimediale.field_external_link
+    - field.field.node.contenuto_multimediale.field_link_ad_articolo
+    - field.field.node.contenuto_multimediale.field_term_temi
+    - field.field.node.contenuto_multimediale.field_tipologia
+    - field.field.node.contenuto_multimediale.field_video_url
+    - node.type.contenuto_multimediale
+  module:
+    - ds
+    - link
+    - user
+id: node.contenuto_multimediale.default
+targetEntityType: node
+bundle: contenuto_multimediale
+mode: default
+content:
+  field_external_link:
+    type: link
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_link_ad_articolo:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_video_url:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: image_medium
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: content
+hidden:
+  body: true
+  field_cover: true
+  field_term_temi: true
+  field_tipologia: true
+  langcode: true
+  links: true

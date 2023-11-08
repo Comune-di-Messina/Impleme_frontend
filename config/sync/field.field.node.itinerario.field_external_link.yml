@@ -1,0 +1,23 @@
+uuid: 75335002-fe7d-4466-877d-7c2d7ce9eafd
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_external_link
+    - node.type.itinerario
+  module:
+    - link
+id: node.itinerario.field_external_link
+field_name: field_external_link
+entity_type: node
+bundle: itinerario
+label: 'Link itinerario'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

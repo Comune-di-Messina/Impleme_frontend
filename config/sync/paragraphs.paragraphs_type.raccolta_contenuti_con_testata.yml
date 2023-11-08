@@ -1,0 +1,10 @@
+uuid: 4300a4e0-f8ca-426c-9ec8-2a614ab06228
+langcode: it
+status: true
+dependencies: {  }
+id: raccolta_contenuti_con_testata
+label: 'Raccolta contenuti - con testata'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

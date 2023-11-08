@@ -1,0 +1,22 @@
+uuid: d3798541-e23d-4771-ba4f-eb7c56aae817
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coordinate
+    - node.type.evento
+  module:
+    - geofield
+id: node.evento.field_coordinate
+field_name: field_coordinate
+entity_type: node
+bundle: evento
+label: Coordinate
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

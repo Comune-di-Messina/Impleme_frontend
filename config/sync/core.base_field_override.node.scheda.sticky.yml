@@ -1,0 +1,22 @@
+uuid: cccb00f6-6fc9-41f5-a87f-5c70190cae1d
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.scheda
+id: node.scheda.sticky
+field_name: sticky
+entity_type: node
+bundle: scheda
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

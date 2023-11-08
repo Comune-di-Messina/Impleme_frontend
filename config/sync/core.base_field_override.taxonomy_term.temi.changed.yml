@@ -1,0 +1,18 @@
+uuid: 4468424c-78e3-49c3-a4bc-11d462528149
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.temi
+id: taxonomy_term.temi.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: temi
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

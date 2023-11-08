@@ -1,0 +1,21 @@
+uuid: 1179983b-2a1f-4e1c-97da-91239f6e4045
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_testo
+    - paragraphs.paragraphs_type.selezione_comuni
+  module:
+    - text
+id: paragraph.selezione_comuni.field_testo
+field_name: field_testo
+entity_type: paragraph
+bundle: selezione_comuni
+label: Testo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

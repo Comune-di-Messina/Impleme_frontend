@@ -1,0 +1,20 @@
+uuid: dcd40f5b-4cea-4d36-b0cc-ea2ef08dac44
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_backoffice_id
+field_name: field_backoffice_id
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

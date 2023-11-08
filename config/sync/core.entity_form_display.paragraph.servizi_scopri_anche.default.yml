@@ -1,0 +1,34 @@
+uuid: 2ffe89e8-357d-49c0-95d1-fb4cbc23f32a
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.servizi_scopri_anche.field_servizio
+    - field.field.paragraph.servizi_scopri_anche.field_titolo
+    - paragraphs.paragraphs_type.servizi_scopri_anche
+id: paragraph.servizi_scopri_anche.default
+targetEntityType: paragraph
+bundle: servizi_scopri_anche
+mode: default
+content:
+  field_servizio:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_titolo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

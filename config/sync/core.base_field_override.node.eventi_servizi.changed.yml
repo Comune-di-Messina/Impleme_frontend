@@ -1,0 +1,18 @@
+uuid: 5c5ae9e2-f459-4257-84f4-c6bea9a402a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.eventi_servizi
+id: node.eventi_servizi.changed
+field_name: changed
+entity_type: node
+bundle: eventi_servizi
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

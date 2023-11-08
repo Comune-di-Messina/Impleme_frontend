@@ -1,0 +1,22 @@
+uuid: 1e1d0453-ba3b-4ad1-9aeb-d19523e9bd5e
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coordinate
+    - node.type.sala
+  module:
+    - geofield
+id: node.sala.field_coordinate
+field_name: field_coordinate
+entity_type: node
+bundle: sala
+label: Coordinate
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

@@ -1,0 +1,37 @@
+name: Portale Messina
+type: theme
+description: 'Portale Messina theme'
+package: Custom
+core: 8.x
+logo: 'logo.png'
+libraries:
+  - portalemessina/base
+
+base theme: six8theme
+
+regions:
+  header: Header
+  navigation: Navigation
+  breadcrumbs: Breadcrumbs
+  before_content: Before content
+  content: Content
+  after_content: After content
+  before_footer: Before footer
+  footer: Footer
+
+component-libraries:
+  atoms:
+    paths:
+      - components/_patterns/00-atoms
+  molecules:
+    paths:
+      - components/_patterns/01-molecules
+  organisms:
+    paths:
+      - components/_patterns/02-organisms
+  templates:
+    paths:
+      - components/_patterns/03-templates
+  pages:
+    paths:
+      - components/_patterns/04-pages

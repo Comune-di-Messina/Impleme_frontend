@@ -1,0 +1,5 @@
+name: 'm_redirect_logout_token'
+type: module
+description: 'redirect to logout if token is invalid'
+core: 8.x
+package: 'Messina'

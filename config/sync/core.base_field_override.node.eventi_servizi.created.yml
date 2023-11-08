@@ -1,0 +1,18 @@
+uuid: a77fb870-e60c-42c4-9ed4-c851826cd28b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.eventi_servizi
+id: node.eventi_servizi.created
+field_name: created
+entity_type: node
+bundle: eventi_servizi
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,17 @@
+uuid: 6e40aecc-103b-471a-aa4b-fda64da9fba4
+langcode: it
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Scheda servizio'
+type: scheda_servizio
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

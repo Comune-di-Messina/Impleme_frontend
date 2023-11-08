@@ -1,0 +1,19 @@
+uuid: caf2da5c-5ff2-4951-a0e5-ecc3fa408900
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titolo
+    - paragraphs.paragraphs_type.carosello_con_testata_small
+id: paragraph.carosello_con_testata_small.field_titolo
+field_name: field_titolo
+entity_type: paragraph
+bundle: carosello_con_testata_small
+label: Titolo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

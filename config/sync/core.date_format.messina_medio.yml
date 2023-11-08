@@ -1,0 +1,8 @@
+uuid: a07a27c4-e50e-4766-b059-10c907ef5b79
+langcode: it
+status: true
+dependencies: {  }
+id: messina_medio
+label: 'Messina - medio'
+locked: false
+pattern: 'd F Y'

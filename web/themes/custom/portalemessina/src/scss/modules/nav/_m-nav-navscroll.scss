@@ -1,0 +1,17 @@
+.navbar.it-navscroll-wrapper {
+  h3 {
+    border-color: $color-gray-light !important;
+    &::after {
+      display: none;
+    }
+  }
+  .nav-link {
+    &.active {
+      border-color: $color-primary !important;
+      background-color: $color-green-lighter;
+    }
+    span {
+      color: $color-primary !important;
+    }
+  }
+}

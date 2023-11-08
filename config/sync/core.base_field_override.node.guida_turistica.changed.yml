@@ -1,0 +1,18 @@
+uuid: 122c05dd-dd98-4441-b807-b2a5ed64e960
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.guida_turistica
+id: node.guida_turistica.changed
+field_name: changed
+entity_type: node
+bundle: guida_turistica
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

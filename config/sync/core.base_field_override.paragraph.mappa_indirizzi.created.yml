@@ -1,0 +1,18 @@
+uuid: 424264c6-30aa-4eb5-86ae-a209b62a91e4
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.mappa_indirizzi
+id: paragraph.mappa_indirizzi.created
+field_name: created
+entity_type: paragraph
+bundle: mappa_indirizzi
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

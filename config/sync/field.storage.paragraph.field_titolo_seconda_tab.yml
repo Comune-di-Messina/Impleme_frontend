@@ -1,0 +1,21 @@
+uuid: d3bffb45-6369-4d7a-8800-0e4c7a1653e1
+langcode: it
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_titolo_seconda_tab
+field_name: field_titolo_seconda_tab
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

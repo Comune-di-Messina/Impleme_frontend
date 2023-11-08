@@ -1,0 +1,61 @@
+uuid: 609a493b-16f6-4812-8f67-32dfff7058ea
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tab_piu_cliccati.field_elementi_carosello_cliccat
+    - field.field.paragraph.tab_piu_cliccati.field_elementi_carosello_luoghi
+    - field.field.paragraph.tab_piu_cliccati.field_titolo
+    - field.field.paragraph.tab_piu_cliccati.field_titolo_prima_tab
+    - field.field.paragraph.tab_piu_cliccati.field_titolo_seconda_tab
+    - field.field.paragraph.tab_piu_cliccati.field_visualizzazione_luoghi
+    - field.field.paragraph.tab_piu_cliccati.field_visualizzazione_servizi
+    - paragraphs.paragraphs_type.tab_piu_cliccati
+  module:
+    - viewsreference
+id: paragraph.tab_piu_cliccati.default
+targetEntityType: paragraph
+bundle: tab_piu_cliccati
+mode: default
+content:
+  field_titolo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_titolo_prima_tab:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_titolo_seconda_tab:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_visualizzazione_luoghi:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+  field_visualizzazione_servizi:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+hidden:
+  created: true
+  field_elementi_carosello_cliccat: true
+  field_elementi_carosello_luoghi: true
+  status: true

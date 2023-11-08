@@ -1,0 +1,70 @@
+{%
+  set classes = [
+  'page-scheda-dettaglio'
+]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+
+  {% include "@molecules/01-modules/hero/hero-simple/hero-simple.twig" with {
+    title: hero_title,
+    content: hero_content,
+    image: hero_image,
+    back: back
+  } %}
+
+  {% if intro|render|striptags %}
+    <div class="scheda-intro py-5 px-4 px-md-0">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="mb-4 mb-lg-0 col-lg-3">
+            {{ filters }}
+          </div>
+          <div class="col-lg-7 text-serif">
+            {{ intro }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if content|render %}
+    {% if node_type == 'settore_segnala_me' or node_type == 'settore_pratiche_tipologia' %}
+      <div class="login row">
+        <div id="accedi" class="scheda-cta col-md-5 col-lg-5 align-center">
+          <div class="scheda-cta-content">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <div class="scheda-content">
+        {{ content }}
+      </div>
+    {% endif %}
+  {% endif %}
+
+  {% if info_map|render %}
+        {% include "@molecules/01-modules/blocks/block-map-content/block-map-content.twig" with {
+          header: info_header,
+          content: info_content,
+          footer: info_footer,
+          map: info_map,
+          bg: info_bg
+        } %}
+  {% endif %}
+  <div id="vueapp"></div>
+  {% if login_form %}
+    <div class="scheda-cta">
+      {{ login_form }}
+    </div>
+  {% endif %}
+  {% if related|render %}
+    <div class="scheda-related py-5">
+      <div class="container">
+        {{ related }}
+      </div>
+    </div>
+  {% endif %}
+
+</div>

@@ -1,0 +1,73 @@
+uuid: 28cc3e3a-39f4-4fc6-9c15-2a802879ca3f
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.carosello_big
+    - field.field.node.evento.body
+    - field.field.node.evento.field_abstract
+    - field.field.node.evento.field_argomenti_correlati
+    - field.field.node.evento.field_comune
+    - field.field.node.evento.field_contatti_indirizzo
+    - field.field.node.evento.field_contenuti_collegati
+    - field.field.node.evento.field_coordinate
+    - field.field.node.evento.field_cover
+    - field.field.node.evento.field_data
+    - field.field.node.evento.field_moduli
+    - field.field.node.evento.field_target
+    - field.field.node.evento.field_term_temi
+    - node.type.evento
+  module:
+    - text
+    - user
+id: node.evento.carosello_big
+targetEntityType: node
+bundle: evento
+mode: carosello_big
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_comune:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_cover:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_term_temi:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_abstract: true
+  field_argomenti_correlati: true
+  field_contatti_indirizzo: true
+  field_contenuti_collegati: true
+  field_coordinate: true
+  field_data: true
+  field_moduli: true
+  field_target: true
+  langcode: true

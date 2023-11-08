@@ -1,0 +1,25 @@
+uuid: 721ac7e8-15c2-4817-bfdb-7ace2e60386e
+langcode: it
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - six8theme
+_core:
+  default_config_hash: GuNyhu0Jw5F4xSl6nEK6xdD-5Z_LQbdNw5kWr2IvG-c
+id: six8theme_branding
+theme: six8theme
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Branding del sito'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,71 @@
+uuid: 403dd065-e4e4-496c-b556-3bb73e521ef9
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.calendario
+    - field.field.node.evento.body
+    - field.field.node.evento.field_abstract
+    - field.field.node.evento.field_argomenti_correlati
+    - field.field.node.evento.field_comune
+    - field.field.node.evento.field_contatti_indirizzo
+    - field.field.node.evento.field_contenuti_collegati
+    - field.field.node.evento.field_coordinate
+    - field.field.node.evento.field_cover
+    - field.field.node.evento.field_data
+    - field.field.node.evento.field_moduli
+    - field.field.node.evento.field_target
+    - field.field.node.evento.field_term_temi
+    - node.type.evento
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_data
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: ''
+          class: ''
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.evento.calendario
+targetEntityType: node
+bundle: evento
+mode: calendario
+content: {  }
+hidden:
+  body: true
+  field_abstract: true
+  field_argomenti_correlati: true
+  field_comune: true
+  field_contatti_indirizzo: true
+  field_contenuti_collegati: true
+  field_coordinate: true
+  field_cover: true
+  field_data: true
+  field_moduli: true
+  field_target: true
+  field_term_temi: true
+  langcode: true
+  links: true

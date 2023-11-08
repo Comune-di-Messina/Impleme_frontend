@@ -1,0 +1,86 @@
+.path-risultati-ricerca {
+  .it-header-wrapper .it-header-navbar-wrapper {
+    background-color: $color-white !important;
+  }
+  .view-filters {
+    background-color: $color-blue-light;
+    padding-bottom: $gap * 5;
+    padding-top: $gap * 5;
+    .views-exposed-form {
+      @include maxWidth($maxwidth-xsmall);
+      @include breakpoint(lg) {
+        max-width: $maxwidth;
+      }
+      .form--inline {
+        position: relative;
+      }
+      .form-item {
+        float: none;
+        max-width: $medium;
+        position: relative;
+        &::before {
+          @include sprite--search;
+          bottom: .6rem;
+          content: '';
+          display: block;
+          margin-bottom: -5px;
+          position: absolute;
+          left: $gap * 2;
+        }
+      }
+      label {
+        font-size: $font-medium;
+        font-weight: 400;
+        margin-bottom: $gap * 2;
+      }
+      .form-text {
+        border-radius: 4px;
+        border: 1px solid $color-secondary;
+        font-size: $font-normal;
+        font-weight: 600;
+        padding-left: $gap * 8;
+      }
+      .form-submit {
+        background: transparent;
+        border: 0;
+        bottom: 0;
+        height: $gap * 6;
+        left: 0;
+        position: absolute;
+        text-indent: -9999px;
+        width: $gap * 6;
+      }
+      .form-actions {
+        margin: 0;
+      }
+    }
+  }
+  .view-content {
+    @include maxWidth($maxwidth-xsmall);
+    padding-top: $gap * 4;
+    @include breakpoint(md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include breakpoint(lg) {
+      max-width: $maxwidth;
+    }
+    .card {
+      margin: $gap / 2;
+      position: relative;
+      @include breakpoint(md) {
+        width: calc(50% - #{$gap-grid});
+      }
+      @include breakpoint(lg) {
+        width: calc(25% - #{$gap-grid});
+      }
+      &::after {
+        background-color: $color-gray-light;
+        content: '';
+        display: block;
+        height: 1px;
+        width: $gap * 16;
+      }
+    }
+  }
+}

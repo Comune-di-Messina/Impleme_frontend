@@ -1,0 +1,79 @@
+uuid: 83b9411b-c70f-451c-80d6-9ac8f6236b37
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vista
+    - paragraphs.paragraphs_type.vista
+  module:
+    - viewsreference
+id: paragraph.vista.field_vista
+field_name: field_vista
+entity_type: paragraph
+bundle: vista
+label: Vista
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    rest_export: 0
+    page: 0
+    entity_reference: 0
+    attachment: 0
+    feed: 0
+  preselect_views:
+    aggregatore_servizi_per_comune: aggregatore_servizi_per_comune
+    eventi: eventi
+    segnalame: segnalame
+    temi: temi
+    tipologie_pratica: tipologie_pratica
+    visualizzazioni_servizi: visualizzazioni_servizi
+    api_mobile: 0
+    api_mobile_v1_taxonomy: 0
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    contatore_itinerari: 0
+    contatore_scheda_dettaglio: 0
+    contatore_scheda_servizio: 0
+    content: 0
+    content_recent: 0
+    contenuti_er: 0
+    contenuti_piu_visitati_luoghi: 0
+    contenuti_piu_visitati_servizi: 0
+    files: 0
+    frontpage: 0
+    guide_agenzie_turistiche: 0
+    itinerari: 0
+    media: 0
+    media_library: 0
+    paragraph_map: 0
+    prova: 0
+    prova_2: 0
+    sale: 0
+    schede: 0
+    search: 0
+    servizi_area_personale: 0
+    taxonomy_term: 0
+    temi_er: 0
+    user_admin_people: 0
+    visualizzazioni_luoghi: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    argument: 0
+    pager: 0
+    offset: 0
+    title: 0
+    limit: 0
+field_type: viewsreference

@@ -1,0 +1,131 @@
+#block-portalemessina-local-tasks {
+  @include maxWidth($maxwidth-small);
+  padding: $gap * 2;
+}
+// Log-in page.
+.path-user:not(.user-logged-in) {
+  ul.tabs {
+    margin: .5rem 0;
+  }
+  .block-system-main-block {
+    @include maxWidth(540px);
+    margin-top: $gap * 3;
+    text-align: center;
+    box-shadow: 0 0 10px $color-gray-light;
+    .user-login-form {
+      padding: $gap * 4 $gap * 10;
+      label {
+        font-size: $font-small;
+        font-weight: 600;
+        margin: 0;
+      }
+      .form-submit {
+        background-color: $color-blue;
+        padding: $gap $gap * 2;
+        display: inline-block;
+        font-weight: 600;
+        color: $color-white;
+        border-radius: $gap / 2;
+        border: 0;
+        font-size: $font-normal;
+      }
+    }
+    .openid-connect-login-form {
+      background-color: $color-gray-lighter;
+      padding: $gap * 4 $gap * 10;
+      div {
+        text-align: center;
+      }
+    }
+  }
+}
+// User page - logged in.
+.path-user {
+  .hero-simple {
+    background-color: $color-green-lighter;
+    margin-bottom: $gap * 5;
+    padding-bottom: $gap * 8;
+  }
+  .page-user {
+    background-color: $color-gray-lighter;
+    padding-bottom: $gap * 4
+  }
+}
+
+// Ricevute.
+.page-user-ricevute {
+  .content {
+    padding: $gap * 15 0;
+    @include breakpoint(md) {
+      background: linear-gradient(
+      to right,
+      $color-green-lighter 0%,
+      $color-green-lighter 50%,
+      $color-white 50%,
+      $color-white 100%
+      );
+    }
+  }
+  .btn {
+    &.disabled,
+    &.disabled:hover {
+      background-color: $color-gray;
+    }
+  }
+}
+
+// Prenotazioni - dettaglio.
+.page-user-prenotazione-dettaglio {
+  .hero {
+    position: relative;
+    z-index: 1;
+  }
+  .dettaglio-info {
+    .dettaglio-col-right {
+      background-color: $color-green-darker;
+      color: $color-white;
+      display: flex;
+      flex-direction: column;
+      .col-bottom {
+        flex-grow: 1;
+      }
+    }
+  }
+  .dettaglio-content {
+    .dettaglio-col-left {
+      background-color: $color-green-lighter;
+    }
+    .dettaglio-col-right {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .dettaglio-list {
+      padding: 0;
+      list-style: none;
+    }
+    .file {
+      font-size: $font-small;
+      svg {
+        fill: $color-green-dark !important;
+      }
+    }
+  }
+  .dettaglio-grid {
+    .dettaglio-col-left {
+      padding-left: calc((100vw - #{$maxwidth}) / 2 );
+    }
+    &.dettaglio-content .dettaglio-col-right,
+    &.dettaglio-info .dettaglio-col-right > div {
+      padding-right: calc((100vw - #{$maxwidth}) / 2 );
+    }
+  }
+  .dettaglio-step {
+    h4 {
+      border-bottom: 1px solid $color-green-dark;
+      color: $color-green-dark;
+      font-size: $font-medium;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+uuid: 695a13ac-e86d-4483-8d5a-23ef20748df2
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.scheda_servizio
+id: node.scheda_servizio.promote
+field_name: promote
+entity_type: node
+bundle: scheda_servizio
+label: 'Promosso alla prima pagina'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

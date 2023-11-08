@@ -1,0 +1,25 @@
+uuid: bfad0111-0287-4187-840c-f780288bdff9
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_tema
+    - node.type.aggregatore_tema
+id: node.aggregatore_tema.field_term_tema
+field_name: field_term_tema
+entity_type: node
+bundle: aggregatore_tema
+label: Tema
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: temi_er
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

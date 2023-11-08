@@ -1,0 +1,18 @@
+uuid: d0d29fea-4b97-4d9d-a11e-75ff61085470
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.settore_segnala_me
+id: node.settore_segnala_me.metatag
+field_name: metatag
+entity_type: node
+bundle: settore_segnala_me
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,38 @@
+uuid: 504fa227-20d0-4308-8331-e5fe5a3049bd
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cover_image
+    - node.type.settore_pratiche_tipologia
+  module:
+    - image
+id: node.settore_pratiche_tipologia.field_cover_image
+field_name: field_cover_image
+entity_type: node
+bundle: settore_pratiche_tipologia
+label: Cover
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  max_resolution: ''
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

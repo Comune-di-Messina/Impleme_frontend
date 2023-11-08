@@ -1,0 +1,53 @@
+uuid: dc64331a-1e37-44be-ac4a-8042d536b8f3
+langcode: it
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - context
+    - node
+    - system
+  theme:
+    - portalemessina
+id: navigazioneprincipale
+theme: portalemessina
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: Argomenti
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      agenzia_turistica: agenzia_turistica
+      aggregatore_tema: aggregatore_tema
+      comune: comune
+      contenuto_multimediale: contenuto_multimediale
+      evento: evento
+      frontpage: frontpage
+      guida_turistica: guida_turistica
+      itinerario: itinerario
+      page: page
+      scheda: scheda
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,12 @@
+***************
+*** 52,55 ****
+      settings: {  }
+      third_party_settings: {  }
+  hidden:
+    langcode: true
+--- 59,63 ----
+      settings: {  }
+      third_party_settings: {  }
+  hidden:
++   field_comune: true
+    langcode: true

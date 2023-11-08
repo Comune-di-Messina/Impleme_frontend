@@ -1,0 +1,42 @@
+header_main:
+  include():
+    pattern: molecules-nav
+    with:
+      items:
+      - title: Menu Item 1
+        url: "#"
+        attributes:
+          Attribute():
+            class:
+            - menu-level-1
+      - title: Menu Item 2
+        url: "#"
+        attributes:
+          Attribute():
+            class:
+            - menu-level-1
+      - title: Menu Item 3
+        url: "#"
+        attributes:
+          Attribute():
+            class:
+            - menu-level-1
+        below:
+        - title: Menu Item 2 Sub 1
+          url: "#"
+          attributes:
+            Attribute():
+              class:
+              - menu-level-2
+        - title: Menu Item 2 Sub 2
+          url: "#"
+          attributes:
+            Attribute():
+              class:
+              - menu-level-2
+        - title: Menu Item 2 Sub 3
+          url: "#"
+          attributes:
+            Attribute():
+              class:
+              - menu-level-2

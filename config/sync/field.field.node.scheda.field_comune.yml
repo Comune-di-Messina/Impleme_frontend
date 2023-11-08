@@ -1,0 +1,28 @@
+uuid: f3dcd2f3-6fb8-485b-9d25-94995961eda9
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comune
+    - node.type.comune
+    - node.type.scheda
+id: node.scheda.field_comune
+field_name: field_comune
+entity_type: node
+bundle: scheda
+label: Comune
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      comune: comune
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

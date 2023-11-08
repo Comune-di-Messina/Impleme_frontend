@@ -1,0 +1,50 @@
+m-core:
+  version: 1.x
+  css:
+    theme:
+      src/css/backend.css: {}
+  js:
+    src/js/m_core.js: {}
+
+m-maps:
+  version: 1.x
+  css:
+    theme:
+      src/css/maps.css: { }
+  js:
+    src/js/m_maps.js: {}
+
+m-calendar:
+  version: 1.x
+  css:
+    theme:
+      src/css/calendar.css: { }
+  js:
+    src/js/m_calendar.js: {}
+
+fullcalendar:
+  version: 1.x
+  css:
+    theme:
+      libraries/fullcalendar/packages/core/main.css: { }
+      libraries/fullcalendar/packages/daygrid/main.css: { }
+  js:
+    libraries/fullcalendar/packages/core/main.js: { }
+    libraries/fullcalendar/packages/daygrid/main.js: { }
+    libraries/fullcalendar/packages/interaction/main.js: { }
+
+swipebox:
+  version: 1.x
+  css:
+    theme:
+      libraries/swipebox/src/css/swipebox.min.css: { }
+  js:
+    libraries/swipebox/src/js/jquery.swipebox.min.js: { }
+
+geojson_routes:
+  version: 1.x
+  js:
+    libraries/geojson_routes.js: {}
+  dependencies:
+    - geofield_map/geofield_google_map
+    - core/drupalSettings

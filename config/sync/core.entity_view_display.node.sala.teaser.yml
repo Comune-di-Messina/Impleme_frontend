@@ -1,0 +1,53 @@
+uuid: e7da9275-5422-4458-8ac1-c877f872c97f
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sala.body
+    - field.field.node.sala.field_abstract
+    - field.field.node.sala.field_attachments
+    - field.field.node.sala.field_categoria_servizio
+    - field.field.node.sala.field_comune_servizi
+    - field.field.node.sala.field_contatti_email
+    - field.field.node.sala.field_contatti_indirizzo
+    - field.field.node.sala.field_contatti_telefono
+    - field.field.node.sala.field_contatti_titolo
+    - field.field.node.sala.field_coordinate
+    - field.field.node.sala.field_cover
+    - field.field.node.sala.field_room_id
+    - node.type.sala
+  module:
+    - text
+    - user
+id: node.sala.teaser
+targetEntityType: node
+bundle: sala
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_abstract: true
+  field_attachments: true
+  field_categoria_servizio: true
+  field_comune_servizi: true
+  field_contatti_email: true
+  field_contatti_indirizzo: true
+  field_contatti_telefono: true
+  field_contatti_titolo: true
+  field_coordinate: true
+  field_cover: true
+  field_room_id: true
+  langcode: true

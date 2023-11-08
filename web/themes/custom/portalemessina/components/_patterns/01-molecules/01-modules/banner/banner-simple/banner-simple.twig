@@ -1,0 +1,73 @@
+{%
+  set classes = [
+  'module',
+  'banner banner-simple'
+]
+%}
+
+{% set tema = tema|render|striptags|spaceless|replace({"\n":"", " ":"-"})|raw %}
+
+{% if tema == 2 %}
+  <div class="h-section-servizi">
+{% endif %}
+
+  <div {{ attributes.addClass(classes) }}>
+    <div class="container">
+
+      {% if content|render and image|render %}
+      <div class="banner-main rounded overflow-hidden row">
+        <div class="col d-flex flex-column{{ modules ? ' col-overlay' }}">
+          <div class="banner-content p-5">
+            {% if title|render %}
+              <h2 class="module-title">{{ title }}</h2>
+            {% endif %}
+            {% if content|render %}
+              <div class="banner-text text-serif">
+                {{ content }}
+              </div>
+            {% endif %}
+          </div>
+          {% if link|render %}
+            <div class="banner-link mt-auto px-5 py-3">
+              {{ link }}
+            </div>
+          {% endif %}
+        </div>
+        <div class="col d-none d-md-block p-0">
+          <div class="banner-img">
+            {{ image }}
+          </div>
+        </div>
+      </div>
+      {% else %}
+        {% if title|render %}
+          <h2 class="module-title h3 mx-4 mb-0">{{ title }}</h2>
+        {% endif %}
+      {% endif %}
+
+      {% if modules|render %}
+      <div class="banner-secondary row p-3">
+        <div class="carousel carousel-teaser">
+          <div class="carousel-nav">
+            <button class="carousel-prev">Prev</button>
+            <button class="carousel-next">Next</button>
+          </div>
+          <div class="carousel-wrapper">
+            {{ modules }}
+            {% if pl %}
+              {{ modules }}
+              {{ modules }}
+              {{ modules }}
+              {{ modules }}
+              {{ modules }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+{% if tema == 2 %}
+  </div>
+{% endif %}

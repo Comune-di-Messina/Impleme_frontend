@@ -1,0 +1,20 @@
+uuid: 7d1991a2-b428-4f15-8221-cfd38f911605
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.residenze
+  module:
+    - path
+id: taxonomy_term.residenze.path
+field_name: path
+entity_type: taxonomy_term
+bundle: residenze
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,54 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+<div class="page-scheda-visure{{ pl ? ' h-section-servizi' }}">
+
+  {% include "@molecules/01-modules/hero/hero-simple/hero-simple.twig" with {
+    breadcrumbs: breadcrumbs,
+    title: 'Visure',
+    content: '',
+    image: '<img src="' ~ dist_url ~ 'images/hero/visure.jpg">'
+  } %}
+
+  {# {% if visure_nucleofam %} #}
+  <div class="scheda-tabs">
+    <div class="container">
+      <ul class="tab-navigation">
+        <li class="tab-element"><a href="{{ visure_dati }}" data-show="block_1" class="">Dati personali</a></li>
+        <li class="tab-element"><a href="{{ visure_nucleofam }}" data-show="block_2" class="active">Visure nucleo familiare</a></li>
+      </ul>
+    </div>
+  </div>
+  {# {% endif %} #}
+
+  <div class="container py-5">
+    {% if errore %}
+      <div class="alert alert-danger mt-4" role="alert">
+        {{ errore }}
+      </div>
+
+    {% else %}
+    <div class="container-grid">
+      {% for persona in elencopersone %}
+
+        {% include "@molecules/01-modules/custom/card-visura/card-visura.twig" with {
+          title: persona.datiIndividuo.nome ~ ' ' ~ persona.datiIndividuo.cognome,
+          subtitle: persona.datiRelazioniFamiliari.descrizioneRelazione,
+
+          anagrafica_luogo_nascita: persona.datiNascita.denominazioneComune,
+          anagrafica_data_nascita: persona.datiNascita.dataNascita,
+          anagrafica_stato_civile: persona.datiStatoCivile.statoCivile.statoCivileDescrizione,
+          anagrafica_sesso: persona.datiIndividuo.sesso,
+          anagrafica_codice_fiscale: persona.datiIndividuo.codiceFiscale,
+
+          immigrazione_data: persona.datiImmigrazione.dataImmigrazione,
+          immigrazione_nazione: persona.datiImmigrazione.siglaProvinciaStato,
+          immigrazione_comune: persona.datiImmigrazione.denominazioneComune,
+          immigrazione_pratica: persona.datiImmigrazione.numeroPraticaImmigrazione
+
+        } %}
+
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+</div>

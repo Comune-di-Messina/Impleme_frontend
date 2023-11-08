@@ -1,0 +1,87 @@
+uuid: cc65372c-ccf0-4555-9c31-88f21df2c1dd
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tipologie_pratiche.field_backoffice_id
+    - field.field.taxonomy_term.tipologie_pratiche.field_code
+    - field.field.taxonomy_term.tipologie_pratiche.field_free
+    - field.field.taxonomy_term.tipologie_pratiche.field_note
+    - taxonomy.vocabulary.tipologie_pratiche
+  module:
+    - path
+    - text
+id: taxonomy_term.tipologie_pratiche.default
+targetEntityType: taxonomy_term
+bundle: tipologie_pratiche
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_backoffice_id:
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_code:
+    weight: 102
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_free:
+    weight: 104
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_note:
+    weight: 103
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+hidden: {  }

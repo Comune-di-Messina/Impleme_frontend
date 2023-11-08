@@ -1,0 +1,22 @@
+uuid: ad1ce405-8e96-42b4-841b-5d7692fb28bd
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.contenuto_multimediale
+id: paragraph.contenuto_multimediale.status
+field_name: status
+entity_type: paragraph
+bundle: contenuto_multimediale
+label: Pubblicato
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

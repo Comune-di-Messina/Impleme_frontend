@@ -1,0 +1,19 @@
+.tab-navigation {
+  display: flex;
+  margin-top: $gap * 5;
+  padding: 0 $gap / 2;
+  .tab-element {
+    list-style: none;
+    & + .tab-element {
+      margin-left: $gap;
+    }
+    a {
+      padding: $gap $gap * 2;
+      border-bottom: 3px solid transparent;
+      &.active {
+        border-color: $color-blue;
+        font-weight: 600;
+      }
+    }
+  }
+}

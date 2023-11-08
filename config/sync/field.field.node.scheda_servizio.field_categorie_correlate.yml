@@ -1,0 +1,25 @@
+uuid: 9b3f6e4b-b803-457f-b8ed-3d4a74f8254c
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categorie_correlate
+    - node.type.scheda_servizio
+id: node.scheda_servizio.field_categorie_correlate
+field_name: field_categorie_correlate
+entity_type: node
+bundle: scheda_servizio
+label: 'Categorie correlate'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: temi_er
+      display_name: entity_reference_4
+      arguments: {  }
+field_type: entity_reference

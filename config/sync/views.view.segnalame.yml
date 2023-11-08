@@ -1,0 +1,384 @@
+uuid: 72f5b63b-e12a-4d4e-9ad6-c4038353570e
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.grid
+    - core.entity_view_mode.node.service_teaser
+    - node.type.settore_segnala_me
+  module:
+    - node
+    - user
+id: segnalame
+label: SegnalaME
+module: views
+description: ''
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Applica
+          reset_button: false
+          reset_button_label: Ripristina
+          exposed_sorts_label: 'Ordina per'
+          expose_sort_order: true
+          sort_asc_label: Crescente
+          sort_desc_label: Disc
+      pager:
+        type: full
+        options:
+          items_per_page: 9
+          offset: 0
+          id: 0
+          total_pages: null
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Voci per pagina'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- Tutto -'
+            offset: false
+            offset_label: Scostamento
+          tags:
+            previous: '‹ Precedente'
+            next: 'Seguente ›'
+            first: '« Prima'
+            last: 'Ultima »'
+          quantity: 9
+      style:
+        type: grid
+        options:
+          uses_fields: false
+          columns: 3
+          automatic_width: false
+          alignment: horizontal
+          col_class_default: true
+          col_class_custom: 'col-xs-12 col-md-4 col-lg-4'
+          row_class_default: true
+          row_class_custom: row
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: grid
+      fields:
+        rendered_entity:
+          id: rendered_entity
+          table: node
+          field: rendered_entity
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view_mode: service_teaser
+          entity_type: node
+          plugin_id: rendered_entity
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            settore_segnala_me: settore_segnala_me
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+      title: SegnalaME
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:core.entity_view_display.node.agenzia_turistica.default'
+        - 'config:core.entity_view_display.node.agenzia_turistica.search_index'
+        - 'config:core.entity_view_display.node.agenzia_turistica.teaser'
+        - 'config:core.entity_view_display.node.aggregatore_servizi.carosello_big'
+        - 'config:core.entity_view_display.node.aggregatore_servizi.default'
+        - 'config:core.entity_view_display.node.aggregatore_servizi.grid'
+        - 'config:core.entity_view_display.node.aggregatore_servizi.search_index'
+        - 'config:core.entity_view_display.node.aggregatore_servizi.teaser'
+        - 'config:core.entity_view_display.node.aggregatore_tema.default'
+        - 'config:core.entity_view_display.node.aggregatore_tema.grid'
+        - 'config:core.entity_view_display.node.aggregatore_tema.search_index'
+        - 'config:core.entity_view_display.node.aggregatore_tema.teaser'
+        - 'config:core.entity_view_display.node.comune.default'
+        - 'config:core.entity_view_display.node.comune.search_index'
+        - 'config:core.entity_view_display.node.comune_servizi.default'
+        - 'config:core.entity_view_display.node.comune_servizi.search_index'
+        - 'config:core.entity_view_display.node.comune_servizi.teaser'
+        - 'config:core.entity_view_display.node.comune.teaser'
+        - 'config:core.entity_view_display.node.contenuto_multimediale.default'
+        - 'config:core.entity_view_display.node.contenuto_multimediale.grid'
+        - 'config:core.entity_view_display.node.contenuto_multimediale.search_index'
+        - 'config:core.entity_view_display.node.contenuto_multimediale.teaser'
+        - 'config:core.entity_view_display.node.eventi_servizi.calendario'
+        - 'config:core.entity_view_display.node.eventi_servizi.default'
+        - 'config:core.entity_view_display.node.eventi_servizi.teaser'
+        - 'config:core.entity_view_display.node.evento.calendario'
+        - 'config:core.entity_view_display.node.evento.carosello_big'
+        - 'config:core.entity_view_display.node.evento.default'
+        - 'config:core.entity_view_display.node.evento.grid'
+        - 'config:core.entity_view_display.node.evento.grid_map'
+        - 'config:core.entity_view_display.node.evento.search_index'
+        - 'config:core.entity_view_display.node.evento.slideshow'
+        - 'config:core.entity_view_display.node.evento.teaser'
+        - 'config:core.entity_view_display.node.frontpage.default'
+        - 'config:core.entity_view_display.node.frontpage.teaser'
+        - 'config:core.entity_view_display.node.guida_turistica.default'
+        - 'config:core.entity_view_display.node.guida_turistica.search_index'
+        - 'config:core.entity_view_display.node.guida_turistica.teaser'
+        - 'config:core.entity_view_display.node.itinerario.carosello_big'
+        - 'config:core.entity_view_display.node.itinerario.default'
+        - 'config:core.entity_view_display.node.itinerario.grid'
+        - 'config:core.entity_view_display.node.itinerario.grid_map'
+        - 'config:core.entity_view_display.node.itinerario.search_index'
+        - 'config:core.entity_view_display.node.itinerario.slideshow'
+        - 'config:core.entity_view_display.node.itinerario.teaser'
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.search_index'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.sala.default'
+        - 'config:core.entity_view_display.node.sala.grid'
+        - 'config:core.entity_view_display.node.sala.search_index'
+        - 'config:core.entity_view_display.node.sala.teaser'
+        - 'config:core.entity_view_display.node.scheda.carosello_big'
+        - 'config:core.entity_view_display.node.scheda.default'
+        - 'config:core.entity_view_display.node.scheda.grid'
+        - 'config:core.entity_view_display.node.scheda.grid_map'
+        - 'config:core.entity_view_display.node.scheda.search_index'
+        - 'config:core.entity_view_display.node.scheda_servizio.carosello_big'
+        - 'config:core.entity_view_display.node.scheda_servizio.default'
+        - 'config:core.entity_view_display.node.scheda_servizio.grid'
+        - 'config:core.entity_view_display.node.scheda_servizio.scopri_anche'
+        - 'config:core.entity_view_display.node.scheda_servizio.search_index'
+        - 'config:core.entity_view_display.node.scheda_servizio.service_teaser'
+        - 'config:core.entity_view_display.node.scheda_servizio.teaser'
+        - 'config:core.entity_view_display.node.scheda.slideshow'
+        - 'config:core.entity_view_display.node.scheda.teaser'
+        - 'config:core.entity_view_display.node.settore_segnala_me.default'
+        - 'config:core.entity_view_display.node.settore_segnala_me.grid'
+        - 'config:core.entity_view_display.node.settore_segnala_me.teaser'
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: Block
+    position: 1
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:core.entity_view_display.node.agenzia_turistica.default'
+        - 'config:core.entity_view_display.node.agenzia_turistica.search_index'
+        - 'config:core.entity_view_display.node.agenzia_turistica.teaser'
+        - 'config:core.entity_view_display.node.aggregatore_servizi.carosello_big'
+        - 'config:core.entity_view_display.node.aggregatore_servizi.default'
+        - 'config:core.entity_view_display.node.aggregatore_servizi.grid'
+        - 'config:core.entity_view_display.node.aggregatore_servizi.search_index'
+        - 'config:core.entity_view_display.node.aggregatore_servizi.teaser'
+        - 'config:core.entity_view_display.node.aggregatore_tema.default'
+        - 'config:core.entity_view_display.node.aggregatore_tema.grid'
+        - 'config:core.entity_view_display.node.aggregatore_tema.search_index'
+        - 'config:core.entity_view_display.node.aggregatore_tema.teaser'
+        - 'config:core.entity_view_display.node.comune.default'
+        - 'config:core.entity_view_display.node.comune.search_index'
+        - 'config:core.entity_view_display.node.comune_servizi.default'
+        - 'config:core.entity_view_display.node.comune_servizi.search_index'
+        - 'config:core.entity_view_display.node.comune_servizi.teaser'
+        - 'config:core.entity_view_display.node.comune.teaser'
+        - 'config:core.entity_view_display.node.contenuto_multimediale.default'
+        - 'config:core.entity_view_display.node.contenuto_multimediale.grid'
+        - 'config:core.entity_view_display.node.contenuto_multimediale.search_index'
+        - 'config:core.entity_view_display.node.contenuto_multimediale.teaser'
+        - 'config:core.entity_view_display.node.eventi_servizi.calendario'
+        - 'config:core.entity_view_display.node.eventi_servizi.default'
+        - 'config:core.entity_view_display.node.eventi_servizi.teaser'
+        - 'config:core.entity_view_display.node.evento.calendario'
+        - 'config:core.entity_view_display.node.evento.carosello_big'
+        - 'config:core.entity_view_display.node.evento.default'
+        - 'config:core.entity_view_display.node.evento.grid'
+        - 'config:core.entity_view_display.node.evento.grid_map'
+        - 'config:core.entity_view_display.node.evento.search_index'
+        - 'config:core.entity_view_display.node.evento.slideshow'
+        - 'config:core.entity_view_display.node.evento.teaser'
+        - 'config:core.entity_view_display.node.frontpage.default'
+        - 'config:core.entity_view_display.node.frontpage.teaser'
+        - 'config:core.entity_view_display.node.guida_turistica.default'
+        - 'config:core.entity_view_display.node.guida_turistica.search_index'
+        - 'config:core.entity_view_display.node.guida_turistica.teaser'
+        - 'config:core.entity_view_display.node.itinerario.carosello_big'
+        - 'config:core.entity_view_display.node.itinerario.default'
+        - 'config:core.entity_view_display.node.itinerario.grid'
+        - 'config:core.entity_view_display.node.itinerario.grid_map'
+        - 'config:core.entity_view_display.node.itinerario.search_index'
+        - 'config:core.entity_view_display.node.itinerario.slideshow'
+        - 'config:core.entity_view_display.node.itinerario.teaser'
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.search_index'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.sala.default'
+        - 'config:core.entity_view_display.node.sala.grid'
+        - 'config:core.entity_view_display.node.sala.search_index'
+        - 'config:core.entity_view_display.node.sala.teaser'
+        - 'config:core.entity_view_display.node.scheda.carosello_big'
+        - 'config:core.entity_view_display.node.scheda.default'
+        - 'config:core.entity_view_display.node.scheda.grid'
+        - 'config:core.entity_view_display.node.scheda.grid_map'
+        - 'config:core.entity_view_display.node.scheda.search_index'
+        - 'config:core.entity_view_display.node.scheda_servizio.carosello_big'
+        - 'config:core.entity_view_display.node.scheda_servizio.default'
+        - 'config:core.entity_view_display.node.scheda_servizio.grid'
+        - 'config:core.entity_view_display.node.scheda_servizio.scopri_anche'
+        - 'config:core.entity_view_display.node.scheda_servizio.search_index'
+        - 'config:core.entity_view_display.node.scheda_servizio.service_teaser'
+        - 'config:core.entity_view_display.node.scheda_servizio.teaser'
+        - 'config:core.entity_view_display.node.scheda.slideshow'
+        - 'config:core.entity_view_display.node.scheda.teaser'
+        - 'config:core.entity_view_display.node.settore_segnala_me.default'
+        - 'config:core.entity_view_display.node.settore_segnala_me.grid'
+        - 'config:core.entity_view_display.node.settore_segnala_me.teaser'

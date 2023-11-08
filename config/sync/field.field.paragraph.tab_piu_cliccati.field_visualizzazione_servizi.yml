@@ -1,0 +1,70 @@
+uuid: 272e77bf-5564-4eb2-867f-4afdeafaccc1
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_visualizzazione_servizi
+    - paragraphs.paragraphs_type.tab_piu_cliccati
+  module:
+    - viewsreference
+id: paragraph.tab_piu_cliccati.field_visualizzazione_servizi
+field_name: field_visualizzazione_servizi
+entity_type: paragraph
+bundle: tab_piu_cliccati
+label: 'Visualizzazione servizi'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    rest_export: 0
+    page: 0
+    entity_reference: 0
+    attachment: 0
+    feed: 0
+  preselect_views:
+    visualizzazioni_servizi: visualizzazioni_servizi
+    api_mobile: 0
+    api_mobile_v1_taxonomy: 0
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    contatore_itinerari: 0
+    contatore_scheda_dettaglio: 0
+    contatore_scheda_servizio: 0
+    content: 0
+    content_recent: 0
+    contenuti_er: 0
+    contenuti_piu_visitati_luoghi: 0
+    contenuti_piu_visitati_servizi: 0
+    eventi: 0
+    files: 0
+    frontpage: 0
+    guide_agenzie_turistiche: 0
+    itinerari: 0
+    media: 0
+    media_library: 0
+    prova: 0
+    prova_2: 0
+    sale: 0
+    schede: 0
+    search: 0
+    servizi_area_personale: 0
+    taxonomy_term: 0
+    temi: 0
+    temi_er: 0
+    user_admin_people: 0
+    visualizzazioni_luoghi: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings: {  }
+field_type: viewsreference

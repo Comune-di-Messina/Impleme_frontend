@@ -1,0 +1,8 @@
+uuid: 5a2d6f0c-37fd-40ac-9f0d-d6db56fb11b9
+langcode: it
+status: true
+dependencies: {  }
+name: Target
+vid: target
+description: ''
+weight: 0

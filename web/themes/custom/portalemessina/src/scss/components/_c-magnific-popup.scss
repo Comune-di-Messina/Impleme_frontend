@@ -1,0 +1,20 @@
+.mfp-container {
+  .mfp-counter {
+    font-size: $font-medium;
+    left: 0;
+    line-height: $gap * 5;
+    right: auto;
+  }
+  .mfp-img {
+    padding: $gap * 5 0;
+  }
+  .mfp-bottom-bar {
+    bottom: $gap * 5;
+    top: auto;
+    .mfp-title:not(:empty) {
+      padding: $gap * 2;
+      background-color: rgba($color-black, .5);
+      font-size: $font-normal;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+uuid: 50383021-842c-4f35-8e6a-9d07639bc23b
+langcode: it
+status: true
+dependencies: {  }
+id: cities_rest_resource
+plugin_id: cities_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

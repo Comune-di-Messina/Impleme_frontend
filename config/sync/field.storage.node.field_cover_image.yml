@@ -1,0 +1,30 @@
+uuid: a42dcbf6-5204-4630-b4e6-8e9924653d6c
+langcode: it
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_cover_image
+field_name: field_cover_image
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

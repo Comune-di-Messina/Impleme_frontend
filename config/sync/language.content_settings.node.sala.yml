@@ -1,0 +1,18 @@
+uuid: 5c17e4cd-6e0b-4006-87f1-53838508d19f
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.sala
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.sala
+target_entity_type_id: node
+target_bundle: sala
+default_langcode: site_default
+language_alterable: true

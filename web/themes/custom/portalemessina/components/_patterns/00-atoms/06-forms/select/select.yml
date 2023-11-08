@@ -1,0 +1,8 @@
+id: inputName
+label: Lorem ipsum dolor 
+title: Scegli un opzione
+
+###
+
+ui_pattern_definition:
+  label: Element - Select

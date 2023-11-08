@@ -1,0 +1,94 @@
+{% macro modalUteUbicazioni(modalName, data) %}
+  <div class="utenze-dettagli">
+    <div class="modal" tabindex="-1" role="dialog" id="{{ modalName }}-details">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="title">
+              <h4 class="modal-title">Dettagli utenza #{{ data.UteUtenza }}</h4>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="table-row my-5 text-center">
+              <div class="table-wrapper">
+                <table width="100%">
+                  <thead>
+                  <tr>
+                    <th>Ubicazione principale</th>
+                    <th>Categoria</th>
+                    <th>Indirizzo</th>
+                    <th>Superficie</th>
+                    <th>Sezione</th>
+                    <th>Foglio</th>
+                    <th>Particella</th>
+                    <th>Sub</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  {% for ubicazione in data.UteUbucazioni %}
+                    <tr>
+                      <td>{{ ubicazione.UbiPrincipale == 'S' ? 'Si' : 'No' }}</td>
+                      <td>{{ data.UteCategoria|length > 0 ? data.UteCategoria : '-' }}</td>
+                      <td>{{ ubicazione.UbiIndirizzo|length > 0 ? ubicazione.UbiIndirizzo : '-' }}</td>
+                      <td>{{ data.UteCategoria|length > 0 ? data.UteCategoria : '-' }}</td>
+                      <td>{{ ubicazione.UbiSezione|length > 0 ? ubicazione.UbiSezione : '-' }}</td>
+                      <td>{{ ubicazione.UbiFoglio|length > 0 ? ubicazione.UbiFoglio : '-' }}</td>
+                      <td>{{ ubicazione.UbiParticella|length > 0 ? ubicazione.UbiParticella : '-' }}</td>
+                      <td>{{ ubicazione.UbiSubalterno|length > 0 ? ubicazione.UbiSubalterno : '-' }}</td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="table-wrapper">
+              <table width="100%" class="mt-5 text-center">
+                <thead>
+                <tr>
+                  <th>Riduzioni</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>
+                    {% for riduzione in data.UteRiduzioni %}
+                      <div>{{ riduzione.RidDescrizione|default('-') }}</div>
+                    {% else %}
+                      -
+                    {% endfor %}
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-wrapper">
+              <table width="100%" class="mt-5 text-center">
+                <thead>
+                <tr>
+                  <th>Maggiorazioni</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>
+                    {% for maggiorazione in data.UteAggiuntivi %}
+                      <div>{{ maggiorazione.AggDescrizione|default('-') }}</div>
+                    {% else %}
+                      -
+                    {% endfor %}
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Chiudi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

@@ -1,0 +1,22 @@
+uuid: 2f29c0a6-415c-4a86-bc48-a4d04a320356
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - portalemessina
+_core:
+  default_config_hash: f4luRh_8S_42S-2Pf3K3AcWVo5Fqf2M-ew_xFcv2M7Y
+id: portalemessina_content
+theme: portalemessina
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

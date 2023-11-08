@@ -1,0 +1,19 @@
+uuid: 4efc0766-e63e-4abc-b018-d0fc607ab952
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_backoffice_id
+    - taxonomy.vocabulary.tipologie_pratiche
+id: taxonomy_term.tipologie_pratiche.field_backoffice_id
+field_name: field_backoffice_id
+entity_type: taxonomy_term
+bundle: tipologie_pratiche
+label: 'Backoffice ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

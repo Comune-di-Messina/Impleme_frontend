@@ -1,0 +1,117 @@
+uuid: 0776ed5b-87de-48d5-80a2-feb86a7650e1
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_moduli
+    - node.type.frontpage
+    - paragraphs.paragraphs_type.aggregatore
+    - paragraphs.paragraphs_type.blocchi_di_selezione_del_comune
+    - paragraphs.paragraphs_type.carosello_big
+    - paragraphs.paragraphs_type.carosello_con_testata_small
+    - paragraphs.paragraphs_type.contenuto_ed_infografica
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.tab_piu_cliccati
+    - paragraphs.paragraphs_type.vista
+  module:
+    - entity_reference_revisions
+id: node.frontpage.field_moduli
+field_name: field_moduli
+entity_type: node
+bundle: frontpage
+label: Moduli
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      vista: vista
+      blocchi_di_selezione_del_comune: blocchi_di_selezione_del_comune
+      slideshow: slideshow
+      carosello_con_testata_small: carosello_con_testata_small
+      carosello_big: carosello_big
+      contenuto_ed_infografica: contenuto_ed_infografica
+      aggregatore: aggregatore
+      tab_piu_cliccati: tab_piu_cliccati
+    target_bundles_drag_drop:
+      aggregatore:
+        enabled: true
+        weight: 25
+      blocchi_di_selezione_del_comune:
+        enabled: true
+        weight: 15
+      calendario_eventi:
+        weight: 27
+        enabled: false
+      carosello_big:
+        enabled: true
+        weight: 17
+      carosello_con_intro_small:
+        weight: 29
+        enabled: false
+      carosello_con_testata_big:
+        weight: 16
+        enabled: false
+      carosello_con_testata_small:
+        enabled: true
+        weight: 17
+      citazione:
+        weight: 8
+        enabled: false
+      contenuto:
+        weight: 9
+        enabled: false
+      contenuto_ed_infografica:
+        enabled: true
+        weight: 17
+      contenuto_multimediale:
+        weight: 35
+        enabled: false
+      elemento_infografica:
+        weight: 13
+        enabled: false
+      elemento_mappa:
+        weight: 37
+        enabled: false
+      gallery:
+        weight: 38
+        enabled: false
+      immagine:
+        weight: 10
+        enabled: false
+      immagine_full:
+        weight: 11
+        enabled: false
+      mappa_indirizzi:
+        weight: 41
+        enabled: false
+      raccolta_contenuti_con_testata:
+        weight: 24
+        enabled: false
+      selezione_comuni:
+        weight: 12
+        enabled: false
+      selezione_comuni_servizi:
+        weight: 26
+        enabled: false
+      servizi_scopri_anche:
+        weight: 45
+        enabled: false
+      slideshow:
+        enabled: true
+        weight: 16
+      tab_piu_cliccati:
+        enabled: true
+        weight: 26
+      tappe:
+        weight: 13
+        enabled: false
+      vista:
+        enabled: true
+        weight: 14
+field_type: entity_reference_revisions

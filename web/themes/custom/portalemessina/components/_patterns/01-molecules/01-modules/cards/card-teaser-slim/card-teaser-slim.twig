@@ -1,0 +1,32 @@
+{%
+  set classes = [
+  'module',
+  'card card-teaser card-teaser-slim',
+  'no-after p-0'
+]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+  {% if image|render %}
+    <div class="card-cover rounded">
+      <div class="card-image">{{ image }}</div>
+    </div>
+  {% endif %}
+  <div class="card-content d-flex flex-column pb-2 px-4">
+    
+    {% if title|render %}
+      <h2 class="card-title my-2">{{ title }}</h2>
+    {% endif %}
+    {% if content|render %}
+      <div class="card-content text-serif">
+        {{ (content|render|striptags)|slice(0, 150) }}
+      </div>
+    {% endif %}
+    {% if link|render %}
+      <div class="card-link">
+        {{ link }}
+      </div>
+    {% endif %}
+  </div>
+  
+</div>

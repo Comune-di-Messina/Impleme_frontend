@@ -1,0 +1,17 @@
+uuid: 9f30d6a5-31f4-43b6-b629-14b5a7ff289f
+langcode: it
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Comune
+type: comune
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

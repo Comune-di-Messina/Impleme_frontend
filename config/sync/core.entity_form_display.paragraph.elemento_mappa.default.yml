@@ -1,0 +1,65 @@
+uuid: 64729edd-2dd1-43a6-9713-cbfa46507320
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.elemento_mappa.field_coordinate
+    - field.field.paragraph.elemento_mappa.field_indirizzo
+    - field.field.paragraph.elemento_mappa.field_orari
+    - field.field.paragraph.elemento_mappa.field_telefono
+    - field.field.paragraph.elemento_mappa.field_titolo
+    - paragraphs.paragraphs_type.elemento_mappa
+  module:
+    - geofield
+id: paragraph.elemento_mappa.default
+targetEntityType: paragraph
+bundle: elemento_mappa
+mode: default
+content:
+  field_coordinate:
+    weight: 1
+    settings:
+      html5_geolocation: false
+    third_party_settings: {  }
+    type: geofield_latlon
+    region: content
+  field_indirizzo:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_orari:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telefono:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_titolo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

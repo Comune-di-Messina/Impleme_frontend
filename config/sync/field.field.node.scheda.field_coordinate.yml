@@ -1,0 +1,22 @@
+uuid: 46d0c30e-5aa1-466c-8021-d6d0770cb56b
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coordinate
+    - node.type.scheda
+  module:
+    - geofield
+id: node.scheda.field_coordinate
+field_name: field_coordinate
+entity_type: node
+bundle: scheda
+label: Coordinate
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

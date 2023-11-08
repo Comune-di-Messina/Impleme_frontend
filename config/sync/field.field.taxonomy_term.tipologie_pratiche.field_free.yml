@@ -1,0 +1,19 @@
+uuid: 4e25045a-eef3-4d0d-ba17-2835fbd0caf8
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_free
+    - taxonomy.vocabulary.tipologie_pratiche
+id: taxonomy_term.tipologie_pratiche.field_free
+field_name: field_free
+entity_type: taxonomy_term
+bundle: tipologie_pratiche
+label: Libero
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,41 @@
+uuid: 6c6df78f-cf60-4835-865d-35646212af9b
+langcode: it
+status: true
+dependencies:
+  config:
+    - views.view.servizi_area_personale
+  module:
+    - context
+    - route_condition
+    - views
+  theme:
+    - portalemessina
+id: views_block__servizi_area_personale_block_1
+theme: portalemessina
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:servizi_area_personale-block_1'
+settings:
+  id: 'views_block:servizi_area_personale-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  route:
+    id: route
+    routes: entity.user.canonical
+    negate: false
+    context_mapping: {  }

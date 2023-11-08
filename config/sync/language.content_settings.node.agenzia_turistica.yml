@@ -1,0 +1,18 @@
+uuid: a1d81ae1-f71b-45dc-a90a-ace1e35f6dc8
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.agenzia_turistica
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.agenzia_turistica
+target_entity_type_id: node
+target_bundle: agenzia_turistica
+default_langcode: site_default
+language_alterable: true

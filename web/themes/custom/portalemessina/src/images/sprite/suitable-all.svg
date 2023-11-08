@@ -1,0 +1,16 @@
+
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Users-/-Geometric-Full-Body-Multiple-Users-/-multiple-circle" stroke="#ffffff" stroke-width="1.5">
+            <g id="Regular">
+                <circle id="Oval" cx="12" cy="3.75" r="3"></circle>
+                <path d="M15.75,14.25 L15.75,12 C15.75,9.92893219 14.0710678,8.25 12,8.25 C9.92893219,8.25 8.25,9.92893219 8.25,12 L8.25,14.25 L9.75,14.25 L10.5,20.25 L13.5,20.25 L14.25,14.25 L15.75,14.25 Z" id="Shape"></path>
+                <circle id="Oval" cx="4.5" cy="6" r="2.25"></circle>
+                <path d="M5.7,9.947 C4.55549749,9.56185104 3.2955841,9.75096546 2.31456674,10.4550945 C1.33354939,11.159247 0.751284599,12.2924305 0.75,13.5 L0.75,14.25 L2.25,14.25 L3,18.75 L6,18.75 L6.376,16.494" id="Shape"></path>
+                <circle id="Oval" cx="19.5" cy="6" r="2.25"></circle>
+                <path d="M18.3,9.947 C19.4445025,9.56185104 20.7044159,9.75096546 21.6854333,10.4550945 C22.6664506,11.159247 23.2487154,12.2924305 23.25,13.5 L23.25,14.25 L21.75,14.25 L21,18.75 L18,18.75 L17.624,16.494" id="Shape"></path>
+                <path d="M23.25,21 C23.25,22.243 18.213,23.25 12,23.25 C5.787,23.25 0.75,22.243 0.75,21" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

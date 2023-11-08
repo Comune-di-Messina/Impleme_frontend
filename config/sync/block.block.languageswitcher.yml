@@ -1,0 +1,37 @@
+uuid: 67ed91d4-369d-40da-9530-f314ed4568e7
+langcode: it
+status: true
+dependencies:
+  module:
+    - context
+    - language
+    - system
+  theme:
+    - portalemessina
+id: languageswitcher
+theme: portalemessina
+region: header
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility:
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "/servizi\r\n/servizi/*"
+    negate: true
+    context_mapping: {  }

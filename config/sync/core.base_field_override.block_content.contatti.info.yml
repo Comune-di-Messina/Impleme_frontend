@@ -1,0 +1,18 @@
+uuid: cf37ad99-8ace-4163-a734-51b16e9acdce
+langcode: it
+status: true
+dependencies:
+  config:
+    - block_content.type.contatti
+id: block_content.contatti.info
+field_name: info
+entity_type: block_content
+bundle: contatti
+label: 'Descrizione del blocco'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

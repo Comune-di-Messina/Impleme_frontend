@@ -1,0 +1,11 @@
+.h-masonry-2col {
+  @include masonry2col;
+}
+
+.h-grid-2col {
+  @include grid2col;
+}
+
+.h-grid-3col {
+  @include grid3col;
+}

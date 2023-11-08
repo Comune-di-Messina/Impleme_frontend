@@ -1,0 +1,179 @@
+{
+    "Esito": "true",
+    "MsgEsito": "",
+    "SelectContribuenti": "",
+    "breadcrumbs": "",
+    "CfiscPiva": "PRZSRG45L23A390P",
+    "Contribuenti": [
+        {
+            "CodContr": "99024982",
+            "Cognome": "PERUZZI",
+            "Nome": "SERGIO",
+            "DataNascita": "23/07/1945",
+            "Indir1": "VIA ACUTO 9 ",
+            "Indir2": "",
+            "Indir3": "52100 AREZZO AR",
+            "RecapitoIndirNominativo": "C/O INF.OR. SRL",
+            "RecapitoIndir1": "",
+            "RecapitoIndir2": "",
+            "RecapitoIndir3": "AREZZO",
+            "AddebitoBanca": "N",
+            "Utenze": [
+                {
+                    "UteUtenza": "1",
+                    "UteComune": "AREZZO (TARIFFA)",
+                    "UteCategoria": "ABITAZIONE PRINCIPALE",
+                    "UteFatturabile": "S",
+                    "UteDataDecorrenza": "01/01/2013",
+                    "UteMisura": "200",
+                    "UteNucleo": "4",
+                    "UteDataCessaz": "",
+                    "UteUbucazioni": [
+                        {
+                            "UbiPrincipale": "S",
+                            "UbiIndirizzo": "VIA PIAGGIA SAN MARTINO, 12",
+                            "UbiCategoria": "ABITAZIONE PRINCIPALE",
+                            "UbiMisura": "100",
+                            "UbiSezione": "",
+                            "UbiFoglio": "00009",
+                            "UbiParticella": "03690",
+                            "UbiSubalterno": "0702"
+                        },
+                        {
+                            "UbiPrincipale": "N",
+                            "UbiIndirizzo": "VIA ROMANA, 1",
+                            "UbiCategoria": "ABITAZIONE PRINCIPALE",
+                            "UbiMisura": "10",
+                            "UbiSezione": "",
+                            "UbiFoglio": "00009",
+                            "UbiParticella": "03690",
+                            "UbiSubalterno": "0704"
+                        }
+                    ],
+                    "UteRiduzioni": [
+                        {
+                            "RidDescrizione": "AGEVOLAZIONE ISEE"
+                        }
+                    ],
+                    "UteAggiuntivi": [],
+                    "UteTrasponders": ""
+                },
+                {
+                    "UteUtenza": "2",
+                    "UteComune": "AREZZO (TARIFFA)",
+                    "UteCategoria": "PARRUCCHIERI-ESTETISTI",
+                    "UteFatturabile": "S",
+                    "UteDataDecorrenza": "01/01/2010",
+                    "UteMisura": "100",
+                    "UteNucleo": "0",
+                    "UteDataCessaz": "",
+                    "UteUbucazioni": [
+                        {
+                            "UbiPrincipale": "S",
+                            "UbiIndirizzo": "VIA ROMA, 110",
+                            "UbiCategoria": "PARRUCCHIERI-ESTETISTI",
+                            "UbiMisura": "100",
+                            "UbiSezione": "",
+                            "UbiFoglio": "",
+                            "UbiParticella": "",
+                            "UbiSubalterno": ""
+                        }
+                    ],
+                    "UteRiduzioni": [],
+                    "UteAggiuntivi": [],
+                    "UteTrasponders": ""
+                },
+                {
+                    "UteUtenza": "3",
+                    "UteComune": "AREZZO (TARIFFA)",
+                    "UteCategoria": "ABITAZIONE SECONDARIA",
+                    "UteFatturabile": "N",
+                    "UteDataDecorrenza": "01/01/2016",
+                    "UteMisura": "200",
+                    "UteNucleo": "3",
+                    "UteDataCessaz": "",
+                    "UteUbucazioni": [
+                        {
+                            "UbiPrincipale": "S",
+                            "UbiIndirizzo": "VIA SETTE PONTI, 62",
+                            "UbiCategoria": "ABITAZIONE SECONDARIA",
+                            "UbiMisura": "150",
+                            "UbiSezione": "",
+                            "UbiFoglio": "",
+                            "UbiParticella": "",
+                            "UbiSubalterno": ""
+                        }
+                    ],
+                    "UteRiduzioni": [
+                        {
+                            "RidDescrizione": "AGEVOLAZIONE ISEE"
+                        }
+                    ],
+                    "UteAggiuntivi": [
+                        {
+                            "AggDescrizione": "RIMBORSO"
+                        }
+                    ],
+                    "UteTrasponders": ""
+                },
+                {
+                    "UteUtenza": "4",
+                    "UteComune": "AREZZO (TARIFFA)",
+                    "UteCategoria": "ABITAZIONE SECONDARIA",
+                    "UteFatturabile": "S",
+                    "UteDataDecorrenza": "01/01/2013",
+                    "UteMisura": "100",
+                    "UteNucleo": "2",
+                    "UteDataCessaz": "",
+                    "UteUbucazioni": [
+                        {
+                            "UbiPrincipale": "S",
+                            "UbiIndirizzo": "VIA ROMA, 5",
+                            "UbiCategoria": "ABITAZIONE SECONDARIA",
+                            "UbiMisura": "100",
+                            "UbiSezione": "",
+                            "UbiFoglio": "",
+                            "UbiParticella": "",
+                            "UbiSubalterno": ""
+                        }
+                    ],
+                    "UteRiduzioni": [],
+                    "UteAggiuntivi": [],
+                    "UteTrasponders": ""
+                }
+            ],
+            "Emissioni": [
+                {
+                    "EmiTipo": "FATTURA RIEPILOGATIVA",
+                    "EmiAnno": "2010",
+                    "EmiNumero": "1",
+                    "EmiRiferimento": "2010/01",
+                    "EmiDataEmissione": "15/05/2010",
+                    "EmiModPagamento": "STANDARD",
+                    "EmiRate": [
+                        {
+                            "EmiNumRata": "Unica",
+                            "EmiImpRata": "206.37",
+                            "EmiDataScaRata": "31/12/2010"
+                        }
+                    ],
+                    "EmiImpPagato": "0",
+                    "EmiDataUltPag": "",
+                    "EmiAnnullata": "N",
+                    "EmiDocumenti": [
+                        {
+                            "EmiDocumentoId": "8",
+                            "EmiDocumentoRiferimento": "FAT450920",
+                            "EmiDocumentoOggetto": "DOCUMENTO BOLLETTA",
+                            "EmiDocumentoNomeFile": "Bolletta_99024982_2010_1.pdf",
+                            "EmiDocumentoDataInserimento": "20180913",
+                            "EmiDocumentoIdArcDoc": "TUFAT4509200001",
+                            "EmiDocumentoDimensioneFile": ""
+                        }
+                    ]
+                }
+            ],
+            "Accertamenti": []
+        }
+    ]
+}

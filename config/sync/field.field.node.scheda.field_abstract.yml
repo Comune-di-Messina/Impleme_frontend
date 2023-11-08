@@ -1,0 +1,23 @@
+uuid: 86fe4af0-2568-49d7-9c5c-f48ca0886113
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abstract
+    - node.type.scheda
+  module:
+    - text
+id: node.scheda.field_abstract
+field_name: field_abstract
+entity_type: node
+bundle: scheda
+label: Abstract
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

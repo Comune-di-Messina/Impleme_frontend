@@ -1,0 +1,33 @@
+uuid: d4d1df56-39bd-4e54-a9f0-56459fa95cc8
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mappa_indirizzi.field_moduli
+    - field.field.paragraph.mappa_indirizzi.field_titolo
+    - paragraphs.paragraphs_type.mappa_indirizzi
+  module:
+    - entity_reference_revisions
+id: paragraph.mappa_indirizzi.default
+targetEntityType: paragraph
+bundle: mappa_indirizzi
+mode: default
+content:
+  field_moduli:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_titolo:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

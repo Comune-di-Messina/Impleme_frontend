@@ -1,0 +1,188 @@
+{
+  "elencopersone": [
+    {
+      "datiIndividuo": {
+        "idAnagrafico": "3055",
+        "cognome": "PERICOLI",
+        "nome": "FILIPPO",
+        "sesso": "M",
+        "codiceFiscale": "PRCFPP76H16A390R"
+      },
+      "datiNascita": {
+        "denominazioneComune": "AREZZO",
+        "siglaProvinciaStato": "AR",
+        "attoNascita": {
+          "denominazioneComune": "AREZZO",
+          "siglaProvinciaStato": "AR",
+          "atto": "1976/65/1/A"
+        }
+      },
+      "datiStatoCivile": {
+        "statoCivile": {
+          "statoCivileDescrizione": "CELIBE",
+          "statoCivile": "1"
+        },
+        "matrimonio": {
+          "coniuge": {}
+        }
+      },
+      "datiImmigrazione": {
+        "denominazioneComune": "",
+        "siglaProvinciaStato": "",
+        "dataImmigrazione": "01/07/2015",
+        "numeroPraticaImmigrazione": ""
+      },
+      "causalePresenza": "10",
+      "datiRelazioniFamiliari": {
+        "codiceRelazione": "1",
+        "descrizioneRelazione": "Intestatario Scheda"
+      }
+    },
+    {
+      "datiIndividuo": {
+        "idAnagrafico": "3067",
+        "cognome": "PERICOLI",
+        "nome": "LORENZO",
+        "sesso": "M",
+        "codiceFiscale": "PRCLNZ15L10A390F"
+      },
+      "datiNascita": {
+        "denominazioneComune": "AREZZO",
+        "siglaProvinciaStato": "AR",
+        "attoNascita": {
+          "denominazioneComune": "AREZZO",
+          "siglaProvinciaStato": "AR",
+          "atto": "2015/1/2/B"
+        }
+      },
+      "datiStatoCivile": {
+        "statoCivile": {
+          "statoCivileDescrizione": "CELIBE",
+          "statoCivile": "1"
+        },
+        "matrimonio": {
+          "coniuge": {}
+        }
+      },
+      "datiImmigrazione": {},
+      "causalePresenza": "10",
+      "datiRelazioniFamiliari": {
+        "codiceRelazione": "3",
+        "descrizioneRelazione": "Figlio/Figlia"
+      }
+    },
+    {
+      "datiIndividuo": {
+        "idAnagrafico": "3187",
+        "cognome": "PERICOLI",
+        "nome": "MATTIA",
+        "sesso": "M",
+        "codiceFiscale": "PRCMTT17B01A390Q"
+      },
+      "datiNascita": {
+        "denominazioneComune": "AREZZO",
+        "siglaProvinciaStato": "AR",
+        "attoNascita": {
+          "denominazioneComune": "AREZZO",
+          "siglaProvinciaStato": "AR",
+          "atto": "2017/123/1/A"
+        }
+      },
+      "datiStatoCivile": {
+        "statoCivile": {
+          "statoCivileDescrizione": "CELIBE",
+          "statoCivile": "1"
+        },
+        "matrimonio": {
+          "coniuge": {}
+        }
+      },
+      "datiImmigrazione": {},
+      "causalePresenza": "10",
+      "datiRelazioniFamiliari": {
+        "codiceRelazione": "3",
+        "descrizioneRelazione": "Figlio/Figlia"
+      }
+    },
+    {
+      "datiIndividuo": {
+        "idAnagrafico": "3061",
+        "cognome": "TAVANTI",
+        "nome": "LARA",
+        "sesso": "F",
+        "codiceFiscale": "TVNLRA81S52A390D"
+      },
+      "datiNascita": {
+        "denominazioneComune": "AREZZO",
+        "siglaProvinciaStato": "AR",
+        "attoNascita": {
+          "denominazioneComune": "AREZZO",
+          "siglaProvinciaStato": "AR",
+          "atto": "1981/561/1/A"
+        }
+      },
+      "datiStatoCivile": {
+        "statoCivile": {
+          "statoCivileDescrizione": "NUBILE",
+          "statoCivile": "1"
+        },
+        "matrimonio": {
+          "coniuge": {}
+        }
+      },
+      "datiImmigrazione": {
+        "denominazioneComune": "",
+        "siglaProvinciaStato": "",
+        "dataImmigrazione": "01/07/2015",
+        "numeroPraticaImmigrazione": ""
+      },
+      "causalePresenza": "10",
+      "datiRelazioniFamiliari": {
+        "codiceRelazione": "23",
+        "descrizioneRelazione": "Convivente (con vincoli affettivi)"
+      }
+    },
+    {
+      "datiIndividuo": {
+        "idAnagrafico": "3260",
+        "cognome": "TOMMASI",
+        "nome": "SARA",
+        "sesso": "F",
+        "codiceFiscale": "TMMSRA91A41F205Q"
+      },
+      "datiNascita": {
+        "denominazioneComune": "MILANO",
+        "siglaProvinciaStato": "MI",
+        "attoNascita": {
+          "denominazioneComune": "MILANO",
+          "siglaProvinciaStato": "MI",
+          "atto": "1991/12/1/A"
+        }
+      },
+      "datiStatoCivile": {
+        "statoCivile": {
+          "statoCivileDescrizione": "NUBILE",
+          "statoCivile": "1"
+        },
+        "matrimonio": {
+          "coniuge": {}
+        }
+      },
+      "datiImmigrazione": {
+        "denominazioneComune": "",
+        "siglaProvinciaStato": "",
+        "dataImmigrazione": "20/03/2018",
+        "numeroPraticaImmigrazione": ""
+      },
+      "causalePresenza": "10",
+      "datiRelazioniFamiliari": {
+        "codiceRelazione": "23",
+        "descrizioneRelazione": "Convivente (con vincoli affettivi)"
+      }
+    }
+  ],
+  "breadcrumbs": "",
+  "visure_dati": "/themes/custom/portalemessina/pattern-lab/public/?p=pages-visure",
+  "visure_nucleofam": "/themes/custom/portalemessina/pattern-lab/public/?p=pages-visure-nucleo",
+  "errore": ""
+}

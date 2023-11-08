@@ -1,0 +1,103 @@
+uuid: 00fe3575-e37e-411f-987e-735f6120237f
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_moduli
+    - node.type.comune
+    - paragraphs.paragraphs_type.calendario_eventi
+    - paragraphs.paragraphs_type.carosello_con_intro_small
+    - paragraphs.paragraphs_type.carosello_con_testata_big
+    - paragraphs.paragraphs_type.carosello_con_testata_small
+    - paragraphs.paragraphs_type.mappa_indirizzi
+    - paragraphs.paragraphs_type.raccolta_contenuti_con_testata
+    - paragraphs.paragraphs_type.vista
+  module:
+    - entity_reference_revisions
+id: node.comune.field_moduli
+field_name: field_moduli
+entity_type: node
+bundle: comune
+label: Moduli
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      carosello_con_testata_big: carosello_con_testata_big
+      carosello_con_testata_small: carosello_con_testata_small
+      carosello_con_intro_small: carosello_con_intro_small
+      raccolta_contenuti_con_testata: raccolta_contenuti_con_testata
+      vista: vista
+      calendario_eventi: calendario_eventi
+      mappa_indirizzi: mappa_indirizzi
+    target_bundles_drag_drop:
+      blocchi_di_selezione_del_comune:
+        weight: -31
+        enabled: false
+      calendario_eventi:
+        enabled: true
+        weight: 22
+      carosello_big:
+        weight: -30
+        enabled: false
+      carosello_con_intro_small:
+        enabled: true
+        weight: -27
+      carosello_con_testata_big:
+        enabled: true
+        weight: -29
+      carosello_con_testata_small:
+        enabled: true
+        weight: -28
+      citazione:
+        weight: -37
+        enabled: false
+      contenuto:
+        weight: -36
+        enabled: false
+      contenuto_ed_infografica:
+        weight: -24
+        enabled: false
+      elemento_infografica:
+        weight: -23
+        enabled: false
+      elemento_mappa:
+        weight: 21
+        enabled: false
+      gallery:
+        weight: -22
+        enabled: false
+      immagine:
+        weight: -35
+        enabled: false
+      immagine_full:
+        weight: -34
+        enabled: false
+      mappa_indirizzi:
+        enabled: true
+        weight: 34
+      raccolta_contenuti_con_testata:
+        enabled: true
+        weight: -26
+      selezione_comuni:
+        weight: -33
+        enabled: false
+      selezione_comuni_servizi:
+        weight: -21
+        enabled: false
+      slideshow:
+        weight: -20
+        enabled: false
+      tappe:
+        weight: -32
+        enabled: false
+      vista:
+        enabled: true
+        weight: -25
+field_type: entity_reference_revisions

@@ -1,0 +1,20 @@
+uuid: 51b5b38f-315c-43ae-98c0-05d2a8e4d841
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.scheda
+id: node.scheda.uid
+field_name: uid
+entity_type: node
+bundle: scheda
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

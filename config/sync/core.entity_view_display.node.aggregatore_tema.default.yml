@@ -1,0 +1,99 @@
+uuid: 05f366e2-880e-465e-a346-ddbf4e67981d
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.aggregatore_tema.body
+    - field.field.node.aggregatore_tema.field_abstract
+    - field.field.node.aggregatore_tema.field_comune
+    - field.field.node.aggregatore_tema.field_cover
+    - field.field.node.aggregatore_tema.field_term_tema
+    - field.field.node.aggregatore_tema.field_vista
+    - node.type.aggregatore_tema
+  module:
+    - ds
+    - text
+    - user
+    - viewsreference
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_page_aggregatore
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      hero_title:
+        - node_title
+      hero_content:
+        - field_abstract
+      hero_image:
+        - field_cover
+      hero_band_right:
+        - body
+      view:
+        - field_vista
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.aggregatore_tema.default
+targetEntityType: node
+bundle: aggregatore_tema
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: hero_band_right
+  field_abstract:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: hero_content
+  field_cover:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: cover_large_tall
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: hero_image
+  field_vista:
+    weight: 4
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: view
+hidden:
+  field_comune: true
+  field_term_tema: true
+  langcode: true
+  links: true

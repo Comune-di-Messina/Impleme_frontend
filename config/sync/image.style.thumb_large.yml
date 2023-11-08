@@ -1,0 +1,17 @@
+uuid: 3eebbba0-0fc2-4b34-a5ac-269c7ecad57a
+langcode: it
+status: true
+dependencies:
+  module:
+    - focal_point
+name: thumb_large
+label: '[585x695] Thumb large'
+effects:
+  70b7b0a0-b321-4ddf-a079-a857dc94f50c:
+    uuid: 70b7b0a0-b321-4ddf-a079-a857dc94f50c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 585
+      height: 695
+      crop_type: focal_point

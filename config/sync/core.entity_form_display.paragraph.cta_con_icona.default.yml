@@ -1,0 +1,43 @@
+uuid: 136f4efa-c1d4-4243-a7b2-23104e70e7bd
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_con_icona.field_cta
+    - field.field.paragraph.cta_con_icona.field_immagine
+    - field.field.paragraph.cta_con_icona.field_titolo
+    - paragraphs.paragraphs_type.cta_con_icona
+  module:
+    - link
+    - media_library
+id: paragraph.cta_con_icona.default
+targetEntityType: paragraph
+bundle: cta_con_icona
+mode: default
+content:
+  field_cta:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_immagine:
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_titolo:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

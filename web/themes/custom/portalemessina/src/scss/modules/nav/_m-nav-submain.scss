@@ -1,0 +1,20 @@
+.menu-main {
+  // Hero - chips.
+  .hero-main-bottom & {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 -#{$gap / 2};
+    .nav-item {
+      margin: $gap;
+    }
+    .nav-link {
+      font-size: $font-xsmall;
+      margin: 0;
+      border-radius: $font-xsmall;
+      background-color: $color-white;
+      padding: 2px $gap * 2;
+      display: block;
+    }
+  }
+}

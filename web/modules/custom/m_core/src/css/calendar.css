@@ -1,0 +1,37 @@
+.view-eventi.view-display-id-block_4 .view-filters {
+  display: none;
+}
+
+#calendar {
+  width: 50%;
+}
+
+.fc-unthemed td,
+.fc-unthemed thead,
+.fc-unthemed tbody,
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-row,
+.fc-unthemed .fc-content,
+.fc-unthemed .fc-popover,
+.fc-unthemed .fc-list-view,
+.fc-unthemed .fc-list-heading td {
+  border: none;
+}
+
+.fc-unthemed td.fc-today {
+  background: inherit;
+  border: none;
+}
+.active-date span {
+  background-color: #3a76bd;
+  border-radius: 25px;
+  min-width: 25px;
+  display: block;
+  text-align: center;
+  color: #ffffff;
+}
+
+.field--name-field-vista .field--name-field-cta {
+  display: flex;
+  justify-content: center;
+}

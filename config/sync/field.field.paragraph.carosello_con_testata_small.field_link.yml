@@ -1,0 +1,23 @@
+uuid: dce67ebd-3ec1-4ca4-9666-a7a9318282d3
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.carosello_con_testata_small
+  module:
+    - link
+id: paragraph.carosello_con_testata_small.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: carosello_con_testata_small
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

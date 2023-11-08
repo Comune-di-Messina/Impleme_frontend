@@ -1,0 +1,265 @@
+.it-header-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 30;
+  // Slim.
+  .it-header-slim-wrapper {
+    background: $color-blue-dark;
+    font-weight: 600;
+    .it-access-top-wrapper {
+      .btn {
+        background-color: rgba($color-white, .1) !important;
+      }
+      .btn-login {
+        background: transparent !important;
+        box-shadow: 0 0 0 1px $color-white;
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+        margin-right: .5rem;
+        &:hover {
+          background-color: rgba($color-white, .1) !important;
+          text-decoration: none;
+        }
+      }
+      form.openid-connect-login-form {
+        display: inline-flex;
+        font-size: unset;
+        &:hover {
+          background-color: rgba($color-white, .1) !important;
+          text-decoration: none;
+        }
+        .form-submit {
+          background: transparent !important;
+          box-shadow: 0 0 0 1px $color-white;
+          border-radius: 5px;
+          margin-right: .5rem;
+          padding: 6px 24px !important;
+          //max-height: 35px !important;
+          font-size: 14px !important;
+          line-height: 1.45 !important;
+          &:hover {
+            background-color: rgba($color-white, .1) !important;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .it-header-slim-wrapper-content {
+      .link-list-wrapper {
+        .links {
+          margin: 0;
+          a {
+            color: $color-black;
+          }
+        }
+      }
+    }
+  }
+  // Sticky.
+  .scrollmagic-pin-spacer {
+    min-height: auto !important;
+  }
+  &.h-header-sticky {
+    .it-nav-wrapper {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0 !important;
+      width: 100% !important;
+    }
+    .it-brand-wrapper img {
+      height: 50px;
+    }
+  }
+  // Main.
+  .it-nav-wrapper {
+    &:after {
+      border-radius: 100%;
+      bottom: 0;
+      box-shadow: 0 0 20px rgba(0,0,0,.1);
+      content: '';
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      z-index: -2;
+    }
+    .it-header-navbar-wrapper {
+      @include breakpoint(lg) {
+        position: relative !important;
+      }
+    }
+    .it-header-center-wrapper,
+    .it-header-navbar-wrapper {
+      .it-brand-wrapper a,
+      .nav-item a {
+        color: $color-blue-dark !important;
+        line-height: 1.4 !important;
+        font-weight: 600 !important;
+      }
+      .nav-item a {
+        padding: $gap $gap * 4;
+      }
+      .active {
+        border-color: $color-primary !important;
+      }
+    }
+    .it-header-navbar-wrapper {
+      background: transparent;
+      box-shadow: none;
+      nav {
+        @include breakpoint(lg) {
+          padding: 0;
+        }
+      }
+    }
+    .it-search-wrapper {
+      color: $color-secondary !important;
+      margin-left: auto !important;
+      @include breakpoint(lg) {
+        padding-left: $gap * 3;
+      }
+      a.search-link {
+        padding: 0;
+        border-radius: 50%;
+        height: $gap * 6;
+        width: $gap * 6;
+        @include breakpoint(lg) {
+          background: $color-blue-dark !important;
+        }
+        .icon {
+          fill: $color-blue-dark !important;
+          @include breakpoint(lg) {
+            fill: $color-white !important;
+          }
+        }
+      }
+      &.cloned {
+        color: $color-secondary;
+        a {
+          @include breakpoint(lg) {
+            background: $color-blue-dark !important;
+          }
+        }
+      }
+      .location-button{
+        background: #ffff !important;
+        border-radius: 1.66667rem;
+        padding: 0 18px;
+        display: block;
+        color: #06c;
+        margin: 0 20px;
+      }
+    }
+    .it-brand-wrapper {
+      margin-left: 20px;
+      @include breakpoint(lg) {
+        margin-left: 0;
+      }
+      img {
+        height: 60px;
+        margin-right: $gap;
+        @include breakpoint(md) {
+          margin-right: $gap * 2;
+        }
+        @include breakpoint(lg) {
+          height: 80px;
+        }
+      }
+      .it-brand-title {
+        font-size: $font-large;
+        line-height: 1.1;
+        font-weight: 700;
+      }
+      .it-brand-subtitle {
+        font-size: $font-normal;
+      }
+    }
+  }
+  // Nav.
+  .menu--main a.nav-link {
+    font-weight: 600 !important;
+  }
+  .navbar {
+    svg {
+      fill: $color-secondary !important;
+    }
+    .dropdown-menu {
+      background-color: $color-white !important;
+      filter: drop-shadow(4px 4px 8px rgba($color-black, .1));
+      min-width: 12rem;
+      &::before {
+        background-color: $color-white !important;
+      }
+      .nav-link span {
+        color: $color-white !important;
+      }
+    }
+  }
+  // Collapsable.
+  .navbar-collapsable {
+    nav {
+      padding: 0 !important;
+    }
+    .navbar-secondary {
+      a {
+        font-size: $font-normal;
+        font-weight: 400 !important;
+      }
+      span::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 150px;
+        height: 1px;
+        background: #e6e9f0;
+        left: 24px;
+        @include breakpoint(lg) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Header - negative.
+.h-header-neg {
+  main {
+    margin-top: -120px;
+  }
+  .module.hero {
+    padding-top: 100px;
+  }
+  .it-header-wrapper:not(.h-header-sticky) .it-nav-wrapper {
+    &::after {
+      display: none;
+    }
+    .it-header-center-wrapper {
+      background-color: transparent !important;
+    }
+    .logo img {
+      filter: brightness(0) invert(1);
+    }
+    .nav-item a {
+      @include breakpoint(lg) {
+        color: $color-white !important;
+        &.active {
+          border-bottom-color: $color-white !important;
+        }
+      }
+    }
+    .it-search-wrapper {
+      .search-link {
+        background-color: $color-white !important;
+      }
+      .icon {
+        fill: $color-blue !important
+      }
+    }
+    .navbar svg {
+      fill: $color-white !important;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+uuid: f702e48c-60ee-48b1-bf3c-99f63b475cc8
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: servizi
+label: Servizi
+type: 'canonical_entities:node'
+pattern: 'servizi/[node:field_comune:entity:title]/[node:title]'
+selection_criteria:
+  ea43c218-0491-4007-9331-b9b7b282c91e:
+    id: node_type
+    bundles:
+      aggregatore_servizi: aggregatore_servizi
+      comune_servizi: comune_servizi
+      sala: sala
+      scheda_servizio: scheda_servizio
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ea43c218-0491-4007-9331-b9b7b282c91e
+selection_logic: and
+weight: -5
+relationships: {  }

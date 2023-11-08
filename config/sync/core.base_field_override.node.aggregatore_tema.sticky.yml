@@ -1,0 +1,22 @@
+uuid: 69d46853-d7bf-4b47-9dd5-83ef46531017
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.aggregatore_tema
+id: node.aggregatore_tema.sticky
+field_name: sticky
+entity_type: node
+bundle: aggregatore_tema
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

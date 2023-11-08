@@ -1,0 +1,18 @@
+uuid: fcd18eba-1944-4fc0-8cd7-3e92b3f5049f
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.residenze
+id: taxonomy_term.residenze.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: residenze
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

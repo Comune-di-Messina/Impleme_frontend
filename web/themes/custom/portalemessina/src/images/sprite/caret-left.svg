@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="5px" height="8px" viewBox="0 0 5 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Picker/_/caret/light_bg/left</title>
+    <g id="symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="#/Calendar/Red" transform="translate(-144.000000, -136.000000)" fill="#17324D" fill-rule="nonzero">
+            <g id="Group-31" transform="translate(36.000000, 118.000000)">
+                <g id="M/YYYY" transform="translate(27.500000, 0.000000)">
+                    <g id="Picker/_/caret/light_bg/left" transform="translate(77.796209, 16.000000)">
+                        <path d="M10.3212142,4.04073773 L10.3212142,8.33363094 C10.3212142,8.60977332 10.0973565,8.83363094 9.82121416,8.83363094 L5.52832094,8.83363094 C5.25217856,8.83363094 5.02832094,8.60977332 5.02832094,8.33363094 C5.02832094,8.2010227 5.08099936,8.07384574 5.17476755,7.98007755 L9.46766077,3.68718434 C9.66292291,3.49192219 9.9795054,3.49192219 10.1747675,3.68718434 C10.2685357,3.78095252 10.3212142,3.90812948 10.3212142,4.04073773 Z" id="Navigation/Toolbar/_/elements/caret-Copy" transform="translate(7.321214, 5.833631) scale(-1, 1) rotate(-45.000000) translate(-7.321214, -5.833631) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

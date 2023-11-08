@@ -1,0 +1,30 @@
+uuid: 17767f9e-091d-47db-bbc3-71705c4471db
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'Utente autenticato'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'post comments'
+  - 'restful get agencies_languages_rest_resource'
+  - 'restful get agencies_names_rest_resource'
+  - 'restful get agencies_residences_rest_resource'
+  - 'restful get agencies_rest_resource'
+  - 'restful get aggregators_rest_resource'
+  - 'restful get cities_rest_resource'
+  - 'restful get guides_rest_resource'
+  - 'restful get pois_rest_resource'
+  - 'restful get rooms_rest_resource'
+  - 'restful get rooms_typologies_rest_resource'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - 'view media'

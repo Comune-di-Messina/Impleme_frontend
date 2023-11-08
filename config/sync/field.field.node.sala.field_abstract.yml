@@ -1,0 +1,23 @@
+uuid: 314e5dde-a923-4033-856c-8b4036bca37e
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abstract
+    - node.type.sala
+  module:
+    - text
+id: node.sala.field_abstract
+field_name: field_abstract
+entity_type: node
+bundle: sala
+label: Abstract
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

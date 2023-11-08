@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Business-Products / Performances / performance-presentation-graph</title>
+    <g id="4.DETTAGLIO" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group-2-Copy" transform="translate(-313.000000, -92.000000)">
+            <g id="Group-9" transform="translate(0.000000, 64.000000)">
+                <g id="Business-Products-/-Performances-/-performance-presentation-graph" transform="translate(313.000000, 28.000000)">
+                    <g id="Group" stroke="#166744" stroke-width="1.5">
+                        <g id="performance-presentation-graph">
+                            <path d="M3.75,11.7 L5.583,9.866 C5.96251909,9.48682059 6.57748091,9.48682059 6.957,9.866 L8.1,11.012 C8.47951909,11.3911794 9.09448091,11.3911794 9.474,11.012 L12.2,8.291 C12.5795191,7.91182059 13.1944809,7.91182059 13.574,8.291 L15.665,10.382 C16.0445191,10.7611794 16.6594809,10.7611794 17.039,10.382 L20.25,7.2" id="Shape"></path>
+                            <line x1="11.808" y1="0.75" x2="11.808" y2="2.188" id="Shape"></line>
+                            <rect id="Rectangle-path" x="0.75" y="2.188" width="22.5" height="15.75" rx="1"></rect>
+                            <line x1="12" y1="17.938" x2="12" y2="20.938" id="Shape"></line>
+                            <polyline id="Shape" points="8.921 23.247 12 20.938 15.076 23.245"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

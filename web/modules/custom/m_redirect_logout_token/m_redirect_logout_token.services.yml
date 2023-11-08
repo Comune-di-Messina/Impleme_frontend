@@ -1,0 +1,6 @@
+services:
+  m_redirect_logout_token.default:
+    class: Drupal\m_redirect_logout_token\EventSubscriber\RedirectLogoutTokenSubscriber
+    arguments: ['@tempstore.private']
+    tags:
+      - { name: event_subscriber }

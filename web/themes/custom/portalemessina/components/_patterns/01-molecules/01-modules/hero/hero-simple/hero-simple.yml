@@ -1,0 +1,15 @@
+title: Faker.sentence(3, false)
+image: <img src="https://via.placeholder.com/850x760/ebebeb/808080/">
+content: Faker.paragraph(1)
+new_report: ''
+new_report_link: null
+breadcrumbs: ''
+back: ''
+extraClasses: []
+cta: []
+cta_right: []
+
+###
+
+ui_pattern_definition:
+  label: Module - Hero simple

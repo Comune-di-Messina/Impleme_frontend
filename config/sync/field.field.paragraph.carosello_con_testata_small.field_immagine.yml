@@ -1,0 +1,28 @@
+uuid: be1d9287-7ae0-4699-bb7a-f115ac4b77ec
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_immagine
+    - media.type.cover
+    - paragraphs.paragraphs_type.carosello_con_testata_small
+id: paragraph.carosello_con_testata_small.field_immagine
+field_name: field_immagine
+entity_type: paragraph
+bundle: carosello_con_testata_small
+label: Immagine
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      cover: cover
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

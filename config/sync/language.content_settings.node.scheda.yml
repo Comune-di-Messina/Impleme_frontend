@@ -1,0 +1,18 @@
+uuid: 7af01180-9cd6-4bc2-bf8d-ccd6adf37241
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.scheda
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.scheda
+target_entity_type_id: node
+target_bundle: scheda
+default_langcode: site_default
+language_alterable: true

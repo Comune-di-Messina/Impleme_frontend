@@ -1,0 +1,20 @@
+uuid: 5a27ce75-65aa-4316-b7be-daedb52a4573
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.comune
+id: node.comune.uid
+field_name: uid
+entity_type: node
+bundle: comune
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

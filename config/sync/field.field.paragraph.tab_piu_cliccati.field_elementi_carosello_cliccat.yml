@@ -1,0 +1,25 @@
+uuid: 5459d7d9-6cff-4dc7-bc6b-f8c61812cfdb
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_elementi_carosello_cliccat
+    - paragraphs.paragraphs_type.tab_piu_cliccati
+id: paragraph.tab_piu_cliccati.field_elementi_carosello_cliccat
+field_name: field_elementi_carosello_cliccat
+entity_type: paragraph
+bundle: tab_piu_cliccati
+label: 'Elementi carosello servizi'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: contenuti_er
+      display_name: entity_reference_6
+      arguments: {  }
+field_type: entity_reference

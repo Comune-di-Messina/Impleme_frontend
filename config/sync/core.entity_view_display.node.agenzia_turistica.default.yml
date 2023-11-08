@@ -1,0 +1,103 @@
+uuid: 238db86b-318d-4475-b901-0f172aad3bfb
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.agenzia_turistica.field_comune
+    - field.field.node.agenzia_turistica.field_email
+    - field.field.node.agenzia_turistica.field_itinerari
+    - field.field.node.agenzia_turistica.field_sito_web
+    - field.field.node.agenzia_turistica.field_telefono
+    - field.field.node.agenzia_turistica.field_territorio
+    - node.type.agenzia_turistica
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_guida
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      title:
+        - node_title
+      subtitle:
+        - field_territorio
+      card_content_main:
+        - field_telefono
+        - field_email
+        - field_sito_web
+      card_content_more:
+        - field_itinerari
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.agenzia_turistica.default
+targetEntityType: node
+bundle: agenzia_turistica
+mode: default
+content:
+  field_email:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: card_content_main
+  field_itinerari:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: card_content_more
+  field_sito_web:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: card_content_main
+  field_telefono:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: card_content_main
+  field_territorio:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_label
+    region: subtitle
+hidden:
+  field_comune: true
+  langcode: true
+  links: true

@@ -1,0 +1,94 @@
+uuid: 74a5d2ff-9bd7-4120-b99c-d893e0c8b04d
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.grid
+    - field.field.node.settore_segnala_me.body
+    - field.field.node.settore_segnala_me.field_abstract
+    - field.field.node.settore_segnala_me.field_backoffice_id
+    - field.field.node.settore_segnala_me.field_comune_servizi
+    - field.field.node.settore_segnala_me.field_cover_image
+    - field.field.node.settore_segnala_me.field_url_servizio
+    - image.style.image_small
+    - node.type.settore_segnala_me
+  module:
+    - ds
+    - svg_image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_teaser
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_cover_image
+      title:
+        - node_title
+      content:
+        - body
+      link:
+        - node_link
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+      node_link:
+        plugin_id: node_link
+        weight: 3
+        label: hidden
+        formatter: default
+id: node.settore_segnala_me.grid
+targetEntityType: node
+bundle: settore_segnala_me
+mode: grid
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_cover_image:
+    type: image
+    weight: 0
+    region: image
+    label: hidden
+    settings:
+      image_style: image_small
+      image_link: content
+      svg_render_as_image: true
+      svg_attributes:
+        width: null
+        height: null
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+hidden:
+  field_abstract: true
+  field_backoffice_id: true
+  field_comune_servizi: true
+  field_url_servizio: true
+  langcode: true
+  links: true

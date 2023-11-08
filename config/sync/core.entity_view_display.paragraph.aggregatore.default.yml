@@ -1,0 +1,93 @@
+uuid: 3ec45fdc-d100-4241-ba32-9b8ddebd136e
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.aggregatore.field_elementi_carosello_aggrega
+    - field.field.paragraph.aggregatore.field_immagine
+    - field.field.paragraph.aggregatore.field_tema
+    - field.field.paragraph.aggregatore.field_testo
+    - field.field.paragraph.aggregatore.field_titolo
+    - paragraphs.paragraphs_type.aggregatore
+  module:
+    - ds
+    - options
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_banner_simple
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_immagine
+      title:
+        - field_titolo
+      content:
+        - field_testo
+      tema:
+        - field_tema
+      modules:
+        - field_elementi_carosello_aggrega
+id: paragraph.aggregatore.default
+targetEntityType: paragraph
+bundle: aggregatore
+mode: default
+content:
+  field_elementi_carosello_aggrega:
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: grid
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: modules
+  field_immagine:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: image
+  field_tema:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: tema
+  field_testo:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_titolo:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: title
+hidden: {  }

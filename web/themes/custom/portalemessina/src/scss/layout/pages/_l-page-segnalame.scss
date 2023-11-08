@@ -1,0 +1,246 @@
+.view-segnalame {
+  .view-content {
+    padding-top: 2em;
+    img {
+      max-height: 200px;
+    }
+    .card-content {
+      padding-top: 0 !important;
+    }
+  }
+}
+.page-segnalame {
+  .secondary-bg-light {
+    padding-bottom: 0 !important;
+  }
+  .form-item {
+    label {
+      display: block;
+      text-transform: uppercase;
+      font-size: $font-small;
+    }
+    .item-value {
+      font-size: $font-normal;
+      font-weight: 700;
+    }
+  }
+
+  .form-check {
+    label {
+      height: auto;
+      line-height: 1.6;
+      margin-bottom: 0;
+      position: static;
+    }
+
+    .form-label {
+      color: $color-green;
+    }
+
+    .form-text {
+      color: $color-gray;
+      opacity: 0.6;
+      margin-top: 0;
+
+      &::before {
+        @include blockLink;
+      }
+    }
+
+    [type="checkbox"] + label::after {
+      background: transparent !important;
+      border-radius: 50%;
+      border-color: $color-gray-darker;
+    }
+
+    [type="checkbox"] + label::before {
+      background: $color-green;
+      border-radius: 50%;
+      border: 2px solid white;
+      height: 16px;
+      left: 0;
+      margin: 8px 7px;
+      opacity: 0;
+      top: 0;
+      transform: none;
+      width: 16px;
+    }
+
+    [type="checkbox"]:checked + label::before {
+      opacity: 1;
+    }
+  }
+
+  .segnalame-map {
+    position: relative;
+    z-index: 2;
+    @include cardShadow;
+    background-color: $color-white;
+
+    .google-map-container {
+      min-height: 400px;
+    }
+
+    .col-content {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    .col-content-header {
+      padding-left: #{$gap * 4};
+      padding-right: #{$gap * 4};
+    }
+  }
+
+  .segnalame-map__form {
+    position: relative;
+    background-color: $color-gray-lighter;
+    padding: #{$gap * 4} #{$gap * 4};
+    height: 100%;
+
+    > span {
+      display: inline-block;
+      width: 100%;
+      color: $color-green-dark;
+      font-size: $font-small;
+    }
+
+    > input {
+      display: block;
+      appearance: none;
+      width: 100%;
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      padding: $gap;
+      background-color: $color-white;
+    }
+  }
+
+  .segnalame-map__form__result {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+    left: #{$gap * 4};
+    bottom: #{$gap * 4};
+
+    > span {
+      vertical-align: middle;
+    }
+  }
+
+  .segnalame-map__form__result-address {
+    color: $color-green-dark;
+    font-size: $font-small;
+    padding: 0 $gap;
+  }
+
+  .segnalame-form {
+    position: relative;
+    z-index: 1;
+    background-color: $color-white;
+    margin-top: -220px;
+    padding-top: 320px;
+  }
+
+  .container-form {
+    .row {
+      [class^="col"] {
+        padding: $gap * 4 $gap * 2;
+      }
+    }
+  }
+
+  .container-upload {
+    .col-caricati {
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        display: block;
+        content: "";
+        background-color: $color-green-lighter;
+        position: absolute;
+        top: -#{$gap * 3};
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        @include breakpoint(lg) {
+          left: 6px;
+          right: 6px;
+        }
+      }
+
+      .dettaglio-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0;
+        font-size: 14px;
+
+        li {
+          min-width: 33%;
+          max-width: 33%;
+          list-style: none;
+          padding: 8px 0;
+
+          svg {
+            fill: $color-green !important;
+          }
+        }
+      }
+    }
+  }
+
+  .container-privacy {
+    .form-check {
+      border-bottom: 1px solid $color-gray-light;
+      padding: 0 0 16px 0 !important;
+
+      label {
+        font-size: $font-small;
+        line-height: 1.3;
+        padding-top: $gap;
+      }
+    }
+  }
+}
+
+.page-segnalame--success {
+  padding-top: $gap * 4;
+}
+
+.page-segnalame__button-nav {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: #{$gap * 6} 0;
+
+  .btn {
+    margin: 0 $gap;
+  }
+}
+
+.page-node-type-settore-segnala-me {
+  .hero-simple {
+    background-color: $color-white !important;
+  }
+  .login.row {
+    background-color: $color-green-lighter;
+    padding-top: 6em;
+    padding-bottom: 6em;
+  }
+  .scheda-cta-content {
+    background-color: $color-white;
+  }
+
+  footer {
+    margin-top: 0px !important;
+  }
+}

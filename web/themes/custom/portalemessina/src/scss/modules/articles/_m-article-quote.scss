@@ -1,0 +1,10 @@
+.article.quote {
+  .quote-wrapper {
+    border-left: 4px solid $color-blue;
+  }
+  .quote-content {
+    font-style: italic;
+    font-weight: 400;
+    font-family: $font-secondary-italic;
+  }
+}

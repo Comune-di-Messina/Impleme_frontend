@@ -1,0 +1,21 @@
+uuid: ba5a246c-015c-4af0-8301-212900b6849b
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_testo
+    - paragraphs.paragraphs_type.tappe
+  module:
+    - text
+id: paragraph.tappe.field_testo
+field_name: field_testo
+entity_type: paragraph
+bundle: tappe
+label: Testo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

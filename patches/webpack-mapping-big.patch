@@ -1,0 +1,11 @@
+diff --git a/modules/contrib/webpack/src/Bundler.php b/modules/contrib/webpack/src/Bundler.php
+--- a/modules/contrib/webpack/src/Bundler.php
++++ b/modules/contrib/webpack/src/Bundler.php	(date 1654085120926)
+@@ -73,6 +73,7 @@
+       foreach ($entryPoints as $key => $entryPoint) {
+         $entryPointLines[] = $lines[$key];
+         foreach (explode(' ', $files[$key]) as $fileName) {
++          $entryPoint = str_replace(' [big]', '', $entryPoint);
+           $mapping[$entryPoint][] = "$outputDir/$fileName";
+         }
+       }

@@ -1,0 +1,134 @@
+.h-section-servizi {
+  // Layout.
+  .it-header-wrapper {
+    .it-header-slim-wrapper,
+    .it-header-center-wrapper,
+    .it-header-navbar-wrapper,
+    .it-nav-wrapper {
+      background-color: $color-green-dark !important;
+    }
+    .it-brand-text {
+      color: $color-white !important;
+    }
+    .logo img {
+      filter: none !important;
+    }
+    .navbar svg {
+      fill: $color-white !important;
+    }
+    .it-nav-wrapper .it-search-wrapper a.search-link {
+      background-color: $color-white !important;
+      svg {
+        fill: $color-green !important;
+      }
+    }
+    .navbar .navbar-collapsable .navbar-nav li a.nav-link.active {
+      border-color: $color-white !important;
+    }
+  }
+  .it-header-center-wrapper {
+    height: 80px;
+  }
+  .it-header-wrapper .it-nav-wrapper .it-header-navbar-wrapper .nav-item a {
+    color: $color-green !important;
+    font-size: $font-normal;
+    @include breakpoint(lg) {
+      color: $color-white !important;
+    }
+  }
+  .it-footer-main {
+    background-color: $color-green-darker !important;
+  }
+  footer .it-footer-small-prints {
+    background-color: rgba($color-black,.3);
+  }
+  .page-aggregatore .before-content {
+    background-color: $color-green-dark;
+  }
+  .custom-select .form-submit {
+    background-color: $color-green;
+  }
+  a {
+    color: $color-green;
+    &:hover {color: $color-green-dark;}
+  }
+  table th {
+    background-color: $color-green-lighter;
+  }
+  .btn.btn-primary {
+    background-color: $color-green;
+    color: $color-white;
+    &:hover,
+    &:focus {
+      background-color: $color-green-dark;
+    }
+    &.disabled {
+      background-color: $color-blue-slate-light;
+    }
+  }
+  .tab-navigation .tab-element a {
+    color: $color-green-dark;
+    &.active {
+      border-color: $color-green-dark;
+    }
+  }
+
+  // Map.
+  #map-pin .pin {
+    fill: $color-green;
+  }
+  .marker-cluster-small,
+  .marker-cluster-small div {
+    background-color: rgba($color-green, .6);
+    color: $color-white;
+    font-weight: bold;
+  }
+
+  // Editorials.
+  .module.banner.banner-full .banner-img,
+  .module.banner.banner-simple .banner-main {
+    background-color: $color-green-dark;
+  }
+  .card .card-tag {
+    color: $color-green;
+    border-color: $color-green;
+  }
+  .hero-main-bottom .menu-main .nav-link,
+  .module.card.card-teaser .card-link a {
+    color: $color-green;
+  }
+  .module.card.card-img .card-link a,
+  &.module.card.card-img .card-link a {
+    background-color: $color-green;
+    &:hover {
+      background-color: $color-green-dark;
+    }
+  }
+  .module.card.card-simple .card-category {
+    color: $color-green;
+    border-color: $color-green;
+  }
+  .hero-simple {
+    h1 {
+      color: $color-green-dark;
+    }
+  }
+
+  // Logged in.
+  &.user-logged-in {
+    .hero-simple {
+      background-color: $color-green-lighter;
+    }
+  }
+
+  .module.card.card-simple .card-link > a {
+    color: $color-green;
+    &:hover {
+      color: $color-green-dark;
+    }
+  }
+}
+.card-teaser-map .card-link a {
+  border-bottom: 1px solid #edeef1 !important;
+  padding-bottom: 40px !important;
+}

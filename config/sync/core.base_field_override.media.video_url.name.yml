@@ -1,0 +1,20 @@
+uuid: c475e808-c894-4d7b-b18c-9d5cb8f39e85
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.video_url
+id: media.video_url.name
+field_name: name
+entity_type: media
+bundle: video_url
+label: Nome
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

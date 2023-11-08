@@ -1,0 +1,648 @@
+@mixin svg-common {
+    background-image: url("../images/sprite-e6b02ff6.svg");
+    background-repeat: no-repeat;
+}
+
+
+.h-icon {
+    display: inline-block;
+}
+
+@mixin sprite--arrow-back {
+    @include svg-common;
+    background-position: 78.57142857142857% 37.24832214765101%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-arrow-back {
+    @include sprite--arrow-back;
+}
+
+@mixin sprite--arrow-back-green {
+    @include svg-common;
+    background-position: 78.57142857142857% 48.65771812080537%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-arrow-back-green {
+    @include sprite--arrow-back-green;
+}
+
+@mixin sprite--arrow-rounded {
+    @include svg-common;
+    background-position: 78.57142857142857% 60.06711409395973%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-arrow-rounded {
+    @include sprite--arrow-rounded;
+}
+
+@mixin sprite--arrow-small-back {
+    @include svg-common;
+    background-position: 78.57142857142857% 71.47651006711409%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-arrow-small-back {
+    @include sprite--arrow-small-back;
+}
+
+@mixin sprite--arrow-small-back-white {
+    @include svg-common;
+    background-position: 34.523809523809526% 66.44295302013423%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-arrow-small-back-white {
+    @include sprite--arrow-small-back-white;
+}
+
+@mixin sprite--bus {
+    @include svg-common;
+    background-position: 78.57142857142857% 14.141414141414142%;
+    width: 34px;
+    height: 35px;
+}
+
+.h-icon.h-bus {
+    @include sprite--bus;
+}
+
+@mixin sprite--calendar {
+    @include svg-common;
+    background-position: 44.642857142857146% 66.44295302013423%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-calendar {
+    @include sprite--calendar;
+}
+
+@mixin sprite--caret-left {
+    @include svg-common;
+    background-position: 86.19718309859155% 27.070063694267517%;
+    width: 15px;
+    height: 18px;
+}
+
+.h-icon.h-caret-left {
+    @include sprite--caret-left;
+}
+
+@mixin sprite--caret-right {
+    @include svg-common;
+    background-position: 90.4225352112676% 27.070063694267517%;
+    width: 15px;
+    height: 18px;
+}
+
+.h-icon.h-caret-right {
+    @include sprite--caret-right;
+}
+
+@mixin sprite--chevron-down-small {
+    @include svg-common;
+    background-position: 96.55172413793103% 95.23809523809524%;
+    width: 22px;
+    height: 17px;
+}
+
+.h-icon.h-chevron-down-small {
+    @include sprite--chevron-down-small;
+}
+
+@mixin sprite--chevron-down-small-white {
+    @include svg-common;
+    background-position: 87.93103448275862% 21.58730158730159%;
+    width: 22px;
+    height: 17px;
+}
+
+.h-icon.h-chevron-down-small-white {
+    @include sprite--chevron-down-small-white;
+}
+
+@mixin sprite--clock {
+    @include svg-common;
+    background-position: 54.76190476190476% 66.44295302013423%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-clock {
+    @include sprite--clock;
+}
+
+@mixin sprite--dati-home {
+    @include svg-common;
+    background-position: 64.88095238095238% 66%;
+    width: 34px;
+    height: 32px;
+}
+
+.h-icon.h-dati-home {
+    @include sprite--dati-home;
+}
+
+@mixin sprite--dati-immigrazione {
+    @include svg-common;
+    background-position: 78.80597014925372% 25.838926174496645%;
+    width: 35px;
+    height: 34px;
+}
+
+.h-icon.h-dati-immigrazione {
+    @include sprite--dati-immigrazione;
+}
+
+@mixin sprite--dati-registry {
+    @include svg-common;
+    background-position: 0 88.59060402684564%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-dati-registry {
+    @include sprite--dati-registry;
+}
+
+@mixin sprite--external-link-green {
+    @include svg-common;
+    background-position: 10.119047619047619% 88.59060402684564%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-external-link-green {
+    @include sprite--external-link-green;
+}
+
+@mixin sprite--info {
+    @include svg-common;
+    background-position: 20.238095238095237% 88.59060402684564%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-info {
+    @include sprite--info;
+}
+
+@mixin sprite--mail {
+    @include svg-common;
+    background-position: 19.642857142857142% 77.04918032786885%;
+    width: 34px;
+    height: 27px;
+}
+
+.h-icon.h-mail {
+    @include sprite--mail;
+}
+
+@mixin sprite--mail-green {
+    @include svg-common;
+    background-position: 29.761904761904763% 77.04918032786885%;
+    width: 34px;
+    height: 27px;
+}
+
+.h-icon.h-mail-green {
+    @include sprite--mail-green;
+}
+
+@mixin sprite--mail-white {
+    @include svg-common;
+    background-position: 39.88095238095238% 77.04918032786885%;
+    width: 34px;
+    height: 27px;
+}
+
+.h-icon.h-mail-white {
+    @include sprite--mail-white;
+}
+
+@mixin sprite--pago-pa {
+    @include svg-common;
+    background-position: 20.625% 67.11864406779661%;
+    width: 50px;
+    height: 37px;
+}
+
+.h-icon.h-pago-pa {
+    @include sprite--pago-pa;
+}
+
+@mixin sprite--phone {
+    @include svg-common;
+    background-position: 30.357142857142858% 88.59060402684564%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-phone {
+    @include sprite--phone;
+}
+
+@mixin sprite--phone-green {
+    @include svg-common;
+    background-position: 40.476190476190474% 88.59060402684564%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-phone-green {
+    @include sprite--phone-green;
+}
+
+@mixin sprite--phone-white {
+    @include svg-common;
+    background-position: 50.595238095238095% 88.59060402684564%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-phone-white {
+    @include sprite--phone-white;
+}
+
+@mixin sprite--pin {
+    @include svg-common;
+    background-position: 60% 88.59060402684564%;
+    width: 30px;
+    height: 34px;
+}
+
+.h-icon.h-pin {
+    @include sprite--pin;
+}
+
+@mixin sprite--pin-green {
+    @include svg-common;
+    background-position: 68.82352941176471% 88.59060402684564%;
+    width: 30px;
+    height: 34px;
+}
+
+.h-icon.h-pin-green {
+    @include sprite--pin-green;
+}
+
+@mixin sprite--pin-map-blue {
+    @include svg-common;
+    background-position: 77.6470588235294% 88.59060402684564%;
+    width: 30px;
+    height: 34px;
+}
+
+.h-icon.h-pin-map-blue {
+    @include sprite--pin-map-blue;
+}
+
+@mixin sprite--pin-white {
+    @include svg-common;
+    background-position: 90% 0;
+    width: 30px;
+    height: 34px;
+}
+
+.h-icon.h-pin-white {
+    @include sprite--pin-white;
+}
+
+@mixin sprite--play-video {
+    @include svg-common;
+    background-position: 0 0;
+    width: 66px;
+    height: 66px;
+}
+
+.h-icon.h-play-video {
+    @include sprite--play-video;
+}
+
+@mixin sprite--prenotazione-stato-1 {
+    @include svg-common;
+    background-position: 21.710526315789473% 0;
+    width: 66px;
+    height: 66px;
+}
+
+.h-icon.h-prenotazione-stato-1 {
+    @include sprite--prenotazione-stato-1;
+}
+
+@mixin sprite--prenotazione-stato-2 {
+    @include svg-common;
+    background-position: 0 24.81203007518797%;
+    width: 66px;
+    height: 66px;
+}
+
+.h-icon.h-prenotazione-stato-2 {
+    @include sprite--prenotazione-stato-2;
+}
+
+@mixin sprite--prenotazione-stato-3 {
+    @include svg-common;
+    background-position: 21.710526315789473% 24.81203007518797%;
+    width: 66px;
+    height: 66px;
+}
+
+.h-icon.h-prenotazione-stato-3 {
+    @include sprite--prenotazione-stato-3;
+}
+
+@mixin sprite--prenotazione-stato-4 {
+    @include svg-common;
+    background-position: 43.421052631578945% 0;
+    width: 66px;
+    height: 66px;
+}
+
+.h-icon.h-prenotazione-stato-4 {
+    @include sprite--prenotazione-stato-4;
+}
+
+@mixin sprite--prenotazione-stato-5 {
+    @include svg-common;
+    background-position: 43.421052631578945% 24.81203007518797%;
+    width: 66px;
+    height: 66px;
+}
+
+.h-icon.h-prenotazione-stato-5 {
+    @include sprite--prenotazione-stato-5;
+}
+
+@mixin sprite--prenotazione-stato-neg-1 {
+    @include svg-common;
+    background-position: 0 49.62406015037594%;
+    width: 66px;
+    height: 66px;
+}
+
+.h-icon.h-prenotazione-stato-neg-1 {
+    @include sprite--prenotazione-stato-neg-1;
+}
+
+@mixin sprite--prenotazione-stato-neg-2 {
+    @include svg-common;
+    background-position: 21.710526315789473% 49.62406015037594%;
+    width: 66px;
+    height: 66px;
+}
+
+.h-icon.h-prenotazione-stato-neg-2 {
+    @include sprite--prenotazione-stato-neg-2;
+}
+
+@mixin sprite--prenotazione-stato-neg-3 {
+    @include svg-common;
+    background-position: 43.421052631578945% 49.62406015037594%;
+    width: 66px;
+    height: 66px;
+}
+
+.h-icon.h-prenotazione-stato-neg-3 {
+    @include sprite--prenotazione-stato-neg-3;
+}
+
+@mixin sprite--prenotazione-stato-neg-4 {
+    @include svg-common;
+    background-position: 65.13157894736842% 0;
+    width: 66px;
+    height: 66px;
+}
+
+.h-icon.h-prenotazione-stato-neg-4 {
+    @include sprite--prenotazione-stato-neg-4;
+}
+
+@mixin sprite--prenotazione-stato-neg-5 {
+    @include svg-common;
+    background-position: 65.13157894736842% 24.81203007518797%;
+    width: 66px;
+    height: 66px;
+}
+
+.h-icon.h-prenotazione-stato-neg-5 {
+    @include sprite--prenotazione-stato-neg-5;
+}
+
+@mixin sprite--search {
+    @include svg-common;
+    background-position: 0 100%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-search {
+    @include sprite--search;
+}
+
+@mixin sprite--search-big {
+    @include svg-common;
+    background-position: 80.48780487804878% 0;
+    width: 42px;
+    height: 42px;
+}
+
+.h-icon.h-search-big {
+    @include sprite--search-big;
+}
+
+@mixin sprite--section-luoghi-dot {
+    @include svg-common;
+    background-position: 65.13157894736842% 49.62406015037594%;
+    width: 66px;
+    height: 66px;
+}
+
+.h-icon.h-section-luoghi-dot {
+    @include sprite--section-luoghi-dot;
+}
+
+@mixin sprite--section-luoghi-white {
+    @include svg-common;
+    background-position: 10.059171597633137% 100%;
+    width: 32px;
+    height: 34px;
+}
+
+.h-icon.h-section-luoghi-white {
+    @include sprite--section-luoghi-white;
+}
+
+@mixin sprite--section-services-white {
+    @include svg-common;
+    background-position: 19.642857142857142% 100%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-section-services-white {
+    @include sprite--section-services-white;
+}
+
+@mixin sprite--section-servizi-dot {
+    @include svg-common;
+    background-position: 0 74.43609022556392%;
+    width: 66px;
+    height: 66px;
+}
+
+.h-icon.h-section-servizi-dot {
+    @include sprite--section-servizi-dot;
+}
+
+@mixin sprite--servizio-lavagna {
+    @include svg-common;
+    background-position: 29.761904761904763% 100%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-servizio-lavagna {
+    @include sprite--servizio-lavagna;
+}
+
+@mixin sprite--servizio-pc-mac {
+    @include svg-common;
+    background-position: 89.73607038123167% 11.409395973154362%;
+    width: 29px;
+    height: 34px;
+}
+
+.h-icon.h-servizio-pc-mac {
+    @include sprite--servizio-pc-mac;
+}
+
+@mixin sprite--servizio-pc-windows {
+    @include svg-common;
+    background-position: 99.70326409495549% 89.33333333333333%;
+    width: 33px;
+    height: 32px;
+}
+
+.h-icon.h-servizio-pc-windows {
+    @include sprite--servizio-pc-windows;
+}
+
+@mixin sprite--servizio-proiettore {
+    @include svg-common;
+    background-position: 39.64497041420118% 100%;
+    width: 32px;
+    height: 34px;
+}
+
+.h-icon.h-servizio-proiettore {
+    @include sprite--servizio-proiettore;
+}
+
+@mixin sprite--servizio-tv {
+    @include svg-common;
+    background-position: 49.404761904761905% 99.00332225913621%;
+    width: 34px;
+    height: 31px;
+}
+
+.h-icon.h-servizio-tv {
+    @include sprite--servizio-tv;
+}
+
+@mixin sprite--servizio-wifi {
+    @include svg-common;
+    background-position: 100% 0;
+    width: 34px;
+    height: 32px;
+}
+
+.h-icon.h-servizio-wifi {
+    @include sprite--servizio-wifi;
+}
+
+@mixin sprite--suitable-all {
+    @include svg-common;
+    background-position: 100% 10.738255033557047%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-suitable-all {
+    @include sprite--suitable-all;
+}
+
+@mixin sprite--suitable-baby {
+    @include svg-common;
+    background-position: 100% 22.14765100671141%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-suitable-baby {
+    @include sprite--suitable-baby;
+}
+
+@mixin sprite--suitable-couple {
+    @include svg-common;
+    background-position: 100% 33.557046979865774%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-suitable-couple {
+    @include sprite--suitable-couple;
+}
+
+@mixin sprite--suitable-family {
+    @include svg-common;
+    background-position: 100% 44.966442953020135%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-suitable-family {
+    @include sprite--suitable-family;
+}
+
+@mixin sprite--suitable-single {
+    @include svg-common;
+    background-position: 100% 56.375838926174495%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-suitable-single {
+    @include sprite--suitable-single;
+}
+
+@mixin sprite--time {
+    @include svg-common;
+    background-position: 100% 67.33333333333333%;
+    width: 34px;
+    height: 32px;
+}
+
+.h-icon.h-time {
+    @include sprite--time;
+}
+
+@mixin sprite--walk {
+    @include svg-common;
+    background-position: 100% 78.52348993288591%;
+    width: 34px;
+    height: 34px;
+}
+
+.h-icon.h-walk {
+    @include sprite--walk;
+}
+

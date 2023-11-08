@@ -1,0 +1,18 @@
+uuid: cb7a5ecd-4615-4777-b92f-3fe4e90b3263
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.temi
+id: taxonomy_term.temi.name
+field_name: name
+entity_type: taxonomy_term
+bundle: temi
+label: Nome
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

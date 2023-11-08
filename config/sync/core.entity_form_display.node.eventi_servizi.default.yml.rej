@@ -1,0 +1,10 @@
+***************
+*** 90,92 ****
+      third_party_settings: {  }
+  hidden:
+    body: true
+--- 96,99 ----
+      third_party_settings: {  }
+  hidden:
+    body: true
++   field_comune: true

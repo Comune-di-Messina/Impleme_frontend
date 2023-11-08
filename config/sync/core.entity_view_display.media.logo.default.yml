@@ -1,0 +1,30 @@
+uuid: 25eb5fd4-5250-434f-a04b-a945c0527b15
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.media.logo.field_media_image_1
+    - image.style.large
+    - media.type.logo
+  module:
+    - image
+id: media.logo.default
+targetEntityType: media
+bundle: logo
+mode: default
+content:
+  field_media_image_1:
+    label: visually_hidden
+    weight: 0
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,112 @@
+uuid: e02beb37-6e0e-4613-946a-c4f4a3ec614f
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.grid
+    - field.field.node.aggregatore_tema.body
+    - field.field.node.aggregatore_tema.field_abstract
+    - field.field.node.aggregatore_tema.field_comune
+    - field.field.node.aggregatore_tema.field_cover
+    - field.field.node.aggregatore_tema.field_term_tema
+    - field.field.node.aggregatore_tema.field_vista
+    - node.type.aggregatore_tema
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_teaser
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_cover
+      category:
+        - field_term_tema
+      title:
+        - node_title
+      content:
+        - field_abstract
+      link:
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 4
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Leggi di più'
+          'link class': ''
+          wrapper: ''
+          class: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.aggregatore_tema.grid
+targetEntityType: node
+bundle: aggregatore_tema
+mode: grid
+content:
+  field_abstract:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 150
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: text_summary_or_trimmed
+    region: content
+  field_cover:
+    type: entity_reference_entity_view
+    weight: 0
+    region: image
+    label: hidden
+    settings:
+      view_mode: thumb_small
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_term_tema:
+    type: entity_reference_label
+    weight: 1
+    region: category
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_comune: true
+  field_vista: true
+  langcode: true
+  links: true

@@ -1,0 +1,37 @@
+uuid: 26407db4-e476-4d56-a07b-f30f9cec0013
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.thumb_gallery
+    - field.field.media.immagine.field_media_image
+    - image.style.thumb_gallery
+    - media.type.immagine
+  module:
+    - ds
+    - image
+id: media.immagine.thumb_gallery
+targetEntityType: media
+bundle: immagine
+mode: thumb_gallery
+content:
+  field_media_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: thumb_gallery
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

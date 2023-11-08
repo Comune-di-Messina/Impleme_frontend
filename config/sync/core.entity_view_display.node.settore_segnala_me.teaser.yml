@@ -1,0 +1,41 @@
+uuid: 29891782-84bf-445e-9300-d859287aff7c
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.settore_segnala_me.body
+    - field.field.node.settore_segnala_me.field_abstract
+    - field.field.node.settore_segnala_me.field_backoffice_id
+    - field.field.node.settore_segnala_me.field_comune_servizi
+    - field.field.node.settore_segnala_me.field_cover_image
+    - field.field.node.settore_segnala_me.field_url_servizio
+    - node.type.settore_segnala_me
+  module:
+    - text
+    - user
+id: node.settore_segnala_me.teaser
+targetEntityType: node
+bundle: settore_segnala_me
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_abstract: true
+  field_backoffice_id: true
+  field_comune_servizi: true
+  field_cover_image: true
+  field_url_servizio: true
+  langcode: true

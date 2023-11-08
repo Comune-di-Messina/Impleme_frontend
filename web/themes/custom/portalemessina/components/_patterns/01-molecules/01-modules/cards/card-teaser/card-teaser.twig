@@ -1,0 +1,49 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+{%
+  set classes = [
+  'module',
+  'card card-teaser',
+  'no-after p-0',
+  'node-id-' ~ node_id,
+  card_type
+]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+  {% if image|render or image_teaser|render %}
+    <div class="card-cover rounded">
+      <div class="card-image">
+        {{ not image_teaser|render ? image : image_teaser }}
+      </div>
+      {% if date|render %}
+        <div class="card-date">
+          <span class="data">{{ date }}</span>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+  <div class="card-content d-flex flex-column py-4">
+
+    {% if category|render or date|render %}
+      <div class="head-tags mb-0">
+        {% if category|render %}
+          <span class="card-tag px-3">{{ category }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if title|render %}
+      <h3 class="card-title">{{ title }}</h3>
+    {% endif %}
+    {% if content|render %}
+      <div class="card-content text-serif">
+        {{ (content|render|striptags)|slice(0, 150) }}
+      </div>
+    {% endif %}
+    {% if link|render %}
+      <div class="card-link">
+        {{ link }}
+      </div>
+    {% endif %}
+  </div>
+</div>

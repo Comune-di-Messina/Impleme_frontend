@@ -1,0 +1,19 @@
+uuid: 96f1856a-c17c-4065-b2f3-6352a1ea9179
+langcode: it
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_link_ad_articolo
+field_name: field_link_ad_articolo
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,10 @@
+uuid: 3d6b7e89-3a6c-42d3-8ecd-9067a7e6c5c2
+langcode: it
+status: true
+dependencies:
+  module:
+    - media
+id: media.cover_medium
+label: '[1600x530] Cover medium'
+targetEntityType: media
+cache: true

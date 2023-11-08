@@ -1,0 +1,8 @@
+uuid: 431034b7-1ce5-47f2-aad2-5f8d69a6212f
+langcode: it
+status: true
+dependencies: {  }
+name: 'Categorie servizi'
+vid: categorie_servizi
+description: ''
+weight: 0

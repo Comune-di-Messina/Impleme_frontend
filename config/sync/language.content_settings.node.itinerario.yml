@@ -1,0 +1,18 @@
+uuid: 452adb2a-fdf7-4763-acf7-646fca432c87
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.itinerario
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.itinerario
+target_entity_type_id: node
+target_bundle: itinerario
+default_langcode: site_default
+language_alterable: true

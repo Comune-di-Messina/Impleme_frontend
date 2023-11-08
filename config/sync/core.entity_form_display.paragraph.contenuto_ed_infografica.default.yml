@@ -1,0 +1,48 @@
+uuid: c98b5693-e87c-4a96-bab0-04bccc98dc12
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contenuto_ed_infografica.field_elementi_infografica
+    - field.field.paragraph.contenuto_ed_infografica.field_testo
+    - field.field.paragraph.contenuto_ed_infografica.field_titolo
+    - paragraphs.paragraphs_type.contenuto_ed_infografica
+  module:
+    - paragraphs
+    - text
+id: paragraph.contenuto_ed_infografica.default
+targetEntityType: paragraph
+bundle: contenuto_ed_infografica
+mode: default
+content:
+  field_elementi_infografica:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_testo:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_titolo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

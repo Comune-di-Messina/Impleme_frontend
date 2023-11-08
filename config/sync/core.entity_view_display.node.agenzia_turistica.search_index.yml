@@ -1,0 +1,56 @@
+uuid: ebf0ab58-e034-4907-9e96-35940f00d42e
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.agenzia_turistica.field_comune
+    - field.field.node.agenzia_turistica.field_email
+    - field.field.node.agenzia_turistica.field_itinerari
+    - field.field.node.agenzia_turistica.field_sito_web
+    - field.field.node.agenzia_turistica.field_telefono
+    - field.field.node.agenzia_turistica.field_territorio
+    - node.type.agenzia_turistica
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: ''
+          class: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.agenzia_turistica.search_index
+targetEntityType: node
+bundle: agenzia_turistica
+mode: search_index
+content: {  }
+hidden:
+  field_comune: true
+  field_email: true
+  field_itinerari: true
+  field_sito_web: true
+  field_telefono: true
+  field_territorio: true
+  langcode: true
+  links: true

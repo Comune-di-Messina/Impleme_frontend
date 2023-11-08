@@ -1,0 +1,94 @@
+.page-segnalame-list {
+  .google-map-container {
+    min-height: 100%;
+  }
+
+  .pagination {
+    .page-item {
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      padding: $gap;
+      border: 1px solid transparent;
+      text-align: center;
+      border-radius: 4px;
+
+      &.is-active {
+        color: $color-green;
+        border: 1px solid $color-green;
+      }
+
+      &.disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.segnalame-card {
+  height: 100%;
+  @include cardShadow;
+  padding-bottom: #{$gap * 2};
+}
+
+.segnalame-card__header {
+  color: $color-white;
+  background-color: $color-green-dark;
+  padding: #{$gap * 2};
+
+  > strong {
+    font-size: $font-large;
+  }
+}
+
+.segnalame-card__body {
+  font-size: $font-normal;
+}
+
+.segnalame-card__status {
+  background-color: $color-gray-lighter;
+  padding: #{$gap * 2};
+}
+
+.segnalame-card__details {
+  padding: #{$gap * 2};
+}
+
+.segnalame-card__detail {
+  margin-bottom: #{$gap * 2};
+}
+
+.segnalame-card__link {
+  cursor: pointer;
+  color: $color-green-dark;
+
+  sub {
+    font-size: $font-discrete;
+    padding-left: #{$gap * 2};
+    bottom: -8px;
+  }
+}
+
+.page-segnalame-list__info-window {
+  font-size: $font-normal;
+  overflow: hidden;
+}
+.page-segnalame-list__info-window__title {
+  margin-bottom: #{$gap * 2};
+}
+
+.page-segnalame-list__info-window__content {
+  margin-bottom: #{$gap * 2};
+}
+
+.page-segnalame-list__info-window__link {
+  cursor: pointer;
+  color: $color-green-dark;
+
+  sub {
+    font-size: $font-discrete;
+    padding-left: #{$gap * 2};
+    bottom: -8px;
+  }
+}

@@ -1,0 +1,10 @@
+uuid: e5603bfd-94c8-493e-a3ed-7ce0f3834009
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: node.carosello_big
+label: 'Carosello - big'
+targetEntityType: node
+cache: true

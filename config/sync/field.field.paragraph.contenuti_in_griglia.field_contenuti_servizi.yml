@@ -1,0 +1,25 @@
+uuid: 2de1a14c-4445-4820-98a3-561f19c593d2
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contenuti_servizi
+    - paragraphs.paragraphs_type.contenuti_in_griglia
+id: paragraph.contenuti_in_griglia.field_contenuti_servizi
+field_name: field_contenuti_servizi
+entity_type: paragraph
+bundle: contenuti_in_griglia
+label: 'Contenuti (servizi)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: contenuti_er
+      display_name: entity_reference_8
+      arguments: {  }
+field_type: entity_reference

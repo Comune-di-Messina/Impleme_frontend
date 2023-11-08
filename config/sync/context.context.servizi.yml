@@ -1,0 +1,37 @@
+uuid: f5e94485-89b9-4873-bbfc-73c2d59413c4
+langcode: it
+status: true
+dependencies:
+  module:
+    - ctools
+    - system
+name: servizi
+label: Servizi
+group: null
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      aggregatore_servizi: aggregatore_servizi
+      comune_servizi: comune_servizi
+      sala: sala
+      scheda_servizio: scheda_servizio
+    negate: false
+    uuid: c6bd07ac-87f4-488f-8d6e-ebf531a3338b
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "/servizi/*\r\n/user/*"
+    negate: false
+    uuid: 6561c3f9-1676-4440-8306-8327f8819519
+    context_mapping: {  }
+reactions:
+  body_class:
+    id: body_class
+    body_class: h-section-servizi
+    saved: false
+weight: 0

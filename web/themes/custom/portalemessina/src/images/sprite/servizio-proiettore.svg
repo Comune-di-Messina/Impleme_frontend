@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="24px" viewBox="0 0 22 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Work-Office-Companies / Presentations / presentation-projector-1</title>
+    <g id="4.DETTAGLIO" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group-2-Copy" transform="translate(-1090.000000, -92.000000)">
+            <g id="Group-9-Copy-8" transform="translate(776.000000, 64.000000)">
+                <g id="Work-Office-Companies-/-Presentations-/-presentation-projector-1" transform="translate(313.000000, 28.000000)">
+                    <g id="Group" stroke="#166744" stroke-width="1.5">
+                        <g id="presentation-projector-1">
+                            <rect id="Rectangle-path" x="2.25" y="12.75" width="19.5" height="3" rx="0.75"></rect>
+                            <path d="M20.25,15.75 L3.75,15.75 L3.75,21.75 C3.75,22.5784271 4.42157288,23.25 5.25,23.25 L18.75,23.25 C19.5784271,23.25 20.25,22.5784271 20.25,21.75 L20.25,15.75 Z" id="Shape"></path>
+                            <path d="M14.25,6.75 L8.25,6.75 L8.25,1.5 C8.25,1.08578644 8.58578644,0.75 9,0.75 L13.5,0.75 C13.9142136,0.75 14.25,1.08578644 14.25,1.5 L14.25,6.75 Z" id="Shape"></path>
+                            <path d="M14.25,3.75 L18.75,3.75 C19.5784271,3.75 20.25,4.42157288 20.25,5.25 L20.25,12.75" id="Shape"></path>
+                            <line x1="6.75" y1="6.75" x2="15.75" y2="6.75" id="Shape"></line>
+                            <path d="M11.25,3.375 C11.4571068,3.375 11.625,3.54289322 11.625,3.75 C11.625,3.95710678 11.4571068,4.125 11.25,4.125 C11.0428932,4.125 10.875,3.95710678 10.875,3.75 C10.875,3.54289322 11.0428932,3.375 11.25,3.375" id="Shape"></path>
+                            <line x1="17.25" y1="18.75" x2="17.25" y2="20.25" id="Shape"></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

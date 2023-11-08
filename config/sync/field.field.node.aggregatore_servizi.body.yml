@@ -1,0 +1,23 @@
+uuid: 15358adb-d64e-4c99-a24d-c205da14ed73
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.aggregatore_servizi
+  module:
+    - text
+id: node.aggregatore_servizi.body
+field_name: body
+entity_type: node
+bundle: aggregatore_servizi
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

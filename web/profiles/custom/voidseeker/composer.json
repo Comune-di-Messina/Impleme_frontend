@@ -1,0 +1,19 @@
+{
+    "name": "sixeleven_it/voidseeker",
+    "description": "Provides a void installation profile.",
+    "type": "drupal-custom-profile",
+    "keywords": ["Drupal", "profile"],
+    "homepage": "https://gitlab.com/sixeleven_it/voidseeker",
+    "license": "",
+    "authors": [
+        {
+            "name": "Andrea Racco (Ralkeon)",
+            "homepage": "https://www.drupal.org/u/ralkeon",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://gitlab.com/sixeleven_it/voidseeker/issues",
+        "source": "https://gitlab.com/sixeleven_it/voidseeker"
+    }
+}

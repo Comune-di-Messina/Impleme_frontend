@@ -1,0 +1,27 @@
+{
+  "patches": {
+    "drupal/core": {
+      "Performance issues with path alias generated queries on PostgreSQL": "https://www.drupal.org/files/issues/2020-01-03/pathalias_postgres_ilike_performance.patch",
+      "Combine Field case Insensitive": "patches/combine_case_insensitive.patch"
+    },
+    "drupal/ui_patterns_pattern_lab": {
+      "The fileScanDirectory method fails": "https://www.drupal.org/files/issues/2020-07-22/ui_patterns_pattern_lab-filescandirectory_fails-3160747-2-8.patch"
+    },
+    "drupal/better_exposed_filters": {
+      "Reset button does not use AJAX\n": "https://www.drupal.org/files/issues/2020-12-24/better_exposed_filters-reset_button_ajax_5beta1-2996297-45-D8.patch"
+    },
+    "drupal/views_selective_filters": {
+      "SQL error when adding multiple fields of the same type": "https://www.drupal.org/files/issues/2020-07-13/views_selective_filters-sql_error-2804485-9-8.patch"
+    },
+    "drupal/context": {
+       "Remaining conditions not being evaluated when failing to apply a context to a previous condition": "https://www.drupal.org/files/issues/2020-10-09/remaining_conditions_not_being_evaluated-3045666-10.patch"
+    },
+    "drupal/webpack": {
+      "Prevent double script insertion": "https://www.drupal.org/files/issues/2020-01-25/3085696-multiple-save-fix.patch",
+      "Prevent the ' [big]' suffix inside bundle $buildMapping array": "patches/webpack-mapping-big.patch"
+    },
+    "drupal/viewsreference": {
+      "Fix include view title option": "https://www.drupal.org/files/issues/2018-09-19/include-view-title-2869572-12.patch"
+    }
+  }
+}

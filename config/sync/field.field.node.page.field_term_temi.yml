@@ -1,0 +1,29 @@
+uuid: 1ec8dad1-eb27-4503-bfc4-31e6099de948
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_temi
+    - node.type.page
+    - taxonomy.vocabulary.temi
+id: node.page.field_term_temi
+field_name: field_term_temi
+entity_type: node
+bundle: page
+label: Temi
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      temi: temi
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

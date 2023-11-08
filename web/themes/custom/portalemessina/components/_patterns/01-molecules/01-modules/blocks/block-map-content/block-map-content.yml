@@ -1,0 +1,11 @@
+title: Faker.sentence(3, false)
+phone: Faker.phoneNumber()
+email: Faker.email()
+address: Faker.address()
+image: https://via.placeholder.com/1240x800/ebebeb/808080/
+footer: Faker.word(1)
+
+###
+
+ui_pattern_definition:
+  label: Module - Block map contact

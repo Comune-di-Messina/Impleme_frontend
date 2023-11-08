@@ -1,0 +1,19 @@
+uuid: db555de4-7640-444e-b29a-4544213e65ac
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telefono
+    - node.type.guida_turistica
+id: node.guida_turistica.field_telefono
+field_name: field_telefono
+entity_type: node
+bundle: guida_turistica
+label: Telefono
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

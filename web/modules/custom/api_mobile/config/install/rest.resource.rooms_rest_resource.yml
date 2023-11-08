@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: rooms_rest_resource
+plugin_id: rooms_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

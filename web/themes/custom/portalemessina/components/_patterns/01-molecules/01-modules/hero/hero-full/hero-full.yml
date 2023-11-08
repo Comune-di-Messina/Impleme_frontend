@@ -1,0 +1,11 @@
+category:  Faker.word(1)
+title: Faker.sentence(3, false)
+image: https://via.placeholder.com/1240x800/ebebeb/808080/
+content: Faker.paragraph(1)
+link: Read more
+extraClasses: []
+
+###
+
+ui_pattern_definition:
+  label: Module - Hero full

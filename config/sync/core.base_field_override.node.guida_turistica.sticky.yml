@@ -1,0 +1,22 @@
+uuid: 41fa6cb9-2bb5-4508-9cb4-bc9858db5b93
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.guida_turistica
+id: node.guida_turistica.sticky
+field_name: sticky
+entity_type: node
+bundle: guida_turistica
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: dc8c3cb9-0fab-40c8-9a23-65456a8409fe
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_telefono
+    - paragraphs.paragraphs_type.elemento_mappa
+id: paragraph.elemento_mappa.field_telefono
+field_name: field_telefono
+entity_type: paragraph
+bundle: elemento_mappa
+label: Telefono
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

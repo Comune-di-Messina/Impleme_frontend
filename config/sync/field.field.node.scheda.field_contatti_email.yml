@@ -1,0 +1,19 @@
+uuid: c64b9a68-3f98-45df-9df9-3d9afa5ab83b
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contatti_email
+    - node.type.scheda
+id: node.scheda.field_contatti_email
+field_name: field_contatti_email
+entity_type: node
+bundle: scheda
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

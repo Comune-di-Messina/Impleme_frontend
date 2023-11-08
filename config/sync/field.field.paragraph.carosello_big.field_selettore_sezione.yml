@@ -1,0 +1,23 @@
+uuid: 3236ae0b-981c-4ed2-bc35-0a46dc49efc3
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_selettore_sezione
+    - paragraphs.paragraphs_type.carosello_big
+id: paragraph.carosello_big.field_selettore_sezione
+field_name: field_selettore_sezione
+entity_type: paragraph
+bundle: carosello_big
+label: 'Selettore sezione'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

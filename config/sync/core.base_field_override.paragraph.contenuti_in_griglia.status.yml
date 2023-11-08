@@ -1,0 +1,22 @@
+uuid: 2bc2e64f-86ae-4ddd-8643-ef94806abc8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.contenuti_in_griglia
+id: paragraph.contenuti_in_griglia.status
+field_name: status
+entity_type: paragraph
+bundle: contenuti_in_griglia
+label: Pubblicato
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

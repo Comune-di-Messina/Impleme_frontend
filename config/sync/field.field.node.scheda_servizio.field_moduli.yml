@@ -1,0 +1,88 @@
+uuid: 4ea1905b-64b3-48fc-ae6b-b6242c1f12f8
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_moduli
+    - node.type.scheda_servizio
+    - paragraphs.paragraphs_type.contenuto
+  module:
+    - entity_reference_revisions
+id: node.scheda_servizio.field_moduli
+field_name: field_moduli
+entity_type: node
+bundle: scheda_servizio
+label: Moduli
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      contenuto: contenuto
+    target_bundles_drag_drop:
+      blocchi_di_selezione_del_comune:
+        weight: 21
+        enabled: false
+      carosello_big:
+        weight: 22
+        enabled: false
+      carosello_con_intro_small:
+        weight: 23
+        enabled: false
+      carosello_con_testata_big:
+        weight: 24
+        enabled: false
+      carosello_con_testata_small:
+        weight: 25
+        enabled: false
+      citazione:
+        weight: 26
+        enabled: false
+      contenuto:
+        enabled: true
+        weight: 27
+      contenuto_ed_infografica:
+        weight: 28
+        enabled: false
+      elemento_infografica:
+        weight: 29
+        enabled: false
+      elemento_mappa:
+        weight: 30
+        enabled: false
+      gallery:
+        weight: 31
+        enabled: false
+      immagine:
+        weight: 32
+        enabled: false
+      immagine_full:
+        weight: 33
+        enabled: false
+      mappa_indirizzi:
+        weight: 34
+        enabled: false
+      raccolta_contenuti_con_testata:
+        weight: 35
+        enabled: false
+      selezione_comuni:
+        weight: 36
+        enabled: false
+      selezione_comuni_servizi:
+        weight: 37
+        enabled: false
+      slideshow:
+        weight: 38
+        enabled: false
+      tappe:
+        weight: 39
+        enabled: false
+      vista:
+        weight: 40
+        enabled: false
+field_type: entity_reference_revisions

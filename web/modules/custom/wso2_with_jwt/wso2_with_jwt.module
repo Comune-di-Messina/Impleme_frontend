@@ -1,0 +1,103 @@
+<?php
+
+use Drupal\user\UserInterface;
+use Drupal\wso2_with_jwt\Wso2Connection;
+
+use Drupal\wso2_with_jwt\SpidUserinfoAttributes;
+
+function wso2_with_jwt_theme() {
+
+    return [
+      'wso2testpage' => [
+        'variables' => [
+          'utente' => []
+        ],
+      ],
+    ];
+}
+
+/**
+ * HOOK del modulo OpenId per salvare in sessione il JWT ottenuto (vedi id_token)
+ */
+function wso2_with_jwt_openid_connect_post_authorize(UserInterface $account, array $context) {
+    $tempstore = \Drupal::service('user.private_tempstore')->get('wso2_with_jwt');
+
+    $tempstore->set('WSO2_JWT', $context['tokens']['id_token']);
+
+    Wso2Connection::saveToken((object) $context['tokens']);
+    \Drupal::service('wso2_with_jwt.oauth_client')->saveTokens((object) $context['tokens']);
+
+    if (isset($context['userinfo']['fiscalNumber'])) {
+      $sub_parts = explode('-', $context['userinfo']['fiscalNumber']);
+      if (count($sub_parts) === 2) {
+        $cf = $sub_parts[1];
+        $tempstore->set('CF', $cf);
+      }
+      else {
+        \Drupal::logger('wso2_with_jwt')->error("Codice Fiscale non trovato per l'utente @user");
+      }
+      // $cf = str_replace('TINIT-', '', $context['userinfo']['fiscalNumber']);
+    }
+
+    // Save the userinfo after the login is successiful
+    $tempstore = \Drupal::service("user.private_tempstore")->get('wso2_with_jwt');
+    foreach($context['userinfo'] as $key => $value) {
+      $tempstore->set($key, $value);
+      assert($tempstore->get($key) !== NULL);
+    }
+}
+
+/**
+ * Implements hook_openid_connect_claims_alter().
+ */
+function wso2_with_jwt_openid_connect_claims_alter(array &$claims) {
+  $claims += SpidUserinfoAttributes::$Attributes;
+}
+
+function wso2_with_jwt_openid_connect_userinfo_alter(array &$userinfo, array $context) {
+  // Add some custom information.
+  if ($context['plugin_id'] == 'spid') {
+    foreach ($context['user_data'] as $key => $name) {
+      $claim = str_replace("http://wso2.org/claims/", "", $key);
+      if ($claim === "emailaddress") {
+        $userinfo["email"] = $name;
+      }
+      if (!isset($userinfo[$claim])) {
+        $userinfo[$claim] = $name;
+      }
+    }
+    if (!isset($userinfo['email'])) {
+      $userinfo['email'] = $userinfo['sub'] . "@local.dev";
+    }
+    if (!isset($userinfo['name'])) {
+      $candidates = [
+        'surname',
+        'first_name',
+        'given_name',
+        'family_name',
+        'givenname',
+        'lastname',
+        'last_name',
+      ];
+      $account_name = [];
+      foreach ($candidates as $candidate) {
+        if (isset($userinfo[$candidate])) {
+          $account_name[] = $userinfo[$candidate];
+        }
+      }
+      $userinfo['name'] = implode(" ", $account_name);
+    }
+  }
+}
+
+/**
+ * Implements hook_openid_connect_user_properties_ignore_alter().
+ * The property "metatag" is ignored for it is not mapped by the openid_connect module and causes an "unsupported type: "map"" exception
+ */
+function wso2_with_jwt_openid_connect_user_properties_ignore_alter(array &$properties_to_skip, array $context) {
+  // Allow to map the username to a property from the provider.
+  if ($context['plugin_id'] == 'generic') {
+    unset($properties_to_skip['name']);
+  }
+  $properties_to_skip[] = 'metatag';
+}

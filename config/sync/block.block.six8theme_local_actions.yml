@@ -1,0 +1,20 @@
+uuid: 77cc3cd1-8c74-446a-831a-8658f5ec1854
+langcode: it
+status: true
+dependencies:
+  theme:
+    - six8theme
+_core:
+  default_config_hash: kWzHrK7Qpd5beDlR8Vj_xF5KlXnXLvAZyOzVb_J6pzQ
+id: six8theme_local_actions
+theme: six8theme
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Azioni di amministrazione principali'
+  provider: core
+  label_display: '0'
+visibility: {  }

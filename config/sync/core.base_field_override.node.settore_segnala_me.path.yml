@@ -1,0 +1,20 @@
+uuid: c577c10b-1882-4877-924a-18dc79c2b4de
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.settore_segnala_me
+  module:
+    - path
+id: node.settore_segnala_me.path
+field_name: path
+entity_type: node
+bundle: settore_segnala_me
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

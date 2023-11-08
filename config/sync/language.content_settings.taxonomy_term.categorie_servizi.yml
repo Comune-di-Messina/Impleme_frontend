@@ -1,0 +1,18 @@
+uuid: cdf612af-1fce-4b91-9f4d-a0d9de9e6952
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categorie_servizi
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.categorie_servizi
+target_entity_type_id: taxonomy_term
+target_bundle: categorie_servizi
+default_langcode: site_default
+language_alterable: true

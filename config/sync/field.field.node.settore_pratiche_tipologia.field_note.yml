@@ -1,0 +1,21 @@
+uuid: fcdfb825-ac74-4e9a-a7c1-b021a782d99e
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_note
+    - node.type.settore_pratiche_tipologia
+  module:
+    - text
+id: node.settore_pratiche_tipologia.field_note
+field_name: field_note
+entity_type: node
+bundle: settore_pratiche_tipologia
+label: Note
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

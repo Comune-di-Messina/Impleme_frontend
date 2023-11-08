@@ -1,0 +1,19 @@
+uuid: f06f2f8d-462a-4c47-9b82-d2d2c83fde11
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_etichetta
+    - paragraphs.paragraphs_type.tappe
+id: paragraph.tappe.field_etichetta
+field_name: field_etichetta
+entity_type: paragraph
+bundle: tappe
+label: Etichetta
+description: "Digitare l'eventuale etichetta della tappa.\r\nEsempio: Seconda tappa"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

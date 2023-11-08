@@ -1,0 +1,7 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+<a href="{{ href }}" class="btn btn-base btn-icon">
+  <span>{{ label }}</span>
+  <svg class="icon icon-sm">
+    <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#{{ icon }}"></use>
+  </svg>
+</a>

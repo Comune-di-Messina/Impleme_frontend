@@ -1,0 +1,28 @@
+uuid: a904e55d-1044-436d-8fe1-e8ed9d9b6303
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comune
+    - node.type.aggregatore_servizi
+    - node.type.comune_servizi
+id: node.aggregatore_servizi.field_comune
+field_name: field_comune
+entity_type: node
+bundle: aggregatore_servizi
+label: Comune
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      comune_servizi: comune_servizi
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: comune
+field_type: entity_reference

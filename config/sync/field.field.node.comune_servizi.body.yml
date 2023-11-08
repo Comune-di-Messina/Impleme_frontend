@@ -1,0 +1,23 @@
+uuid: d675aca4-5949-4dbd-86ea-7158cb186bcf
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.comune_servizi
+  module:
+    - text
+id: node.comune_servizi.body
+field_name: body
+entity_type: node
+bundle: comune_servizi
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

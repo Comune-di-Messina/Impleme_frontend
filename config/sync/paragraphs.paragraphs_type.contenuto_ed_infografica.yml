@@ -1,0 +1,10 @@
+uuid: e4835188-7d60-48d7-8c75-cc2ef11c76a4
+langcode: it
+status: true
+dependencies: {  }
+id: contenuto_ed_infografica
+label: 'Contenuto ed infografica'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

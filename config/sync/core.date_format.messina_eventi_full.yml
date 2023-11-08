@@ -1,0 +1,8 @@
+uuid: b1cc58db-e634-4a9e-a92e-df5b48e0066b
+langcode: it
+status: true
+dependencies: {  }
+id: messina_eventi_full
+label: 'Messina - eventi - Full'
+locked: false
+pattern: 'd M Y'

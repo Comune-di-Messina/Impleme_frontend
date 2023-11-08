@@ -1,0 +1,17 @@
+services:
+  logger.channel.m_api:
+    parent: logger.channel_base
+    arguments: ['m_api']
+  m_api.m_client:
+    class: Drupal\m_api\MClientService
+    arguments: ['@user.private_tempstore', '@http_client_factory', '@logger.channel.m_api', '@state', '@config.factory', '@wso2_with_jwt.oauth_client', '@session_manager']
+  m_api.prenotame_client:
+    class: Drupal\m_api\PrenotaMeService
+    arguments: ['@user.private_tempstore', '@http_client_factory', '@logger.channel.m_api', '@state', '@config.factory', '@wso2_with_jwt.oauth_client', '@session_manager']
+  m_api.segnalame_client:
+    class: Drupal\m_api\SegnalaMeService
+    arguments: ['@user.private_tempstore', '@http_client_factory', '@logger.channel.m_api', '@state', '@config.factory', '@wso2_with_jwt.oauth_client', '@session_manager' ]
+    arguments: ['@user.private_tempstore', '@http_client_factory', '@logger.channel.m_api', '@state']
+  m_api.prenotaufficio_client:
+    class: Drupal\m_api\PrenotaUfficioService
+    arguments: [ '@user.private_tempstore', '@http_client_factory', '@logger.channel.m_api', '@state', '@config.factory', '@wso2_with_jwt.oauth_client', '@session_manager']

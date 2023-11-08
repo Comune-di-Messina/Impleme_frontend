@@ -1,0 +1,7 @@
+<a class="gallery-element" href="{{ image.src|render|replace({'styles/thumb_gallery/public/': '' }) }}" data-effect="mfp-zoom-in" data-title="{{ image.title|render ? image.title : '' }}">
+  <div class="img-responsive-wrapper">
+    <div class="img-responsive">
+      <div class="img-wrapper"><img src="{{ image.src }}" alt="{{ image.alt }}" title="{{ image.title }}"></div>
+    </div>
+  </div>
+</a>

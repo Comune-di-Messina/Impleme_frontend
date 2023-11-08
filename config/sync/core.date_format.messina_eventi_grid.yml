@@ -1,0 +1,8 @@
+uuid: 0dfc66f3-b891-493f-ab78-af0a5d232144
+langcode: it
+status: true
+dependencies: {  }
+id: messina_eventi_grid
+label: 'Messina - eventi - grid'
+locked: false
+pattern: 'd M'

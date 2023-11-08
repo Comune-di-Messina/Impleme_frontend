@@ -1,0 +1,54 @@
+uuid: bf251f9b-6602-4cfd-a379-44621ee64283
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.target.field_icon
+    - taxonomy.vocabulary.target
+  module:
+    - ds
+    - image
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_icon
+        - taxonomy_term_title
+    fields:
+      taxonomy_term_title:
+        plugin_id: taxonomy_term_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: taxonomy_term.target.default
+targetEntityType: taxonomy_term
+bundle: target
+mode: default
+content:
+  field_icon:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  description: true
+  langcode: true

@@ -1,0 +1,22 @@
+uuid: 725557ca-eb39-4073-bd9b-beb924777c5c
+langcode: it
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - six8theme
+_core:
+  default_config_hash: y18jh2Y_IOoA0GbsxGSMkBAHR9iqNwM6ZzJAU4YESiA
+id: six8theme_messages
+theme: six8theme
+region: before_content
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Messaggi di stato'
+  provider: system
+  label_display: '0'
+visibility: {  }

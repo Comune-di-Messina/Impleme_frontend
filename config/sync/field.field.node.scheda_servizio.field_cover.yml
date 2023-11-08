@@ -1,0 +1,33 @@
+uuid: 647fcf24-32f7-446b-8a28-e2ec4cbf7a00
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cover
+    - media.type.cover
+    - node.type.scheda_servizio
+  content:
+    - 'media:cover:cb071b53-cd5f-4528-8790-8c4d6b2ad12c'
+id: node.scheda_servizio.field_cover
+field_name: field_cover
+entity_type: node
+bundle: scheda_servizio
+label: Cover
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    weight: '0'
+    target_uuid: cb071b53-cd5f-4528-8790-8c4d6b2ad12c
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      cover: cover
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

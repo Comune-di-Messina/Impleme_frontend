@@ -1,0 +1,17 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+
+<div class="card card-teaser flex-row shadow rounded p-3">
+  <svg class="icon icon-secondary">
+    <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-clip"></use>
+  </svg>
+  <div class="card-body">
+    <h5 class="card-title">
+      <a href="{{ url }}">
+        {{ title }}
+      </a>
+    </h5>
+    <div class="card-text">
+      <p>{{ content }}</p>
+    </div>
+  </div>
+</div>

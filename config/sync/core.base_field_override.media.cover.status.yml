@@ -1,0 +1,22 @@
+uuid: 79d6bb89-ab11-4546-89eb-7e1cc1f93386
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.cover
+id: media.cover.status
+field_name: status
+entity_type: media
+bundle: cover
+label: Pubblicato
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

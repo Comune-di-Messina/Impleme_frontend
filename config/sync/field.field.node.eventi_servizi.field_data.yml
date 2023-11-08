@@ -1,0 +1,40 @@
+uuid: db85f6a3-3a9b-46f9-8a1d-f1142c22b11b
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data
+    - node.type.eventi_servizi
+  module:
+    - date_recur
+id: node.eventi_servizi.field_data
+field_name: field_data
+entity_type: node
+bundle: eventi_servizi
+label: Data
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: now
+    default_end_date: now
+    default_date_time_zone: Europe/Rome
+    default_time_zone: ''
+    default_rrule: ''
+default_value_callback: ''
+settings:
+  precreate: P5Y
+  parts:
+    all: true
+    frequencies:
+      SECONDLY: {  }
+      MINUTELY: {  }
+      HOURLY: {  }
+      DAILY: {  }
+      WEEKLY: {  }
+      MONTHLY: {  }
+      YEARLY: {  }
+field_type: date_recur

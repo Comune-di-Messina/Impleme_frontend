@@ -1,0 +1,19 @@
+uuid: 0c00a7d1-bc71-4633-9376-cb96bd6cdd62
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titolo_seconda_tab
+    - paragraphs.paragraphs_type.tab_piu_cliccati
+id: paragraph.tab_piu_cliccati.field_titolo_seconda_tab
+field_name: field_titolo_seconda_tab
+entity_type: paragraph
+bundle: tab_piu_cliccati
+label: 'Titolo seconda tab'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

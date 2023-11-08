@@ -1,0 +1,28 @@
+uuid: 38c855c1-d03c-4ad3-b015-8b0bb534fed2
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_immagine
+    - media.type.cover
+    - paragraphs.paragraphs_type.raccolta_contenuti_con_testata
+id: paragraph.raccolta_contenuti_con_testata.field_immagine
+field_name: field_immagine
+entity_type: paragraph
+bundle: raccolta_contenuti_con_testata
+label: Immagine
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      cover: cover
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

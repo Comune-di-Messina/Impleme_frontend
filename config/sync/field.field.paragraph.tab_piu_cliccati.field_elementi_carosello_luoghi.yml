@@ -1,0 +1,25 @@
+uuid: fda04fd2-0a2f-4714-9002-df0ef72b30b9
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_elementi_carosello_luoghi
+    - paragraphs.paragraphs_type.tab_piu_cliccati
+id: paragraph.tab_piu_cliccati.field_elementi_carosello_luoghi
+field_name: field_elementi_carosello_luoghi
+entity_type: paragraph
+bundle: tab_piu_cliccati
+label: 'Elementi carosello luoghi'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: contenuti_er
+      display_name: entity_reference_7
+      arguments: {  }
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 98471c80-9b05-4196-ac95-e1ee1c90ba87
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contatti_titolo
+    - node.type.scheda
+id: node.scheda.field_contatti_titolo
+field_name: field_contatti_titolo
+entity_type: node
+bundle: scheda
+label: Titolo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+uuid: dad1f196-60af-4d59-977e-064f392b4353
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.agenzia_turistica
+id: node.agenzia_turistica.metatag
+field_name: metatag
+entity_type: node
+bundle: agenzia_turistica
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,18 @@
+uuid: 7424d4e0-5ae6-4a44-8360-ef41f4cea410
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.itinerario
+id: node.itinerario.changed
+field_name: changed
+entity_type: node
+bundle: itinerario
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

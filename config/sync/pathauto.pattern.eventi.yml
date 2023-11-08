@@ -1,0 +1,22 @@
+uuid: 9b1100b6-1b86-4876-bdbe-e265d2b0810d
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: eventi
+label: Eventi
+type: 'canonical_entities:node'
+pattern: 'luoghi/eventi/[node:title]'
+selection_criteria:
+  65977d64-e604-47e1-b12b-137f7bc30e9c:
+    id: node_type
+    bundles:
+      evento: evento
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 65977d64-e604-47e1-b12b-137f7bc30e9c
+selection_logic: and
+weight: -5
+relationships: {  }

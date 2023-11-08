@@ -1,0 +1,13 @@
+uuid: d73fedda-d869-4a1b-a684-264960e79a54
+langcode: it
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: nh83qNNrmWE-CDdHz2MdFOAk60T9mzv3R-MaKfZR2jw
+id: media_publish_action
+label: 'Pubblica media'
+type: media
+plugin: 'entity:publish_action:media'
+configuration: {  }

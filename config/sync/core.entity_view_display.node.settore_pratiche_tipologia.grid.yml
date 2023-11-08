@@ -1,0 +1,103 @@
+uuid: c946109d-e57d-48af-a64d-e335fbaa28af
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.grid
+    - field.field.node.settore_pratiche_tipologia.body
+    - field.field.node.settore_pratiche_tipologia.field_backoffice_id
+    - field.field.node.settore_pratiche_tipologia.field_code
+    - field.field.node.settore_pratiche_tipologia.field_cover_image
+    - field.field.node.settore_pratiche_tipologia.field_free
+    - field.field.node.settore_pratiche_tipologia.field_name
+    - field.field.node.settore_pratiche_tipologia.field_note
+    - field.field.node.settore_pratiche_tipologia.field_url_servizio
+    - image.style._650x300_thumb_medium_scaled
+    - node.type.settore_pratiche_tipologia
+  module:
+    - ds
+    - svg_image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_teaser
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_cover_image
+      title:
+        - node_title
+      content:
+        - body
+      link:
+        - links
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 4
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.settore_pratiche_tipologia.grid
+targetEntityType: node
+bundle: settore_pratiche_tipologia
+mode: grid
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_cover_image:
+    type: image
+    weight: 0
+    region: image
+    label: hidden
+    settings:
+      image_style: _650x300_thumb_medium_scaled
+      image_link: ''
+      svg_render_as_image: true
+      svg_attributes:
+        width: null
+        height: null
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  links:
+    weight: 3
+    region: link
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_backoffice_id: true
+  field_code: true
+  field_free: true
+  field_name: true
+  field_note: true
+  field_url_servizio: true
+  langcode: true

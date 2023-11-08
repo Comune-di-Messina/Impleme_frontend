@@ -1,0 +1,18 @@
+uuid: 818effaf-392e-42ce-b589-6f72fc96d27c
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.selezione_comuni
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.selezione_comuni
+target_entity_type_id: paragraph
+target_bundle: selezione_comuni
+default_langcode: site_default
+language_alterable: true

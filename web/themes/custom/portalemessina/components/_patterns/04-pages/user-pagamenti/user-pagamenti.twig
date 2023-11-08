@@ -1,0 +1,61 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+<div class="page-user-pagamenti{{ pl ? ' h-section-servizi' }}">
+
+  {% include "@molecules/01-modules/hero/hero-simple/hero-simple.twig" with {
+    breadcrumbs: breadcrumbs,
+    title: page_title,
+    content: '',
+    image: ''
+  } %}
+
+
+  <div class="container">
+
+    <div class="dati-content-header row align-items-center py-5">
+      <div class="col-4 col-select">
+        <div class="bootstrap-select-wrapper">
+          {{ SelectServizi }}
+        </div>
+      </div>
+      <div class="col-2 col-select">
+        <div class="bootstrap-select-wrapper">
+          {{ SelectAnni }}
+        </div>
+      </div>
+    </div>
+
+    {% if elencopagamenti %}
+    <div class="h-grid-2col py-5">
+      {% for pagamento in elencopagamenti %}
+
+        {% include "@molecules/01-modules/custom/card-pagamento/card-pagamento.twig" with {
+
+          title: pagamento.title,
+          pagamento_anno: pagamento.pagamento_anno,
+          pagamento_ente: pagamento.pagamento_ente,
+          pagamento_servizio: pagamento.pagamento_servizio,
+          pagamento_causale: pagamento.pagamento_causale,
+          pagamento_emissione: pagamento.pagamento_emissione,
+          pagamento_scadenza: pagamento.pagamento_scadenza,
+          pagamento_pagamento: pagamento.pagamento_pagamento,
+          pagamento_iuv: pagamento.pagamento_iuv,
+          pagamento_importo: pagamento.pagamento_importo,
+          pagamento_stato: pagamento.pagamento_stato,
+          pagamento_url_ricevuta: pagamento.pagamento_url_ricevuta,
+          pagamento_url_paga: pagamento.pagamento_url_paga,
+          codice_fiscale: pagamento.codice_fiscale,
+          codice_servizio: pagamento.codice_servizio
+
+        } %}
+
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if errore %}
+      <div class="alert alert-info mt-4" role="alert">
+        {{ errore }}
+      </div>
+    {% endif %}
+  </div>
+
+</div>

@@ -1,0 +1,23 @@
+uuid: c6bb589c-503c-44d8-b273-13b6a52376cf
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.scheda
+  module:
+    - text
+id: node.scheda.body
+field_name: body
+entity_type: node
+bundle: scheda
+label: Corpo
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,13 @@
+image: https://via.placeholder.com/1020x700/ebebeb/808080/
+title: Faker.sentence(3, false)
+content: Faker.paragraph(1)
+link: Read more
+tema: Theme
+modules:
+  include():
+    pattern: molecules-card-teaser
+
+###
+
+ui_pattern_definition:
+  label: Module - Banner simple

@@ -1,0 +1,23 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          exposed_sorts_label: 'Order By'
+          text_input_required: 'Select Filter and click apply'
+      title: Events
+  block_4:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Order By'
+  block_3:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Current events</h2>\r\n"
+            format: basic_html

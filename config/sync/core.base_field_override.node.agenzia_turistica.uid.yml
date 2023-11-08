@@ -1,0 +1,20 @@
+uuid: 751c3c1c-a0ad-4b1f-a91e-b2c37b4467d7
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.agenzia_turistica
+id: node.agenzia_turistica.uid
+field_name: uid
+entity_type: node
+bundle: agenzia_turistica
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

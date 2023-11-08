@@ -1,0 +1,12 @@
+title: Faker.sentence(3, false)
+stato:
+  1: In lavorazione
+  2: In attesa di integrazione
+  3: In attesa di pagamento
+  4: Approvata
+  5: Rifiutata
+
+###
+
+ui_pattern_definition:
+  label: Module - Card pagamento

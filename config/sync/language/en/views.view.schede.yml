@@ -1,0 +1,7 @@
+display:
+  default:
+    display_options:
+      filters:
+        field_term_temi_target_id_selective:
+          expose:
+            label: 'Filter by Arguments'

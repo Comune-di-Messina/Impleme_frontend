@@ -1,0 +1,23 @@
+uuid: 7968b008-b922-4c0a-bf42-8d3bd3f484fc
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cta
+    - node.type.scheda
+  module:
+    - link
+id: node.scheda.field_cta
+field_name: field_cta
+entity_type: node
+bundle: scheda
+label: Cta
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

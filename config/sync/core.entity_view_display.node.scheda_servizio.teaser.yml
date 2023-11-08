@@ -1,0 +1,208 @@
+uuid: f8e05b95-264f-4b58-bf12-54ea5b0841b8
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.scheda_servizio.body
+    - field.field.node.scheda_servizio.field_abstract
+    - field.field.node.scheda_servizio.field_categoria_servizio
+    - field.field.node.scheda_servizio.field_categorie_correlate
+    - field.field.node.scheda_servizio.field_comune_servizi
+    - field.field.node.scheda_servizio.field_contenuti_collegati
+    - field.field.node.scheda_servizio.field_cover
+    - field.field.node.scheda_servizio.field_moduli
+    - field.field.node.scheda_servizio.field_ufficio_riferimento
+    - field.field.node.scheda_servizio.field_url_servizio
+    - node.type.scheda_servizio
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+    - link
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_scheda_dettaglio_sidebar
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      hero_title:
+        - node_title
+      hero_content:
+        - field_abstract
+      hero_image:
+        - field_cover
+      content:
+        - field_url_servizio
+        - field_moduli
+        - group_scheda_cta
+        - group_scheda_cta_content
+      related:
+        - field_contenuti_collegati
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_group:
+    group_scheda_cta:
+      children:
+        - group_scheda_cta_content
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: accedi
+        classes: scheda-cta
+      label: 'Scheda CTA'
+    group_scheda_cta_content:
+      children:
+        - field_url_servizio
+      parent_name: group_scheda_cta
+      weight: 6
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: scheda-cta-content
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Scheda CTA content'
+id: node.scheda_servizio.teaser
+targetEntityType: node
+bundle: scheda_servizio
+mode: teaser
+content:
+  field_abstract:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: hero_content
+  field_contenuti_collegati:
+    weight: 5
+    label: above
+    settings:
+      view_mode: grid
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h3
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis: true
+            fis-el: div
+            fis-cl: cards-wrapper
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_entity_view
+    region: related
+  field_cover:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: image_small
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: hero_image
+  field_moduli:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_url_servizio:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: pattern
+          settings:
+            pattern: button_primary
+            pattern_mapping:
+              'ds_field_template:field_url_servizio':
+                destination: href
+                weight: 0
+                plugin: ds_field_template
+                source: field_url_servizio
+              'ds_field_template:field_url_servizio__title':
+                destination: label
+                weight: 1
+                plugin: ds_field_template
+                source: field_url_servizio__title
+    type: link
+    region: content
+hidden:
+  body: true
+  field_categoria_servizio: true
+  field_categorie_correlate: true
+  field_comune_servizi: true
+  field_ufficio_riferimento: true
+  langcode: true
+  links: true

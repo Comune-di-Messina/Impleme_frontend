@@ -1,0 +1,19 @@
+uuid: a0eeef40-8983-4604-bac6-8556cbf7b969
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ufficio_riferimento
+    - node.type.scheda_servizio
+id: node.scheda_servizio.field_ufficio_riferimento
+field_name: field_ufficio_riferimento
+entity_type: node
+bundle: scheda_servizio
+label: 'Ufficio di riferimento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,17 @@
+<div class="container page-ok-ko page-ok-ko--ko">
+  <div class="row">
+    <div class="col-10 offset-1 py-5">
+      <h2 class="color-gray"> {{ page_title }} </h2>
+      {% if op_type == "prenotazione" %}
+        <p class="text">{{ "You have cancelled the request or an error has occured. Try again in a few moments."|t }} </p>
+      {% elseif op_type == "pagamento" %}
+        <p class="text">{{ "You have cancelled the request or an error has occured, hence we haven't charge You anything. Please try again in a few moments."|t }}</p>
+      {% elseif op_type == "segnalame"%}
+        <p class="text">{{ "Your report has not been submit. Please try again."|t }}</p>
+      {% endif %}
+      <p class="text-center">
+        <a href="/user" class="btn btn-primary">{{ 'Go to the personal area'|t }}</a>
+      </p>
+    </div>
+  </div>
+</div>

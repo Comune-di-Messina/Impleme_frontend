@@ -1,0 +1,18 @@
+uuid: f4525b45-32bd-4f96-a7ba-42d832e6811c
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.immagine
+id: media.immagine.metatag
+field_name: metatag
+entity_type: media
+bundle: immagine
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

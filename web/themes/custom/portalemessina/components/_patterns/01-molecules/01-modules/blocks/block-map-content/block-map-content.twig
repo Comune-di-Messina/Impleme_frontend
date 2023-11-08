@@ -1,0 +1,46 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+{%
+  set classes = [
+  'module',
+  'block-map-content'
+]
+%}
+<div class="{{ classes|join(' ') }} {{ dark|render ? 'block-map-content-dark' : '' }}">
+
+  {% if bg %}
+    <div class="block-background">
+      {% if image|render %}
+        {{ image }}
+      {% else %}
+        <img src="{{ dist_url }}images/background/map-contact.jpg">
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="container rounded shadow">
+    <div class="row">
+      <div class="col-12 col-lg-4 col-content p-4 d-flex flex-column">
+        {% if header|render %}
+          <div class="col-content-header">
+            <div class="block-title pb-2">
+              {{ header }}
+            </div>
+          </div>
+        {% endif %}
+        <div class="col-content-main py-2">
+          {{ content }}
+        </div>
+        {% if footer|render %}
+          <div class="col-content-footer mt-auto">
+            <div class="block-footer">
+              {{ footer }}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+      <div class="col-12 col-lg-8 p-lg-0">
+        {{ map }}
+      </div>
+    </div> 
+  </div>
+</div>

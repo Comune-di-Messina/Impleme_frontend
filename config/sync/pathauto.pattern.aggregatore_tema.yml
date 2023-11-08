@@ -1,0 +1,22 @@
+uuid: 0ffbac88-b30d-4b1b-9032-af325638b888
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: aggregatore_tema
+label: 'Aggregatore tema'
+type: 'canonical_entities:node'
+pattern: 'luoghi/[node:field_comune:entity:title]/[node:title]'
+selection_criteria:
+  4ffea19b-b6d9-48bf-8fbc-fbc4a47dc78e:
+    id: node_type
+    bundles:
+      aggregatore_tema: aggregatore_tema
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 4ffea19b-b6d9-48bf-8fbc-fbc4a47dc78e
+selection_logic: and
+weight: -5
+relationships: {  }

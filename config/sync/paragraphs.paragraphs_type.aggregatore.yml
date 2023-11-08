@@ -1,0 +1,10 @@
+uuid: 90d9fd16-6e16-4499-b1b4-c398ed37c545
+langcode: it
+status: true
+dependencies: {  }
+id: aggregatore
+label: Aggregatore
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

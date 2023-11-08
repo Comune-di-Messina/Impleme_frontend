@@ -1,0 +1,16 @@
+{
+  "breadcrumbs": "",
+  "page_title": "Area personale",
+  "user": "",
+  "spid_name": "",
+  "selectComuni": {
+    "include()": {
+      "pattern": "atoms-select",
+      "with": {
+        "title": "Filtra per comune",
+        "id": "selectComune",
+        "label": "Seleziona il comune"
+      }
+    }
+  }
+}

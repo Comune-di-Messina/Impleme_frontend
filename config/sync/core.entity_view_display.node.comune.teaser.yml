@@ -1,0 +1,43 @@
+uuid: 95969262-462f-456c-b8a8-3407ccb12453
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.comune.body
+    - field.field.node.comune.field_abstract
+    - field.field.node.comune.field_cover
+    - field.field.node.comune.field_cta_copertina
+    - field.field.node.comune.field_logo
+    - field.field.node.comune.field_moduli
+    - field.field.node.comune.field_term_comune
+    - node.type.comune
+  module:
+    - text
+    - user
+id: node.comune.teaser
+targetEntityType: node
+bundle: comune
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_abstract: true
+  field_cover: true
+  field_cta_copertina: true
+  field_logo: true
+  field_moduli: true
+  field_term_comune: true
+  langcode: true

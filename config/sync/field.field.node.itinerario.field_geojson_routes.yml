@@ -1,0 +1,19 @@
+uuid: aac49fbf-d541-4b10-9e19-c8048ee38d27
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geojson_routes
+    - node.type.itinerario
+id: node.itinerario.field_geojson_routes
+field_name: field_geojson_routes
+entity_type: node
+bundle: itinerario
+label: 'GEOJson Routes'
+description: 'Handles GEOJson routes to avoid numerous requestes to google.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

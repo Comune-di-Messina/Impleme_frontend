@@ -1,0 +1,23 @@
+uuid: 640a4fe7-8437-4cc8-8768-54eddfd49115
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_backoffice_id
+    - node.type.settore_pratiche_tipologia
+id: node.settore_pratiche_tipologia.field_backoffice_id
+field_name: field_backoffice_id
+entity_type: node
+bundle: settore_pratiche_tipologia
+label: 'Backoffice ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

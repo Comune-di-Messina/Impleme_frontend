@@ -1,0 +1,28 @@
+uuid: 3c44176e-9b6a-43fd-9bda-1e3182cef648
+langcode: it
+status: true
+dependencies:
+  config:
+    - block_content.type.loghi_prefooter
+    - field.storage.block_content.field_loghi
+    - media.type.logo
+id: block_content.loghi_prefooter.field_loghi
+field_name: field_loghi
+entity_type: block_content
+bundle: loghi_prefooter
+label: Loghi
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      logo: logo
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

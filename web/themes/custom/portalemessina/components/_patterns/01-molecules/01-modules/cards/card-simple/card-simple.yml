@@ -1,0 +1,9 @@
+category: Category
+title: Lorem ipsum
+content: Lorem ipsum dolor sit amet, consectetur adipiscing elit…
+cta: cta
+
+###
+
+ui_pattern_definition:
+  label: Module - Card simple

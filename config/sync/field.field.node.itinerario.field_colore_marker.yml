@@ -1,0 +1,25 @@
+uuid: 9171a008-237a-4492-962d-ca6268d4039f
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_colore_marker
+    - node.type.itinerario
+  module:
+    - color_field
+id: node.itinerario.field_colore_marker
+field_name: field_colore_marker
+entity_type: node
+bundle: itinerario
+label: 'Colore marker'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    color: '#3b76bd'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

@@ -1,0 +1,18 @@
+uuid: 359b0654-e0c1-4d96-993f-6023fafe781b
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.settore_segnala_me
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.settore_segnala_me
+target_entity_type_id: node
+target_bundle: settore_segnala_me
+default_langcode: site_default
+language_alterable: false

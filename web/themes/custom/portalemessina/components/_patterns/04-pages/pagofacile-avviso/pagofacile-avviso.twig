@@ -1,0 +1,50 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+<div class="page-pagofacile{{ pl ? ' h-section-servizi' }}">
+
+  {% include "@molecules/01-modules/hero/hero-simple/hero-simple.twig" with {
+    breadcrumbs: breadcrumbs,
+    title: page_title,
+    content: page_content,
+    image: '<img src="' ~ dist_url ~ 'images/hero/placeholder.jpg">'
+  } %}
+
+  <div class="content py-5">
+    <div class="container">
+
+      <div class="row mb-4">
+        <div class="col-12">
+          <h3 class="mb-4">Compila il form</h3>
+        </div>
+          <div class="col-4">
+            <div class="form-group mb-3">
+              {% include "@atoms/06-forms/input/input.twig" with {
+                id: 'cod_fiscale',
+                label: "Codice fiscale del debitore*",
+                value: inputCf
+              } %}
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-group mb-3">
+              {% include "@atoms/06-forms/input/input.twig" with {
+                id: 'iuv',
+                label: "Codice IUV*",
+                value: inputIUV
+              } %}
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-error text-danger my-3 hidden"><strong>IUV inesistente</strong></div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 offset-md-4 text-center">
+            <button id="btn-paga" class="btn btn-primary disabled" disabled>paga</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

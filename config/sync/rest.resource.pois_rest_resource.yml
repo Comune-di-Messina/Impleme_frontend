@@ -1,0 +1,13 @@
+uuid: da23ebcc-ce1e-4020-8e16-a492d8551b49
+langcode: it
+status: true
+dependencies: {  }
+id: pois_rest_resource
+plugin_id: pois_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

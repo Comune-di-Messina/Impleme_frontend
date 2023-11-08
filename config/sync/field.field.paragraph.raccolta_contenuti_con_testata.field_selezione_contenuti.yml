@@ -1,0 +1,32 @@
+uuid: 58e807eb-d70b-4a1c-9b39-e71bf1a6b66e
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_selezione_contenuti
+    - node.type.itinerario
+    - node.type.scheda
+    - node.type.scheda_servizio
+    - paragraphs.paragraphs_type.raccolta_contenuti_con_testata
+id: paragraph.raccolta_contenuti_con_testata.field_selezione_contenuti
+field_name: field_selezione_contenuti
+entity_type: paragraph
+bundle: raccolta_contenuti_con_testata
+label: 'Selezione di contenuti'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      itinerario: itinerario
+      scheda: scheda
+      scheda_servizio: scheda_servizio
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: scheda
+field_type: entity_reference

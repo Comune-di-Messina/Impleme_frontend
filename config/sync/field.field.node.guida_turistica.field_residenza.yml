@@ -1,0 +1,29 @@
+uuid: a633e717-0aaf-4171-bfc9-61d938540d20
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_residenza
+    - node.type.guida_turistica
+    - taxonomy.vocabulary.residenze
+id: node.guida_turistica.field_residenza
+field_name: field_residenza
+entity_type: node
+bundle: guida_turistica
+label: Residenza
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      residenze: residenze
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,350 @@
+uuid: 148ab627-bd79-4156-a493-f6953537bcd9
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.scheda.body
+    - field.field.node.scheda.field_abstract
+    - field.field.node.scheda.field_argomenti_correlati
+    - field.field.node.scheda.field_comune
+    - field.field.node.scheda.field_contatti_email
+    - field.field.node.scheda.field_contatti_indirizzo
+    - field.field.node.scheda.field_contatti_telefono
+    - field.field.node.scheda.field_contatti_titolo
+    - field.field.node.scheda.field_contenuti_collegati
+    - field.field.node.scheda.field_coordinate
+    - field.field.node.scheda.field_cover
+    - field.field.node.scheda.field_cta
+    - field.field.node.scheda.field_immagine
+    - field.field.node.scheda.field_moduli
+    - field.field.node.scheda.field_term_temi
+    - node.type.scheda
+  module:
+    - ds
+    - entity_reference_revisions
+    - geofield_map
+    - link
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_scheda_dettaglio
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      hero_title:
+        - node_title
+      hero_content:
+        - field_abstract
+        - field_cta
+      hero_image:
+        - field_cover
+      filters:
+        - field_argomenti_correlati
+      intro:
+        - body
+      content:
+        - field_moduli
+      related:
+        - field_contenuti_collegati
+      info_header:
+        - field_contatti_titolo
+      info_content:
+        - field_contatti_indirizzo
+        - field_contatti_telefono
+        - field_contatti_email
+      info_map:
+        - field_coordinate
+      info_bg:
+        - field_immagine
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.scheda.default
+targetEntityType: node
+bundle: scheda
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 6
+    region: intro
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_abstract:
+    type: text_summary_or_trimmed
+    weight: 1
+    region: hero_content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_argomenti_correlati:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: entity_reference_entity_id
+    region: filters
+  field_contatti_email:
+    type: email_mailto
+    weight: 12
+    region: info_content
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_contatti_indirizzo:
+    type: string
+    weight: 10
+    region: info_content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_contatti_telefono:
+    type: string
+    weight: 11
+    region: info_content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_contatti_titolo:
+    weight: 9
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: info_header
+  field_contenuti_collegati:
+    type: entity_reference_entity_view
+    weight: 8
+    region: related
+    label: above
+    settings:
+      view_mode: grid
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h3
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis: true
+            fis-el: div
+            fis-cl: cards-wrapper
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  field_coordinate:
+    type: geofield_google_map
+    weight: 13
+    region: info_map
+    label: hidden
+    settings:
+      map_dimensions:
+        width: 100%
+        height: 450px
+      map_empty:
+        empty_behaviour: '0'
+        empty_message: 'No Geofield Value entered for this field'
+      map_center:
+        lat: '42'
+        lon: '12.5'
+        center_force: 0
+        geocode: 'Find my location'
+      map_zoom_and_pan:
+        zoom:
+          initial: '6'
+          min: '1'
+          max: '22'
+          finer: '0'
+          force: 0
+        gestureHandling: auto
+        scrollwheel: '1'
+        draggable: '1'
+        map_reset_position: TOP_RIGHT
+        map_reset: 0
+      map_controls:
+        zoom_control: '1'
+        map_type_id: roadmap
+        map_type_control: '1'
+        map_type_control_options_type_ids:
+          roadmap: roadmap
+          satellite: satellite
+          hybrid: hybrid
+          terrain: terrain
+        scale_control: '1'
+        street_view_control: '1'
+        fullscreen_control: '1'
+        disable_default_ui: 0
+      map_marker_and_infowindow:
+        icon_image_mode: icon_file
+        icon_file_wrapper:
+          icon_file:
+            fids: ''
+            upload_button: Carica
+            remove_button: Elimina
+            upload: ''
+            is_svg: false
+          image_style: geofield_map_default_icon_style
+        icon_image_path: ''
+        infowindow_field: title
+        view_mode: full
+        tooltip_field: title
+        multivalue_split: 0
+        force_open: 0
+      map_additional_options: ''
+      map_geometries_options: '{"strokeColor":"black","strokeOpacity":"0.8","strokeWeight":2,"fillColor":"blue","fillOpacity":"0.1","clickable":false}'
+      map_oms:
+        map_oms_control: '1'
+        map_oms_options: '{"markersWontMove":"true","markersWontHide":"true","basicFormatEvents":"true","nearbyDistance":3}'
+      custom_style_map:
+        custom_style_name: ''
+        custom_style_options: ''
+        custom_style_control: 0
+        custom_style_default: 0
+      map_markercluster:
+        markercluster_additional_options: '{"maxZoom":12,"gridSize":50}'
+        markercluster_control: 0
+      map_additional_libraries:
+        places: 0
+        drawing: 0
+        geometry: 0
+        visualization: 0
+      map_lazy_load:
+        lazy_load: 0
+      gmap_api_key: ''
+      map_geocoder:
+        control: 0
+        settings:
+          position: topright
+          input_size: 25
+          providers: {  }
+          min_terms: 4
+          delay: 800
+          zoom: 16
+          infowindow: 0
+          options: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_cover:
+    type: entity_reference_entity_view
+    weight: 4
+    region: hero_image
+    label: hidden
+    settings:
+      view_mode: image_small
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_cta:
+    type: link
+    weight: 3
+    region: hero_content
+    label: above
+    settings:
+      trim_length: 80
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ' '
+  field_immagine:
+    type: entity_reference_entity_view
+    weight: 14
+    label: hidden
+    settings:
+      view_mode: cover_medium
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: info_bg
+  field_moduli:
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  field_comune: true
+  field_term_temi: true
+  langcode: true
+  links: true

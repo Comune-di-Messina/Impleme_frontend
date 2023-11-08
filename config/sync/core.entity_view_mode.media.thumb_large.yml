@@ -1,0 +1,10 @@
+uuid: fa71ab01-c6cd-461e-a3ee-80303b9cd0ce
+langcode: it
+status: true
+dependencies:
+  module:
+    - media
+id: media.thumb_large
+label: '[585x695] Thumb large'
+targetEntityType: media
+cache: true

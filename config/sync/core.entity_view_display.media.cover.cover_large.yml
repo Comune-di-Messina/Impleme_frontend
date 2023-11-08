@@ -1,0 +1,50 @@
+uuid: 819dd006-ae95-46f9-be07-0c352e6148a2
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.cover_large
+    - field.field.media.cover.field_media_image
+    - image.style.cover_large
+    - media.type.cover
+  module:
+    - ds
+    - image
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_image_responsive
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_media_image
+id: media.cover.cover_large
+targetEntityType: media
+bundle: cover
+mode: cover_large
+content:
+  field_media_image:
+    label: hidden
+    weight: 0
+    settings:
+      image_style: cover_large
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: image
+    region: image
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

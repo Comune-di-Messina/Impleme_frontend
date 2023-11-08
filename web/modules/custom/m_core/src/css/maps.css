@@ -1,0 +1,59 @@
+.paragraph--type--mappa-indirizzi {
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
+}
+.mappa-sidebar {
+  padding: 1em;
+  width: 20vw;
+  position: relative;
+  z-index: 5;
+}
+.mappa-sidebar .field--name-field-coordinate {
+  display: none;
+}
+.mappa-sidebar .group-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  z-index: 10;
+}
+.mappa-indirizzi {
+  min-height: 400px;
+  width: 60vw;
+}
+.leaflet-mapdiv-icon {
+  background: none;
+  border: 0;
+}
+.pin-zoom {
+  animation: zoom 0.2s normal ease-in-out forwards;
+  transform-origin: center bottom;
+}
+.paragraph--type--mappa-indirizzi .views-element-container {
+    width: 100%;
+}
+.view-paragraph-map {
+  width: 100%;
+  height: 100%;
+}
+.view-paragraph-map .view-content{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.view-paragraph-map .geofield-google-map {
+  position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+}
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.25);
+  }
+}

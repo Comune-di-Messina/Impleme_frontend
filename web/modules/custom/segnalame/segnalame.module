@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Contains segnalame.modlue.
+ */
+
+use Drupal\Core\Link;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function segnalame_preprocess_pattern_scheda_dettaglio(&$variables) {
+  $node = $variables["context"]->getProperty('entity');
+  if (isset($node)) {
+    if ($node->getType() === 'settore_segnala_me') {
+      $variables['breadcrumbs'] = _get_moved_breadcrumbs();
+      $variables['node_type'] = $node->getType();
+    }
+  }
+  else {
+    $nodeStorage   = \Drupal::entityTypeManager()->getStorage('node');
+    $termStorage   = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+    $segnalaMeTerm = $termStorage->loadByProperties(['name' => 'Segnala ME']);
+    $segnalaMeTerm = min($segnalaMeTerm);
+
+    $segnalaMeNode = $nodeStorage->loadByProperties(['field_categoria_agg_servizi' => $segnalaMeTerm->id()]);
+    $segnalaMeNode = reset($segnalaMeNode);
+
+    $parameters = \Drupal::routeMatch()->getParameters();
+    $node = $nodeStorage->loadByProperties(['field_backoffice_id' => $parameters->get('sectorId')]);
+    $node = reset($node);
+    $title = $node->label();
+    $nodeLink = Link::createFromRoute($title, 'entity.node.canonical', ['node' => $node->id()]);
+    $backLink = Link::createFromRoute(t('Go back'), 'entity.node.canonical', ['node' => $segnalaMeNode->id()]);
+
+    $variables['node_type'] = $node->getType();
+    $variables['hero_title'] = t('Insert new report');
+    $variables['hero_content'] = [
+      ['#markup' => $node->field_abstract->value],
+      ['#markup' => '<br>'],
+      ['#markup' => $node->body->value],
+    ];
+    $variables['back'] = $backLink;
+
+    $variables['breadcrumbs'] = _get_moved_breadcrumbs();
+    $variables['breadcrumbs']['#links'][] = Link::createFromRoute(t('<span class="breadcrumb-link">@label</span> <span class="separator">/</span>', ['@label' => t('Segnala ME')]), '<nolink>');
+    $variables['breadcrumbs']['#links'][] = $nodeLink;
+    $variables['breadcrumbs']['#links'][] = Link::createFromRoute(t('New report'), '<nolink>');
+  }
+}

@@ -1,0 +1,20 @@
+uuid: a98dfe7f-4d16-46c1-86a9-82fc637e2a80
+langcode: it
+status: true
+dependencies:
+  config:
+    - media.type.cover
+id: media.cover.name
+field_name: name
+entity_type: media
+bundle: cover
+label: Nome
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

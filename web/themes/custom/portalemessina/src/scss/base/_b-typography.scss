@@ -1,0 +1,72 @@
+h1,
+.h1 {
+  line-height: 1.25;
+  @include breakpoint(sm) {
+    font-size: $font-huge;
+    line-height: 1.2;
+  }
+}
+
+h2,
+.h2 {
+  line-height: 1.1428;
+  @include breakpoint(sm) {
+    font-size: $font-xxlarge;
+    line-height: 1.25;
+  }
+}
+
+h3,
+.h3 {
+  line-height: 1.1666;
+  @include breakpoint(sm) {
+    font-size: $font-large;
+  }
+}
+
+h4,
+.h4 {
+  font-weight: 400;
+  @include breakpoint(sm) {
+    font-size: $font-discrete;
+  }
+}
+
+h5,
+.h5 {
+  font-size: $font-medium;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+h6,
+.h6 {
+  font-size: $font-xsmall;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  &:hover {
+    color: $color-primary;
+    text-decoration: underline;
+  }
+}
+p {
+  margin: 0;
+  & + p {
+    margin-top: 1rem;
+  }
+}
+
+.dati-label {
+  font-size: $font-small;
+  font-weight: 400;
+}
+.dati-content {
+  font-size: $font-normal;
+  font-weight: 700;
+}

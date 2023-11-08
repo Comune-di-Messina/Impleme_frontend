@@ -1,0 +1,33 @@
+uuid: 258ee536-c58e-4709-b7cd-52144635e3bd
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.agenzia_turistica.field_comune
+    - field.field.node.agenzia_turistica.field_email
+    - field.field.node.agenzia_turistica.field_itinerari
+    - field.field.node.agenzia_turistica.field_sito_web
+    - field.field.node.agenzia_turistica.field_telefono
+    - field.field.node.agenzia_turistica.field_territorio
+    - node.type.agenzia_turistica
+  module:
+    - user
+id: node.agenzia_turistica.teaser
+targetEntityType: node
+bundle: agenzia_turistica
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_comune: true
+  field_email: true
+  field_itinerari: true
+  field_sito_web: true
+  field_telefono: true
+  field_territorio: true
+  langcode: true

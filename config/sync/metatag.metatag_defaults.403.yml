@@ -1,0 +1,11 @@
+uuid: ad6a99ab-09c6-4125-9fdc-5335a0422d43
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Da5YWhJdKLxaJ9gDRI1u5oCbm5WBxiiDgA4M1QrOEPQ
+id: '403'
+label: 'Accesso negato'
+tags:
+  canonical_url: '[site:url]'
+  shortlink: '[site:url]'

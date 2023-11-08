@@ -1,0 +1,25 @@
+uuid: 2ad2f290-e12b-439a-bf6d-6c97e96feddb
+langcode: it
+status: true
+dependencies:
+  config:
+    - system.menu.social
+  module:
+    - system
+  theme:
+    - portalemessina
+id: social
+theme: portalemessina
+region: footer
+weight: -3
+provider: null
+plugin: 'system_menu_block:social'
+settings:
+  id: 'system_menu_block:social'
+  label: 'Seguici su'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

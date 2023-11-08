@@ -1,0 +1,13 @@
+uuid: cfdfd5ab-857b-448b-8c19-645d511433f2
+langcode: it
+status: true
+dependencies: {  }
+id: agencies_names_rest_resource
+plugin_id: agencies_names_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

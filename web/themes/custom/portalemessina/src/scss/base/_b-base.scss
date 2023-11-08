@@ -1,0 +1,56 @@
+body {
+  @include fontSmoothing;
+  color: $color-secondary;
+  overflow-x: hidden;
+  &.h-noscroll {
+    overflow: hidden;
+  }
+  .dialog-off-canvas-main-canvas {
+    overflow: hidden;
+  }
+}
+figure {
+  width: 100%;
+  img {
+    height: auto;
+    width: 100%;
+  }
+  figcaption {
+    font-size: $font-xsmall;
+    font-weight: 700;
+  }
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+// Globals.
+.primary-bg {
+  background-color: $color-blue-dark;
+}
+.secondary-bg {
+  background-color: $color-green-dark;
+}
+.secondary-bg-light {
+  background-color: $color-green-lighter;
+}
+.neutral-bg-light {
+  background-color: $color-gray-lighter;
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 150px; /* fixed header height*/
+  margin: -150px 0 0; /* negative fixed header height */
+}
+
+
+// Reset class bootstrap vs drupal.
+article.media {
+  display: block;
+}
+#toolbar-administration.toolbar {
+  height: auto;
+}

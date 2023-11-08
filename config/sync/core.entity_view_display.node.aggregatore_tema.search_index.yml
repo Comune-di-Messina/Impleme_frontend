@@ -1,0 +1,80 @@
+uuid: c47a1faf-b667-4346-b95e-2aaf16398470
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.aggregatore_tema.body
+    - field.field.node.aggregatore_tema.field_abstract
+    - field.field.node.aggregatore_tema.field_comune
+    - field.field.node.aggregatore_tema.field_cover
+    - field.field.node.aggregatore_tema.field_term_tema
+    - field.field.node.aggregatore_tema.field_vista
+    - node.type.aggregatore_tema
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_simple
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      category:
+        - 'bundle_field:node'
+      title:
+        - node_title
+      content:
+        - field_abstract
+      cta:
+        - node_link
+    fields:
+      'bundle_field:node':
+        plugin_id: 'bundle_field:node'
+        weight: 0
+        label: hidden
+        formatter: default
+      node_link:
+        plugin_id: node_link
+        weight: 3
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.aggregatore_tema.search_index
+targetEntityType: node
+bundle: aggregatore_tema
+mode: search_index
+content:
+  field_abstract:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  body: true
+  field_comune: true
+  field_cover: true
+  field_term_tema: true
+  field_vista: true
+  langcode: true
+  links: true

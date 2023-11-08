@@ -1,0 +1,10 @@
+uuid: f8b6f640-295c-4b8f-ba8c-d7a0b680db85
+langcode: it
+status: true
+dependencies: {  }
+id: elemento_infografica
+label: 'Elemento infografica'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

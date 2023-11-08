@@ -1,0 +1,23 @@
+uuid: 54ac6bb8-cd2f-47e2-bc8d-bcdcdd40872d
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_numero
+    - paragraphs.paragraphs_type.elemento_infografica
+id: paragraph.elemento_infografica.field_numero
+field_name: field_numero
+entity_type: paragraph
+bundle: elemento_infografica
+label: Numero
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,306 @@
+uuid: 675f9c0d-f672-4194-8886-b2ed3039795f
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.itinerario.body
+    - field.field.node.itinerario.field_abstract
+    - field.field.node.itinerario.field_argomenti_correlati
+    - field.field.node.itinerario.field_colore_marker
+    - field.field.node.itinerario.field_comune
+    - field.field.node.itinerario.field_contenuti_collegati
+    - field.field.node.itinerario.field_coordinate
+    - field.field.node.itinerario.field_cover
+    - field.field.node.itinerario.field_distanza_da_percorrere
+    - field.field.node.itinerario.field_external_link
+    - field.field.node.itinerario.field_geojson_routes
+    - field.field.node.itinerario.field_immagine
+    - field.field.node.itinerario.field_mezzo_di_trasporto
+    - field.field.node.itinerario.field_moduli
+    - field.field.node.itinerario.field_percorso
+    - field.field.node.itinerario.field_target
+    - field.field.node.itinerario.field_tempo_previsto
+    - field.field.node.itinerario.field_term_temi
+    - field.field.node.itinerario.field_tipologia_itinerario
+    - field.field.node.itinerario.field_video_url
+    - node.type.itinerario
+  module:
+    - ds
+    - entity_reference_revisions
+    - geofield_map
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_scheda_dettaglio_full
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      hero_title:
+        - node_title
+      hero_content:
+        - field_abstract
+      hero_image:
+        - field_cover
+      filters:
+        - field_argomenti_correlati
+      intro:
+        - body
+      content:
+        - field_moduli
+      related:
+        - field_contenuti_collegati
+      info_content:
+        - field_tempo_previsto
+        - field_distanza_da_percorrere
+        - field_mezzo_di_trasporto
+        - field_target
+      info_map:
+        - field_percorso
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.itinerario.default
+targetEntityType: node
+bundle: itinerario
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: intro
+  field_abstract:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: hero_content
+  field_argomenti_correlati:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: entity_reference_entity_id
+    region: filters
+  field_contenuti_collegati:
+    weight: 6
+    label: above
+    settings:
+      view_mode: grid
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h3
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis: true
+            fis-el: div
+            fis-cl: cards-wrapper
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_entity_view
+    region: related
+  field_cover:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: cover_large
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: hero_image
+  field_distanza_da_percorrere:
+    type: string
+    weight: 8
+    region: info_content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_mezzo_di_trasporto:
+    type: string
+    weight: 9
+    region: info_content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_moduli:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_percorso:
+    weight: 11
+    label: hidden
+    settings:
+      map_dimensions:
+        width: 100%
+        height: 450px
+      map_empty:
+        empty_behaviour: '0'
+        empty_message: 'No Geofield Value entered for this field'
+      map_center:
+        lat: '42'
+        lon: '12.5'
+        center_force: 0
+        geocode: 'Find my location'
+      map_zoom_and_pan:
+        zoom:
+          initial: '6'
+          min: '1'
+          max: '22'
+          finer: '0'
+          force: 0
+        gestureHandling: auto
+        scrollwheel: '1'
+        draggable: '1'
+        map_reset_position: TOP_RIGHT
+        map_reset: 0
+      map_controls:
+        zoom_control: '1'
+        map_type_id: roadmap
+        map_type_control: '1'
+        map_type_control_options_type_ids:
+          roadmap: roadmap
+          satellite: satellite
+          hybrid: hybrid
+          terrain: terrain
+        scale_control: '1'
+        street_view_control: '1'
+        fullscreen_control: '1'
+        disable_default_ui: 0
+      map_marker_and_infowindow:
+        icon_image_mode: icon_file
+        icon_file_wrapper:
+          icon_file:
+            fids: ''
+            upload_button: Carica
+            remove_button: Elimina
+            upload: ''
+            is_svg: false
+          image_style: geofield_map_default_icon_style
+        icon_image_path: ''
+        infowindow_field: title
+        view_mode: full
+        tooltip_field: title
+        multivalue_split: 0
+        force_open: 0
+      map_additional_options: ''
+      map_additional_libraries:
+        geometry: geometry
+        places: 0
+        drawing: 0
+        visualization: 0
+      map_geometries_options: '{"strokeColor":"black","strokeOpacity":"0.8","strokeWeight":2,"fillColor":"blue","fillOpacity":"0.1","clickable":false}'
+      map_oms:
+        map_oms_control: '1'
+        map_oms_options: '{"markersWontMove":"true","markersWontHide":"true","basicFormatEvents":"true","nearbyDistance":3}'
+      custom_style_map:
+        custom_style_name: ''
+        custom_style_options: ''
+        custom_style_control: 0
+        custom_style_default: 0
+      map_markercluster:
+        markercluster_additional_options: '{"maxZoom":12,"gridSize":50}'
+        markercluster_control: 0
+      map_lazy_load:
+        lazy_load: 0
+      gmap_api_key: ''
+      map_geocoder:
+        control: 0
+        settings:
+          position: topright
+          input_size: 25
+          providers: {  }
+          min_terms: 4
+          delay: 800
+          zoom: 16
+          infowindow: 0
+          options: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: geofield_google_map
+    region: info_map
+  field_target:
+    type: entity_reference_entity_view
+    weight: 10
+    region: info_content
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_tempo_previsto:
+    type: string
+    weight: 7
+    region: info_content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_colore_marker: true
+  field_comune: true
+  field_coordinate: true
+  field_external_link: true
+  field_geojson_routes: true
+  field_immagine: true
+  field_term_temi: true
+  field_tipologia_itinerario: true
+  field_video_url: true
+  langcode: true
+  links: true

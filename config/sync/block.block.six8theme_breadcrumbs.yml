@@ -1,0 +1,22 @@
+uuid: 8b068696-202f-4f7f-b1cc-ca58b554b29c
+langcode: it
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - six8theme
+_core:
+  default_config_hash: 9NpLtl9MCWsAZOoD468MNZVk4qKlIyNoihELT-CC--s
+id: six8theme_breadcrumbs
+theme: six8theme
+region: breadcrumbs
+weight: -4
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumb
+  provider: system
+  label_display: '0'
+visibility: {  }

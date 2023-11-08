@@ -1,0 +1,21 @@
+.upload-input {border-bottom: 1px solid #d9e4f3; position: relative;}
+.upload-input input {opacity: 0; height: 100%;}
+.upload-input .label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.upload-input .label span {
+  color: #7790A2;
+}
+.upload-input .icon {
+  width: 30px;
+  height: 30px;
+}
+.upload-input svg use {
+  fill: #7790A2;
+}
+.integration-form .new-documents > * {
+  width: calc(100% / 3);
+}

@@ -1,0 +1,22 @@
+uuid: 0589c116-397c-4798-a7e3-bcdc19aff1bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.aggregatore
+id: paragraph.aggregatore.status
+field_name: status
+entity_type: paragraph
+bundle: aggregatore
+label: Pubblicato
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

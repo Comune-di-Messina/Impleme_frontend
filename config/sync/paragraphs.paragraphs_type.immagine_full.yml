@@ -1,0 +1,10 @@
+uuid: 07280740-341e-47bf-bce1-cde7517bd14c
+langcode: it
+status: true
+dependencies: {  }
+id: immagine_full
+label: 'Immagine full'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

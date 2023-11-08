@@ -1,0 +1,16 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+
+<div class="h-section-servizi segnala-me">
+  <div class="page-scheda-dati">
+
+    {% include "@molecules/01-modules/hero/hero-simple/hero-simple.twig" with {
+      breadcrumbs: breadcrumbs,
+      title: 'Le tue segnalazioni',
+      content: '',
+      new_report: 'Effettua nuova segnalazione',
+      back: '<a href="/it/servizi/messina">Torna indietro</a>'
+    } %}
+
+  </div>
+</div>
+

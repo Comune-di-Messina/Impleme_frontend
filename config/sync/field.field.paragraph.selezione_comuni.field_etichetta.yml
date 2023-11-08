@@ -1,0 +1,19 @@
+uuid: 1f005364-b2fd-4bce-bbcc-b4e86c18aaa3
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_etichetta
+    - paragraphs.paragraphs_type.selezione_comuni
+id: paragraph.selezione_comuni.field_etichetta
+field_name: field_etichetta
+entity_type: paragraph
+bundle: selezione_comuni
+label: Etichetta
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,140 @@
+uuid: ec71bae6-004b-4573-b222-84223defdf38
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.slideshow
+    - field.field.node.scheda.body
+    - field.field.node.scheda.field_abstract
+    - field.field.node.scheda.field_argomenti_correlati
+    - field.field.node.scheda.field_comune
+    - field.field.node.scheda.field_contatti_email
+    - field.field.node.scheda.field_contatti_indirizzo
+    - field.field.node.scheda.field_contatti_telefono
+    - field.field.node.scheda.field_contatti_titolo
+    - field.field.node.scheda.field_contenuti_collegati
+    - field.field.node.scheda.field_coordinate
+    - field.field.node.scheda.field_cover
+    - field.field.node.scheda.field_cta
+    - field.field.node.scheda.field_immagine
+    - field.field.node.scheda.field_moduli
+    - field.field.node.scheda.field_term_temi
+    - node.type.scheda
+  module:
+    - ds
+    - link
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_hero_full
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      title:
+        - node_title
+      image:
+        - field_cover
+      content:
+        - body
+      link:
+        - field_cta
+        - group_box_tour
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 5
+        label: above
+        formatter: default
+        settings:
+          'link text': 'Read more'
+          'link class': pt-5
+          wrapper: ''
+          class: pt-5
+        ft:
+          id: reset
+          settings:
+            lb: ' '
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.scheda.slideshow
+targetEntityType: node
+bundle: scheda
+mode: slideshow
+content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 150
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_cover:
+    type: entity_reference_entity_view
+    weight: 1
+    region: image
+    label: hidden
+    settings:
+      view_mode: cover_large
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_cta:
+    type: link
+    weight: 3
+    region: link
+    label: above
+    settings:
+      trim_length: 80
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ' '
+hidden:
+  field_abstract: true
+  field_argomenti_correlati: true
+  field_comune: true
+  field_contatti_email: true
+  field_contatti_indirizzo: true
+  field_contatti_telefono: true
+  field_contatti_titolo: true
+  field_contenuti_collegati: true
+  field_coordinate: true
+  field_immagine: true
+  field_moduli: true
+  field_term_temi: true
+  langcode: true
+  links: true

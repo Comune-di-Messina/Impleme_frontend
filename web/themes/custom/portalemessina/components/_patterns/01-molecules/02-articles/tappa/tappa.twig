@@ -1,0 +1,24 @@
+{%
+  set classes = [
+  'article',
+  'tappa',
+  'container my-5'
+]
+%}
+
+<article {{ attributes.addClass(classes) }}>
+  <div class="row justify-content-center">
+    <div class="tappa-number col-3 px-4">
+      <div class="number-label font-weight-normal text-monospace">{{ tappa_number }}</div>
+      <div class="number-subtitle font-weight-bold">{{ tappa_subtitle }}</div>
+    </div>
+    <div class="tappa-content-wrapper col-8 p-4">
+      {% if title|render %}
+        <h4 class="tappa-title">{{ title }}</h4>
+      {% endif %}
+      {% if content|render %}
+        <div class="tappa-content">{{ content }}</div>
+      {% endif %}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,22 @@
+uuid: 15a28e9d-1fac-462f-afcf-0d6630aa4e7b
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_percorso
+    - node.type.itinerario
+  module:
+    - geofield
+id: node.itinerario.field_percorso
+field_name: field_percorso
+entity_type: node
+bundle: itinerario
+label: Percorso
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

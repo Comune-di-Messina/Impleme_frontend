@@ -1,0 +1,10 @@
+uuid: bd3e5e4f-13f5-423d-9f7e-01ebae6d1904
+langcode: it
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_small
+label: '[850x760] Image small'
+targetEntityType: media
+cache: true

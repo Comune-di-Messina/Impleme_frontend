@@ -1,0 +1,95 @@
+.page-prenota-ufficio-offices-list {
+  .col-filters {
+    .col-filters__title {
+      margin-bottom: pxrem(8);
+      font-weight: bold;
+      color: $color-white;
+    }
+    .col-filters__list {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .col-filters__item {
+      display: inline-flex;
+      margin: pxrem(8);
+      font-size: 0.66667rem;
+      border-radius: 0.66667rem;
+      border: 1px solid $color-white;
+      padding: 2px 16px;
+      color: $color-white;
+      cursor: pointer;
+
+      &.active {
+        color: $color-green-dark;
+        background-color: $color-white;
+      }
+    }
+  }
+
+  .pagination {
+    .page-item {
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      padding: $gap;
+      border: 1px solid transparent;
+      text-align: center;
+      border-radius: 4px;
+
+      &.is-active {
+        color: $color-green;
+        border: 1px solid $color-green;
+      }
+
+      &.disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .page-segnalame-list__info-window__content {
+    > span {
+      color: $color-green;
+      display: inline-block;
+      width: 100%;
+      text-transform: uppercase;
+      font-size: $font-small;
+      padding-top: pxrem(10);
+      padding-bottom: pxrem(16);
+    }
+  }
+}
+
+.page-prenota-ufficio-offices-list__card {
+  padding: 0 pxrem(20) 0 0;
+  margin-bottom: pxrem(60);
+
+  .card-badge {
+    display: inline-flex;
+    margin: pxrem(16) 0 pxrem(8);
+    font-size: 0.66667rem;
+    border-radius: 0.66667rem;
+    border: 1px solid $color-green;
+    padding: 2px 16px;
+    color: $color-green;
+    cursor: pointer;
+  }
+}
+
+.page-prenota-ufficio-offices-list__card__media {
+  width: 100%;
+  height: pxrem(192);
+  border-radius: pxrem(4);
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+
+  > img {
+    width: 100%;
+    height: 100%;
+  }
+}

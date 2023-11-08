@@ -1,0 +1,135 @@
+.module.banner {
+  margin-bottom: $gap * 8;
+  margin-top: $gap * 8;
+  .banner-img {
+    // display: block;
+    // height: 100%;
+    // object-fit: cover;
+    // width: 100%;
+
+    // temp.
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .media {
+      position: static;
+    }
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+    }
+  }
+  .carousel {
+    .module {
+      margin: $gap * 2;
+    }
+  }
+  // Simple.
+  &.banner-simple {
+    @include breakpoint(xs, md) {
+      max-width: 100%;
+    }
+    .carousel {
+      width: 100%;
+      max-width: 100%;
+    }
+    .banner-main {
+      background-color: $color-blue-dark;
+      color: $color-white;
+      min-height: 460px;
+      margin-bottom: -#{$gap * 10};
+    }
+    .col-overlay {
+      padding-bottom: $gap * 10;
+    }
+    .banner-link a {
+      @include inlineCta;
+      color: $color-white;
+    }
+  }
+
+  // Full.
+  &.banner-full {
+    margin: 0;
+    .banner-img {
+      background-color: $color-blue;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+    }
+    .banner-main {
+      color: $color-white;
+      min-height: 450px;
+      overflow: hidden;
+      padding-bottom: $gap * 20;
+      position: relative;
+      .banner-main-content {
+        padding-bottom: $gap * 10;
+        padding-top: $gap * 10;
+      }
+    }
+    .banner-secondary {
+      margin-top: -#{$gap * 20};
+    }
+    .slick-list {
+      overflow: visible;
+    }
+  }
+
+  // Big
+  &.banner-big{
+    .banner-main {
+      min-height: 550px;
+      @media(max-width: 1440px){
+        min-height: auto;
+      }
+      @media(max-width: 767px){
+        height: 220px;
+      }
+      @media(max-width: 515px){
+        height: 160px;
+      }
+      .banner-img{
+        img{
+          @media(max-width: 767px){
+            height: 220px;
+          }
+          @media(max-width: 515px){
+            height: 160px;
+          }
+        }
+      } 
+    }
+    .carousel-card{
+      margin-top: -70px;
+      @media(max-width: 1440px){
+        margin-top: -30px;
+      }
+      @media(max-width: 767px){
+        margin-top: 70px;
+      }
+      @media(max-width: 515px){
+        margin-top: 100px;
+      }
+    }
+  }  
+
+  // Text.
+  &.banner-text {
+    .carousel {
+      width: 100%;
+      max-width: 100%;
+    }
+    .slick-list {
+      overflow: visible;
+    }
+  }
+}

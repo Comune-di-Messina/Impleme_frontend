@@ -1,0 +1,21 @@
+uuid: a59eeb42-d461-4ccf-ae74-9770d8977e12
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_mezzo_di_trasporto
+field_name: field_mezzo_di_trasporto
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

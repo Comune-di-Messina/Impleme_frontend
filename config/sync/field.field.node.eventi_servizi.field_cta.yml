@@ -1,0 +1,23 @@
+uuid: 373728b6-7d92-4725-a01e-c04db87fdfc9
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cta
+    - node.type.eventi_servizi
+  module:
+    - link
+id: node.eventi_servizi.field_cta
+field_name: field_cta
+entity_type: node
+bundle: eventi_servizi
+label: Cta
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

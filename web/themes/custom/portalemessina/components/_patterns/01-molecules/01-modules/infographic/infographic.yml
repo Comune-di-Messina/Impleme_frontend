@@ -1,0 +1,10 @@
+title: Faker.sentence(6, false)
+content: Faker.paragraph(5)
+modules:
+  include():
+    pattern: molecules-infographic-element
+
+###
+
+ui_pattern_definition:
+  label: Module - Infographic

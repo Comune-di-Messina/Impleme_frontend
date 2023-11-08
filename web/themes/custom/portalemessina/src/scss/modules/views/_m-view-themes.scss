@@ -1,0 +1,24 @@
+.view-temi {
+  // Display - grid.
+  &.view-display-id-block_1 {
+    
+    & > .view-content {
+      margin-right: $gap-grid / 2;
+      margin-left: $gap-grid / 2;
+      @include breakpoint(md) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .card {
+        margin: $gap-grid / 2;
+        width: calc(100% - #{$gap-grid});
+        @include breakpoint(md) {
+          width: calc(50% - #{$gap-grid});
+        }
+        @include breakpoint(lg) {
+          width: calc(33.3% - #{$gap-grid});
+        }
+      }
+    }
+  }
+}

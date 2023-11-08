@@ -1,0 +1,27 @@
+uuid: 10a0e7ee-7993-4186-a9f3-3dbdae381df9
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tipologia
+field_name: field_tipologia
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Video
+      label: Video
+    -
+      value: 'Link esterno'
+      label: 'Link esterno'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

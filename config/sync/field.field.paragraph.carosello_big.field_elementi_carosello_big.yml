@@ -1,0 +1,25 @@
+uuid: d8f08eb1-4321-4913-a700-499add0db327
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_elementi_carosello_big
+    - paragraphs.paragraphs_type.carosello_big
+id: paragraph.carosello_big.field_elementi_carosello_big
+field_name: field_elementi_carosello_big
+entity_type: paragraph
+bundle: carosello_big
+label: 'Elementi carosello'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: contenuti_er
+      display_name: entity_reference_3
+      arguments: {  }
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: f21bd293-0d92-4898-bd66-98b158dd1ac5
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tema
+    - paragraphs.paragraphs_type.aggregatore
+  module:
+    - options
+id: paragraph.aggregatore.field_tema
+field_name: field_tema
+entity_type: paragraph
+bundle: aggregatore
+label: Tema
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

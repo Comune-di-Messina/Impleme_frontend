@@ -1,0 +1,284 @@
+uuid: e0cb44de-7aac-41a1-ada1-1cb12363f817
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.date_format.messina_eventi_full
+    - field.field.node.evento.body
+    - field.field.node.evento.field_abstract
+    - field.field.node.evento.field_argomenti_correlati
+    - field.field.node.evento.field_comune
+    - field.field.node.evento.field_contatti_indirizzo
+    - field.field.node.evento.field_contenuti_collegati
+    - field.field.node.evento.field_coordinate
+    - field.field.node.evento.field_cover
+    - field.field.node.evento.field_data
+    - field.field.node.evento.field_moduli
+    - field.field.node.evento.field_target
+    - field.field.node.evento.field_term_temi
+    - node.type.evento
+  module:
+    - date_recur
+    - ds
+    - entity_reference_revisions
+    - geofield_map
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_scheda_dettaglio_full
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      hero_title:
+        - node_title
+      hero_content:
+        - field_abstract
+      hero_image:
+        - field_cover
+      filters:
+        - field_argomenti_correlati
+      intro:
+        - body
+      content:
+        - field_moduli
+      related:
+        - field_contenuti_collegati
+      info_content:
+        - field_contatti_indirizzo
+        - field_target
+        - field_data
+      info_map:
+        - field_coordinate
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.evento.default
+targetEntityType: node
+bundle: evento
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: intro
+  field_abstract:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: hero_content
+  field_argomenti_correlati:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: entity_reference_entity_id
+    region: filters
+  field_contatti_indirizzo:
+    type: string
+    weight: 7
+    region: info_content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_contenuti_collegati:
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: grid
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h3
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis: true
+            fis-el: div
+            fis-cl: cards-wrapper
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_entity_view
+    region: related
+  field_coordinate:
+    type: geofield_google_map
+    weight: 10
+    region: info_map
+    label: hidden
+    settings:
+      gmap_api_key: ''
+      map_dimensions:
+        width: 100%
+        height: 450px
+      map_empty:
+        empty_behaviour: '0'
+        empty_message: 'No Geofield Value entered for this field'
+      map_center:
+        lat: '42'
+        lon: '12.5'
+        center_force: 0
+      map_zoom_and_pan:
+        zoom:
+          initial: 6
+          force: 0
+          min: 1
+          max: 22
+          finer: 0
+        scrollwheel: 1
+        draggable: 1
+        map_reset: 0
+        map_reset_position: TOP_RIGHT
+      map_controls:
+        disable_default_ui: 0
+        zoom_control: 1
+        map_type_id: roadmap
+        map_type_control: 1
+        map_type_control_options_type_ids:
+          roadmap: roadmap
+          satellite: satellite
+          hybrid: hybrid
+          terrain: terrain
+        scale_control: 1
+        street_view_control: 1
+        fullscreen_control: 1
+      map_marker_and_infowindow:
+        icon_image_mode: icon_file
+        icon_image_path: ''
+        icon_file_wrapper:
+          icon_file: ''
+        infowindow_field: title
+        view_mode: full
+        multivalue_split: 0
+        force_open: 0
+        tooltip_field: title
+      map_oms:
+        map_oms_control: 1
+        map_oms_options: '{"markersWontMove": "true", "markersWontHide": "true", "basicFormatEvents": "true", "nearbyDistance": 3}'
+      map_additional_options: ''
+      map_additional_libraries: {  }
+      map_geometries_options: '{"strokeColor":"black","strokeOpacity":"0.8","strokeWeight":2,"fillColor":"blue","fillOpacity":"0.1", "clickable": false}'
+      custom_style_map:
+        custom_style_control: 0
+        custom_style_name: ''
+        custom_style_options: ''
+        custom_style_default: 0
+      map_markercluster:
+        markercluster_control: 0
+        markercluster_additional_options: '{"maxZoom":12, "gridSize":50}'
+      map_geocoder:
+        control: 0
+        settings:
+          position: topright
+          input_size: 25
+          providers: {  }
+          min_terms: 4
+          delay: 800
+          zoom: 16
+          infowindow: 0
+          options: ''
+      map_lazy_load:
+        lazy_load: 0
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_cover:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: cover_large
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: hero_image
+  field_data:
+    weight: 9
+    label: above
+    settings:
+      format_type: messina_eventi_full
+      occurrence_format_type: messina_eventi_full
+      same_end_date_format_type: messina_eventi_full
+      separator: '- '
+      timezone_override: ''
+      interpreter: ''
+      show_next: 1
+      count_per_item: true
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: date_recur_basic_formatter
+    region: info_content
+  field_moduli:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_target:
+    type: entity_reference_entity_view
+    weight: 8
+    region: info_content
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+hidden:
+  field_comune: true
+  field_term_temi: true
+  langcode: true
+  links: true

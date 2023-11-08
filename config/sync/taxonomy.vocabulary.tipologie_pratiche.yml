@@ -1,0 +1,8 @@
+uuid: 2a285af7-14d1-4bfa-bca0-cb4b70300e10
+langcode: it
+status: true
+dependencies: {  }
+name: 'Tipologie Pratiche'
+vid: tipologie_pratiche
+description: ''
+weight: 0

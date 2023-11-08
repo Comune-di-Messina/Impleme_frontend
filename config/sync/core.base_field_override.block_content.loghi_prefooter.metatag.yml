@@ -1,0 +1,18 @@
+uuid: 8ef8bd68-e15a-40e9-81fc-a676e0888d87
+langcode: it
+status: true
+dependencies:
+  config:
+    - block_content.type.loghi_prefooter
+id: block_content.loghi_prefooter.metatag
+field_name: metatag
+entity_type: block_content
+bundle: loghi_prefooter
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,10 @@
+uuid: d2be6e70-b2a9-4d2c-9868-e76459e44296
+langcode: it
+status: true
+dependencies: {  }
+id: mappa_indirizzi
+label: 'Indirizzi utili'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

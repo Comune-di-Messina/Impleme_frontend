@@ -1,0 +1,211 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+<div class="h-section-servizi">
+  <div class="page-scheda-dati">
+
+  {% include "@molecules/01-modules/hero/hero-simple/hero-simple.twig" with {
+    breadcrumbs: breadcrumbs,
+    title: 'Consultazione IMU',
+    content: '',
+    image: '<img src="' ~ dist_url ~ 'images/hero/imu.jpg">',
+    back: '<a href="/it/servizi/messina">Torna indietro</a>'
+  } %}
+
+  {% if MsgEsito %}
+
+    <div class="container py-5">
+      <div class="alert alert-danger mt-4" role="alert">
+        {{ MsgEsito }}
+      </div>
+    </div>
+
+  {% else %}
+
+    <div class="dati-info py-5">
+      <div class="container">
+        <h3>Dati contribuente</h3>
+        <div class="row">
+          <div class="col">
+            <h6 class="dati-label">Codice Fiscale</h6>
+            <div class="dati-content">{{ Situazione.CfiscPiva }}</div>
+          </div>
+          <div class="col">
+            <h6 class="dati-label">Nominativo</h6>
+            <div class="dati-content">{{ Situazione.Nome }} {{ Situazione.Cognome }}</div>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dati-content py-5 container">
+
+      <div class="dati-content-header row align-items-center justify-content-between">
+        <div class="col-title">
+          <h2>Le tue utenze</h2>
+        </div>
+        <div class="col-select">
+          <div class="bootstrap-select-wrapper">
+            {{ SelectAnni }}
+          </div>
+        </div>
+      </div>
+
+      <div class="table-wrapper my-5">
+        <h3>Immobili:</h3>
+        <div class="table-wrapper">
+          <table width="100%">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Tipo</th>
+                <th>Sez.</th>
+                <th>Fogl.</th>
+                <th>Part.</th>
+                <th>Sub.</th>
+                <th>Categoria</th>
+                <th>Valore</th>
+                <th>MM</th>
+                <th>% Poss</th>
+                <th>Detraz.</th>
+                <th>Assogg.</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% set immobiliImpostaTot = 0 %}
+              {% for immobile in Situazione.Immobili %}
+                <tr>
+                  <td rowspan="2" align="center">{{ loop.index }})</td>
+                  <td rowspan="2">{{ immobile.ImmCaratteristica }}</td>
+                  <td rowspan="2" align="center">{{ immobile.ImmSezione|default('-') }}</td>
+                  <td rowspan="2" align="center">{{ immobile.ImmFoglio }}</td>
+                  <td rowspan="2" align="center">{{ immobile.ImmParticella }}</td>
+                  <td rowspan="2" align="center">{{ immobile.ImmSubalterno }}</td>
+                  <td align="center">{{ immobile.ImmCategoria }}</td>
+                  <td align="right">{{ immobile.ImmValore|number_format(2, ',', '.') }}&euro;</td>
+                  <td align="center">{{ immobile.ImmMesiPoss }}</td>
+                  <td align="center">{{ immobile.ImmPercPoss|number_format(2, ',', '.') }}%</td>
+                  <td align="right">{{ immobile.ImmDetrazione|default('-')|number_format(2, ',', '.') }}&euro;</td>
+                  <td align="center">{{ immobile.ImmAssogg }}</td>
+                </tr>
+                <tr>
+                  <td align="center">{{ immobile.ImmUbicazione }}</td>
+                  <td colspan="2" align="right"><strong>Aliquota</strong></td>
+                  <td align="right">{{ immobile.ImmAliquota }} %</td>
+                  <td align="right"><strong>Imposta</strong></td>
+                  <td align="right">{{ immobile.ImmImpCalc|default('-')|number_format(2, ',', '.') }}&euro;</td>
+                </tr>
+              {% set immobiliImpostaTot = immobiliImpostaTot + immobile.ImmImpCalc %}
+              {% endfor %}
+              <tr>
+                <td colspan="11" align="right"><strong>Totale imposta</strong></td>
+                <td align="right"><strong>{{ immobiliImpostaTot|number_format(2, ',', '.') }}&euro;</strong></td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+
+
+      <div class="table-wrapper my-5">
+        <h3>Pagamenti ordinari:</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Tipo</th>
+                <th>Importo</th>
+                <th>Ravvedimento</th>
+                <th>Provenienza</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for pagamento in Situazione.Pagamenti %}
+                <tr align="center">
+                  <td>{{ pagamento.PagData }}</td>
+                  <td>{{ pagamento.PagAccSal }}</td>
+                  <td align="right">{{ pagamento.PagTotale|number_format(2, ',', '.') }}&euro;</td>
+                  <td>{{ pagamento.PagRavvedimento|default('-') }}</td>
+                  <td>{{ pagamento.PagProvenienza }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+
+
+      <div class="table-wrapper my-5">
+        <h3>Accertamenti:</h3>
+        <div class="table-wrapper">
+          <table width="100%">
+            <thead>
+              <tr>
+                <th>Data emissione</th>
+                <th>Numero</th>
+                <th>Tipo</th>
+                <th>Stato</th>
+                <th>Importo intero</th>
+                <th>Importo agevolato</th>
+                <th>Data notifica</th>
+                <th>Pagamento</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for accertamento in Situazione.Accertamenti %}
+                <tr align="center">
+                  <td>{{ accertamento.AccDataEmis }}</td>
+                  <td>{{ accertamento.AccNumero }}</td>
+                  <td>{{ accertamento.AccTipo }}</td>
+                  <td>{{ accertamento.AccStato }}</td>
+                  <td align="right">{{ accertamento.AccImporto|number_format(2, ',', '.') }}&euro;</td>
+                  <td align="right">{{ accertamento.AccImpAgevolato|number_format(2, ',', '.') }}&euro;</td>
+                  <td>{{ accertamento.AccDataNotifica|default('-') }}</td>
+                  <td align="right">{{ accertamento.AccImpPagato|default('-')|number_format(2, ',', '.') }}&euro;</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+
+
+
+      <div class="table-wrapper my-5">
+        <h3>Rimborsi:</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Data emissione</th>
+                <th>Numero</th>
+                <th>Tipo</th>
+                <th>Stato</th>
+                <th>Importo</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for rimborso in Situazione.Rimborsi %}
+                <tr align="center">
+                  <td>{{ rimborso.RimDataEmis }}</td>
+                  <td>{{ rimborso.RimNumero }}</td>
+                  <td>{{ rimborso.RimTipo }}</td>
+                  <td>{{ rimborso.RimStato }}</td>
+                  <td align="right">{{ rimborso.RimImporto|number_format(2, ',', '.') }}&euro;</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+
+    </div>
+  {% endif %}
+  </div>
+
+</div>

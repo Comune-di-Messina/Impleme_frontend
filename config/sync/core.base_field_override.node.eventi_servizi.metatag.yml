@@ -1,0 +1,18 @@
+uuid: 69f9e877-1822-41bc-adb4-7b2549ff4d5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.eventi_servizi
+id: node.eventi_servizi.metatag
+field_name: metatag
+entity_type: node
+bundle: eventi_servizi
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

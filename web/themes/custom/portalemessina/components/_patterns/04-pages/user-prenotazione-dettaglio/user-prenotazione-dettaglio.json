@@ -1,0 +1,51 @@
+{
+  "page_title": "Le tue prenotazioni",
+
+  "stato": {
+    "1": "In lavorazione",
+    "2": "In attesa di integrazione",
+    "3": "In attesa di pagamento",
+    "4": "Approvata",
+    "5": "Rifiutata"
+  },
+
+  "prenotazione_titolo": "Sala ovale \"Antonino Caponnetto\"",
+  "prenotazione_sottotitolo": "Titolo dell'evento",
+  "prenotazione_stato": "In attesa di integrazione",
+  "prenotazione_codice_stato": 2,
+  "prenotazione_data": "16 maggio / 20 maggio",
+  "prenotazione_pratica": "111111",
+  "prenotazione_orario": "15:00 / 17:00",
+  "prenotazione_note": "Si richiede copia dello statuto",
+  "prenotazione_importo": "370",
+
+  "lista_documenti": "- codice fiscale<br> - copia della busta paga<br> - lorem ipsum",
+
+  "documenti_list": [
+    {
+      "title": "carta-identita-pdf",
+      "url": "#"
+     },
+     {
+      "title": "modalità-di-richiesta.pdf",
+      "url": "#"
+     },
+     {
+      "title": "documento-identità.pdf",
+      "url": "#"
+     },
+     {
+      "title": "statuto.pdf",
+      "url": "#"
+     }
+  ],
+
+  "codice_IUV": "0123456789",
+
+  "prenotazione_annulla": "#",
+  "url_areapersonale": "#",
+  "url_pagopa": "#",
+
+  "breadcrumbs": "",
+  "message": ""
+}

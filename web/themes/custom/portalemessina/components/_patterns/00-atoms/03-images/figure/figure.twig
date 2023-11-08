@@ -1,0 +1,21 @@
+{% set dist_url = dist_url|default('/themes/custom/portaledellafamiglia/dist/') %}
+<figure class="figure m-0">
+
+  {% if video %}
+    <a class="figure-video" href="{{ video }}" data-lity>
+      {% if image|render %}
+        {{ image }}
+      {% else %}
+        <img src="{{ dist_url }}images/backgrounds/placeholder-video.jpg">
+      {% endif %} 
+    </a>
+  {% else %}
+    {{ image }}
+  {% endif %}
+
+  {% if caption|render %}
+  <figcaption class="figure-caption text-right text-serif pt-2">
+    {{ caption }}
+  </figcaption>
+  {% endif %}
+</figure>

@@ -1,0 +1,29 @@
+uuid: 437281e2-c4fc-411d-80a6-693c6c273329
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blocchi_di_selezione_del_comune.field_moduli
+    - paragraphs.paragraphs_type.blocchi_di_selezione_del_comune
+  module:
+    - paragraphs
+id: paragraph.blocchi_di_selezione_del_comune.default
+targetEntityType: paragraph
+bundle: blocchi_di_selezione_del_comune
+mode: default
+content:
+  field_moduli:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

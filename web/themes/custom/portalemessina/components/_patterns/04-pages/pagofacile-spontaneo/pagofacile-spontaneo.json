@@ -1,0 +1,14 @@
+{
+  "page_title": "Effettua un pagamento spontaneo",
+  "breadcrumbs": "",
+  "selectComuni": {
+    "include()": {
+      "pattern": "atoms-select",
+      "with": {
+        "title": "Filtra per comune",
+        "id": "selectComune",
+        "label": "Seleziona il comune"
+      }
+    }
+  }
+}

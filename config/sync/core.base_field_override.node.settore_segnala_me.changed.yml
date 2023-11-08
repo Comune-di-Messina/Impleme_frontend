@@ -1,0 +1,18 @@
+uuid: 51004dac-b353-4deb-ba2c-9268edc2d6e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.settore_segnala_me
+id: node.settore_segnala_me.changed
+field_name: changed
+entity_type: node
+bundle: settore_segnala_me
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

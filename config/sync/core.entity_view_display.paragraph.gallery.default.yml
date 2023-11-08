@@ -1,0 +1,43 @@
+uuid: cfcb87c8-10a7-4169-ab22-6be100a64ae4
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gallery.field_gallery
+    - paragraphs.paragraphs_type.gallery
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_gallery
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      gallery:
+        - field_gallery
+id: paragraph.gallery.default
+targetEntityType: paragraph
+bundle: gallery
+mode: default
+content:
+  field_gallery:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: thumb_gallery
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: gallery
+hidden: {  }

@@ -1,0 +1,8 @@
+wso2-with-jwt-styles:
+  version: 1.0.0
+  js:
+      js/wso2_with_jwt.js: {}
+
+  dependencies:
+    - core/jquery
+    - core/drupal

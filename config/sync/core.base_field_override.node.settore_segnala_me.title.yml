@@ -1,0 +1,18 @@
+uuid: 405ab387-e9f4-4bbf-aa04-e9d99f51008b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.settore_segnala_me
+id: node.settore_segnala_me.title
+field_name: title
+entity_type: node
+bundle: settore_segnala_me
+label: Titolo
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,39 @@
+{% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+<div class="page-user-ricevute{{ pl ? ' h-section-servizi' }}">
+
+  {% include "@molecules/01-modules/hero/hero-simple/hero-simple.twig" with {
+    breadcrumbs: breadcrumbs,
+    title: page_title,
+    content: '',
+    image: ''
+  } %}
+
+  <div class="content">
+    <div class="container">
+      
+      <div class="row justify-content-between">
+        <div class="col-intro col-12 col-md-5">
+          <h3 class="mb-4">Cerca la tua ricevuta tramite codice IUV</h3>
+          <p class="text-serif">
+            Cillum labore laboris pariatur esse sint. Lorem adipisicing officia cillum officia fugiat excepteur. Ea exercitation magna sit officia ipsum aliqua ea cupidatat non pariatur magna sint.
+          </p>
+        </div>
+        <div class="col-12 col-md-5">
+          <h6 class="mb-4">Codice IUV</h6>
+          <div class="form-group mb-3">
+            <input type="text" class="form-control" id="codiceIUV">
+            <label for="codiceIUV">Inserisci qui il codice IUV</label>
+          </div>
+
+          {% if error == true %}
+          <div class="form-error text-danger my-3"><strong>IUV inesistente</strong></div>
+          {% endif %}
+
+          <button class="btn btn-primary btn-lg disabled" disabled>Scarica</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

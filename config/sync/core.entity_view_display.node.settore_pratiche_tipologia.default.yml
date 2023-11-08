@@ -1,0 +1,112 @@
+uuid: e25213fc-234f-4619-b8cc-6b24069a1423
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.settore_pratiche_tipologia.body
+    - field.field.node.settore_pratiche_tipologia.field_backoffice_id
+    - field.field.node.settore_pratiche_tipologia.field_code
+    - field.field.node.settore_pratiche_tipologia.field_cover_image
+    - field.field.node.settore_pratiche_tipologia.field_free
+    - field.field.node.settore_pratiche_tipologia.field_name
+    - field.field.node.settore_pratiche_tipologia.field_note
+    - field.field.node.settore_pratiche_tipologia.field_url_servizio
+    - node.type.settore_pratiche_tipologia
+  module:
+    - ds
+    - link
+    - svg_image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_scheda_dettaglio
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      hero_title:
+        - field_name
+      hero_content:
+        - body
+        - field_free
+      content:
+        - field_url_servizio
+id: node.settore_pratiche_tipologia.default
+targetEntityType: node
+bundle: settore_pratiche_tipologia
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: hero_content
+  field_cover_image:
+    weight: 4
+    label: above
+    settings:
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_free:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: hero_content
+  field_name:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: hero_title
+  field_url_servizio:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 500
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: pattern
+          settings:
+            pattern: button_primary
+            pattern_mapping:
+              'ds_field_template:field_url_servizio':
+                destination: href
+                weight: 0
+                plugin: ds_field_template
+                source: field_url_servizio
+              'ds_field_template:field_url_servizio__title':
+                destination: label
+                weight: 1
+                plugin: ds_field_template
+                source: field_url_servizio__title
+    type: link
+    region: content
+hidden:
+  field_backoffice_id: true
+  field_code: true
+  field_note: true
+  langcode: true
+  links: true

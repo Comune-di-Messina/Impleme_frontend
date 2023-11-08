@@ -1,0 +1,17 @@
+uuid: 4d16a55f-f2bd-421f-b8f0-684997f5a738
+langcode: it
+status: true
+dependencies:
+  module:
+    - focal_point
+name: thumb_small
+label: '[540x285] Thumb small'
+effects:
+  27d1298d-d242-487f-9ded-2cb138344b3b:
+    uuid: 27d1298d-d242-487f-9ded-2cb138344b3b
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 540
+      height: 285
+      crop_type: focal_point

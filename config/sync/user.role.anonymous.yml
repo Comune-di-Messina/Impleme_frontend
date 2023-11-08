@@ -1,0 +1,27 @@
+uuid: b8cc350d-49c3-40e7-9042-add98d8fc979
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
+id: anonymous
+label: 'Utente anonimo'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'restful get agencies_languages_rest_resource'
+  - 'restful get agencies_names_rest_resource'
+  - 'restful get agencies_residences_rest_resource'
+  - 'restful get agencies_rest_resource'
+  - 'restful get aggregators_rest_resource'
+  - 'restful get cities_rest_resource'
+  - 'restful get guides_rest_resource'
+  - 'restful get pois_rest_resource'
+  - 'restful get rooms_rest_resource'
+  - 'restful get rooms_typologies_rest_resource'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view media'

@@ -1,0 +1,52 @@
+{#
+/**
+ * @see templates/navigation/menu.html.twig
+ */
+#}
+{% import _self as menus %}
+
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% set dist_url = dist_url|default('/themes/custom/portalemessina/dist/') %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('navbar-nav') }}>
+    {% else %}
+      <ul{{ attributes.addClass('link-list').removeClass(['menu-main', 'navbar-nav']) }}>
+    {% endif %}
+    {% for item in items %}
+      {% if item.below %}
+        <li{{ item.attributes.addClass(['nav-item', 'dropdown']) }}>
+          <a class="nav-link dropdown-toggle{% if item.in_active_trail %} active{% endif %}" href="#" data-toggle="dropdown" aria-expanded="false">
+            <span>{{ item.title }}</span>
+            <svg class="icon icon-xs">
+              <use xlink:href="{{ dist_url }}vendors/bootstrap-italia/svg/sprite.svg#it-expand"></use>
+            </svg>
+          </a>
+          <div class="dropdown-menu">
+            <div class="link-list-wrapper">
+                <ul class="link-list">
+                  {% for subitem in item.below %}
+                    <li>
+                      <a class="list-item{% if subitem.in_active_trail %} active{% endif %}" href="{{ subitem.url }}">
+                        {{ subitem.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+            </div>
+          </div>
+        </li>
+      {% else %}
+      <li{{ item.attributes.addClass('nav-item') }}>
+        <a class="nav-link{% if item.in_active_trail %} active{% endif %}" href="{{ item.url }}">
+          <span>{{ item.title }}</span>
+        </a>
+      </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

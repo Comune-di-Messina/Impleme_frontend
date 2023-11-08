@@ -1,0 +1,17 @@
+uuid: 6b232a03-677d-40cd-bba5-e1ca80506f8b
+langcode: it
+status: true
+dependencies:
+  module:
+    - focal_point
+name: image_large
+label: '[1170x700] Image large'
+effects:
+  07128bae-2894-4ecc-947b-9ea21c5ee805:
+    uuid: 07128bae-2894-4ecc-947b-9ea21c5ee805
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1170
+      height: 700
+      crop_type: focal_point

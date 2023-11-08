@@ -1,0 +1,7 @@
+before_content: before content
+content: content
+
+###
+
+ui_pattern_definition:
+  label: Template - Page front

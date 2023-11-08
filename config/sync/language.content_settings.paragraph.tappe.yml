@@ -1,0 +1,18 @@
+uuid: 6b243940-5eb1-4ccc-b018-46b58c777188
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.tappe
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.tappe
+target_entity_type_id: paragraph
+target_bundle: tappe
+default_langcode: site_default
+language_alterable: true

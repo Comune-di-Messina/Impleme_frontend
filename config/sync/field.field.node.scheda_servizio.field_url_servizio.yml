@@ -1,0 +1,23 @@
+uuid: bebc1078-cebd-43d7-b81d-52c9c6f2dc3e
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url_servizio
+    - node.type.scheda_servizio
+  module:
+    - link
+id: node.scheda_servizio.field_url_servizio
+field_name: field_url_servizio
+entity_type: node
+bundle: scheda_servizio
+label: 'URL Servizio'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

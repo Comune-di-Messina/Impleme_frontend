@@ -1,0 +1,63 @@
+uuid: 3092f9b0-2583-4f41-be8a-498df866ac22
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.date_format.medium
+    - field.field.node.eventi_servizi.body
+    - field.field.node.eventi_servizi.field_comune
+    - field.field.node.eventi_servizi.field_cta
+    - field.field.node.eventi_servizi.field_data
+    - node.type.eventi_servizi
+  module:
+    - date_recur
+    - link
+    - text
+    - user
+id: node.eventi_servizi.default
+targetEntityType: node
+bundle: eventi_servizi
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_cta:
+    weight: 103
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_data:
+    weight: 104
+    label: above
+    settings:
+      show_next: 5
+      count_per_item: true
+      occurrence_format_type: medium
+      same_end_date_format_type: medium
+      interpreter: null
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: date_recur_basic_formatter
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_comune: true
+  langcode: true

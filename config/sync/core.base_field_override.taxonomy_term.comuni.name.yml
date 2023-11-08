@@ -1,0 +1,18 @@
+uuid: ef9b6e99-bd47-4a75-b52a-b2b87c3beb3e
+langcode: it
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.comuni
+id: taxonomy_term.comuni.name
+field_name: name
+entity_type: taxonomy_term
+bundle: comuni
+label: Nome
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,8 @@
+id: inputName
+label: Lorem ipsum dolor
+value: null
+
+###
+
+ui_pattern_definition:
+  label: Element - Input

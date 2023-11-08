@@ -1,0 +1,21 @@
+uuid: dde36d4a-efea-4ea5-8952-6ba49553af0f
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+    - views
+    - viewsreference
+id: node.field_vista
+field_name: field_vista
+entity_type: node
+type: viewsreference
+settings:
+  target_type: view
+module: viewsreference
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,18 @@
+uuid: f46350b3-f82d-49fe-bf5c-2428fff0a6d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.settore_segnala_me
+id: node.settore_segnala_me.created
+field_name: created
+entity_type: node
+bundle: settore_segnala_me
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

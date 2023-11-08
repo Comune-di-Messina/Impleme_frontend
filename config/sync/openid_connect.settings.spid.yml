@@ -1,0 +1,8 @@
+enabled: spid
+settings:
+  redirect_url: ''
+  client_id: vmNVSVSieN8v7XfO3uaRsji6eS4a
+  client_secret: RmFJhhRIMVBeP5vjt_DAj2ps6qAa
+  authorization_endpoint: 'https://spid-test.comune.messina.it/oauth2/authorize'
+  token_endpoint: 'https://spid-test.comune.messina.it/oauth2/token'
+  userinfo_endpoint: 'https://spid-test.comune.messina.it/oauth2/userinfo'

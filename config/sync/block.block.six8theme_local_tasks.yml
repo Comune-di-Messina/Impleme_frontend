@@ -1,0 +1,22 @@
+uuid: 0ea2f632-7e39-4f14-8e31-63d9f3300a99
+langcode: it
+status: true
+dependencies:
+  theme:
+    - six8theme
+_core:
+  default_config_hash: 6eYuBTZR0lqAxdPo20yHxNOj1fnGzACYqgNbWmkITVQ
+id: six8theme_local_tasks
+theme: six8theme
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Schede
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

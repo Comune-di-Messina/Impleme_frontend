@@ -1,0 +1,70 @@
+uuid: 7fbd92f4-95cc-419d-b4d9-11c84dbf70bd
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tappe.field_etichetta
+    - field.field.paragraph.tappe.field_numero
+    - field.field.paragraph.tappe.field_testo
+    - field.field.paragraph.tappe.field_titolo
+    - paragraphs.paragraphs_type.tappe
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_tappa
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      tappa_number:
+        - field_numero
+      tappa_subtitle:
+        - field_etichetta
+      title:
+        - field_titolo
+      content:
+        - field_testo
+id: paragraph.tappe.default
+targetEntityType: paragraph
+bundle: tappe
+mode: default
+content:
+  field_etichetta:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: tappa_subtitle
+  field_numero:
+    weight: 0
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: tappa_number
+  field_testo:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_titolo:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: title
+hidden: {  }

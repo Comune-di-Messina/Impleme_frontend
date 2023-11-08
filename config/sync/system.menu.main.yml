@@ -1,0 +1,10 @@
+uuid: fa08beec-6d45-4672-b035-ac88061f8004
+langcode: it
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Q2Ra3jfoIVk0f3SjxJX61byRQFVBAbpzYDQOiY-kno8
+id: main
+label: 'Navigazione principale'
+description: 'Link alle sezioni'
+locked: true

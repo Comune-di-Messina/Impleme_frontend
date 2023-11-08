@@ -1,0 +1,21 @@
+uuid: 6df9fd84-8f03-4c2c-ba56-9ec884fc5b9b
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_testo
+    - paragraphs.paragraphs_type.raccolta_contenuti_con_testata
+  module:
+    - text
+id: paragraph.raccolta_contenuti_con_testata.field_testo
+field_name: field_testo
+entity_type: paragraph
+bundle: raccolta_contenuti_con_testata
+label: Testo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,22 @@
+uuid: 4556ba4d-a07e-4a0a-acd5-e332141fb1d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.eventi_servizi
+id: node.eventi_servizi.sticky
+field_name: sticky
+entity_type: node
+bundle: eventi_servizi
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Acceso
+  off_label: Spento
+field_type: boolean

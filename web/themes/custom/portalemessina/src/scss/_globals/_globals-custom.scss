@@ -1,0 +1,105 @@
+// =============================================================================
+// Custom.
+// =============================================================================
+
+// Inline cta.
+@mixin inlineCta($uppercase: true, $size_small: true) {
+  background: transparent;
+  border: 0;
+  color: $color-blue;
+  display: inline-block;
+  @if ($size_small) {
+    font-size: $font-small;
+  } @else {
+    font-size: $font-medium;
+  }
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.555;
+  padding: 0;
+  text-align: left;
+  @if ($uppercase) {
+    text-transform: uppercase;
+  }
+  &::after {
+    content: ' →';
+  }
+}
+// Create full block absolute link
+@mixin blockLink {
+  bottom: 0;
+  content: '';
+  cursor: pointer;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+// Button.
+@mixin button {
+  background-color: $color-blue;
+  border-radius: 3px;
+  color: $color-white;
+  display: inline-block;
+  font-size: $font-normal;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition: .25s ease-in-out;
+  padding: $gap $gap * 2;
+  &:hover {
+    background-color: darken($color-blue, 10%);
+  }
+}
+
+// Card shadow.
+@mixin cardShadow {
+  box-shadow: 4px 4px 8px rgba($color-black, .1);
+}
+@mixin cardShadowLarge {
+  box-shadow: 0 0 80px rgba($color-blue-dark, .1);
+}
+
+
+// Masonry - 2 col.
+@mixin masonry2col() {
+  @include breakpoint(md) {
+    margin: 0 -#{$gap};
+    column-count: 2;
+    column-gap: $gap * 2;
+  }
+  & > * {
+    break-inside: avoid-column;
+    margin-bottom: $gap * 2;
+  }
+}
+
+// Grid - 2 col.
+@mixin grid2col() {
+  display: flex;
+  flex-wrap: wrap;
+  // margin: 0 -#{$gap * 2};
+  & > * {
+    margin: $gap-grid / 2;
+    width: calc(100% - #{$gap-grid});
+    @include breakpoint(md) {
+      width: calc(50% - #{$gap-grid});
+    }
+  }
+}
+
+// Grid - 3 col.
+@mixin grid3col() {
+  display: flex;
+  flex-wrap: wrap;
+  & > * {
+    margin: $gap-grid / 2;
+    width: calc(100% - #{$gap-grid});
+    @include breakpoint(md) {
+      width: calc(33.3% - #{$gap-grid});
+    }
+  }
+}

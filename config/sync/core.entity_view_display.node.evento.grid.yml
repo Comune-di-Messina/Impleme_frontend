@@ -1,0 +1,144 @@
+uuid: 54f975f4-36bf-4975-b545-8e30b46d4ce7
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.date_format.messina_eventi_full
+    - core.entity_view_mode.node.grid
+    - field.field.node.evento.body
+    - field.field.node.evento.field_abstract
+    - field.field.node.evento.field_argomenti_correlati
+    - field.field.node.evento.field_comune
+    - field.field.node.evento.field_contatti_indirizzo
+    - field.field.node.evento.field_contenuti_collegati
+    - field.field.node.evento.field_coordinate
+    - field.field.node.evento.field_cover
+    - field.field.node.evento.field_data
+    - field.field.node.evento.field_moduli
+    - field.field.node.evento.field_target
+    - field.field.node.evento.field_term_temi
+    - node.type.evento
+  module:
+    - date_recur
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card_teaser
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_cover
+      category:
+        - field_term_temi
+      date:
+        - field_data
+      title:
+        - node_title
+      content:
+        - body
+      link:
+        - node_link
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 3
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+      node_link:
+        plugin_id: node_link
+        weight: 5
+        label: hidden
+        formatter: default
+id: node.evento.grid
+targetEntityType: node
+bundle: evento
+mode: grid
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 4
+    settings:
+      trim_length: 150
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: content
+  field_cover:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: thumb_small
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: image
+  field_data:
+    type: date_recur_basic_formatter
+    weight: 2
+    region: date
+    label: hidden
+    settings:
+      format_type: messina_eventi_full
+      occurrence_format_type: messina_eventi_full
+      same_end_date_format_type: messina_eventi_full
+      separator: '-'
+      timezone_override: ''
+      interpreter: ''
+      show_next: 1
+      count_per_item: true
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_term_temi:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_label
+    region: category
+hidden:
+  field_abstract: true
+  field_argomenti_correlati: true
+  field_comune: true
+  field_contatti_indirizzo: true
+  field_contenuti_collegati: true
+  field_coordinate: true
+  field_moduli: true
+  field_target: true
+  langcode: true
+  links: true

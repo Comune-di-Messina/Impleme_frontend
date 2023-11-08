@@ -1,0 +1,127 @@
+uuid: a62207df-081e-4811-9a1c-729702a9f6b4
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_moduli
+    - node.type.comune_servizi
+    - paragraphs.paragraphs_type.calendario_eventi
+    - paragraphs.paragraphs_type.carosello_big
+    - paragraphs.paragraphs_type.carosello_con_intro_small
+    - paragraphs.paragraphs_type.carosello_con_testata_big
+    - paragraphs.paragraphs_type.carosello_con_testata_small
+    - paragraphs.paragraphs_type.contenuti_in_griglia
+    - paragraphs.paragraphs_type.mappa_indirizzi
+    - paragraphs.paragraphs_type.raccolta_contenuti_con_testata
+    - paragraphs.paragraphs_type.servizi_scopri_anche
+    - paragraphs.paragraphs_type.vista
+  module:
+    - entity_reference_revisions
+id: node.comune_servizi.field_moduli
+field_name: field_moduli
+entity_type: node
+bundle: comune_servizi
+label: Moduli
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      carosello_big: carosello_big
+      carosello_con_intro_small: carosello_con_intro_small
+      carosello_con_testata_big: carosello_con_testata_big
+      calendario_eventi: calendario_eventi
+      carosello_con_testata_small: carosello_con_testata_small
+      mappa_indirizzi: mappa_indirizzi
+      raccolta_contenuti_con_testata: raccolta_contenuti_con_testata
+      servizi_scopri_anche: servizi_scopri_anche
+      vista: vista
+      contenuti_in_griglia: contenuti_in_griglia
+    target_bundles_drag_drop:
+      aggregatore:
+        weight: 26
+        enabled: false
+      blocchi_di_selezione_del_comune:
+        weight: -45
+        enabled: false
+      calendario_eventi:
+        enabled: true
+        weight: -41
+      carosello_big:
+        enabled: true
+        weight: -44
+      carosello_con_intro_small:
+        enabled: true
+        weight: -43
+      carosello_con_testata_big:
+        enabled: true
+        weight: -42
+      carosello_con_testata_small:
+        enabled: true
+        weight: -40
+      citazione:
+        weight: -39
+        enabled: false
+      contenuti_in_griglia:
+        enabled: true
+        weight: 36
+      contenuto:
+        weight: -38
+        enabled: false
+      contenuto_ed_infografica:
+        weight: -37
+        enabled: false
+      contenuto_multimediale:
+        weight: 36
+        enabled: false
+      cta_con_icona:
+        weight: 38
+        enabled: false
+      elemento_infografica:
+        weight: -36
+        enabled: false
+      elemento_mappa:
+        weight: -35
+        enabled: false
+      gallery:
+        weight: -34
+        enabled: false
+      immagine:
+        weight: -33
+        enabled: false
+      immagine_full:
+        weight: -32
+        enabled: false
+      mappa_indirizzi:
+        enabled: true
+        weight: -31
+      raccolta_contenuti_con_testata:
+        enabled: true
+        weight: -30
+      selezione_comuni:
+        weight: -28
+        enabled: false
+      selezione_comuni_servizi:
+        weight: -27
+        enabled: false
+      servizi_scopri_anche:
+        enabled: true
+        weight: -29
+      slideshow:
+        weight: -26
+        enabled: false
+      tab_piu_cliccati:
+        weight: 48
+        enabled: false
+      tappe:
+        weight: -25
+        enabled: false
+      vista:
+        enabled: true
+        weight: -24
+field_type: entity_reference_revisions

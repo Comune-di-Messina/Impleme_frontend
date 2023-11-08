@@ -1,0 +1,18 @@
+uuid: bf66f66b-be67-4a62-8f13-84d6d3f00cc2
+langcode: it
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.contenuto_multimediale
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.contenuto_multimediale
+target_entity_type_id: paragraph
+target_bundle: contenuto_multimediale
+default_langcode: site_default
+language_alterable: false

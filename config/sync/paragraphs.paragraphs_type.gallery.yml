@@ -1,0 +1,10 @@
+uuid: 454c1b63-dc63-4e64-a660-96f4b068283f
+langcode: it
+status: true
+dependencies: {  }
+id: gallery
+label: Gallery
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

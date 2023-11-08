@@ -1,0 +1,18 @@
+uuid: 0eb9e639-5c84-4fc1-a5fe-5b2566bedb42
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.itinerario
+id: node.itinerario.metatag
+field_name: metatag
+entity_type: node
+bundle: itinerario
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

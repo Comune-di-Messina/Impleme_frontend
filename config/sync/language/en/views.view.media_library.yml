@@ -1,0 +1,118 @@
+label: 'Raccolta Multimediale'
+description: 'Trova e gestisci media.'
+display:
+  default:
+    display_title: Principale
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'Applica filtri'
+          reset_button_label: Ripristina
+          exposed_sorts_label: 'Ordina per'
+          sort_asc_label: Crescente
+          sort_desc_label: Disc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Voci per pagina'
+            items_per_page_options_all_label: '- Tutto -'
+            offset_label: Scostamento
+          tags:
+            previous: Indietro
+            next: Avanti
+      fields:
+        media_bulk_form:
+          action_title: Azione
+      filters:
+        status:
+          expose:
+            label: 'Stato di pubblicazione'
+          group_info:
+            label: Pubblicato
+            group_items:
+              1:
+                title: Pubblicato
+              2:
+                title: 'Non pubblicato'
+        name:
+          expose:
+            label: Nome
+        bundle:
+          expose:
+            label: 'Tipi di contenuti multimediali'
+          group_info:
+            label: 'Tipi di contenuti multimediali'
+        langcode:
+          expose:
+            label: Lingua
+      sorts:
+        created:
+          expose:
+            label: 'Prima i più recenti'
+        name:
+          expose:
+            label: 'Nome (ord. alfabetico)'
+        name_1:
+          expose:
+            label: 'Nome (ord. alfabetico inverso)'
+      empty:
+        area_text_custom:
+          content: 'Non è disponibile alcun contributo mediale.'
+  page:
+    display_title: Pagina
+    display_options:
+      fields:
+        media_bulk_form:
+          action_title: Azione
+        name:
+          separator: ''''
+        edit_media:
+          alter:
+            text: 'Modifica {{ name }}'
+            alt: 'Modifica {{ name }}'
+          text: Modifica
+        delete_media:
+          alter:
+            text: 'Elimina {{ name }}'
+            alt: 'Elimina {{ name }}'
+          text: Elimina
+  widget:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Nome
+      arguments:
+        bundle:
+          exception:
+            title: Tutti
+      header:
+        display_link_grid:
+          label: Griglia
+        display_link_table:
+          label: Tabella
+  widget_table:
+    display_title: 'Widget (tabella)'
+    display_options:
+      fields:
+        thumbnail__target_id:
+          label: Miniatura
+        name:
+          label: Nome
+        uid:
+          label: Autore
+        changed:
+          label: Aggiornato
+      filters:
+        name:
+          expose:
+            label: Nome
+      arguments:
+        bundle:
+          exception:
+            title: Tutti
+      header:
+        display_link_grid:
+          label: Griglia
+        display_link_table:
+          label: Tabella

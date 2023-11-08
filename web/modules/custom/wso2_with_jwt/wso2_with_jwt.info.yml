@@ -1,0 +1,9 @@
+name: WSO2 - Chiama API Manager con JWT
+description: Integrazione per chiamate a API Manager WSO2 passando un JWT in Header
+package: Other
+type: module
+version: 1.0
+core: 8.x
+configure: wso2_with_jwt.
+dependencies:
+  - openid_connect

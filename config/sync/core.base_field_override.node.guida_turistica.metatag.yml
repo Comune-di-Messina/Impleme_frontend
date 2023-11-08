@@ -1,0 +1,18 @@
+uuid: 95b62634-6586-4744-842d-7da057dab4bf
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.guida_turistica
+id: node.guida_turistica.metatag
+field_name: metatag
+entity_type: node
+bundle: guida_turistica
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,19 @@
+uuid: 5d298af4-eb0e-4867-81b6-91608d45d234
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_code
+    - taxonomy.vocabulary.tipologie_pratiche
+id: taxonomy_term.tipologie_pratiche.field_code
+field_name: field_code
+entity_type: taxonomy_term
+bundle: tipologie_pratiche
+label: Codice
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+uuid: d7a68ec7-ed52-42fb-93f2-adfbe75c4d52
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.frontpage
+id: node.frontpage.changed
+field_name: changed
+entity_type: node
+bundle: frontpage
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

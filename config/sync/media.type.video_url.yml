@@ -1,0 +1,20 @@
+uuid: c7974b86-f8a4-4903-a250-125502108206
+langcode: it
+status: true
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: null
+id: video_url
+label: 'Video url'
+description: ''
+source: 'oembed:video'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers: {  }
+  source_field: field_media_oembed_video
+field_map: {  }

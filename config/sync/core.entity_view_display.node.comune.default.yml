@@ -1,0 +1,103 @@
+uuid: d22fd790-417d-473f-92d9-eeaf490e57e5
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.comune.body
+    - field.field.node.comune.field_abstract
+    - field.field.node.comune.field_cover
+    - field.field.node.comune.field_cta_copertina
+    - field.field.node.comune.field_logo
+    - field.field.node.comune.field_moduli
+    - field.field.node.comune.field_term_comune
+    - node.type.comune
+  module:
+    - ds
+    - entity_reference_revisions
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_page_basic
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      hero_title:
+        - node_title
+      hero_content:
+        - field_abstract
+        - field_cta_copertina
+      hero_image:
+        - field_cover
+      content:
+        - field_moduli
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.comune.default
+targetEntityType: node
+bundle: comune
+mode: default
+content:
+  field_abstract:
+    type: text_summary_or_trimmed
+    weight: 1
+    region: hero_content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_cover:
+    type: entity_reference_entity_view
+    weight: 3
+    region: hero_image
+    label: hidden
+    settings:
+      view_mode: cover_large
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_cta_copertina:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: hero_content
+  field_moduli:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_logo: true
+  field_term_comune: true
+  langcode: true
+  links: true

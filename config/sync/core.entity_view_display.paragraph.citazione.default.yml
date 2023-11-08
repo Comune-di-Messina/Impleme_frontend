@@ -1,0 +1,47 @@
+uuid: fda28fe0-e645-446b-98a7-a80a72cb86ad
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.citazione.field_testo
+    - field.field.paragraph.citazione.field_titolo
+    - paragraphs.paragraphs_type.citazione
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_quote
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      title:
+        - field_titolo
+      content:
+        - field_testo
+id: paragraph.citazione.default
+targetEntityType: paragraph
+bundle: citazione
+mode: default
+content:
+  field_testo:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_titolo:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: title
+hidden: {  }

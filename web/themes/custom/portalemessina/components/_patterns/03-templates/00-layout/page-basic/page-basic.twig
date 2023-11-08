@@ -1,0 +1,29 @@
+{%
+  set classes = [
+  'page-basic'
+]
+%}
+<div {{ attributes.addClass(classes) }}>
+
+  {% include "@molecules/01-modules/hero/hero-full/hero-full.twig" with {
+    category: category,
+    title: hero_title,
+    content: hero_content,
+    image: hero_image,
+    band_left: filters,
+    band_right: hero_band_right
+  } %}
+
+  {% if before_content|render %}
+    <div class="before-content">
+      {{ before_content }}
+    </div>
+  {% endif %}
+
+  {% if content|render %}
+    <div class="content">
+      {{ content }}
+    </div>
+  {% endif %}
+
+</div>

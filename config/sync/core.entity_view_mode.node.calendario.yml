@@ -1,0 +1,10 @@
+uuid: e2de61a6-d12b-4bc1-b956-5061491f8d3d
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: node.calendario
+label: Calendario
+targetEntityType: node
+cache: true

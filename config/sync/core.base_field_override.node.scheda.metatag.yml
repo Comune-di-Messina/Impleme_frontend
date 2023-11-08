@@ -1,0 +1,18 @@
+uuid: 03a5552e-55e1-47f6-9d4a-e6103a5bc110
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.scheda
+id: node.scheda.metatag
+field_name: metatag
+entity_type: node
+bundle: scheda
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

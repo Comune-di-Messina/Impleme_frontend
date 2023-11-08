@@ -1,0 +1,28 @@
+.cta-full{
+    margin-top: 48px;
+    a{
+        display: flex;
+        align-items: center;
+        color: #4470b6;
+        max-width: 230px;
+        font-weight: 700;
+        background: #fff;
+        padding: 20px;
+        border: 1px solid #4470b6;
+        border-radius: 5px;
+        &:focus{
+            box-shadow: none !important;
+        }
+        img{
+            margin-left: 12px;
+            max-width: 30px;
+        }
+
+        &.no-button {
+          background: transparent;
+          color: $color-white;
+          border: none;
+          padding-left: 0;
+        }
+    }
+}

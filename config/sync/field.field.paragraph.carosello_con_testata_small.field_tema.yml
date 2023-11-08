@@ -1,0 +1,23 @@
+uuid: 236dd09b-9286-4c8b-9140-2ee8e38f0e40
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tema
+    - paragraphs.paragraphs_type.carosello_con_testata_small
+  module:
+    - options
+id: paragraph.carosello_con_testata_small.field_tema
+field_name: field_tema
+entity_type: paragraph
+bundle: carosello_con_testata_small
+label: Tema
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

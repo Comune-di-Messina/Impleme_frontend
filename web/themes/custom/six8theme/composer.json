@@ -1,0 +1,24 @@
+{
+    "name": "sixeleven/six8theme",
+    "description": "Drupal 8 Sixeleven theme.",
+    "type": "drupal-custom-theme",
+    "keywords": ["Drupal", "theme"],
+    "homepage": "https://gitlab.com/sixeleven/six8theme",
+    "license": "",
+    "authors": [
+        {
+            "name": "Andrea Racco (Ralkeon)",
+            "homepage": "https://www.drupal.org/u/ralkeon",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Simona Ritrovato (Strill)",
+            "homepage": "https://www.drupal.org/u/strill",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "",
+        "source": "https://bitbucket.org/sixeleven/six8theme"
+    }
+}

@@ -1,0 +1,19 @@
+uuid: 0bcc3035-84b2-43b3-9662-4a7215fd9dc0
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titolo
+    - paragraphs.paragraphs_type.raccolta_contenuti_con_testata
+id: paragraph.raccolta_contenuti_con_testata.field_titolo
+field_name: field_titolo
+entity_type: paragraph
+bundle: raccolta_contenuti_con_testata
+label: Titolo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

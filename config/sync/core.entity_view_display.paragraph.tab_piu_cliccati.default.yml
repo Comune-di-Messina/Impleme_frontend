@@ -1,0 +1,87 @@
+uuid: 8ec7ed78-9470-4dee-9f09-1089f8416e4c
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tab_piu_cliccati.field_elementi_carosello_cliccat
+    - field.field.paragraph.tab_piu_cliccati.field_elementi_carosello_luoghi
+    - field.field.paragraph.tab_piu_cliccati.field_titolo
+    - field.field.paragraph.tab_piu_cliccati.field_titolo_prima_tab
+    - field.field.paragraph.tab_piu_cliccati.field_titolo_seconda_tab
+    - field.field.paragraph.tab_piu_cliccati.field_visualizzazione_luoghi
+    - field.field.paragraph.tab_piu_cliccati.field_visualizzazione_servizi
+    - paragraphs.paragraphs_type.tab_piu_cliccati
+  module:
+    - ds
+    - viewsreference
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_carousel_tab
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      title:
+        - field_titolo
+      titletab1:
+        - field_titolo_prima_tab
+      titletab2:
+        - field_titolo_seconda_tab
+      modules:
+        - field_visualizzazione_servizi
+      secondmodules:
+        - field_visualizzazione_luoghi
+id: paragraph.tab_piu_cliccati.default
+targetEntityType: paragraph
+bundle: tab_piu_cliccati
+mode: default
+content:
+  field_titolo:
+    type: string
+    weight: 0
+    region: title
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_titolo_prima_tab:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: titletab1
+  field_titolo_seconda_tab:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: titletab2
+  field_visualizzazione_luoghi:
+    weight: 4
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: secondmodules
+  field_visualizzazione_servizi:
+    weight: 3
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: modules
+hidden:
+  field_elementi_carosello_cliccat: true
+  field_elementi_carosello_luoghi: true

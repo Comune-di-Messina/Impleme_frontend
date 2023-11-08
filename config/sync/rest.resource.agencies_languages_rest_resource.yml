@@ -1,0 +1,13 @@
+uuid: 906e352f-bacf-4179-83f8-913e500bf1a3
+langcode: it
+status: true
+dependencies: {  }
+id: agencies_languages_rest_resource
+plugin_id: agencies_languages_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

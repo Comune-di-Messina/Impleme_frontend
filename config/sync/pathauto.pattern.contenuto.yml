@@ -1,0 +1,36 @@
+uuid: 7e12d6aa-34e7-4980-95d8-f84be1c788a8
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+id: contenuto
+label: Contenuto
+type: 'canonical_entities:node'
+pattern: 'luoghi/[node:title]'
+selection_criteria:
+  19c2e935-6d8e-420a-9ad7-deb8a9d014c3:
+    id: node_type
+    bundles:
+      agenzia_turistica: agenzia_turistica
+      aggregatore_servizi: aggregatore_servizi
+      aggregatore_tema: aggregatore_tema
+      comune: comune
+      comune_servizi: comune_servizi
+      contenuto_multimediale: contenuto_multimediale
+      eventi_servizi: eventi_servizi
+      evento: evento
+      frontpage: frontpage
+      guida_turistica: guida_turistica
+      itinerario: itinerario
+      page: page
+      sala: sala
+      scheda: scheda
+      scheda_servizio: scheda_servizio
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 19c2e935-6d8e-420a-9ad7-deb8a9d014c3
+selection_logic: and
+weight: 0
+relationships: {  }

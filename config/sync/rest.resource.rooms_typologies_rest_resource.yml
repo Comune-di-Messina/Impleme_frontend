@@ -1,0 +1,13 @@
+uuid: 94bfeaec-28bb-430c-b059-663a1400b351
+langcode: it
+status: true
+dependencies: {  }
+id: rooms_typologies_rest_resource
+plugin_id: rooms_typologies_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

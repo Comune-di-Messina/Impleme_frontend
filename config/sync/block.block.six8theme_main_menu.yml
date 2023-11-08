@@ -1,0 +1,27 @@
+uuid: c46f1d8b-6a72-44e9-b1c2-31e9406c04ec
+langcode: it
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - six8theme
+_core:
+  default_config_hash: PV0JAT6WtYjQd3bBhbyfDnuHHY7F-4kvCD9t5zHTPkc
+id: six8theme_main_menu
+theme: six8theme
+region: navigation
+weight: -4
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navigazione principale'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,7 @@
+wso2_with_jwt:
+  client_id: hpoi_rB2_Gfj6tubPpHSWa_1MqEa
+  client_secret: zQ08FZwmT6eBKRgLPXVCFjGPN7ka
+  base_url: 'https://gw-test.comune.messina.it'
+_core:
+  default_config_hash: kwY2Jw7VBu6QLrR09S4meE1t-3JvmNB2Ozv4uDkfqUo
+langcode: it

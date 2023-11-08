@@ -1,0 +1,20 @@
+uuid: e1817aa8-a197-4efd-87ae-9dd7e7588def
+langcode: it
+status: true
+dependencies:
+  theme:
+    - six8theme
+_core:
+  default_config_hash: ZLTFTDHDb5Peukbk2ahmlqfgiuyjamZMKfMIKuAOHEk
+id: six8theme_page_title
+theme: six8theme
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titolo della pagina'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,12 @@
+services:
+  mcore.breadcrumbs:
+    class: Drupal\m_core\Breadcrumbs
+    arguments: ['@current_user', '@access_manager']
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  logger.channel.m_core:
+    parent: logger.channel_base
+    arguments: ['m_core']
+  m_core.default:
+    class: Drupal\m_core\MCoreService
+    arguments: []

@@ -1,0 +1,23 @@
+uuid: 6706fb99-8b23-45c4-9c64-db82cd4ff319
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_ad_articolo
+    - node.type.contenuto_multimediale
+  module:
+    - link
+id: node.contenuto_multimediale.field_link_ad_articolo
+field_name: field_link_ad_articolo
+entity_type: node
+bundle: contenuto_multimediale
+label: 'Link ad articolo'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 1
+field_type: link
